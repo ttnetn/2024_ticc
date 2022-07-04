@@ -1,0 +1,531 @@
+/////////////////////////////////////////////////////////以下為demo範例///
+// 首頁區塊設定
+// -------------------------------- 共用
+
+// more按鈕
+// a.more {
+//     display: block;
+//     width: 10em;
+//     text-align: center;
+//     height: 2.5em;
+//     margin: .5em auto .5em;
+//     line-height: 2.5;
+//     color: $primaryColor;
+//     border: 1px solid $primaryColor;
+//     text-align: center;
+//     overflow: hidden;
+//     vertical-align: middle;
+//     -webkit-transform: perspective(1px) translateZ(0);
+//     transform: perspective(1px) translateZ(0);
+//     box-shadow: 0 0 1px transparent;
+//     position: relative;
+//     -webkit-transition-property: color;
+//     transition-property: color;
+//     -webkit-transition-duration: 0.2s;
+//     transition-duration: 0.2s;
+//     &:after {
+//         content: "";
+//         width: 12px;
+//         height: 12px;
+//         border: 2px solid #FFF;
+//         transform: rotate(45deg);
+//         position: absolute;
+//         right: -10px;
+//         top: 14px;
+//         border-left: none;
+//         border-bottom: none;
+//         transition: .3s ease-out;
+//     }
+//     &:before {
+//         content: "";
+//         position: absolute;
+//         z-index: -1;
+//         top: 0;
+//         left: 0;
+//         right: 0;
+//         bottom: 0;
+//         background: $primaryColor;
+//         -webkit-transform: scale(0);
+//         transform: scale(0);
+//         -webkit-transition-property: transform;
+//         transition-property: transform;
+//         -webkit-transition-duration: 0.2s;
+//         transition-duration: 0.2s;
+//         -webkit-transition-timing-function: ease-out;
+//         transition-timing-function: ease-out;
+//     }
+//     &:hover,
+//     &:focus,
+//     &.active {
+//         color: white;
+//         &:before {
+//             -webkit-transform: scale(1);
+//             transform: scale(1);
+//         }
+//         &:after {
+//             right: 15px;
+//         }
+//     }
+// }
+
+
+// 父層啟動 flex ------------------
+$m-gutter: 4px;
+.hotLinks,
+.contentUs,
+.contentUs .col:last-child{
+    .container{
+        @extend %flex_set;
+    }
+}
+
+// main section ------------------
+.main > section{
+    margin: 60px auto;
+}
+
+// h2.title ----------------------
+// 預設：黑
+h2.title{
+    font-size: 2em;
+    margin: 0 0 2.2em !important;
+    span{
+        font-size: 50%;
+        line-height: 3;
+    }
+
+    position: relative;
+    &:after{
+        content: '';
+        width: 280px;
+        height: 3px;
+        position: absolute;
+        background: #121212;
+        transform: rotate(-20deg);
+        left: -10px;
+        bottom: 0;
+        z-index: 1;
+    }
+}
+// 變色設定
+.VR,
+.contentUs{
+    h2.title{
+        color: #fff;
+        &:after{
+            background: #fff;
+        }
+    }
+}
+// 滿版、位置設定
+.full{
+    h2.title{
+        max-width: 1440px;
+        margin: auto !important;
+    }
+}
+
+// 表單 ----------------------------
+.planSearch,
+.contentUs .col:last-child{
+    .flex-form{
+        .form_grp{
+            border-bottom: transparent;
+        }
+        .form_title{
+            color: #373636;
+            align-self: center;
+        }
+        .form_content{
+            align-items: center;
+        }
+    }
+    input, select{
+        border: 1px solid #373636;
+        font-weight: bold;
+        letter-spacing: 1px;
+        +b{ padding: 0 6px; }
+    }
+    input[type="text"],input[type="tel"],input[type="email"]{
+        padding: .75em 1.25em;
+    }
+    select{
+        padding: .75em 2em .75em 1.25em;
+        background: #fff url(../images/icon/icon_select_arrow.png) no-repeat right 8px center;
+    }
+    .btn-submit{
+        border-radius: 2px;
+        background: #000;
+        color: #fff;
+        height: 60px;
+    }
+}
+
+// 左上色塊、三角色塊 ----------------
+.hero,
+.hero .btn_box a.btn,
+.VR{
+    position: relative;
+    overflow: hidden;
+    &:before{
+        // 三角色塊
+        content: '';
+        position: absolute;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        transform-origin: bottom left;
+        transform: rotate(-20deg);
+    }
+}
+
+// -------------------------------------------------------------
+// hero
+.hero{
+    margin-top: 0 !important;
+
+    .container{
+        max-height: 720px;
+        background: #000;
+
+        // 讓影片垂直置中
+        display: flex;
+        align-items: center;
+
+        // 漸層黑瀑：父層.hero > .container
+        position: relative;
+        &:before{
+            content: '';
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 40%;
+            background: linear-gradient(180deg, rgba(0,0,0,0.75) 20%, rgba(0,0,0,0) 100%);
+        }
+
+        .slogen{
+            position: absolute;
+            font-size: 2.6em;
+            color: #fff;
+            text-transform: uppercase;
+            line-height: 1.6;
+            left: 12%;
+            bottom: 15%;
+        }
+
+        // 登入＋查詢
+        .btn_box{
+            position: absolute;
+            top: 140px;
+            right: 12%;
+            z-index: 1;
+            a.btn{
+                display: flex;
+                flex-flow: row wrap;
+                justify-content: center;
+                align-items: center;
+
+                width: 220px;
+                background: rgba(0,0,0,.65);
+                border: 1px solid #fff;
+                border-radius: 3px;
+                color: #fff;
+                // padding: .75em 1.25em;
+                margin-bottom: .5em;
+                line-height: 2;
+                font-size: 1.125em;
+                span{
+                    display: block;
+
+                    position: relative;
+                    &:before{
+                        content: '';
+                        position: absolute;
+                        left: 50%;
+                        top: 0;
+                        margin-left: -15px;
+                        width: 30px;
+                        height: 2px;
+                        background: #fff;
+                    }
+                }
+
+                &:before{
+                    border-width: 90px 200px 0 0;
+                    border-color: $primaryColor;
+                    left: -30px;
+                    bottom: 50%;
+                }
+
+                &:last-child{
+                    &:before{
+                        border-color: $secondaryColor;
+                    }
+                }
+            }
+        }
+    }
+
+
+    video {
+        &.viedo_img{
+            margin: 0 auto;
+            // width: auto;
+            // height: 100%;
+            width: 100vw;
+            height: 100%;
+            // display: block;
+        }
+    }
+
+    // 左上色塊：父層.hero
+    position: relative;
+    overflow: hidden;
+    &:before{
+        // 三角色塊
+        border-width: 240px 900px 0 0;
+        border-image-source: url(../images/ticc/bg-default.jpg);
+        left: -100px;
+        // left: -240px;
+        z-index: 1;
+    }
+}
+
+
+// 計畫你的活動
+.planSearch{
+    h2.title{
+        margin: 3em 0 -1.4em !important;
+
+        +p{
+            width: 50%;
+            float: right;
+            margin-top: -6em;
+            line-height: 2;
+            font-size: 1.125em;
+        }
+    }
+    .box{
+        background: url(../images/ticc/bg-mp-form.jpg) 50% 50% no-repeat;
+        background-size: cover !important;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+        width: 96%;
+        float: right;
+
+        padding-top: 10em;
+        padding-bottom: 10em;
+    }
+
+    form{
+        max-width: 800px;
+        margin: auto;
+    }
+    .flex-form{
+        .form_title{
+            text-align: right;
+            padding-right: 30px;
+        }
+    }
+    input[type="text"]{ text-align: right; }
+    .btn-submit{
+        position: absolute;
+        right: 0;
+        bottom: 0;
+        margin: 0;
+        width: 20%;
+    }
+}
+
+// 手機版：links 2欄重複
+.hotLinks{
+    .container{
+        &:before, &:after{ display: none;}
+
+        a{
+            background: #343434;
+            color: #fff;
+            font-size: 1.45em;
+            text-align: center;
+            padding: 40px 0;
+            margin: 10px 0;
+
+            @include flex-xs(6, 6px);
+            @include flex-sm(6, 6px);
+            @include flex-md(6, 6px);
+            @include flex-lg(6, 6px);
+
+            // 左上色塊
+            position: relative;
+            overflow: hidden;
+            &:before{
+                content: '';
+                position: absolute;
+
+                width: 0;
+                height: 0;
+                border-style: solid;
+                border-width: 100px 200px 0 0;
+                border-image-source: linear-gradient(90deg, rgba(106,27,138,1) 0%, rgba(36,8,107,1) 50%);
+
+                transform-origin: bottom left;
+                transform: rotate(-20deg);
+                left: 0;
+                bottom: 50%;
+            }
+        }
+    }
+}
+
+// VR 滿版：滿版
+.VR{
+    background: url(../images/ticc/bg-VR.jpg) 50% top no-repeat;
+    height: 680px;
+
+    // 左上色塊
+    position: relative;
+    overflow: hidden;
+    &:before{
+        border-width: 380px 1200px 0 0;
+        border-image-source: linear-gradient(90deg, rgba(106,27,138,1) 0%, rgba(36,8,107,1) 100%);
+    }
+
+    .container{
+        max-width: 1440px  !important;
+    }
+
+    // default font-size: 2em
+    h2.title{
+        &:after{ display: none; }
+
+        letter-spacing: 3px;
+        line-height: 1;
+        padding-top: 90px;
+        font-size: 3em;
+
+        b{ font-size: 62.5%; }
+        em{
+            font-size: 40%;
+            padding: 0 4px;
+        }
+        span{
+            display: block;
+            width: 260px;
+            margin-top: 55px;
+            line-height: 1.4;
+            text-align: center;
+            font-size: 75%;
+
+            b{
+                font-size: 66.6%;
+                display: block;
+            }
+        }
+    }
+
+    a.more {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 186px;
+        height: 186px;
+        border-radius: 50%;
+        background: rgba(0,0,0,.75);
+        color: #fff;
+        border: 1px solid #fff;
+        font-size: 1.35em;
+        letter-spacing: 2px;
+        line-height: 1.4;
+
+        margin: 90px 0 0 37px;
+    }
+}
+// .VR-rwd {
+//     position: relative;
+//     padding-bottom: 50%;
+//     padding-top: 30px;
+//     height: 0;
+//     overflow: hidden;
+
+//     iframe {
+//         position: absolute;
+//         top: 0;
+//         left: 0;
+//         width: 100%;
+//         // height: 100%;
+//     }
+// }
+
+
+// 熱門活動 slider：滿版
+.cardSlider{
+    padding: 30px auto;
+    .card{
+        margin: 1em .5em 3em;
+        padding: 64px 46px;
+        background: #fff;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+
+        .img-container{
+            @include aspect-ratio(3,2);
+        }
+    }
+}
+
+// 聯絡我們：2欄、3:2
+.contentUs{
+    margin: 60px auto;
+    .container{
+        align-items: stretch;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+    }
+    .col{
+        @include flex-xs(12, 0px);
+        @include flex-sm(12, 0px);
+        @include flex-md(7, $m-gutter);
+        @include flex-lg(7, $m-gutter);
+        @include gutter();
+
+        &.map-rwd {
+            position: relative;
+            padding-bottom: 50%;
+            padding-top: 30px;
+            // height: 0;
+            overflow: hidden;
+
+            iframe {
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+            }
+        }
+
+        &:last-child{
+            @include flex-xs(12, 0px);
+            @include flex-sm(12, 0px);
+            @include flex-md(5, $m-gutter);
+            @include flex-lg(5, $m-gutter);
+
+            background: linear-gradient(0deg, rgba(106,27,138,1) 0%, rgba(36,8,107,1) 100%);
+            color: #fff;
+            padding: 64px 46px;
+            p{ line-height: 1.8;}
+
+            .flex-form{
+                .form_grp{ padding: 0; }
+                .form_title{
+                    color: #fff;
+                    padding-top: 0;
+                }
+                .form_content{}
+            }
+            .btn_grp{ padding: 0; }
+            .btn-submit{ width: 240px; }
+        }
+    }
+    .google_captcha{
+        text-align: center;
+        padding-top: 2em;
+    }
+}
