@@ -104,7 +104,7 @@ h2.title{
         transform: rotate(-20deg);
         left: -10px;
         bottom: 0;
-        z-index: 1;
+        z-index: 99;
     }
 }
 // 變色設定
@@ -164,6 +164,7 @@ h2.title{
 // 左上色塊、三角色塊 ----------------
 .hero,
 .hero .btn_box a.btn,
+.m_area .btn_box a.btn,
 .VR{
     position: relative;
     overflow: hidden;
@@ -175,9 +176,80 @@ h2.title{
         height: 0;
         border-style: solid;
         transform-origin: bottom left;
-        transform: rotate(-20deg);
+        transform: rotate(-22deg);
     }
 }
+
+// full ---------------------------
+.full{
+    .container{
+        padding-left: 0 !important;
+        padding-right: 0 !important;
+
+        h2.title{
+            margin-left: 40px !important;
+        }
+    }
+}
+
+// m_area -------------------------
+.m_area{
+    // 登入＋查詢
+    .btn_box{
+        padding: 0 25px;
+        a.btn{
+            display: flex;
+            flex-flow: row wrap;
+            justify-content: center;
+            align-items: center;
+
+            background: rgba(0,0,0,.65);
+            border: 1px solid #fff;
+            border-radius: 3px;
+            color: #fff;
+            margin: .25em 0;
+            line-height: 2;
+            font-size: 1.125em;
+            span{
+                display: block;
+                width: 100%;
+
+                position: relative;
+                &:before{
+                    content: '';
+                    position: absolute;
+                    left: 50%;
+                    top: 0;
+                    margin-left: -15px;
+                    width: 30px;
+                    height: 2px;
+                    background: #fff;
+                }
+            }
+            &:before{
+                border-width: 90px 200px 0 0;
+                border-color: $primaryColor;
+                left: -30px;
+                bottom: 50%;
+            }
+
+            &:last-child{
+                &:before{
+                    border-color: $secondaryColor;
+                }
+            }
+        }
+    }
+    .sidebar .navigation ul{
+        border: 1px solid transparent;
+    }
+    .language{
+        select{
+            margin: .3em 0;
+        }
+    }
+}
+
 
 // -------------------------------------------------------------
 // hero
@@ -264,17 +336,16 @@ h2.title{
                 }
             }
         }
-    }
 
-
-    video {
-        &.viedo_img{
-            margin: 0 auto;
-            // width: auto;
-            // height: 100%;
-            width: 100vw;
-            height: 100%;
-            // display: block;
+        video {
+            &.viedo_img{
+                margin: 0 auto;
+                // width: auto;
+                // height: 100%;
+                width: 100vw;
+                height: 100%;
+                // display: block;
+            }
         }
     }
 
@@ -288,6 +359,56 @@ h2.title{
         left: -100px;
         // left: -240px;
         z-index: 1;
+    }
+
+    @media screen and (max-width: 1700px) {
+        // 左上色塊：父層.hero
+        &:before{
+            // 三角色塊
+            left: -200px;
+        }
+    }
+    @media screen and (max-width: 1300px) {
+        // 左上色塊：父層.hero
+        &:before{
+            // 三角色塊
+            left: -260px;
+        }
+    }
+    @include screen('tablet'){
+        .container{
+            .slogen{
+                font-size: 2.2em;
+                line-height: 1.4;
+                left: 8%;
+                bottom: 2%;
+            }
+        }
+
+        // 漸層黑瀑：父層.hero > .container ---> .container:before
+        // 登入＋查詢
+        // 左上色塊：父層.hero ---> &:before
+        .container .btn_box{ display: none; }
+    }
+    @include screen('mobile'){
+        .container{
+            height: 520px;
+
+            .slogen{ font-size: 1.6em; }
+            video {
+                &.viedo_img{
+                    width: auto;
+                    // 影片寬度 750px
+                    margin-left: -20%;
+                }
+            }
+        }
+
+        // 左上色塊：父層.hero
+        &:before{
+            // 三角色塊
+            // top: -20px;
+        }
     }
 }
 
@@ -334,6 +455,16 @@ h2.title{
         margin: 0;
         width: 20%;
     }
+
+    @media screen and (max-width: 1480px) {
+        .container{
+            padding-left: 40px;
+        }
+    }
+
+    @include screen('tablet'){
+        display: none;
+    }
 }
 
 // 手機版：links 2欄重複
@@ -373,6 +504,11 @@ h2.title{
                 bottom: 50%;
             }
         }
+    }
+
+    display: none;
+    @include screen('tablet'){
+        display: block;
     }
 }
 
@@ -458,15 +594,37 @@ h2.title{
 
 // 熱門活動 slider：滿版
 .cardSlider{
-    padding: 30px auto;
+    // padding: 30px auto;
     .card{
         margin: 1em .5em 3em;
         padding: 64px 46px;
         background: #fff;
         box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
-
-        .img-container{
+        > .img-container{
             @include aspect-ratio(3,2);
+        }
+        .info{
+            display: flex;
+            flex-flow: row nowrap;
+            align-items: center;
+            img{
+                flex: 0 0 auto;
+                max-width: 100px;
+            }
+            time{
+                flex: 1 1 auto;
+                padding-left: 1em;
+                line-height: 1.2;
+                b{
+                    letter-spacing: 2px;
+                }
+            }
+        }
+    }
+
+    @include screen('notebook') {
+        .card{
+            padding: 50px 32px;
         }
     }
 }

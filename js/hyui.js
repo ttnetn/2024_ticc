@@ -37,10 +37,12 @@ $(function() {
         _sidebar = $('.sidebar'),
         _search = $('.search'),
         _nav = $('.navigation'),
+        _login = $('.hero .btn_box'),
         _sidebarClose = $('.sidebarClose'),
         _sidebarCtrl = $('.sidebarCtrl'),
         _overlay = $('.menu_overlay'),
         _mArea = $('.m_area');
+
     _sidebarCtrl.append('<span></span><span></span><span></span>');
     // -------------------------------------------- 打開選單 function
     function showSidebar() {
@@ -116,6 +118,7 @@ $(function() {
 
     // 先複製過去
     _nav.clone().prependTo(_mArea);
+    _login.clone().prependTo(_mArea);
     _menu.clone().prependTo(_mArea);
     _megamenu.clone().prependTo(_mArea);
     _search.clone().prependTo(_body).removeClass('search').addClass('m_search');
@@ -131,7 +134,7 @@ $(function() {
     // 切換PC/Mobile 選單
     function mobileMenu() {
         ww = _window.outerWidth();
-        if (ww < wwSmall) {
+        if (ww < wwMedium) {
             /*-----------------------------------*/
             /////////////// 手機版設定 /////////////
             /*-----------------------------------*/
@@ -329,16 +332,16 @@ $(function() {
     // fixed navbar
     var resizeNavTimer;
     if ($('header .menu').length > 0) {
-        var stickyMenuTop = Math.floor($('header .menu').offset().top),
+        var stickyMenuTop = Math.floor($('header').offset().top),
             menuH = Math.floor(_menu.outerHeight());
 
         function stickynavBar() {
             windowW = _window.outerWidth();
-            if (windowW >= wwSmall && $(this).scrollTop() > stickyMenuTop) {
-                $('header .menu').addClass('sticky');
+            if (windowW >= wwMedium && $(this).scrollTop() > stickyMenuTop) {
+                $('header').addClass('sticky');
                 $('.main').css('padding-top', menuH);
             } else {
-                $('header .menu').removeClass('sticky');
+                $('header').removeClass('sticky');
                 $('.main').removeAttr('style');
             }
         }
@@ -361,7 +364,7 @@ $(function() {
 
         function stickyMegaNavBar() {
             windowW = _window.outerWidth();
-            if (windowW >= wwSmall && $(this).scrollTop() > stickyMegamenuTop) {
+            if (windowW >= wwMedium && $(this).scrollTop() > stickyMegamenuTop) {
                 $('header .megamenu').addClass('sticky');
                 $('.main').css('padding-top', megamenuH);
             } else {
@@ -386,10 +389,10 @@ $(function() {
     /*-----------------------------------*/
     //////////// notice訊息區塊 ////////////
     /*-----------------------------------*/
-    $('[class*="notice"] a.close').click(function(e) {
-        $(this).parent('[class*="notice"]').hide();
-        e.preventDefault();
-    });
+    // $('[class*="notice"] a.close').click(function(e) {
+    //     $(this).parent('[class*="notice"]').hide();
+    //     e.preventDefault();
+    // });
     /*-----------------------------------*/
     //////////// Accordion設定 ////////////
     /*-----------------------------------*/
@@ -411,22 +414,22 @@ $(function() {
     /*-----------------------------------*/
     /////////////fatfooter開關/////////////
     /*-----------------------------------*/
-    $('.btn-fatfooter').click(function(e) {
-        $(this)
-            .parent('.container')
-            .find('nav>ul>li>ul')
-            .stop(true, true)
-            .slideToggle(function() {
-                if ($(this).is(':visible')) {
-                    $('.btn-fatfooter').html('收合/CLOSE');
-                    $('.btn-fatfooter').attr('name', '收合選單/CLOSE');
-                } else {
-                    $('.btn-fatfooter').html('展開/OPEN');
-                    $('.btn-fatfooter').attr('name', '展開選單/OPEN');
-                }
-            });
-        $(this).stop(true, true).toggleClass('close');
-    });
+    // $('.btn-fatfooter').click(function(e) {
+    //     $(this)
+    //         .parent('.container')
+    //         .find('nav>ul>li>ul')
+    //         .stop(true, true)
+    //         .slideToggle(function() {
+    //             if ($(this).is(':visible')) {
+    //                 $('.btn-fatfooter').html('收合/CLOSE');
+    //                 $('.btn-fatfooter').attr('name', '收合選單/CLOSE');
+    //             } else {
+    //                 $('.btn-fatfooter').html('展開/OPEN');
+    //                 $('.btn-fatfooter').attr('name', '展開選單/OPEN');
+    //             }
+    //         });
+    //     $(this).stop(true, true).toggleClass('close');
+    // });
     /*-----------------------------------*/
     ////////////////多組Tab////////////////
     /*-----------------------------------*/
@@ -453,7 +456,7 @@ $(function() {
                 tabItemLength = _tabItem.length,
                 tabItemWidth;
             _tab.find('.active').next('.tabContent').show();
-            if (ww >= wwSmall) {
+            if (ww >= wwMedium) {
                 _tabContent.css('top', tabItemHeight);
                 _tab.height(tabContentHeight + tabItemHeight);
                 tabItemWidth = (tabwidth - (tabItemLength - 1) * tiGap) / tabItemLength;
@@ -474,7 +477,7 @@ $(function() {
                     scollDistance = tvp + tabItemHeight * tabIndex - tab_headerHeight;
                 _tabItem.removeClass('active');
                 _tabItemNow.addClass('active');
-                if (ww <= wwSmall) {
+                if (ww <= wwMedium) {
                     _tabItem.not('.active').next().slideUp();
                     _tabItemNow.next().slideDown();
                     $('html,body').stop(true, false).animate({ scrollTop: scollDistance });
@@ -595,79 +598,79 @@ $(function() {
     /*------------------------------------*/
     /////////////字型大小 font-size//////////
     /*------------------------------------*/
-    $('.font_size')
-        .find('.small')
-        .click(function(e) {
-            $(this).parent('li').siblings('li').find('a').removeClass('active');
-            $('.innerpage').removeClass('large_size').addClass('small_size');
-            $(this).blur().addClass('active');
-            e.preventDefault();
-            createCookie('FontSize', 'small', 356);
-        });
-    $('.font_size')
-        .find('.medium')
-        .click(function(e) {
-            $(this).parent('li').siblings('li').find('a').removeClass('active');
-            $('.innerpage').removeClass('large_size small_size');
-            $(this).blur().addClass('active');
-            e.preventDefault();
-            createCookie('FontSize', 'medium', 356);
-        });
-    $('.font_size')
-        .find('.large')
-        .click(function(e) {
-            $(this).parent('li').siblings('li').find('a').removeClass('active');
-            $('.innerpage').removeClass('small_size').addClass('large_size');
-            $(this).blur().addClass('active');
-            e.preventDefault();
-            createCookie('FontSize', 'large', 356);
-        });
+    // $('.font_size')
+    //     .find('.small')
+    //     .click(function(e) {
+    //         $(this).parent('li').siblings('li').find('a').removeClass('active');
+    //         $('.innerpage').removeClass('large_size').addClass('small_size');
+    //         $(this).blur().addClass('active');
+    //         e.preventDefault();
+    //         createCookie('FontSize', 'small', 356);
+    //     });
+    // $('.font_size')
+    //     .find('.medium')
+    //     .click(function(e) {
+    //         $(this).parent('li').siblings('li').find('a').removeClass('active');
+    //         $('.innerpage').removeClass('large_size small_size');
+    //         $(this).blur().addClass('active');
+    //         e.preventDefault();
+    //         createCookie('FontSize', 'medium', 356);
+    //     });
+    // $('.font_size')
+    //     .find('.large')
+    //     .click(function(e) {
+    //         $(this).parent('li').siblings('li').find('a').removeClass('active');
+    //         $('.innerpage').removeClass('small_size').addClass('large_size');
+    //         $(this).blur().addClass('active');
+    //         e.preventDefault();
+    //         createCookie('FontSize', 'large', 356);
+    //     });
 
-    function createCookie(name, value, days) {
-        if (days) {
-            var date = new Date();
-            date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000);
-            var expires = '; expires=' + date.toGMTString();
-        } else expires = '';
-        document.cookie = name + '=' + value + expires + '; path=/';
-    }
+    // function createCookie(name, value, days) {
+    //     if (days) {
+    //         var date = new Date();
+    //         date.setTime(date.getTime() + days * 24 * 60 * 60 * 1000);
+    //         var expires = '; expires=' + date.toGMTString();
+    //     } else expires = '';
+    //     document.cookie = name + '=' + value + expires + '; path=/';
+    // }
 
-    function readCookie(name) {
-        var nameEQ = name + '=';
-        var ca = document.cookie.split(';');
-        for (var i = 0; i < ca.length; i++) {
-            var c = ca[i];
-            while (c.charAt(0) == ' ') c = c.substring(1, c.length);
-            if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
-        }
-        return null;
-    }
-    window.onload = function(e) {
-        var cookie = readCookie('FontSize');
-        //alert('cookie='+cookie);
-        if (cookie == 'small') {
-            //$('.font_size').find('.small').click();
-            $('.font_size').find('.small').parent('li').siblings('li').find('a').removeClass('active');
-            $('.innerpage').removeClass('large_size medium_size').addClass('small_size');
-            $('.font_size').find('.small').addClass('active');
-            e.preventDefault();
-        } else {
-            if (cookie == 'large') {
-                //$('.font_size').find('.large').click();
-                $('.font_size').find('.large').parent('li').siblings('li').find('a').removeClass('active');
-                $('.innerpage').removeClass('small_size medium_size').addClass('large_size');
-                $('.font_size').find('.large').addClass('active');
-                e.preventDefault();
-            } else {
-                //這裡是預設宣告
-                //$('.font_size').find('.medium').click();
-                $('.font_size').find('.medium').parent('li').siblings('li').find('a').removeClass('active');
-                $('.innerpage').removeClass('large_size small_size');
-                $('.font_size').find('.medium').addClass('active');
-                e.preventDefault();
-            }
-        }
-    };
+    // function readCookie(name) {
+    //     var nameEQ = name + '=';
+    //     var ca = document.cookie.split(';');
+    //     for (var i = 0; i < ca.length; i++) {
+    //         var c = ca[i];
+    //         while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+    //         if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+    //     }
+    //     return null;
+    // }
+    // window.onload = function(e) {
+    //     var cookie = readCookie('FontSize');
+    //     //alert('cookie='+cookie);
+    //     if (cookie == 'small') {
+    //         //$('.font_size').find('.small').click();
+    //         $('.font_size').find('.small').parent('li').siblings('li').find('a').removeClass('active');
+    //         $('.innerpage').removeClass('large_size medium_size').addClass('small_size');
+    //         $('.font_size').find('.small').addClass('active');
+    //         e.preventDefault();
+    //     } else {
+    //         if (cookie == 'large') {
+    //             //$('.font_size').find('.large').click();
+    //             $('.font_size').find('.large').parent('li').siblings('li').find('a').removeClass('active');
+    //             $('.innerpage').removeClass('small_size medium_size').addClass('large_size');
+    //             $('.font_size').find('.large').addClass('active');
+    //             e.preventDefault();
+    //         } else {
+    //             //這裡是預設宣告
+    //             //$('.font_size').find('.medium').click();
+    //             $('.font_size').find('.medium').parent('li').siblings('li').find('a').removeClass('active');
+    //             $('.innerpage').removeClass('large_size small_size');
+    //             $('.font_size').find('.medium').addClass('active');
+    //             e.preventDefault();
+    //         }
+    //     }
+    // };
     /*-----------------------------------*/
     /////////// category active  //////////
     /*-----------------------------------*/
@@ -681,67 +684,67 @@ $(function() {
     /*-----------------------------------*/
     /////////// 無障礙快捷鍵盤組合  //////////
     /*-----------------------------------*/
-    $(document).on('keydown', function(e) {
-        // alt+S 查詢
-        if (e.altKey && e.keyCode == 83) {
-            $('html, body').animate({ scrollTop: 0 }, 200, 'easeOutExpo');
-            $('.search').find('input[type="text"]').focus();
-        }
-        // alt+U header
-        if (e.altKey && e.keyCode == 85) {
-            $('html, body').animate({ scrollTop: 0 }, 200, 'easeOutExpo');
-            $('header').find('.accesskey').focus();
-        }
-        // alt+C 主要內容區
-        if (e.altKey && e.keyCode == 67) {
-            $('html, body')
-                .stop(true, true)
-                .animate({ scrollTop: $('.main').find('.accesskey').offset().top - 70 }, 800, 'easeOutExpo');
-            $('.main').find('.accesskey').focus();
-        }
-        // alt+Z footer
-        if (e.altKey && e.keyCode == 90) {
-            $('html, body')
-                .stop(true, true)
-                .animate({ scrollTop: $('footer').find('.accesskey').offset().top }, 800, 'easeOutExpo');
-            $('footer').find('.accesskey').focus();
-        }
-    });
-    //無障礙切換slick箭頭語系
-    if ($('html')[0].hasAttribute('lang')) {
-        var weblang = $('html').attr('lang');
-        if (weblang.substring(0, 2) == 'zh') {
-            $('.slick-prev').attr('title', '上一筆');
-            $('.slick-next').attr('title', '下一筆');
-        } else if (weblang.substring(0, 2) !== 'zh') {
-            $('.slick-prev').attr('title', 'previous');
-            $('.slick-next').attr('title', 'next');
-        }
-    }
-    // 無障礙錨點切換語系，更改accesskey的title名稱
-    var weblang = $('html').attr('lang');
-    if (weblang.substring(0, 2) == 'zh') {
-        $('header').find('.accesskey').attr('title', '上方功能區塊');
-        $('.main').find('.accesskey').attr('title', '中央內容區塊');
-        $('footer').find('.accesskey').attr('title', '下方功能區塊');
-        $('.search').find('.accesskey').attr('title', '關鍵字搜尋：文章關鍵字搜尋');
-    } else if (weblang.substring(0, 2) !== 'zh') {
-        $('header').find('.accesskey').attr('title', 'header');
-        $('.main').find('.accesskey').attr('title', 'content');
-        $('footer').find('.accesskey').attr('title', 'footer');
-        $('.search').find('.accesskey').attr('title', 'search');
-    }
+    // $(document).on('keydown', function(e) {
+    //     // alt+S 查詢
+    //     if (e.altKey && e.keyCode == 83) {
+    //         $('html, body').animate({ scrollTop: 0 }, 200, 'easeOutExpo');
+    //         $('.search').find('input[type="text"]').focus();
+    //     }
+    //     // alt+U header
+    //     if (e.altKey && e.keyCode == 85) {
+    //         $('html, body').animate({ scrollTop: 0 }, 200, 'easeOutExpo');
+    //         $('header').find('.accesskey').focus();
+    //     }
+    //     // alt+C 主要內容區
+    //     if (e.altKey && e.keyCode == 67) {
+    //         $('html, body')
+    //             .stop(true, true)
+    //             .animate({ scrollTop: $('.main').find('.accesskey').offset().top - 70 }, 800, 'easeOutExpo');
+    //         $('.main').find('.accesskey').focus();
+    //     }
+    //     // alt+Z footer
+    //     if (e.altKey && e.keyCode == 90) {
+    //         $('html, body')
+    //             .stop(true, true)
+    //             .animate({ scrollTop: $('footer').find('.accesskey').offset().top }, 800, 'easeOutExpo');
+    //         $('footer').find('.accesskey').focus();
+    //     }
+    // });
+    // //無障礙切換slick箭頭語系
+    // if ($('html')[0].hasAttribute('lang')) {
+    //     var weblang = $('html').attr('lang');
+    //     if (weblang.substring(0, 2) == 'zh') {
+    //         $('.slick-prev').attr('title', '上一筆');
+    //         $('.slick-next').attr('title', '下一筆');
+    //     } else if (weblang.substring(0, 2) !== 'zh') {
+    //         $('.slick-prev').attr('title', 'previous');
+    //         $('.slick-next').attr('title', 'next');
+    //     }
+    // }
+    // // 無障礙錨點切換語系，更改accesskey的title名稱
+    // var weblang = $('html').attr('lang');
+    // if (weblang.substring(0, 2) == 'zh') {
+    //     $('header').find('.accesskey').attr('title', '上方功能區塊');
+    //     $('.main').find('.accesskey').attr('title', '中央內容區塊');
+    //     $('footer').find('.accesskey').attr('title', '下方功能區塊');
+    //     $('.search').find('.accesskey').attr('title', '關鍵字搜尋：文章關鍵字搜尋');
+    // } else if (weblang.substring(0, 2) !== 'zh') {
+    //     $('header').find('.accesskey').attr('title', 'header');
+    //     $('.main').find('.accesskey').attr('title', 'content');
+    //     $('footer').find('.accesskey').attr('title', 'footer');
+    //     $('.search').find('.accesskey').attr('title', 'search');
+    // }
     /*------------------------------------*/
     /////gotoCenter on focus跳到 content/////
     /*------------------------------------*/
-    $('a.goCenter').keydown(function(e) {
-        if (e.which == 13) {
-            $('#aC').focus();
-            $('html, body')
-                .stop(true, true)
-                .animate({ scrollTop: $('.main').find('.accesskey').offset().top }, 800, 'easeOutExpo');
-        }
-    });
+    // $('a.goCenter').keydown(function(e) {
+    //     if (e.which == 13) {
+    //         $('#aC').focus();
+    //         $('html, body')
+    //             .stop(true, true)
+    //             .animate({ scrollTop: $('.main').find('.accesskey').offset().top }, 800, 'easeOutExpo');
+    //     }
+    // });
     /*-----------------------------------*/
     //////// 語言模組 無障礙遊走設定  ////////
     /*-----------------------------------*/

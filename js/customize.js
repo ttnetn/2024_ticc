@@ -21,7 +21,7 @@ $(function() {
         slidesToShow: 3,
         slidesToScroll: 1,
         responsive: [{
-            breakpoint: 768,
+            breakpoint: 1200,
             settings: {
                 arrows: false,
                 centerMode: true,
@@ -29,11 +29,11 @@ $(function() {
                 slidesToShow: 3
             }
         },{
-            breakpoint: 1200,
+            breakpoint: 992,
             settings: {
                 arrows: false,
                 centerMode: true,
-                centerPadding: '90px',
+                centerPadding: '40px',
                 slidesToShow: 1
             }
         }]

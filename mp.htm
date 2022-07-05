@@ -15,6 +15,8 @@
     <link rel="stylesheet" type="text/css" href="vendor/slick/slick-theme.css" />
     <!-- 燈箱facybox -->
     <link rel="stylesheet" type="text/css" href="vendor/fancybox/jquery.fancybox.min.css">
+    <!-- animate -->
+    <link rel="stylesheet" href="vendor/wow/animate.css">
     <!-- hyUI css -->
     <link rel="stylesheet" href="css/hyui.css">
     <!-- favicon -->
@@ -45,11 +47,18 @@
                         </ul>
                     </div>
                     <!-- language -->
-                    <div class="language">
+                    <!-- <div class="language">
                         <select id="selectSample" name="">
                             <option value="">EN</option>
                             <option value="">繁中</option>
                         </select>
+                    </div> -->
+                    <div class="language">
+                        <a href="#">語言選擇</a>
+                        <ul>
+                            <li><a href="#">繁體中文</a></li>
+                            <li><a href="#">ENGLISH</a></li>
+                        </ul>
                     </div>
                 </nav>
                 <!-- navigation End -->
@@ -124,7 +133,7 @@
         <!-- main Start -->
         <div id="center" class="main">
             <!-- side bar -->
-            <section class="sideBar">
+            <section class="sideBar wow fadeInRight" data-wow-delay=".3s">
                 <a href="javascript:;">檔期<br>查詢</a>
                 <a href="javascript:;">線上<br>洽詢</a>
                 <a href="javascript:;">VR<br>實境</a>
@@ -135,7 +144,7 @@
             <section class="full hero">
                 <div class="container">
                     <!-- slogen -->
-                    <h3 class="slogen">Taipei<br>
+                    <h3 class="slogen wow bounceInLeft">Taipei<br>
                         International<br>
                         Convention Center
                     </h3>
@@ -145,7 +154,7 @@
                         <a href="#" class="btn">大會堂座位圖查詢<span>Search</span></a>
                     </div>
                     <!-- muted=""  -->
-                    <video class="viedo_img" autoplay="" muted=""  loop="">
+                    <video class="viedo_img" autoplay="" loop="">
                         <source src="images/ticc/earth.mp4" type="video/mp4">
                     </video>
                 </div>
@@ -153,7 +162,7 @@
             <!-- 計畫你的活動 -->
             <section class="planSearch">
                 <div class="container">
-                    <h2 class="title">計畫你的活動<br><span>Plan your event</span></h2>
+                    <h2 class="title wow bounceInLeft">計畫你的活動<br><span>Plan your event</span></h2>
                     <p class="note">TICC提供專業會議服務，地處全臺最國際化的信義商圈，擁有多元化空間及一流的硬體設備，每年辦理超過800場以上的會議活動，包含大型國際會議、演唱會、各式研討會、產品發表會等，為臺灣會議暨大型活動首屈一指的專業場地。</p>
                     <section class="box">
                         <form action="">
@@ -214,7 +223,7 @@
             <!-- VR -->
             <section class="VR full">
                 <div class="container">
-                    <h2 class="title">領<em>/</em>先<em>/</em>業<em>/</em>界<br><b>全景虛擬實境服務</b><span>VR實境<b>身歷其境新體驗</b></span></h2>
+                    <h2 class="title wow bounceInLeft">領<em>/</em>先<em>/</em>業<em>/</em>界<br><b>全景虛擬實境服務</b><span>VR實境<b>身歷其境新體驗</b></span></h2>
                     <a href="#" class="more">立即<br>體驗</a>
                     <!-- VR 嵌入 -->
                     <!-- <div class="VR-rwd">
@@ -225,7 +234,7 @@
             <!-- 熱門活動 slider：滿版 full -->
             <section class="full">
                 <div class="container">
-                    <h2 class="title">熱門活動<br><span>hot</span></h2>
+                    <h2 class="title wow bounceInLeft">熱門活動<br><span>hot</span></h2>
                     <!-- slider -->
                     <div class="cardSlider">
                         <div class="card">
@@ -234,7 +243,10 @@
                             </div>
                             <h3 class="title">2020 TIFFANY YOUNG OPEN HEARTS EVE</h3>
                             <p>曾為少女時代團體一員的TIFFANY YOUNG 2017年回美國發展、2018年陸續推出單曲都獲得熱烈迴響。</p>
-                            <time>TICC<br>2021 / 10 / 23</time>
+                            <div class="info">
+                                <img src="images/ticc/logo-default2.png" alt="">
+                                <time><b>TICC</b><br>2021 / 10 / 23</time>
+                            </div>
                         </div>
                         <div class="card">
                             <div class="img-container">
@@ -242,7 +254,10 @@
                             </div>
                             <h3 class="title">2020 TIFFANY YOUNG OPEN HEARTS EVE</h3>
                             <p>曾為少女時代團體一員的TIFFANY YOUNG 2017年回美國發展、2018年陸續推出單曲都獲得熱烈迴響。</p>
-                            <time>TICC<br>2021 / 10 / 23</time>
+                            <div class="info">
+                                <img src="images/ticc/logo-default2.png" alt="">
+                                <time><b>TICC</b><br>2021 / 10 / 23</time>
+                            </div>
                         </div>
                         <div class="card">
                             <div class="img-container">
@@ -250,7 +265,10 @@
                             </div>
                             <h3 class="title">2020 TIFFANY YOUNG OPEN HEARTS EVE</h3>
                             <p>曾為少女時代團體一員的TIFFANY YOUNG 2017年回美國發展、2018年陸續推出單曲都獲得熱烈迴響。</p>
-                            <time>TICC<br>2021 / 10 / 23</time>
+                            <div class="info">
+                                <img src="images/ticc/logo-default2.png" alt="">
+                                <time><b>TICC</b><br>2021 / 10 / 23</time>
+                            </div>
                         </div>
                         <div class="card">
                             <div class="img-container">
@@ -258,7 +276,10 @@
                             </div>
                             <h3 class="title">2020 TIFFANY YOUNG OPEN HEARTS EVE</h3>
                             <p>曾為少女時代團體一員的TIFFANY YOUNG 2017年回美國發展、2018年陸續推出單曲都獲得熱烈迴響。</p>
-                            <time>TICC<br>2021 / 10 / 23</time>
+                            <div class="info">
+                                <img src="images/ticc/logo-default2.png" alt="">
+                                <time><b>TICC</b><br>2021 / 10 / 23</time>
+                            </div>
                         </div>
                         <div class="card">
                             <div class="img-container">
@@ -266,13 +287,16 @@
                             </div>
                             <h3 class="title">2020 TIFFANY YOUNG OPEN HEARTS EVE</h3>
                             <p>曾為少女時代團體一員的TIFFANY YOUNG 2017年回美國發展、2018年陸續推出單曲都獲得熱烈迴響。</p>
-                            <time>TICC<br>2021 / 10 / 23</time>
+                            <div class="info">
+                                <img src="images/ticc/logo-default2.png" alt="">
+                                <time><b>TICC</b><br>2021 / 10 / 23</time>
+                            </div>
                         </div>
                     </div>
                 </div>
             </section>
             <!-- 聯絡我們 -->
-            <section class="contentUs">
+            <section class="contentUs wow fadeIn">
                 <div class="container">
                     <div class="col map-rwd">
                         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3615.0185468176514!2d121.55841961529123!3d25.033444644467018!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442abb61ab3d33f%3A0xab0d0f7ac395bff4!2z5Y-w5YyX5ZyL6Zqb5pyD6K2w5Lit5b-DKFRJQ0Mp!5e0!3m2!1szh-TW!2stw!4v1656665290748!5m2!1szh-TW!2stw" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
@@ -401,6 +425,11 @@
     <script src='vendor/sticky-sidebar/ResizeSensor.js'></script>
     <!-- fancy -->
     <script src='vendor/fancybox/jquery.fancybox.min.js'></script>
+    <!-- WOW -->
+    <script src='vendor/wow/wow.js'></script>
+    <script>
+        new WOW().init();
+    </script>
     <!-- hyUI -->
     <script src="js/hyui.js"></script>
     <!-- 客製js -->

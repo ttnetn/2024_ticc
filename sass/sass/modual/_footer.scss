@@ -52,15 +52,32 @@ footer{
             }
         }
 
-        @include screen('mobile') {
-            // 黑底
-            &:first-child{}
-            // 標章＋隱私權
-            &:last-child{
-                // 版權連結
-                .footer_link {
-                    flex-direction: column;
-                    li { flex:1 1 100%; }
+        @include screen('tablet') {
+            section{
+                padding: 42px 30px;
+                flex-flow: row wrap;
+                // 黑底
+                &:first-child{
+                    justify-content: flex-end;
+                    .col{
+                        flex: 0 0 70%;
+                        &:first-child{
+                            flex: 0 0 30%
+                        }
+                    }
+                }
+                // 標章＋隱私權
+                &:last-child{
+                    .col{
+                        flex: 1 1 100%;
+                        text-align: center;
+                    }
+
+                    // 版權連結
+                    .footer_link {
+                        flex-direction: row;
+                        justify-content: center;
+                    }
                 }
             }
         }

@@ -1,17 +1,12 @@
 //header
 .header {
-    // position: relative;
     position: fixed;
     width: 100%;
-    // top: 0;
-    // left: 0;
-    z-index: 99;
+    z-index: 999;
     transition: 0.3s ease-out;
+
     @extend %clearfix;
-    @include screen('mobile') {
-        position: fixed;
-        width: 100%;
-    }
+
     &:before {
         position: absolute;
         content: '';
@@ -27,68 +22,78 @@
             height: 60px;
         }
     }
+
     // mobile btn for extend
     %mobileCtrlBtn {
         width: 60px !important;
         height: 60px !important;
         position: absolute;
-        top: 0px;
+        top: 90px;
         display: block;
         font-size: 0em;
         padding: 15px;
         margin: 0;
         min-width: auto;
         min-height: auto;
-        background: transparent;
+        background: linear-gradient(0deg, rgba(106,27,138,1) 0%, rgba(36,8,107,1) 100%);
+        border-radius: 50%;
         border: none;
         box-shadow: none;
         box-sizing: border-box;
-        @include screen('mobile') {
+
+        @include screen('tablet') {
             display: block !important;
         }
     }
     >.container {
         max-width: $container-max;
         overflow: visible;
-        position: relative; // menu
+        position: relative;
+
+        // menu
         .sidebarCtrl {
             display: none;
-            left: 0px;
+            right: 30px;
             @extend %mobileCtrlBtn;
             span {
                 position: absolute;
-                background: $primaryColor;
-                width: 50%;
-                height: 3px;
-                top: 20px;
+                background: #fff;
+                width: 20px;
+                height: 2px;
                 left: 50%;
-                margin-left: -25%;
+                margin-left: -10px;
                 display: block;
                 border-radius: 2px;
+                top: 50%;
+                margin-top: -7px;
+
                 &:nth-child(2) {
-                    top: 28px;
+                    // top: 50%;
+                    margin-top: -1px;
                 }
                 &:nth-child(3) {
-                    top: 36px;
+                    // top: 36px;
+                    margin-top: 5px;
                 }
             }
         }
         // search
         .searchCtrl {
             display: none;
-            right: 0px;
+            right: 100px;
             font-size: 0em;
             @extend %mobileCtrlBtn;
             &:before {
-                width: 40px;
-                height: 40px;
-                background: url(../images/basic/icon_search.png) no-repeat center center;
-                background-size: 28px;
-                opacity: 0.6;
+                width: 24px;
+                height: 24px;
+                background: url(../images/icon/icon_search2.svg) 50% 50% no-repeat;
+                background-size: 20px 20px;
                 content: '';
                 position: absolute;
-                top: 10px;
-                left: 10px;
+                top: 50%;
+                left: 50%;
+                margin-top: -12px;
+                margin-left: -12px;
                 display: block;
             }
         }
@@ -100,6 +105,7 @@
         margin: 0;
         padding: 0;
         box-sizing: border-box;
+
         a {
             display: inline-block;
         }
@@ -108,19 +114,19 @@
             max-width: 300px;
             max-height: 75px;
         }
-        @include screen('mobile') {
-            padding: 2px 60px;
-            width: 100%;
-            text-align: center;
-            height: 60px;
-            img {
-                width: auto;
-                height: auto;
-                max-height: 54px;
-                margin: 0px auto;
-                transform: scale(0.8);
-            }
-        }
+        // @include screen('tablet') {
+        //     padding: 2px 60px;
+        //     width: 100%;
+        //     text-align: center;
+        //     height: 60px;
+        //     img {
+        //         width: auto;
+        //         height: auto;
+        //         max-height: 54px;
+        //         margin: 0px auto;
+        //         transform: scale(0.8);
+        //     }
+        // }
     }
     // 導覽列
     .navigation {
@@ -135,7 +141,7 @@
         float: right;
         margin-top: 18px;
 
-        @include screen('mobile') {
+        @include screen('tablet') {
             display: none;
         }
     
@@ -175,9 +181,7 @@
                 }
 
                 &:last-child{
-                    &:after{
-                        right: 0;
-                    }
+                    &:after{ right: 0; }
                 }
             }
         }
@@ -194,6 +198,72 @@
                 padding: .5em 24px .5em 1.25em;
                 color: #fff;
             }
+
+            flex: 0 1 auto;
+            display: flex;
+            flex-flow: row wrap;
+            align-items: center;
+            align-self: center;
+        }
+    }
+
+    &.sticky {
+        // background-color: #fff;
+        // box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+
+        background: url(../images/ticc/bg-default.jpg) left top repeat-y;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 50px;
+
+        .menu{
+            >ul{
+                >li{
+                    >a{ color: #222; }
+                    &:hover {
+                        >a {
+                            color: #fff;
+                        }
+                    }
+                }
+            }
+        }
+
+        // 導覽列
+        .navigation {
+            .navlist {
+                li a { color: #222;}
+            }
+            // 語言
+            .language{
+                select{ color: #222; }
+            }
+        }
+
+        .search{
+            button.switch{
+                background: url(../images/icon/icon_search.svg) 50% 50% no-repeat, transparent;
+                background-size: 16px 16px;
+            }
+        }
+    }
+
+    @media screen and (max-width: 1480px) {
+        h1{ margin-left: 40px; }
+    }
+
+    @include screen('tablet') {
+        h1 {
+            // padding: 2px 60px;
+            // width: 100%;
+            margin-left: 0;
+            text-align: center;
+            // height: 60px;
+            img {
+                width: auto;
+                height: auto;
+                max-height: 75px;
+                margin: 0px auto;
+                transform: scale(0.8);
+            }
         }
     }
 }
@@ -202,7 +272,7 @@
 .search {
     font-size: .938em;
 
-    @include screen('mobile') {
+    @include screen('tablet') {
         display: none;
     }
 
