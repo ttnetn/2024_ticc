@@ -352,29 +352,29 @@ h2.title{
     // 左上色塊：父層.hero
     position: relative;
     overflow: hidden;
-    &:before{
-        // 三角色塊
-        border-width: 240px 900px 0 0;
-        border-image-source: url(../images/ticc/bg-default.jpg);
-        left: -100px;
-        // left: -240px;
-        z-index: 1;
-    }
+    // &:before{
+    //     // 三角色塊
+    //     border-width: 240px 900px 0 0;
+    //     border-image-source: url(../images/ticc/bg-default.jpg);
+    //     left: -100px;
+    //     // left: -240px;
+    //     z-index: 1;
+    // }
 
-    @media screen and (max-width: 1700px) {
-        // 左上色塊：父層.hero
-        &:before{
-            // 三角色塊
-            left: -200px;
-        }
-    }
-    @media screen and (max-width: 1300px) {
-        // 左上色塊：父層.hero
-        &:before{
-            // 三角色塊
-            left: -260px;
-        }
-    }
+    // @media screen and (max-width: 1700px) {
+    //     // 左上色塊：父層.hero
+    //     &:before{
+    //         // 三角色塊
+    //         left: -200px;
+    //     }
+    // }
+    // @media screen and (max-width: 1300px) {
+    //     // 左上色塊：父層.hero
+    //     &:before{
+    //         // 三角色塊
+    //         left: -260px;
+    //     }
+    // }
     @include screen('tablet'){
         .container{
             .slogen{
@@ -386,9 +386,10 @@ h2.title{
         }
 
         // 漸層黑瀑：父層.hero > .container ---> .container:before
-        // 登入＋查詢
+        // 登入＋查詢 ---> .container .btn_box
         // 左上色塊：父層.hero ---> &:before
-        .container .btn_box{ display: none; }
+        .container .btn_box,
+        &:before{ display: none; }
     }
     @include screen('mobile'){
         .container{
@@ -595,6 +596,7 @@ h2.title{
 // 熱門活動 slider：滿版
 .cardSlider{
     // padding: 30px auto;
+    padding-bottom: 50px;
     .card{
         margin: 1em .5em 3em;
         padding: 64px 46px;
@@ -620,6 +622,85 @@ h2.title{
                 }
             }
         }
+    }
+
+    .slick-dots{
+        // bottom: 0;
+        // max-width: 1440px;
+        width: calc( 100% - ((100% - 1440px)/2) - (80px + 72px + 30px));
+        justify-content: right;
+
+        li{
+            // background: pink;
+
+            position: relative;
+            display: block;
+            width: 30px;
+            height: 30px;
+            &:before{
+                content: '-0';
+                position: absolute;
+                top: 1.5px;
+                left: 0;
+                width: 20px;
+                height: 30px;
+                // background: aquamarine;
+                font-style: italic;
+            }
+
+            button{
+                font-size: 1em;
+                background: transparent;
+                width: 30px;
+                height: 30px;
+                font-style: italic;
+                margin: 0;
+                padding-left: 20px;
+                border-radius: 0;
+                border-bottom: 4px solid transparent;
+                opacity: 1;
+
+                 &:hover, &:focus{
+                    background: transparent;
+                }
+
+                &:before{
+                    display: none;
+                }
+            }
+
+            &.slick-active{
+                button{
+                    // background: pink;
+                    border-bottom: 4px solid #674f11;
+
+                    &:hover, &:focus{
+                        background: transparent;
+                    }
+                }
+            }
+        }
+    }
+
+    .slick-prev, .slick-next{
+        top: initial;
+        bottom: 0;
+        width: 72px !important;
+        height: 72px !important;
+        border-radius: 50%;
+    }
+
+    // icon_arrow_next.png
+    .slick-prev{
+        left: auto;
+        right: calc((100% - 1440px)/2 + 80px);
+        background: url(../images/ticc/icon/icon_arrow_prev.png) 50% 50% no-repeat,linear-gradient(90deg, #6a1b8a 0%, #24086b 100%);
+        background-size: 30px 20px, cover;
+    }
+    .slick-next{
+        right: calc((100% - 1440px)/2);
+        background: url(../images/ticc/icon/icon_arrow_next.png) 50% 50% no-repeat,linear-gradient(90deg, #6a1b8a 0%, #24086b 100%);
+        background-size: 30px 20px, cover;
     }
 
     @include screen('notebook') {

@@ -303,7 +303,7 @@ $(function() {
 
     function searchToggle() {
         if (!search_mode) {
-            $('.m_search').stop(true, false).slideDown('400', 'easeOutQuint');
+            $('.m_search').stop(true, false).fadeIn('400', 'easeOutQuint');
             // $('.m_search').find('input[type="text"]').focus();
             search_mode = true;
             // prevent Android sofr Keyboard
@@ -312,7 +312,7 @@ $(function() {
                 _window.off('resize');
             }
         } else {
-            $('.m_search').hide();
+            $('.m_search').fadeOut();
             search_mode = false;
         }
     }

@@ -15,7 +15,7 @@ $(function() {
     $('.cardSlider').slick({
         centerMode: true,
         centerPadding: '180px',
-        arrows: false,
+        arrows: true,
         dots: true,
         infinite: true,
         slidesToShow: 3,
@@ -37,6 +37,40 @@ $(function() {
                 slidesToShow: 1
             }
         }]
+    });
+
+    // Search
+
+    // 1）
+    // $('.search button.switch').click(function(){
+    //     $(this).next('.form_grp').fadeToggle('600');
+    // });
+    // $(document).on('touchend click', function(e) {
+    //     var target = e.target;
+    //     if (!$(target).is('.search button.switch')) {
+    //         $('.search').find('.form_grp').hide();
+    //     }
+    // });
+
+    // 2）
+    $('.search button.switch').find('.form_grp').hide();
+
+    var openSearch = $('.search').children('.switch');
+    openSearch.off().click(function(e) {
+        $(this).next('.form_grp').stop(true, true).fadeToggle();
+        e.preventDefault();
+    });
+    openSearch.keyup(function() {
+        $(this).next('.form_grp').stop(true, true).fadeIn();
+    });
+    $('.search').find('.form_grp').focusout(function() {
+        $('.search').find('.form_grp').fadeOut();
+    });
+    $(document).on('touchend click', function(e) {
+        var target = e.target;
+        if (!$(target).is('.search button.switch')) {
+            $('.search').find('.form_grp').fadeOut();
+        }
     });
 
 

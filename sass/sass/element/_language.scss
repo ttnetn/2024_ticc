@@ -2,12 +2,13 @@
     font-weight: bold;
     font-size: 0.75em;
     flex: 0 0 140px;
-    width: 140px;
+    width: 70px;
     z-index: 9999;
     position: relative;
     >a {
         display: block;
-        background: #555;
+        // background: #555;
+        // background: pink;
         box-sizing: border-box;
         color: #fff;
         padding: 0.2em 1em;
@@ -27,15 +28,17 @@
             border-width: 6px 3px 0 3px;
             border-color: #ffffff transparent transparent transparent;
         }
-        &:before {
-            position: absolute;
-            width: 1px;
-            height: 1.6em;
-            right: 2em;
-            top: 0.4em;
-            content: '';
-            border-left: 1px solid #ddd;
-        }
+        // &:before {
+        //     position: absolute;
+        //     width: 1px;
+        //     height: 1.6em;
+        //     right: 2em;
+        //     top: 0.4em;
+        //     content: '';
+        //     border-left: 1px solid #ddd;
+        // }
+
+        // 下拉箭頭
         &:focus {
             box-shadow: none;
             background: #444;

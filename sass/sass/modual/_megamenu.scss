@@ -197,8 +197,8 @@
             line-height: 3em;
             box-sizing: border-box;
         }
-        // width:280px;
-        width: 100%;
+        // width: 280px;
+        width: 80%;
         padding: 5em 0;
         position:absolute;
         top: 0;
@@ -391,25 +391,29 @@
         height: 5em !important;
         padding: 0;
         min-width: auto;
-        top: 0px;
-        right: 30px;
+        top: 0;
         margin: 0;
         text-indent: -9999px;
         border: none;
-        background: none;
-        border: none;
-        &:before {
-            position: absolute;
-            width: 15px;
-            height: 15px;
-            border: 3px solid #eee;
-            content: "";
-            top: 15px;
-            right: 10px;
-            transform: rotate(45deg);
-            border-right: none;
-            border-top: none;
-        }
+        background: rgba(0,0,0,.45);
+
+        // 關閉 switch
+        // &:before {
+        //     content: "";
+        //     position: absolute;
+        //     width: 15px;
+        //     height: 2px;
+        // }
+
+        // &:before {
+        //     transform: rotate(45deg);
+        //     background: pink;
+        // }
+        // &:after{
+        //     transform: rotate(-45deg);
+        //     background: red;
+        // }
+
     }
 }
 //animation

@@ -35,9 +35,7 @@
     //         margin: 0 auto;
     //     }
     // }
-    @include screen('tablet') {
-        display: none;
-    }
+
     // 預設選單 ul
     >ul {
         margin: 0;
@@ -158,5 +156,16 @@
                 }
             }
         }
+    }
+
+    @media screen and (max-width: 1480px) {
+        // 預設選單 ul
+        >ul {
+            justify-content: flex-end;
+        }
+    }
+
+    @include screen('tablet') {
+        display: none;
     }
 }
