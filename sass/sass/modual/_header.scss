@@ -275,7 +275,10 @@
 
     @include screen('tablet') {
         // 背景
-        &:before {}
+        &:before {
+            right: auto;
+            left: -200px;
+        }
 
         h1 {
             // padding: 2px 60px;
