@@ -158,12 +158,12 @@
         }
     }
 
-    @media screen and (max-width: 1480px) {
-        // 預設選單 ul
-        >ul {
-            justify-content: flex-end;
-        }
-    }
+    // @media screen and (max-width: 1480px) {
+    //     // 預設選單 ul
+    //     >ul {
+    //         justify-content: flex-end;
+    //     }
+    // }
 
     @include screen('tablet') {
         display: none;

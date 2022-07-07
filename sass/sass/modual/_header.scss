@@ -27,7 +27,7 @@
 
         border-width: 300px 820px 0 0;
         border-image-source: url(../images/ticc/bg-default.jpg);
-        right: 57%;
+        right: 58%;
     }
 
     &:after{
@@ -118,6 +118,7 @@
     h1 {
         float: left;
         // width: 300px;
+        // height: 75px;
         height: 75px;
         margin: 0;
         padding: 0;
@@ -265,7 +266,10 @@
 
     @media screen and (max-width: 1480px) {
         // 背景
-        &:before { left: -140px; }
+        &:before {
+            // left: -150px;
+            right: 52%;
+        }
         h1{ margin-left: 40px; }
     }
 
@@ -290,6 +294,9 @@
     }
 }
 
+// test
+.TT{ color: red;}
+
 //search
 .search {
     font-size: .938em;
@@ -313,6 +320,8 @@
         position: absolute;
         top: 0;
         right: 62px;
+        border-radius: 40px;
+        overflow: hidden;
 
         // 先隱藏
         display: none;
