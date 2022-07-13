@@ -211,8 +211,15 @@ select::-ms-expand {
 
 // 表單必填
 .necessary {
-    color: red;
-    margin: 0px .2em;
+    background: #b70000;
+    color: #fff;
+    font-weight: bold;
+    font-size: 70%;
+    line-height: initial;
+    display: inline-block;
+    padding: 1px 6px;
+    margin: 0 0 0 6px;
+    border-radius: 4px;
 }
 
 .form_grid {}

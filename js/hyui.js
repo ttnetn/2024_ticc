@@ -506,18 +506,25 @@ $(function() {
     /*-----------------------------------*/
     /////click event to scroll to top//////
     /*-----------------------------------*/
-    $('.scrollToTop')
-        .off()
-        .click(function(e) {
-            $('html, body').stop().animate({ scrollTop: 0 }, 400, 'linear');
-            // $('a.goCenter').focus(); //加入這行
-            e.preventDefault();
-        });
+    $('.scrollToTop').off().click(function(e) {
+        $('html, body').stop().animate({ scrollTop: 0 }, 400, 'linear');
+        // $('a.goCenter').focus(); //加入這行
+        e.preventDefault();
+    });
     $('.scrollToTop').keydown(function(e) {
         $('html, body').stop().animate({ scrollTop: 0 }, 400, 'linear');
         _body.find('a.goCenter').focus();
         e.preventDefault();
     });
+
+
+    // 右 sidebar 的 gotop  .sb-scrollToTop
+    $('.sb-scrollToTop').off().click(function(e) {
+        $('html, body').stop().animate({ scrollTop: 0 }, 600, 'linear');
+        e.preventDefault();
+    });
+
+
     /*--------------------------------------------------------*/
     /////設定img 在IE9+ SAFARI FIREFOX CHROME 可以object-fit/////
     /*--------------------------------------------------------*/

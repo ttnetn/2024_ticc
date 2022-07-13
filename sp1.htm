@@ -1,0 +1,503 @@
+<!doctype html>
+<html lang="zh-Hant" class="no-js">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>預約消息</title>
+    <!--HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries [if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <!-- slick css-->
+    <link rel="stylesheet" type="text/css" href="vendor/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="vendor/slick/slick-theme.css" />
+    <!-- 燈箱facybox -->
+    <link rel="stylesheet" type="text/css" href="vendor/fancybox/jquery.fancybox.min.css">
+    <!-- animate -->
+    <link rel="stylesheet" href="vendor/wow/animate.css">
+    <!-- hyUI css -->
+    <link rel="stylesheet" href="css/hyui.css">
+    <!-- favicon -->
+    <link href="images/favicon.png" rel="icon" type="image/x-icon">
+</head>
+<body>
+    <!--跳窗-->
+    <div id="modal1" class="modal">
+        <h2>標題</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero, perferendis cumque nobis recusandae aperiam? Quis sunt, sit error consequuntur, amet, odit corrupti exercitationem eveniet debitis facere dolor mollitia natus suscipit.</p>
+        <div class="btn_grp">
+            <button class="btn btn-secondary">好的</button>
+        </div>
+    </div>
+    <!-- wrapper Start -->
+    <div class="wrapper">
+        <!-- header Start -->
+        <header class="header">
+            <div class="container">
+                <!-- navigation Start -->
+                <nav class="navigation" role="navigation" aria-label="Site">
+                    <!-- Search Start -->
+                    <div class="search" role="search">
+                        <button class="switch">開關</button>
+                        <div class="form_grp">
+                            <input name="username" id="mustSameAsId" type="text" placeholder="請輸入文字" title="請輸入文字" aria-label="搜尋網站內容">
+                            <input name="" type="submit" value="查詢" class="btn btn-search" />
+                        </div>
+                    </div>
+                    <!-- 新增div navlist -->
+                    <div class="navlist">
+                        <ul>
+                            <li><a href="#">回首頁</a></li>
+                            <li><a href="#">網站導覽</a></li>
+                        </ul>
+                    </div>
+                    <!-- language -->
+                    <div class="language">
+                        <a href="#" class="switch">EN</a>
+                        <ul>
+                            <li><a href="#">繁中</a></li>
+                            <li><a href="#">EN</a></li>
+                        </ul>
+                    </div>
+                </nav>
+                <!-- navigation End -->
+                <h1>
+                    <a href="index.htm"><img src="images/ticc/logo-default.png" alt="網站標題" /></a>
+                </h1>
+                <!-- menu Start -->
+                <nav class="menu" role="navigation" aria-label="About page">
+                    <ul>
+                        <li><a href="#">關於我們</a>
+                            <ul>
+                                <li><a href="#">第二層選單</a></li>
+                                <li><a href="#">第二層選單</a></li>
+                                <li><a href="#">第二層選單</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">最新消息</a>
+                            <ul>
+                                <li><a href="#">第二層選單</a></li>
+                                <li><a href="#">第二層選單</a></li>
+                                <li><a href="#">第二層選單</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">場地導覽</a>
+                            <ul>
+                                <li><a href="#">第二層選單</a></li>
+                                <li><a href="#">第二層選單</a></li>
+                                <li><a href="#">第二層選單</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">檔期查詢</a>
+                            <ul>
+                                <li><a href="#">第二層選單</a></li>
+                                <li><a href="#">第二層選單</a></li>
+                                <li><a href="#">第二層選單</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">預約洽訂</a>
+                            <ul>
+                                <li><a href="#">第二層選單</a></li>
+                                <li><a href="#">第二層選單</a></li>
+                                <li><a href="#">第二層選單</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">參宴服務</a>
+                            <ul>
+                                <li><a href="#">第二層選單</a></li>
+                                <li><a href="#">第二層選單</a></li>
+                                <li><a href="#">第二層選單</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">出租服務</a>
+                            <ul>
+                                <li><a href="#">第二層選單</a></li>
+                                <li><a href="#">第二層選單</a></li>
+                                <li><a href="#">第二層選單</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">資源下載</a>
+                            <ul>
+                                <li><a href="#">第二層選單</a></li>
+                                <li><a href="#">第二層選單</a></li>
+                                <li><a href="#">第二層選單</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+                <!-- menu End -->
+            </div>
+        </header>
+        <!-- header End -->
+        <!-- main Start -->
+        <div id="center" class="main innerpage">
+            <div class="container-hero">
+                <!-- 內頁新增一個classname-->
+                <!-- side bar -->
+                <section class="sideBar wow fadeInRight" data-wow-delay=".3s">
+                    <a href="javascript:;">檔期<br>查詢</a>
+                    <a href="javascript:;">線上<br>洽詢</a>
+                    <a href="javascript:;">VR<br>實境</a>
+                    <a href="javascript:;">活動<br>行事曆</a>
+                    <a href="javascript:;" class="sb-scrollToTop">Top</a>
+                </section>
+                <!-- 影片 -->
+                <section class="full hero">
+                    <div class="container">
+                        <!-- slogen -->
+                        <h3 class="slogen wow bounceInLeft">Taipei<br>
+                            International<br>
+                            Convention Center
+                        </h3>
+                        <!-- 登入＋查詢 -->
+                        <div class="btn_box">
+                            <a href="#" class="btn">預約編號登入<span>Login in</span></a>
+                            <a href="#" class="btn">大會堂座位圖查詢<span>Search</span></a>
+                        </div>
+                        <img src="images/ticc/img-hero.jpg" alt="">
+                    </div>
+                </section>
+            </div>
+            <div class="mainTitleBox">
+                <!-- breadcrumb路徑 -->
+                <div class="breadcrumb">
+                    <ul>
+                        <li><a href="#">首頁</a></li>
+                        <li><a href="#">節點</a></li>
+                        <li>節點</li>
+                    </ul>
+                </div>
+                <h2 class="title">中文標題<br><span>English title</span></h2>
+            </div>
+            <!-- 主要內容 -->
+            <div class="container">
+                <!-- 左側 -->
+                <!-- 如果不要sticky效果，就移除stickySidebar classname -->
+                <div class="left_block">
+                    <div class="leftblock_list">
+                        <ul>
+                            <li><a href="javascript:;">預約訊息</a></li>
+                            <li><a href="javascript:;">上傳活動資料</a></li>
+                            <li><a href="javascript:;">填寫滿意度調查與下載收據</a></li>
+                            <li><a href="javascript:;">聯絡承辦</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- 主要內容區 -->
+                <div class="center_block">
+                    <!-- function_panel -->
+                    <div class="function_panel">
+                        <!-- function功能區塊 -->
+                        <div class="function">
+                            <ul>
+                                <li class="back"><a href="javascript:history.back()">回上一頁</a></li>
+                                <li class="print"><a href="#">友善列印</a></li>
+                                <li class="forward"><a href="#">轉寄友人</a></li>
+                            </ul>
+                        </div>
+                        <!-- 社群分享
+                        <div class="share">
+                            <ul>
+                                <li>
+                                    <a href="#"><img src="images/basic/icon_facebook.svg" alt="facebook"></a>
+                                </li>
+                                <li>
+                                    <a href="#"><img src="images/basic/icon_twitter.svg" alt="twitter"></a>
+                                </li>
+                                <li>
+                                    <a href="#"><img src="images/basic/icon_line.svg" alt="line"></a>
+                                </li>
+                                <li>
+                                    <a href="#"><img src="images/basic/icon_youtube.svg" alt="youtube"></a>
+                                </li>
+                                <li>
+                                    <a href="#"><img src="images/basic/icon_googleplus.svg" alt="google plus"></a>
+                                </li>
+                                <li>
+                                    <a href="#"><img src="images/basic/icon_instagram.svg" alt="instagram"></a>
+                                </li>
+                                <li>
+                                    <a href="#"><img src="images/basic/icon_linkedin.svg" alt="LinkedIn"></a>
+                                </li>
+                                <li>
+                                    <a href="#"><img src="images/basic/icon_rss.svg" alt="RSS"></a>
+                                </li>
+                                <li>
+                                    <a href="#"><img src="images/basic/icon_plurk.svg" alt="Plurk"></a>
+                                </li>
+                            </ul>
+                        </div> -->
+                    </div>
+                    <!-- content Start -->
+                    <section class="">
+                        <!-- 狀態 -->
+                        <section class="flex-2-col">
+                            <div class="col reserve_num">預約編號<b>202205021639</b></div>
+                            <div class="col state_label">
+                                <span class="">未付款</span>
+                                <!-- <span class="paid">已付款</span>
+                                <span class="delay">訂單逾期</span>
+                                <span class="error">訂單錯誤</span>
+                                <span class="finish">活動結束</span> -->
+                                <br>
+                                <time>訂單日期：2022/05/15</time>
+                            </div>
+                        </section>
+                        <!-- 活動訊息 -->
+                        <section class="card">
+                            <div class="inner">
+                                <h3>活動訊息</h3>
+                                <div class="flex-2-col">
+                                    <div class="col">
+                                        <h4>活動名稱</h4>
+                                        <p>Global Information Security Conference</p>
+                                    </div>
+                                    <div class="col">
+                                        <h4>洽租公司 / 聯絡人</h4>
+                                        <p>凌網科技股份有限公司 / 陳ＯＯ 先生</p>
+                                    </div>
+                                    <div class="col">
+                                        <h4>活動起訖時間</h4>
+                                        <p>2022/05/25 10:00-18:00</p>
+                                    </div>
+                                    <div class="col">
+                                        <h4>聯絡電話 / Email</h4>
+                                        <p>0987654321 / 123456@gmail.com</p>
+                                    </div>
+                                    <div class="col">
+                                        <h4>租借內容</h4>
+                                        <p>101全室</p>
+                                    </div>
+                                    <div class="col">
+                                        <h4>場地費用</h4>
+                                        <p>NT$ 482,000</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <!-- 繳款與合約確認期限 -->
+                        <section class="card">
+                            <h4 class="section_title">繳款與合約確認期限</h4>
+                            <time>2022/06/01（三）&nbsp;23:59 前</time>
+                            <div class="inner">
+                                <div>
+                                    <h3>合約確認</h3>
+                                    <p>若您在審閱承租合約後，發現<b>資料有誤或有疑慮</b>，請先暫停用印，請立即<a href="#">聯絡承辦</a>回報訊息。若確認無誤，請將合約用印後掃描為PDF或圖檔，並上傳檔案送出。</p>
+                                    <section class="box">
+                                        <h4>合約資料下載</h4>
+                                        <div class="info">
+                                            <ul>
+                                                <li><a href="#">主合約.pdf</a></li>
+                                                <li><a href="#">座位圖.jpg</a></li>
+                                                <li><a href="#">最多五筆.doc</a></li>
+                                            </ul>
+                                        </div>
+                                    </section>
+                                    <section class="box">
+                                        <h4>合約用印回傳<abbr class="necessary" title="為必填(選)欄位,不能為空白。">必填</abbr></h4>
+                                        <div class="info">
+                                            <div class="flex-form">
+                                                <button type="button" class="btn btn-primary">上傳用印合約</button><span>（PDF、JPG、PNG檔，檔案大小限制25Mb）</span>
+                                                <div class="form_grp">
+                                                    <input name="text" type="text" value="" placeholder="尚未上傳合約">
+                                                    <button type="button" class="btn btn-delete"><i class="i_close2"></i>移除</button>
+                                                </div>
+                                                <!-- <div class="notice_error">請上傳用印合約</div> -->
+                                            </div>
+                                        </div>
+                                    </section>
+                                    <section class="box">
+                                        <h4>合約用印回傳<abbr class="necessary" title="為必填(選)欄位,不能為空白。">必填</abbr></h4>
+                                        <div class="info">
+                                            <div class="flex-form">
+                                                <button type="button" class="btn btn-primary">上傳用印合約</button><span>（PDF、JPG、PNG檔，檔案大小限制25Mb）</span>
+                                                <div class="form_grp">
+                                                    <input name="text" type="text" value="用印合約.pdf" placeholder="尚未上傳合約">
+                                                    <button type="button" class="btn btn-delete"><i class="i_close2"></i>移除</button>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </section>
+                                    <section class="box">
+                                        <h4>合約用印回傳<abbr class="necessary" title="為必填(選)欄位,不能為空白。">必填</abbr></h4>
+                                        <div class="info">
+                                            <div class="flex-form">
+                                                <button type="button" class="btn btn-primary">上傳用印合約</button><span>（PDF、JPG、PNG檔，檔案大小限制25Mb）</span>
+                                                <div class="form_grp">
+                                                    <input name="text" type="text" value="用印合約.pdf" placeholder="尚未上傳合約" class="error">
+                                                    <button type="button" class="btn btn-delete"><i class="i_close2"></i>移除</button>
+                                                </div>
+                                                <div class="notice_error">請上傳用印合約</div>
+                                            </div>
+                                        </div>
+                                    </section>
+                                    <div class="btn_grp">
+                                        <!-- <input name="" type="reset" value="清除" class="btn btn-reset" /> -->
+                                        <input name="" type="submit" value="送出" class="btn btn-submit" />
+                                    </div>
+                                </div>
+                                <div>
+                                    <h3>第一次繳費單確認</h3>
+                                    <p>若您在審閱承租合約後，發現<b>資料有誤或有疑慮</b>，請先暫停用印，請立即<a href="#">聯絡承辦</a>回報訊息。若確認無誤，請將合約用印後掃描為PDF或圖檔，並上傳檔案送出。</p>
+                                    <section class="box">
+                                        <h4>繳費單下載</h4>
+                                        <div class="info">
+                                            <ul>
+                                                <li><a href="#">訂金繳費單.pdf</a></li>
+                                            </ul>
+                                        </div>
+                                    </section>
+                                    <section class="box">
+                                        <h4>繳費資訊回傳<abbr class="necessary" title="為必填(選)欄位,不能為空白。">必填</abbr></h4>
+                                        <div class="info">
+                                            <div class="flex-form">
+                                                <div class="form_grp">
+                                                    <input name="text" type="text" value="" placeholder="匯款銀行名稱">
+                                                    <input name="text" type="text" value="" placeholder="匯款銀行帳號末五碼">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </section>
+                                    <section class="box">
+                                        <h4>繳費資訊回傳<abbr class="necessary" title="為必填(選)欄位,不能為空白。">必填</abbr></h4>
+                                        <div class="info">
+                                            <div class="flex-form">
+                                                <div class="form_grp">
+                                                    <input name="text" type="text" value="台新銀行" placeholder="匯款銀行名稱">
+                                                    <input name="text" type="text" value="12345" placeholder="匯款銀行帳號末五碼">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </section>
+                                    <section class="box">
+                                        <h4>繳費資訊回傳<abbr class="necessary" title="為必填(選)欄位,不能為空白。">必填</abbr></h4>
+                                        <div class="info">
+                                            <div class="flex-form">
+                                                <div class="form_grp">
+                                                    <!-- <input name="text" type="text" value="" placeholder="匯款銀行名稱" class="error"> -->
+                                                    <input name="text" type="text" value="" placeholder="匯款銀行帳號末五碼" class="error">
+                                                </div>
+                                                <div class="notice_error">請填寫繳費資訊</div>
+                                            </div>
+                                        </div>
+                                    </section>
+                                    <div class="btn_grp">
+                                        <!-- <input name="" type="reset" value="清除" class="btn btn-reset" /> -->
+                                        <input name="" type="submit" value="送出" class="btn btn-submit" />
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                        <!-- 第二次繳款期限 -->
+                        <section class="card">
+                            <h4 class="section_title">第二次繳款期限</h4>
+                            <time>2022/06/08（三）&nbsp;23:59 前</time>
+                            <div class="inner">
+                                <div>
+                                    <h3>第二次繳費單確認</h3>
+                                    <p>若您在審閱承租合約後，發現<b>資料有誤或有疑慮</b>，請先暫停用印，請立即<a href="#">聯絡承辦</a>回報訊息。若確認無誤，請將合約用印後掃描為PDF或圖檔，並上傳檔案送出。</p>
+                                    <section class="box">
+                                        <h4>繳費單下載</h4>
+                                        <div class="info">
+                                            <ul>
+                                                <li><a href="#">訂金繳費單.pdf</a></li>
+                                            </ul>
+                                        </div>
+                                    </section>
+                                    <section class="box">
+                                        <h4>繳費資訊回傳</h4>
+                                        <div class="info">
+                                            <div class="flex-form">
+                                                <div class="form_grp">
+                                                    <input name="text" type="text" value="" placeholder="匯款銀行名稱">
+                                                    <input name="text" type="text" value="" placeholder="匯款銀行帳號末五碼">
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </section>
+                                    <div class="btn_grp">
+                                        <!-- <input name="" type="reset" value="清除" class="btn btn-reset" /> -->
+                                        <input name="" type="submit" value="開啟跳窗" id="openModal" class="btn btn-submit" />
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </section>
+                    <!-- content End -->
+                </div>
+            </div>
+        </div>
+        <!-- footer Start-->
+        <footer>
+            <div class="container">
+                <section>
+                    <div class="col">
+                        <!-- logo -->
+                        <a href="#"><img src="images/ticc/bg-white.png"></a>
+                    </div>
+                    <div class="col">
+                        營運機構：中華民國對外貿易發展協會 (TAITRA)<br>
+                        地址：11049 台北市信義路五段1號<br>
+                        Email: ticc@taitra.org.tw<br>
+                        傳真：(02)2723-2589<br>
+                        總機：(02)2725-5200
+                    </div>
+                    <div class="col">
+                        會議場地訂位分機: 3517,3518   /  服務台分機：3000,3151  /<br>
+                        停車場分機：3040  /  餐飲服務分機：3350,3351<br>
+                        婚宴專線：(02)2720-8008
+                    </div>
+                </section>
+                <section>
+                    <div class="col">
+                        <!-- 標章2枚 -->
+                        <img src="images/ticc/footer_logo1.png" alt="">
+                        <img src="images/ticc/footer_logo2.png" alt="">
+                    </div>
+                    <div class="col">
+                        <!-- 隱私權三連結＋版權 -->
+                        <ul class="footer_link">
+                            <li><a href="javascript:;">隱私權政策</a></li>
+                            <li><a href="javascript:;">免責聲明</a></li>
+                            <li><a href="javascript:;">友站連結</a></li>
+                        </ul>
+                        <p class="Copyright">Taipei International Convention Center 版權所有</p>
+                    </div>
+                </section>
+            </div>
+        </footer>
+        <!-- footer End -->
+    </div>
+    <a href="javascript:;" class="scrollToTop">回頁首</a>
+    <!-- JQ -->
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <!-- 外掛 plugin js -->
+    <script src="vendor/jquery.easing.min.js"></script>
+    <!-- ease -->
+    <script src="vendor/slick/slick.min.js "></script>
+    <!-- slick -->
+    <script src="vendor/slick/slick-lightbox.js "></script>
+    <!-- slick lightbox -->
+    <script src="vendor/lazyload/lazyload.js"></script>
+    <!-- lazyload -->
+    <script src="vendor/picturefill/picturefill.min.js" async></script>
+    <!-- picturefill -->
+    <script src="vendor/scrolltable/jquery.scroltable.min.js"></script>
+    <!-- scrolltable -->
+    <!-- sticky-sidebar -->
+    <script src='vendor/sticky-sidebar/sticky-sidebar.js'></script>
+    <script src='vendor/sticky-sidebar/ResizeSensor.js'></script>
+    <!-- fancy -->
+    <script src='vendor/fancybox/jquery.fancybox.min.js'></script>
+    <!-- WOW -->
+    <script src='vendor/wow/wow.js'></script>
+    <script>
+        new WOW().init();
+    </script>
+    <!-- hyUI -->
+    <script src="js/hyui.js"></script>
+    <!-- 客製js -->
+    <script src="js/customize.js"></script>
+</body>

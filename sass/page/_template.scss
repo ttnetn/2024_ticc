@@ -1,15 +1,7 @@
-* {
-    box-sizing: border-box;
-}
-
-html {
-    scroll-behavior: smooth;
-}
-
+* { box-sizing: border-box; }
+html { scroll-behavior: smooth; }
 body {
-
     background: url(../images/ticc/bg-default.jpg) left top repeat-y;
-
     &.noscroll {
         position: static !important;
         width: 100%;
@@ -50,7 +42,7 @@ body {
     h2 { line-height: 1.25em; }
 }
 
-// 全站共用
+// 全站共用 /////////////////////////////////////////
 .sideBar{
     position: fixed;
     right: 0;
@@ -59,6 +51,8 @@ body {
     z-index: 999;
     padding: 40px 0;
     margin: 0 !important;
+
+    transition: all 300ms ease;
 
     &:before{
         content: '';
@@ -102,17 +96,478 @@ body {
         }
     }
 
+    @media screen and (max-width: 1600px) {
+        // right: -86px;
+    }
+
     @include screen('tablet'){
         display: none;
     }
 }
 
+// 懶得找 sass 原檔改
+.cp{
+    blockquote,
+    .publish_info{ background: #fff; }
+}
+.lightbox_slider_block{ background: transparent; }
+
+// 內頁 main title
+.mainTitleBox{
+    max-width: 1440px;
+    margin: auto;
+
+    @media screen and (max-width: 1480px) {
+        @include gutter(80px);
+    }
+}
+
+// 內頁內容區塊 卡片式
+.innerpage .center_block .card{
+    // background: #fff;
+    // box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    // border-radius: 4px;
+    // padding: 1em 2em;
+    margin: 1em 0 2em;
+
+    .inner{
+        background: #fff;
+        box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+        border-radius: 4px;
+        padding: 1em 2.5em;
+
+        >div{
+            // border-bottom: 1px solid #adadad;
+            padding: 1em 0;
+
+            position: relative;
+            &:after{
+                content: '';
+                position: absolute;
+                width: calc(100% + 5em);
+                height: 1px;
+                background: #d9d9d9;
+                bottom: 0;
+                left: -2.5em;
+            }
+
+            &:last-child{
+                &:after{
+                    display: none;
+                }
+            }
+
+            .box{
+                padding: 1em 0;
+                h4{
+                    color: #222;
+                    font-size: 1.125em;
+                }
+            }
+        }
+
+        .btn_grp{
+            .btn{
+                min-width: 220px;
+                padding: .75em 3em; 
+            }
+
+            // &:before{
+            //     content: '';
+            //     position: absolute;
+            //     width: calc(100% + 5em);
+            //     height: 2px;
+            //     background: #fff;
+            //     top: -2px;
+            //     left: -2.5em;
+            // }
+        }
+
+        .flex-form{
+            .form_grp{
+                &:last-child{
+                    border-bottom: none;
+                }
+            }
+
+            .form_title{
+                max-width: 180px;
+                flex: 0 0 180px;
+            }
+            .form_content{
+                max-width: calc(100% - 180px);
+                flex-basis: calc(100% - 180px);
+            }
+        }
+    }
+
+    .section_title{
+        font-size: 1.6em;
+        // color: $secondaryColor;
+        color: #222;
+        margin-top: 2em;
+
+        +time{
+            line-height: 3;
+            font-weight: 500;
+        }
+    }
+
+    .alert_info{
+        h3{
+            text-align: center;
+            margin: 2em 0 0;
+        }
+        h3:before,
+        &:after{ display: none; }
+    }
+
+    h3{
+        font-size: 1.75em;
+        color: #0c2577;
+
+        position: relative;
+        &:before{
+            content: '';
+            position: absolute;
+            width: 5px;
+            height: 42px;
+            background: #0c2577;
+            left: -1.4em;
+            top: -9px;
+        }
+    }
+    h4{
+        margin: 0;
+        color: #b2b2b2;
+
+        +p{
+            margin: 18px 0 22px 32px;
+            font-size: 1.2em;
+        }
+
+    }
+    p{
+        margin: 18px 0 22px 0;
+
+        b{ color: #9d0000; }
+        a{
+            display: inline-block;
+            padding: 0 4px;
+            text-decoration: underline;
+
+            &:hover, &:focus{
+                text-decoration: none;
+            }
+        }
+    }
+
+    .info{
+        .flex-form{
+            .form_grp{
+                border-bottom: 0;
+                flex-flow: row nowrap;
+            }
+        }
+    }
+}
+
+// 預約編號
+.reserve_num{
+    font-size: 1.65em;
+    // color: $secondaryColor;
+    color: #6b6b6b;
+    line-height: 70px;
+    b{ padding-left: .5em; color: #222;}
+}
+.state_label{
+    text-align: right;
+
+    span{
+        display: inline-block;
+        background: url(../images/ticc/icon/icon_coin.svg) 18px 50% no-repeat, #531580;
+        background-size: 20px 20px;
+        // background: #531580;
+        color: #fff;
+        padding: .45em 1.25em .45em 3em;
+        border-radius: 3px;
+
+        &.paid{
+            background: url(../images/ticc/icon/icon_paid.svg) 18px 50% no-repeat, #009688;
+            background-size: 20px 20px;
+        }
+        &.delay{
+            background: url(../images/ticc/icon/icon_delay.svg) 18px 50% no-repeat,#6f5b20;
+            background-size: 20px 20px;
+        }
+        &.error{
+            box-shadow: none;
+            background: url(../images/ticc/icon/icon_error.svg) 18px 50% no-repeat,#b70000;
+            background-size: 20px 20px;
+        }
+        &.finish{
+            background: url(../images/ticc/icon/icon_smile.svg) 18px 50% no-repeat,#3d3d3d;
+            background-size: 20px 20px;
+        }
+    }
+
+    time{
+        font-weight: bold;
+        line-height: 2;
+    }
+}
+
+// 客服
+// 左右欄
+.chat_content_inner{
+    display: flex;
+    padding-top: 1em;
+    padding-bottom: 1em;
+    flex-flow: column wrap;
+
+    .title,
+    .title_pic{
+        // @include title(700);
+        margin: 0;
+        padding: 10px 16px;
+    }
+
+    p, a{
+        // @include paragraph(500);
+        margin: 0;
+        padding: 8px 16px;
+    }
+
+    // a{
+    //     display: block;
+    //     border-radius: 10px;
+
+    //     &:hover{
+    //         background: $primaryColor-10;
+    //     }
+    // }
+
+    .title_pic{
+        text-align: center;
+        color: #fff;
+        background: url(../images/bg_title.png) 50% 50% no-repeat;
+        background-size: cover;
+        display: block;
+        border-radius: 10px;
+
+        padding: 16px 16px;
+        margin-bottom: 10px;
+    }
+    .t_center{ text-align: center; }
+
+    // .message_user
+    .message_received,
+    .message_user{
+        flex: 1 1 100%;
+        max-width: 100%;
+        margin-bottom: 12px;
+
+        // 控制內部物件
+        display: flex;
+        flex-flow: row wrap;
+    }
+
+    // 訊息發送時間 style
+    .received_time{
+        flex: 1 1 100%;
+
+        font-size: $caption;
+        color: $Nature-b-Color-40;
+        margin-top: 8px;
+        line-height: 1.3;
+    }
+
+    .service_message,
+    .user_message{
+        margin-top: 6px;
+        &:first-child{ margin-top: 0; }
+
+        a{
+            display: block;
+            border-radius: 10px;
+
+            &:hover{
+                background: $primaryColor-10;
+            }
+            &:focus{
+                background: transparent;
+            }
+
+            @media screen and (max-width: 767px) {
+                &:hover{
+                    background: transparent;
+                }
+            }
+        }
+    }
+
+    // 客服端
+    .message_received{
+        // background: #ddd;
+        padding-left: 1em;
+
+        .service_icon{
+            flex: 0 0 80px;
+            padding-right: 10px;
+        }
+
+        .service_wrap{
+            flex: 0 1 auto;
+            width: calc(100% - 80px);
+        }
+
+        .service_message{
+            flex: 0 1 auto;
+            width: fit-content;
+            max-width: 85%;
+            margin-top: 10px;
+
+            background: $primaryColor-10;
+            border-radius: 0px 20px 20px 20px;
+            padding: 12px 16px;
+            margin-right: 8px;
+
+            // @include paragraph(500);
+
+            .img-container{
+                background: #fff;
+                height: 170px;
+                border-radius: 10px;
+                +p{
+                    padding: 8px 0;
+                }
+            }
+        }
+        
+        // 訊息發送時間、反饋
+        .received_time, .feedback{ padding-left: 100px; }
+
+        // 連續兩個 客服端對話筐時
+        // +.message_received{
+        //     margin-top: 1em;
+        // }
+    }
+    // 使用者
+    .message_user{
+        padding-right: 1em;
+        flex-flow: row-reverse;
+
+        .user_icon{
+            flex: 0 0 80px;
+            padding-left: 10px;
+            text-align: center;
+            img{
+                max-width: 36px;
+                margin-top: 8px;
+            }
+        }
+
+        .user_wrap{
+            width: calc(100% - 80px);
+        }
+
+        .user_message{
+            text-align: right;
+            margin-top: 6px;
+            >span{
+                display: inline-block;
+                background: $primaryColor-100;
+                border-radius: 20px 0px 20px 20px;
+                color: #fff;
+                padding: 12px 16px;
+            }
+        }
+        .received_time{ text-align: right;}
+    }
+
+    // 反饋
+    .feedback{
+        display: flex;
+        align-items: center;
+        margin: 6px 0;
+
+        .btn{
+            width: auto;
+            padding: 12px 16px;
+            margin-left: 4px;
+            border-radius: 30px;
+
+            background: $primaryColor-10;
+            color: $primaryColor-100;
+            // @include paragraph(700);
+
+            transition: all .3s ease;
+
+            img, .svg{
+                margin-right: 4px;
+                // width: 20px;
+                // height: 20px;
+            }
+
+            &:hover{
+                background: $primaryColor-30; 
+            }
+
+            &:focus,
+            &.act{
+                background: $primaryColor-100;
+                color: $Nature-w-Color-100;
+
+                // svg focus 換色
+                .svg{
+                    path, circle, rect{ fill: $Nature-w-Color-100; }
+                }
+            }
+
+            &.disable{
+                cursor: not-allowed;
+                color: $Nature-b-Color-20;
+                background: $Nature-b-Color-2;
+
+                .svg{
+                    path, circle{ fill: $Nature-b-Color-20; }
+                }
+
+                &:hover, &:focus{
+                    color: $Nature-b-Color-20;
+
+                    .svg{
+                        path, circle{ fill: $Nature-b-Color-20; }
+                    }
+                }
+            }
+        }
+
+        b{
+            // @include paragraph(500);
+        }
+    }
+}
+
+// flex  /////////////////////////////////////////
+.flex-2-col{
+    @extend %flex_set;
+}
+.flex-2-col{
+    .col{
+        @include flex-xs-equal(1, 0px);
+        @include flex-sm-equal(2, 0px);
+        @include flex-md-equal(2, 0px);
+        @include flex-lg-equal(2, 0px);
+        // @include gutter();
+    }
+}
 
 ////////////////////////////////////////////////////////////
 // 為了與首頁區隔，請在內頁加上innerpage ClassName
 .innerpage {
     >.container {
-        @include gutter(); //gutter 代表左右要留白
+        // @include gutter(); //gutter 代表左右要留白
         display: flex;
     }
     .center_block {
@@ -137,21 +592,48 @@ body {
             flex-basis: calc(100% - 300px);
             max-width: calc(100% - 300px);
         }
+
+        @media screen and (max-width: 1600px) {
+            +.center_block { padding-right: 100px; }
+
+        }
         @include screen('tablet') {
-            display: none;
+            position: fixed;
+            z-index: 999;
+            left: 0;
+            top: 280px;
+            // width: 260px;
+            width: auto;
+            margin-right: 0;
+
             +.center_block {
-                flex: none;
+                padding-right: 0;
                 flex-basis: 100%;
                 max-width: 100%;
             }
+
         }
     }
-    &.small_size {
-        font-size: .938em;
+    &.small_size { font-size: .938em; }
+    &.large_size { font-size: 1.125em; }
+
+    @media screen and (max-width: 1480px) {
+        >.container {
+            @include gutter(80px);
+        }
     }
-    &.large_size {
-        font-size: 1.125em;
-    }
+    // @include screen('tablet') {
+    //     .left_block {
+
+    //         position: fixed;
+    //         z-index: 999;
+
+    //         +.center_block{
+    //             flex-basis: 100%;
+    //             max-width: 100%;
+    //         }
+    //     }
+    // }
 }
 
 .hidden { display: none; }

@@ -2,6 +2,29 @@
 // 於mixins 資料夾內，各個模組也有其個別使用的變數，請至個別檔案設定，個別使用變數不含在此設定
 //---------------------------------------------------顏色---------//
 // 定義顏色 此顏色可自由變換
+$primaryColor-100: rgba(120, 149, 172, 1); //主色
+$primaryColor-60: rgba(120, 149, 172, .6);
+$primaryColor-50: rgba(120, 149, 172, .5);
+$primaryColor-30: rgba(120, 149, 172, .3);
+$primaryColor-10: rgba(120, 149, 172, .1);
+
+$NoticeColor: rgba(192, 76, 8, 1);			// notice
+
+$Nature-b-Color-100: rgba(53, 66, 70, 1);	// 白色
+$Nature-b-Color-40: rgba(53, 66, 70, .4);
+$Nature-b-Color-30: rgba(53, 66, 70, .3);
+$Nature-b-Color-25: rgba(53, 66, 70, .25);
+$Nature-b-Color-20: rgba(53, 66, 70, .2);
+$Nature-b-Color-8: rgba(53, 66, 70, .08);
+$Nature-b-Color-2: rgba(53, 66, 70, .02);
+
+$Nature-w-Color-100: rgba(255, 255, 255, 1);
+$Nature-w-Color-80: rgba(255, 255, 255, .8);
+
+$Gradient-color: linear-gradient(115.39deg, #688398 18.75%, rgba(120, 149, 172, 0.6) 100%);
+
+//---------------------------------------------------顏色---------//
+// 定義顏色 此顏色可自由變換
 $primaryColor: #463b9e; //主色
 $secondaryColor: #7b117e; //輔色
 $lightColor: #fec003; //點綴-淺
@@ -29,14 +52,24 @@ $form-focus: #0066cc; //表單
 $form-btn: #0066cc; //表單
 //------------------------------------------------------字型--------//
 // 字型設定
-$font-family: Lato,
-'PingFang TC',
-'Helvetica Neue',
-Helvetica,
-微軟正黑體,
-Arial,
-sans-serif;
-$font-size: 1em;
+// $font-family: Lato,
+// 'PingFang TC',
+// 'Helvetica Neue',
+// Helvetica,
+// 微軟正黑體,
+// Arial,
+// sans-serif;
+// $font-size: 1em;
+
+//------------------------------------------------------字型--------//
+
+// 字型設定
+$font-family: 'Noto Sans TC';
+$font-size: 1em;	// body
+
+$title: 150%;		// 24px
+$subtitle: 125%;	// 20px
+$caption: 87.5%;
 //------------------------------------------------------格線系統-----//
 
 // 格線系統

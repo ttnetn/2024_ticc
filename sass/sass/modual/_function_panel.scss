@@ -10,35 +10,48 @@
     justify-content:flex-end;
     align-items: center;
 
+    position: absolute;
+    top: -120px;
+    right: 0;
+
+    @media screen and (max-width: 1600px) {
+        right: 100px;
+    }
+    @include screen('tablet') {
+        right: 30px;
+    }
+
     @include screen('mobile') {
         margin: .6em 0;
         padding: .5em 0 .5em;
     }
-    .share { flex:0 0 auto; }
-    .function { flex:0 0 auto; }
-    .publish_time {
-        flex:1 1 auto;
-        min-width: 100px;
-        display: block;
-        color:#666;
-        span{
-            font-size:.938em;
-            @include screen('mobile') { display:none; }
-        }
-        time{
-            font-family:georgia;
-            font-size:1.125em;
-            @include screen('mobile') { font-size:.938em; }
-        }
-        &:before {
-            content: "";
-            display: inline-block;
-            width: 12px;
-            height: 12px;
-            top:.3em;
-            background: url(../images/basic/icon_time.png) no-repeat center center;
-            background-size: 12px;
-        }
+    // .share { flex:0 0 auto; }
+    // .function { flex:0 0 auto; }
+}
+
+// 發佈日期
+.publish_time {
+    flex:1 1 auto;
+    min-width: 100px;
+    display: block;
+    color:#666;
+    span{
+        font-size:.938em;
+        @include screen('mobile') { display:none; }
+    }
+    time{
+        font-family:georgia;
+        font-size:1.125em;
+        @include screen('mobile') { font-size:.938em; }
+    }
+    &:before {
+        content: "";
+        display: inline-block;
+        width: 12px;
+        height: 12px;
+        top:.3em;
+        background: url(../images/basic/icon_time.png) no-repeat center center;
+        background-size: 12px;
     }
 }
 
@@ -116,25 +129,26 @@ div.function{
         flex: initial;
     }
     .function {
-        height: 32px;
+        height: 46px;
         margin: 0;
         ul {
             display: flex;
             li {
                 font-size: 1em;
                 margin: 0 .2em;
-                flex:0 0 32px;
+                flex:0 0 46px;
                 a {
                     display: block;
                     box-sizing: border-box;
-                    width: 32px;
-                    height: 32px;
+                    width: 46px;
+                    height: 46px;
                     text-align: center;
-                    line-height: 32px;
+                    line-height: 46px;
                     border-radius: 50%;
-                    background: #F1F1F1;
+                    background: transparent;
                     text-indent: -9999px;
                     position: relative;
+                    transition: all 300ms ease;
                     &:hover, &:focus {
                         background: $aHover;
                         color: #FFF;
@@ -143,10 +157,12 @@ div.function{
                     &:before {
                         content: "";
                         position: absolute;
-                        width: 60%;
-                        height: 60%;
-                        top: 20%;
-                        left: 20%;
+                        width: 20px;
+                        height: 20px;
+                        top: 50%;
+                        left: 50%;
+                        margin-top: -10px;
+                        margin-left: -10px;
                     }
                 }
                 &.back {
@@ -205,27 +221,32 @@ div.function{
     .share {
         box-sizing: border-box;
         text-align: center;
-        height: 32px;
+        height: 46px;
         margin: 0 4px;
         position:relative;
         a.shareButton{
             display: block;
-            background: #F1F1F1;
+            background: transparent;
+            // background: pink;
             border-radius: 50%;
-            width: 32px;
-            height: 32px;
+            width: 46px;
+            height: 46px;
             text-indent:-9999px;
             text-align: center;
             position: relative;
+
+            transition: all 300ms ease;
             &:before {
                 content: "";
                 position: absolute;
-                width: 60%;
-                height: 60%;
-                top: 20%;
-                left: 20%;
+                width: 20px;
+                height: 20px;
+                top: 50%;
+                left: 50%;
+                margin-top: -10px;
+                margin-left: -10px;
                 background: url(../images/basic/icon_share.svg) no-repeat center center  !important;
-                background-size: 24px !important;
+                background-size: 20px 20px;
             }
             // img {
             //   width: 60%;
@@ -243,10 +264,9 @@ div.function{
         ul {
           display: none;
           position: absolute;
-          top: 2.5em;
+          top: 48px;
           left: -6px;
-          // width: 44px;
-          padding: 6px;
+          padding: 20px 16px;
           background: #FFF;
           box-shadow: 2px 2px 5px RGBA(0, 0, 0, .2);
           border-radius: 8px;

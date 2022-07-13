@@ -97,7 +97,7 @@ h2.title{
     position: relative;
     &:after{
         content: '';
-        width: 280px;
+        width: 260px;
         height: 3px;
         position: absolute;
         background: #121212;
@@ -252,6 +252,7 @@ h2.title{
 
 
 // -------------------------------------------------------------
+
 // hero
 .hero{
     margin-top: 0 !important;
@@ -283,12 +284,13 @@ h2.title{
             line-height: 1.6;
             left: 12%;
             bottom: 15%;
+            z-index: 1;
         }
 
         // 登入＋查詢
         .btn_box{
             position: absolute;
-            top: 140px;
+            top: 160px;
             right: 12%;
             z-index: 1;
             a.btn{
@@ -383,6 +385,12 @@ h2.title{
                 left: 8%;
                 bottom: 2%;
             }
+
+            img{
+                max-width: fit-content;
+                height: 600px;
+                margin-left: -50%;
+            }
         }
 
         // 漸層黑瀑：父層.hero > .container ---> .container:before
@@ -403,6 +411,9 @@ h2.title{
                     margin-left: -20%;
                 }
             }
+            .img-containe{
+                img{ object-fit: cover; }
+            }
         }
 
         // 左上色塊：父層.hero
@@ -411,6 +422,27 @@ h2.title{
             // top: -20px;
         }
     }
+}
+
+// 內頁的 hero 高度調整，影片改為圖片
+.container-hero{
+    .hero{
+        .container{
+            max-height: 460px;
+            overflow: hidden;
+
+            .slogen{
+                font-size: 2.4em;
+                line-height: 1.4;
+                bottom: 0;
+            }
+        }
+    }
+    
+    // +.container{
+    //     margin-top: 2.4em;
+    //     @include gutter(0);
+    // }
 }
 
 
