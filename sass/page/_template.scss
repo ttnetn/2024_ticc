@@ -563,6 +563,29 @@ body {
     }
 }
 
+// 登入
+.login{
+    width: 420px;
+    margin: auto;
+
+    .flex-form .form_grp{ border-bottom: transparent;}
+
+    .form_title{
+        font-size: 1.25em;
+        padding-bottom: .65em !important;
+    }
+
+    p{
+        text-align: center;
+        line-height: 2;
+    }
+}
+// google 機器人
+.google_captcha{
+    text-align: center;
+    padding-top: 2em;
+}
+
 // flex  /////////////////////////////////////////
 .flex-2-col{
     @extend %flex_set;

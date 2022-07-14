@@ -23,6 +23,18 @@
     <link href="images/favicon.png" rel="icon" type="image/x-icon">
 </head>
 <body>
+    <!--跳窗-->
+    <div id="modal1" class="modal">
+        <h2>忘記密碼</h2>
+        <p>請輸入預約編號，我們將重新發送通知信。<br>若找不到信件時，請到「垃圾信件」分類查找，或請<a href="#">聯絡我們</a>。</p>
+        <div class="flex-form">
+            <input type="text" id="" placeholder="請輸入編號" class="error">
+            <div class="notice_error">查無此預約編號</div>
+        </div>
+        <div class="btn_grp">
+            <button class="btn btn-submit">送出</button>
+        </div>
+    </div>
     <!-- wrapper Start -->
     <div class="wrapper">
         <!-- header Start -->
@@ -161,48 +173,48 @@
                         <li>節點</li>
                     </ul>
                 </div>
-                <h2 class="title">填寫滿意度調查與下載收據<br><span>English title</span></h2>
+                <h2 class="title">預約編號登入<br><span>English title</span></h2>
             </div>
             <!-- 主要內容 -->
             <div class="container">
                 <!-- 左側 -->
-                <!-- 如果不要sticky效果，就移除stickySidebar classname -->
-                <div class="left_block">
-                    <div class="leftblock_list">
-                        <ul>
-                            <li><a href="javascript:;">預約訊息</a></li>
-                            <li><a href="javascript:;">上傳活動資料</a></li>
-                            <li><a href="javascript:;">填寫滿意度調查與下載收據</a></li>
-                            <li><a href="javascript:;">聯絡承辦</a></li>
-                        </ul>
-                    </div>
-                </div>
                 <!-- 主要內容區 -->
                 <div class="center_block">
                     <!-- content Start -->
                     <section class="">
-                        <!-- 狀態 -->
-                        <section class="flex-2-col">
-                            <div class="col reserve_num">預約編號<b>202205021639</b></div>
-                            <div class="col state_label">
-                                <!-- <span class="">未付款</span>
-                                <span class="paid">已付款</span>
-                                <span class="delay">訂單逾期</span>
-                                <span class="error">訂單錯誤</span> -->
-                                <span class="finish">活動結束</span>
-                                <br>
-                                <time>訂單日期：2022/05/15</time>
-                            </div>
-                        </section>
-                        <!-- 活動內容(限500字) -->
+                        <!-- 活動訊息 -->
                         <section class="card">
                             <div class="inner">
-                                <div class="alert_info">
-                                    <h3>送出成功，感謝您的支持！</h3>
-                                </div>
-                                <div class="btn_grp">
-                                    <!-- <input name="" type="reset" value="清除" class="btn btn-reset" /> -->
-                                    <input name="" type="submit" value="下載本次訂單收據" class="btn btn-submit" />
+                                <div class="login">
+                                    <!-- <h3>標題</h3> -->
+                                    <div class="flex-form form-column">
+                                        <div class="form_grp">
+                                            <label for="password" class="form_title">活動預約編號</label>
+                                            <div class="form_content">
+                                                <input type="text" id="" placeholder="請輸入活動預約編號">
+                                            </div>
+                                        </div>
+                                        <div class="form_grp">
+                                            <label for="password" class="form_title">密碼</label>
+                                            <div class="form_content">
+                                                <div class="labelEffect password_toggle">
+                                                    <input name="password" type="password" placeholder="請輸入密碼" value="1234" class="error">
+                                                    <button type="button" class="btn btn-icon"><i class="i_hide"></i></button>
+                                                </div>
+                                                <div class="notice_error">密碼錯誤，請確認後再試一次</div>
+                                            </div>
+                                        </div>
+                                        <div class="google_captcha"><img src="images/ticc/google-reCAPTCHA.jpg" alt=""></div>
+                                        <div class="btn_grp">
+                                            <input name="" type="submit" value="登入" class="btn btn-submit" />
+                                            <!-- <input name="" type="reset" value="清除" class="btn btn-reset" /> -->
+                                            <!-- <input name="" type="submit" value="開啟跳窗" id="openModal" class="btn btn-submit" /> -->
+                                        </div>
+                                        <div class="check_grp">
+                                            <label><input name="checkSample" type="checkbox" value="">記住我</label>
+                                        </div>
+                                        <p><a href="#" id="openModal">忘記預約編號或密碼？</a><br>沒有預約編號？開始計畫你的活動，立即<a href="#">線上洽詢</a></p>
+                                    </div>
                                 </div>
                             </div>
                         </section>
@@ -252,7 +264,7 @@
         </footer>
         <!-- footer End -->
     </div>
-    <!-- 鯨魚 -->
+    !-- 鯨魚 -->
     <div class="abgne_float_game">
         <a href="javascript:;"><img src="images/ticc/t-boHelper-ch.png" alt=""></a>
     </div>
