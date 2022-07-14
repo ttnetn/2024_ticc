@@ -78,11 +78,11 @@ $grid-gutter-width: 30px !default; //左右padding
 $container-max: 1440px !default; //container最大寬
 
 //mediaquery
-$screen-lg: 1440px !default; //電腦
+$screen-lg: 1440px !default;	//電腦
 // $screen-md: 992px !default;  //平板
-$screen-md: 1200px !default;  //平板
-$screen-sm: 768px !default;  //手機
-$screen-xs: 576px !default;  //極小尺寸 - hyui
+$screen-md: 1200px !default;	//平板
+$screen-sm: 768px !default;		//手機
+$screen-xs: 576px !default;		//極小尺寸 - hyui
 $screen-xs-flex: 320px !default; //極小尺寸 - flex
 
 //-------------------------------------------------------客製化------//

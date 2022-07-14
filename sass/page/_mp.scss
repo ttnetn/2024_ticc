@@ -258,6 +258,7 @@ h2.title{
     margin-top: 0 !important;
 
     .container{
+        min-height: 460px;
         max-height: 720px;
         background: #000;
 
@@ -386,11 +387,11 @@ h2.title{
                 bottom: 2%;
             }
 
-            img{
-                max-width: fit-content;
-                height: 600px;
-                margin-left: -50%;
-            }
+            // img{
+            //     max-width: fit-content;
+            //     height: 600px;
+            //     margin-left: -50%;
+            // }
         }
 
         // 漸層黑瀑：父層.hero > .container ---> .container:before

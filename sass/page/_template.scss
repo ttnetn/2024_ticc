@@ -135,6 +135,7 @@ body {
         box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
         border-radius: 4px;
         padding: 1em 2.5em;
+        margin-top: 1.25em;
 
         >div{
             // border-bottom: 1px solid #adadad;
@@ -208,7 +209,7 @@ body {
         margin-top: 2em;
 
         +time{
-            line-height: 3;
+            line-height: 2.6;
             font-weight: 500;
         }
     }
