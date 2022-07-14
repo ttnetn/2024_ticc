@@ -378,6 +378,16 @@ h2.title{
     //         left: -260px;
     //     }
     // }
+
+    @media screen and (max-width: 1199px) {
+        .container{
+            // img{
+            //     max-width: fit-content;
+            //     height: 600px;
+            //     margin-left: -50%;
+            // }
+        }
+    }
     @include screen('tablet'){
         .container{
             .slogen{
@@ -386,12 +396,11 @@ h2.title{
                 left: 8%;
                 bottom: 2%;
             }
-
-            // img{
-            //     max-width: fit-content;
-            //     height: 600px;
-            //     margin-left: -50%;
-            // }
+            img{
+                max-width: fit-content;
+                height: 600px;
+                // margin-left: -50%;
+            }
         }
 
         // 漸層黑瀑：父層.hero > .container ---> .container:before
@@ -412,8 +421,12 @@ h2.title{
                     margin-left: -20%;
                 }
             }
-            .img-containe{
-                img{ object-fit: cover; }
+            // .img-containe{
+            //     img{ object-fit: cover; }
+            // }
+
+            img{
+                margin-left: -50%;
             }
         }
 
@@ -493,6 +506,11 @@ h2.title{
     @media screen and (max-width: 1480px) {
         .container{
             padding-left: 40px;
+            padding-right: 120px;
+        }
+
+        .btn-submit{
+            right: 120px;
         }
     }
 
@@ -753,8 +771,8 @@ h2.title{
     .col{
         @include flex-xs(12, 0px);
         @include flex-sm(12, 0px);
-        @include flex-md(7, $m-gutter);
-        @include flex-lg(7, $m-gutter);
+        @include flex-md(6, $m-gutter);
+        @include flex-lg(6, $m-gutter);
         @include gutter();
 
         &.map-rwd {
@@ -776,8 +794,8 @@ h2.title{
         &:last-child{
             @include flex-xs(12, 0px);
             @include flex-sm(12, 0px);
-            @include flex-md(5, $m-gutter);
-            @include flex-lg(5, $m-gutter);
+            @include flex-md(6, $m-gutter);
+            @include flex-lg(6, $m-gutter);
 
             background: linear-gradient(0deg, rgba(106,27,138,1) 0%, rgba(36,8,107,1) 100%);
             color: #fff;
@@ -794,6 +812,13 @@ h2.title{
             }
             .btn_grp{ padding: 0; }
             .btn-submit{ width: 240px; }
+
+            @media screen and (max-width: 1480px) {
+                padding-right: 120px;
+            }
+            @include screen('tablet') {
+                padding-right: 46px;
+            }
         }
     }
     .google_captcha{

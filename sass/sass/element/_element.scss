@@ -9,15 +9,22 @@
   line-height: 50px;
   text-decoration: none;
   position: fixed;
-  bottom: 10px;
+  bottom: 14px;
   right: 10px;
   transition: .3s ease-out;
   display: none;
   z-index: 99999999;
   text-indent: -999999px;
+
+  opacity: 0;
+
   &:hover,&:focus{
     background: url(../images/basic/top.png) no-repeat center top rgba(0, 0, 0, 0.8);
     box-shadow:none;
+  }
+
+  @include screen('tablet') {
+    opacity: 1;
   }
 }
 

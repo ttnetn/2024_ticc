@@ -47,7 +47,7 @@ body {
     position: fixed;
     right: 0;
     background: linear-gradient(0deg, rgba(106,27,138,1) 0%, rgba(36,8,107,1) 100%);
-    bottom: 90px;
+    bottom: 100px;
     z-index: 999;
     padding: 40px 0;
     margin: 0 !important;
@@ -104,7 +104,20 @@ body {
         display: none;
     }
 }
+// 鯨魚
+.abgne_float_game {
+    position: fixed;
+    bottom: 10px;
+    right: 6px;
+    z-index: 100000000;
+    a{ display: block; }
+    img { width: 90px; }
 
+    @include screen('tablet') {
+        bottom: 80px;
+        img { width: 75px; }
+    }
+}
 // 懶得找 sass 原檔改
 .cp{
     blockquote,
@@ -594,10 +607,9 @@ body {
             max-width: calc(100% - 300px);
         }
 
-        @media screen and (max-width: 1600px) {
-            +.center_block { padding-right: 100px; }
-
-        }
+        // @media screen and (max-width: 1600px) {
+        //     +.center_block { padding-right: 100px; }
+        // }
         @include screen('tablet') {
             position: fixed;
             z-index: 999;
@@ -618,11 +630,26 @@ body {
     &.small_size { font-size: .938em; }
     &.large_size { font-size: 1.125em; }
 
+    .hero{
+        img{}
+    }
+
+    @media screen and (max-width: 1600px) {
+        .center_block { padding-right: 100px; }
+    }
     @media screen and (max-width: 1480px) {
         >.container {
             @include gutter(80px);
         }
     }
+    @include screen('tablet') {
+        .center_block {
+            padding-right: 0;
+            flex-basis: 100%;
+            max-width: 100%;
+        }
+    }
+
     // @include screen('tablet') {
     //     .left_block {
 

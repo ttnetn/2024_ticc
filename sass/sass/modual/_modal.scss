@@ -2,20 +2,24 @@
 .modal {
     position: fixed;
     display: none;
-    width: 400px;
+    width: 600px;
     // height: 300px;
     background: #FFF;
     z-index: 99999999;
     top: 5%;
     left: 50%;
-    margin-left: -200px;
+    margin-left: -300px;
     padding: 3em 1.5em 2em;
     box-sizing: border-box;
     border-radius:8px;
     box-shadow:1px 1px 15px RGBA(0, 0, 0, .5);
     animation: scaleUp .5s ease-out;
 
-    h2 { padding-bottom: .5em; }
+    h2 {
+        padding-bottom: .5em;
+        color: #0c2577;
+    }
+    a{ padding: 0 4px; }
 
     .close {
         position: absolute;
