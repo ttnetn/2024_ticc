@@ -5,6 +5,8 @@ h1.title, h2.title {
   margin: .4em 0;
 }
 
+h2, h3, h4, h5, h6{ color: #0c2577; }
+
 .pic {
   float: left;
   margin: 0px 1em 1em 0;
@@ -36,9 +38,12 @@ h1.title, h2.title {
 }
 
 .cp {
-  table {
-    background: #FFF;
-  }
+  background: #fff;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-radius: 4px;
+  padding: 4em 2.5em;
+
+  table { background: #FFF; }
   img {
     &.float_left {
       float: left;
