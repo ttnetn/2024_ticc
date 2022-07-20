@@ -10,9 +10,10 @@
     justify-content:flex-end;
     align-items: center;
 
-    position: absolute;
-    top: -120px;
-    right: 0;
+    // position: absolute;
+    // top: -120px;
+    // right: 0;
+    // z-index: 1;
 
     @media screen and (max-width: 1600px) {
         right: 100px;
@@ -82,13 +83,15 @@ div.function{
             margin: 0 0px 0px 3px;
             flex:0 0 auto;
             button, a {
-                font-size: .813em;
+                font-size: .9em;
                 display: block;
-                padding: .2em 1em;
-                background: $function_color;
-                border-color: $function_color;
+                padding: .75em 2.6em;
+                // background: $function_color;
+                // border-color: $function_color;
+                background: #222;
+                border-color: #222;
                 color: #FFF;
-                border-radius: 4px;
+                border-radius: 3px;
                 &:hover,
                 &:focus {
                   background: darken($aHover, 0);

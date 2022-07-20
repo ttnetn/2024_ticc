@@ -43,6 +43,26 @@ body {
 }
 
 // 全站共用 /////////////////////////////////////////
+
+// flex  /////////////////////////////////////////
+.flex-2-col{
+    @extend %flex_set;
+
+    +.card{
+        margin-top: 2em;
+    }
+}
+.flex-2-col{
+    .col{
+        @include flex-xs-equal(1, 0px);
+        @include flex-sm-equal(2, 0px);
+        @include flex-md-equal(2, 0px);
+        @include flex-lg-equal(2, 0px);
+        // @include gutter();
+    }
+}
+
+// 右邊 sticky function
 .sideBar{
     position: fixed;
     right: 0;
@@ -130,25 +150,59 @@ body {
     max-width: 1440px;
     margin: auto;
 
-    @media screen and (max-width: 1480px) {
+    position: relative;
+    .function{
+        position: absolute;
+        right: 0;
+        top: 0;
+        margin: 1em 0;
+    }
+
+    // 活動詳目頁：分享＋加入google月曆
+    .link{
+        top: inherit;
+        right: 0;
+        bottom: 0;
+    }
+
+    @media screen and (max-width: 1600px) {
+        .function,
+        .link{
+            // 避開右側 sideBar
+            right: 100px;
+        }
+    }
+     @media screen and (max-width: 1480px) {
         @include gutter(80px);
+        .function,
+        .link{
+            // 避開右側 sideBar
+            right: 140px;
+        }
+    }
+    @media screen and (max-width: 1200px) {
+        .function,
+        .link{
+            // 避開右側 sideBar
+            right: 40px;
+        }
+    }
+
+    @include screen('mobile') {
+        .function,
+        .link{ position: static; }
     }
 }
-
 // 內頁內容區塊 卡片式
 .innerpage .center_block .card{
-    // background: #fff;
-    // box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-    // border-radius: 4px;
-    // padding: 1em 2em;
-    margin: 1em 0 2em;
+    // margin: 1em 0 2em;
 
     .inner{
         background: #fff;
         box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
         border-radius: 4px;
         padding: 1em 2.5em;
-        margin-top: 1.25em;
+        // margin-top: 1.25em;
 
         >div{
             // border-bottom: 1px solid #adadad;
@@ -160,7 +214,7 @@ body {
                 position: absolute;
                 width: calc(100% + 5em);
                 height: 1px;
-                background: #d9d9d9;
+                background: #f0f0f0;
                 bottom: 0;
                 left: -2.5em;
             }
@@ -259,7 +313,6 @@ body {
             margin: 18px 0 22px 32px;
             font-size: 1.2em;
         }
-
     }
     p{
         margin: 18px 0 22px 0;
@@ -275,7 +328,6 @@ body {
             }
         }
     }
-
     .info{
         .flex-form{
             .form_grp{
@@ -285,7 +337,6 @@ body {
         }
     }
 }
-
 // 預約編號
 .reserve_num{
     font-size: 1.65em;
@@ -330,9 +381,107 @@ body {
         line-height: 2;
     }
 }
+// 登入
+.login{
+    width: 420px;
+    margin: auto;
+    .flex-form{
+        .form_grp{
+            border-bottom: transparent;
 
-// 客服
-// 左右欄
+            .form_title{
+                font-size: 1.35em;
+                // padding-bottom: .65em !important;
+                padding-bottom: .25em !important;
+            }
+        }
+    }
+    p{
+        text-align: center;
+        line-height: 2;
+    }
+    @include screen('tablet') {
+        width: 100%;
+    }
+}
+// 篩選
+.filter_box{
+    width: 90%;
+    margin: auto;
+    .col{
+        @include gutter(60px);
+    }
+    .filter_search{ padding-right: 85px; }
+    .flex-2-col{
+        .form_grp{
+            border-bottom: transparent;
+            .form_title{
+                font-size: 1.25em;
+                padding-bottom: .25em !important;
+            }
+            .form_content{ position: relative; }
+        }
+        .btn{
+            flex: 0 0 auto !important;
+            width: 40px;
+            height: 40px;
+            font-size: 0;
+
+            position: absolute;
+            top: 4.8px;
+            right: 12px;
+        }
+        .btn-reset,
+        .btn-submit{ border: transparent !important; }
+        .btn-reset{
+            right: 52px;
+            background: url(../images/ticc/icon/icon_close.svg) 50% 50% no-repeat !important;
+            background-size: 16px 16px !important;
+
+            &:hover{
+                background: url(../images/ticc/icon/icon_close.svg) 50% 50% no-repeat, #ddd !important;
+                background-size: 16px 16px !important;
+            }
+        }
+        .btn-submit{
+            background: url(../images/ticc/icon/icon_search.svg) 50% 50% no-repeat !important;
+            background-size: 16px 16px !important;
+
+            &:hover{
+                background: url(../images/ticc/icon/icon_search.svg) 50% 50% no-repeat, #ddd !important;
+                background-size: 16px 16px !important;
+            }
+        }
+    }
+    .dateBox{
+        .datepick {
+            margin-left: .3em;
+            margin-right: 0;
+            padding-right: 0;
+
+            &:before {
+                content: "~";
+                font-size: 1.5em;
+                color: #777;
+            }
+
+            @include screen('xs_mobile') {
+                margin-left: 0em;
+
+                &:before { display: none; }
+            }
+        }
+    }
+}
+.login,
+.filter_box{
+    padding: 3em 0 0 !important;
+
+    .form_title{
+        color: #222 !important;
+    }
+}
+// 客服、左右欄
 .chat_content_inner{
     display: flex;
     padding-top: 1em;
@@ -562,43 +711,502 @@ body {
         }
     }
 }
-
-// 登入
-.login{
-    width: 420px;
-    margin: auto;
-
-    .flex-form .form_grp{ border-bottom: transparent;}
-
-    .form_title{
-        font-size: 1.25em;
-        padding-bottom: .65em !important;
-    }
-
-    p{
-        text-align: center;
-        line-height: 2;
-    }
-}
 // google 機器人
 .google_captcha{
     text-align: center;
     padding-top: 2em;
 }
 
-// flex  /////////////////////////////////////////
-.flex-2-col{
-    @extend %flex_set;
-}
-.flex-2-col{
-    .col{
-        @include flex-xs-equal(1, 0px);
-        @include flex-sm-equal(2, 0px);
-        @include flex-md-equal(2, 0px);
-        @include flex-lg-equal(2, 0px);
-        // @include gutter();
+// 活動行事曆 
+// 對應內容
+.output-content{
+    padding-top: 2em;
+    // function
+    .functions{
+        border-bottom: 3px solid #000;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        align-items: center;
+        .col{
+            flex: 0 0 auto;
+
+            &:first-child{
+                span{
+                    letter-spacing: 1px;
+                    padding: 0 1em;
+                }
+            }
+            &:last-child{
+                a.timeline,
+                a.calendar,
+                a.list,
+                .filter{
+                    display: inline-block;
+                    padding: .75em 1.5em;
+                    padding-left: 46px;
+                    line-height: 2;
+                    color: #222;
+                }
+
+                a.timeline{
+                    background: url(../images/ticc/icon_clock.png) 6px 50% no-repeat;
+                    background-size: 36px 36px;
+                }
+                a.calendar{
+                    background: url(../images/ticc/icon_calendar.png) 6px 50% no-repeat;
+                    background-size: 36px 36px;
+                }
+                a.list{
+                    background: url(../images/ticc/icon_grid.png) 6px 50% no-repeat;
+                    background-size: 36px 36px;
+                }
+                .filter{
+                    background: url(../images/ticc/icon_date.png) 6px 50% no-repeat;
+                    background-size: 36px 36px;
+                    padding-right: 0;
+                }
+            }
+        }
+
+        .download_pdf{
+            color: #fff;
+            padding: .75em 1.5em;
+            padding-left: 46px;
+            background: url(../images/ticc/icon_pdf.png) 6px 50% no-repeat, #222;
+            background-size: 36px 36px;
+            border-radius: 4px;
+        }
+    }
+
+    // 日期展示
+    .date-display{
+        // padding: 4em 6em;
+        padding: 4em 0;
+        h3{
+            text-align: center;
+            font-size: 2em;
+            letter-spacing: 2px;
+            line-height: 2;
+            margin: 0;
+
+            +h4.date{
+                margin-bottom: 0 !important;
+            }
+        }
+
+        // 時間軸背景
+        &.timeline{
+            .date-slider{
+                background: url(../images/ticc/bg-timeline.png) left 50% no-repeat;
+                background-size: contain;
+                margin-top: 2em;
+            }
+
+            .slick-list{
+                width: calc(100% - 12em);
+                margin: auto;
+            }
+        }
+
+    }
+    // 拖出來共用
+    h4.date{
+        color: #fff;
+        background: linear-gradient(0deg, #24086b 0%, #6a1b8a 100%);
+        border: solid 2px #fff;
+        box-shadow: rgba(99,99,99,.2) 0px 2px 8px 0px;
+        display: block;
+        width: 420px;
+        margin: 1.125em auto;
+        padding: 1em 0;
+        text-align: center;
+        font-size: 1.5em;
+        line-height: 1.4;
+        font-weight: bold;
+
+        b{ font-size: 140%; }
+
+        position: relative;
+        overflow: hidden;
+        &:before{
+            content: '';
+            position: absolute;
+            border-style: solid;
+            transform-origin: left top;
+            transform: rotate(-24deg);
+            border-width: 50px 120px 0 0;
+            border-color: #fff;
+            left: -20px;
+            top: 0px;
+        }
+    }
+    h4.month{
+        text-align: center;
+        font-size: 2.5em;
+        margin: 0;
+        padding: 1em 0;
+    }
+
+    // 品項
+    .content{
+        margin-top: 2em;
+        .item{
+            box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+            background: #fff;
+            margin: 16px 0;
+
+            position: relative;
+            // .link{
+            //     position: absolute;
+            //     right: 2em;
+            //     top: 2em;
+            //     z-index: 1;
+            //     a{
+            //         display: inline-block;
+            //         width: 42px;
+            //         height: 42px;
+            //         padding: 6px;
+            //         &.share{}
+            //         &.calendar{}
+            //     }
+            // }
+            >a{
+                display: flex;
+                flex-flow: row nowrap;
+                padding: 34px 40px;
+                transition: all .3s ease;
+                .timepoint{
+                    flex: 0 0 30%;
+                    background: #ddd;
+                    height: 180px;
+                    border-radius: 5px;
+                    overflow: hidden;
+
+                    transition: all .3s ease;
+
+                    position: relative;
+                    p{
+                        position: absolute;
+                        z-index: 1;
+                        text-align: center;
+                        width: 100%;
+                        height: 100%;
+                        margin: 0;
+
+                        color: #fff;
+                        background: linear-gradient(0deg, rgba(36,8,107,1) 0%, rgba(106,27,138,1) 100%);
+                        transition: all .6s;
+
+                        display: flex;
+                        flex-flow: column wrap;
+                        justify-content: center;
+                        span{
+                            line-height: 1.4;
+                            &:nth-child(1){
+                                font-size: 1em;
+                            }
+                            &:nth-child(2){
+                                font-size: 2.2em;
+                                font-weight: bold;
+                                letter-spacing: 1px;
+                            }
+                            &:nth-child(3){
+                                font-size: 1.75em;
+                                font-weight: bold;
+                            }
+                        }
+                    }
+                    .img-container{
+                        background: #222;
+                        height: 100%;
+                        img{}
+                    }
+                }
+                .text{
+                    flex: 1 1 70%;
+                    padding: 0 5.5em 0 3em;
+                    color: #222;
+                    h3{
+                        font-size: 1.5em;
+                        color: rgba(36,8,107,1);
+                    }
+                    h4{
+                        font-size: 1.125em;
+                        margin-bottom: 10px;
+                    }
+                    p{
+                        line-height: 1.8;
+                        margin-top: 0;
+                        color: #373636;
+                        span{
+                            color: $primaryColor;
+                            font-weight: bold;
+                        }
+                    }
+                }
+                &:hover, &:focus{
+                    .timepoint{
+                        height: 280px;
+                        p{ background: rgba(0,0,0,.65); }
+                    }
+                    .text{}
+                }
+            }
+
+            &.AD{
+                // p{
+                //     position: absolute;
+                //     right: 0;
+                //     bottom: 0;
+                //     text-align: center;
+                //     width: 260px;
+                //     padding: 1em 0;
+                //     margin: 0;
+                //     line-height: 1.6;
+                //     font-size: 1.2em;
+                //     letter-spacing: 1px;
+                //     // background: $secondaryColor;
+                //     background: linear-gradient(0deg, $secondaryColor 0%, $secondaryColor 100%);
+                //     color: #fff;
+                //     font-weight: 400;
+                // }
+                >a{
+                    .img-container{
+                        width: calc( 100% - 120px);
+                        height: 320px;
+                        border-radius: 5px;
+                        overflow: hidden;
+
+                        img{
+                            transform: scale(1);
+                            transition: all .3s ease;
+                        }
+                    }
+
+                    p{
+                        position: absolute;
+                        right: 0;
+                        bottom: 0;
+                        text-align: center;
+                        width: 260px;
+                        padding: 1em 0;
+                        margin: 0;
+                        line-height: 1.6;
+                        font-size: 1.2em;
+                        letter-spacing: 1px;
+                        // background: $secondaryColor;
+                        background: linear-gradient(0deg, #6a1b8a 0%, #24086b 100%);
+                        color: #fff;
+                        font-weight: 400;
+
+                        transition: all .3s ease;
+                    }
+
+                    // &:hover, &:focus{
+                    //     .img-container{
+                    //         img{
+                    //             transform: scale(1.1);
+                    //         }
+                    //     }
+                    // }
+                }
+
+                &:hover, &:focus{
+                    >a{
+                        .img-container{
+                            img{ transform: scale(1.1); }
+                        }
+                        p{ background: linear-gradient(0deg, $secondaryColor 0%, $secondaryColor 100%); }
+                    }
+                }
+            }
+        }
     }
 }
+// 活動行事曆：分享＋加入google月曆
+.link{
+    // 拉出來共用
+    position: absolute;
+    right: 2em;
+    top: 2em;
+    z-index: 1;
+    a{
+        display: inline-block;
+        width: 42px;
+        height: 42px;
+        padding: 6px;
+        &.share{}
+        &.calendar{}
+    }
+}
+
+.center_block{}
+
+// 日曆calendar_Tb
+.calendar_Tb {
+    margin: 0 0 20px;
+    table {
+        word-break: break-all;
+        table-layout: fixed;
+        border: solid 3px #939393;
+        tbody { border-top: 1px solid #939393; }
+        tr { background-color: #fff; }
+        th {
+            background-color: #686868 !important;
+            border-bottom: solid 3px #939393;
+            color: #fff;
+            padding: .65em 1em;
+            width: 14.28%;
+            font-size: 1.05em;
+            font-weight: 400;
+            &.weekend {
+                background-color: #e26f6f !important;
+                color: #fff;
+            }
+        }
+        td {
+            vertical-align: top;
+            border: 1px solid #e5e5e5;
+            padding: 20px;
+            @include screen('mobile') {
+                min-height: 65px;
+                // padding: 2px 7px 2px 17% !important;
+            }
+            // 不可用
+            &.unavailable{
+                background: #f3f3f3;
+                .num_date { color: #d5d5d5; }
+                @include screen('tablet') {
+                    display: none;
+                }
+
+                &:hover, &:focus{
+                    cursor: not-allowed;
+                }
+            }
+
+            // 手機版 週幾
+            &:before{
+                background: #f0f0f0;
+            }
+        }
+
+        .num_date {
+            color: #090808;
+            font-size: 1.125em;
+            font-weight: 400;
+            @include screen('tablet') {
+                // position: absolute;
+                // text-align: center;
+                // right: 0;
+                // left: 0;
+                // top: 30px;
+                // width: 15%;
+            }
+        }
+        .gallery_activity {
+            a{
+                display: block;
+                margin: 10px 0;
+                color: #fff;
+                background: linear-gradient(0deg, #666 0%, #222 100%);
+                padding: 20px 16px;
+                border-radius: 4px;
+                transition: .6s;
+
+                &:hover, &:focus{
+                    background: linear-gradient(0deg, #24086b 0%, #6a1b8a 100%);
+                }
+            }
+        }
+
+        @include screen('tablet') {
+            tr{
+                &:nth-child(even){
+                    background: #f0f0f0;
+                    td {
+                        border-bottom: 1px solid #fff !important;
+                        // 手機版 週幾
+                        &:before{ background: #fff; }
+                    }
+
+                }
+            }
+        }
+    }
+}
+// 詳目頁
+.act_info{
+    padding: 2em 0 !important;
+    @extend %flex_set;
+
+    .pic,
+    .list{
+        // @include flex-xs(12, 0px);
+        // @include flex-sm(6, 0px);
+        // @include flex-md(7, 0px);
+        // @include flex-lg(7, 0px);
+
+        @include flex-xs(12, 0px);
+        @include flex-sm(6, 24px);
+        @include flex-md(6, 24px);
+        @include flex-lg(6, 24px);
+    }
+
+    .pic{
+        margin: 0;
+        padding: 0;
+    }
+    .list{
+        // @include flex-xs(12, 0px);
+        // @include flex-sm(6, 0px);
+        // @include flex-md(5, 0px);
+        // @include flex-lg(5, 0px);
+
+        .scroltable{
+            min-width: auto !important;
+            width: 100%;
+        }
+        .scroltable-nav{ display: none !important; }
+
+        table{
+            th, td{
+                border: 0;
+                border-bottom: 1px solid #ddd;
+                padding: 1.45em .5em;
+            }
+
+            tr{
+                &:last-child{
+                    th, td{
+                        border-bottom: 1px solid transparent;
+                    }
+                }
+            }
+
+            th{
+                background: transparent;
+                text-align: right;
+            }
+            td{
+                a{
+                    display: block;
+                    letter-spacing: 1px;
+                    padding: .25em .5em;
+
+                    &:hover, &:focus{}
+                }
+            }
+        }
+    }
+
+    +p{
+        line-height: 2;
+        margin: 3em 0 2em !important;
+    }
+}
+
 
 ////////////////////////////////////////////////////////////
 // 為了與首頁區隔，請在內頁加上innerpage ClassName
@@ -628,6 +1236,7 @@ body {
             flex: auto;
             flex-basis: calc(100% - 300px);
             max-width: calc(100% - 300px);
+            margin-bottom: 3em;
         }
 
         // @media screen and (max-width: 1600px) {
@@ -658,6 +1267,7 @@ body {
     }
 
     @media screen and (max-width: 1600px) {
+        // 避開右側 sideBar
         .center_block { padding-right: 100px; }
     }
     @media screen and (max-width: 1480px) {
@@ -667,7 +1277,7 @@ body {
     }
     @include screen('tablet') {
         .center_block {
-            padding-right: 0;
+            padding-right: 0;  // 右側 sideBar 隱藏，回歸原本位置
             flex-basis: 100%;
             max-width: 100%;
         }

@@ -1,3 +1,155 @@
+.leftblock_list {
+    background: rgba(0,0,0,.75);
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    // 越過標題斜線
+    position: relative;
+    z-index: 1;
+    ul {
+        margin: 0;
+        padding: 1em 0;
+        list-style-type: none;
+        li {
+            a {
+                display: block;
+                line-height: 1.4em;
+                font-size: 1em;
+                color: #fafafa;
+                padding: .75em 1em .75em 3.2em;
+
+                &:hover {
+                    color: $aHover;
+                    color: #fff;
+                }
+            }
+
+            background: transparent;
+            transition: all 300ms ease;
+            background: url(../images/ticc/icon/icon_doc2.svg) 20px 50% no-repeat, transparent;
+            background-size: 20px 20px;
+            &:hover {
+                background: url(../images/ticc/icon/icon_doc2.svg) 20px 50% no-repeat, $secondaryColor;
+                background-size: 20px 20px;
+            }
+
+            &:nth-child(2){
+                background: url(../images/ticc/icon/icon_cloudUp2.svg) 20px 50% no-repeat, transparent;
+                background-size: 24px 20px;
+                &:hover {
+                    background: url(../images/ticc/icon/icon_cloudUp2.svg) 20px 50% no-repeat, $secondaryColor;
+                    background-size: 24px 20px;
+                }
+            }
+            &:nth-child(3){
+                background: url(../images/ticc/icon/icon_pen2.svg) 20px 50% no-repeat, transparent;
+                background-size: 20px 20px;
+                &:hover {
+                    background: url(../images/ticc/icon/icon_pen2.svg) 20px 50% no-repeat, $secondaryColor;
+                    background-size: 20px 20px;
+                }
+            }
+            &:nth-child(4){
+                background: url(../images/ticc/icon/icon_phone2.svg) 20px 50% no-repeat, transparent;
+                background-size: 20px 20px;
+                &:hover {
+                    background: url(../images/ticc/icon/icon_phone2.svg) 20px 50% no-repeat, $secondaryColor;
+                    background-size: 20px 20px;
+                }
+            }
+        }
+    }
+
+    // 廠商後臺上稿，icon 統一
+    &.freezone{
+        ul {
+            li {
+                background: transparent;
+                counter-increment:hh2;
+                position: relative;
+                &:before{ 
+                    content:counter(hh2)"";
+                    color: #fff;
+                    position: absolute;
+                    left: 22px;
+                    top: 10px;
+                }
+                // a{ padding: .75em 1em .75em 4em; }
+                &:hover {
+                    background: $secondaryColor;
+                }
+            }
+        }
+    }
+
+    @include screen('tablet') {
+        ul {
+            li{
+                position: relative;
+
+                width: 46px;
+                height: 46px;
+
+                a{
+                    height: 46px;
+                    position: absolute;
+                    width: max-content;
+                    background: $secondaryColor;
+                    left: -600px;
+
+                    transition: all 600ms ease;
+                }
+
+                background: url(../images/ticc/icon/icon_doc2.svg) 14px 50% no-repeat, transparent;
+                background-size: 20px 20px;
+                &:hover {
+                    background: url(../images/ticc/icon/icon_doc2.svg) 14px 50% no-repeat, $secondaryColor;
+                    background-size: 20px 20px;
+                }
+                &:nth-child(2){
+                    background: url(../images/ticc/icon/icon_cloudUp2.svg) 14px 50% no-repeat, transparent;
+                    background-size: 24px 20px;
+                    &:hover {
+                        background: url(../images/ticc/icon/icon_cloudUp2.svg) 14px 50% no-repeat, $secondaryColor;
+                        background-size: 24px 20px;
+                    }
+                }
+                &:nth-child(3){
+                    background: url(../images/ticc/icon/icon_pen2.svg) 14px 50% no-repeat, transparent;
+                    background-size: 20px 20px;
+                    &:hover {
+                        background: url(../images/ticc/icon/icon_pen2.svg) 14px 50% no-repeat, $secondaryColor;
+                        background-size: 20px 20px;
+                    }
+                }
+                &:nth-child(4){
+                    background: url(../images/ticc/icon/icon_phone2.svg) 14px 50% no-repeat, transparent;
+                    background-size: 20px 20px;
+                    &:hover {
+                        background: url(../images/ticc/icon/icon_phone2.svg) 14px 50% no-repeat, $secondaryColor;
+                        background-size: 20px 20px;
+                    }
+                }
+                &:hover, &:focus{
+                    a{ left: 0; }
+                }
+            }
+        }
+
+        // 廠商後臺上稿，icon 統一
+        &.freezone{
+            ul {
+                li {
+                    background: transparent;
+                    &:before{ left: 20px; }
+                    &:hover { background: $secondaryColor; }
+                }
+
+            }
+        }
+    }
+}
+
+
+
 // .leftblock_banner {
 //     padding: 0 0 2.5em 0;
 //     .item {
@@ -118,122 +270,6 @@
 //         }
 //     }
 // }
-
-.leftblock_list {
-    background: rgba(0,0,0,.75);
-    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
-    ul {
-        margin: 0;
-        padding: 1em 0;
-        list-style-type: none;
-        li {
-            a {
-                display: block;
-                line-height: 1.4em;
-                font-size: 1em;
-                color: #fafafa;
-                padding: .75em 1em .75em 3.2em;
-
-                &:hover {
-                    color: $aHover;
-                    color: #fff;
-                }
-            }
-
-            background: transparent;
-            transition: all 300ms ease;
-            background: url(../images/ticc/icon/icon_doc2.svg) 20px 50% no-repeat, transparent;
-            background-size: 20px 20px;
-            &:hover {
-                background: url(../images/ticc/icon/icon_doc2.svg) 20px 50% no-repeat, $secondaryColor;
-                background-size: 20px 20px;
-            }
-
-            &:nth-child(2){
-                background: url(../images/ticc/icon/icon_cloudUp2.svg) 20px 50% no-repeat, transparent;
-                background-size: 24px 20px;
-                &:hover {
-                    background: url(../images/ticc/icon/icon_cloudUp2.svg) 20px 50% no-repeat, $secondaryColor;
-                    background-size: 24px 20px;
-                }
-            }
-            &:nth-child(3){
-                background: url(../images/ticc/icon/icon_pen2.svg) 20px 50% no-repeat, transparent;
-                background-size: 20px 20px;
-                &:hover {
-                    background: url(../images/ticc/icon/icon_pen2.svg) 20px 50% no-repeat, $secondaryColor;
-                    background-size: 20px 20px;
-                }
-            }
-            &:nth-child(4){
-                background: url(../images/ticc/icon/icon_phone2.svg) 20px 50% no-repeat, transparent;
-                background-size: 20px 20px;
-                &:hover {
-                    background: url(../images/ticc/icon/icon_phone2.svg) 20px 50% no-repeat, $secondaryColor;
-                    background-size: 20px 20px;
-                }
-            }
-        }
-    }
-
-
-    @include screen('tablet') {
-        ul {
-            li{
-                position: relative;
-
-                width: 46px;
-                height: 46px;
-
-                a{
-                    height: 46px;
-                    position: absolute;
-                    width: max-content;
-                    background: $secondaryColor;
-                    left: -600px;
-
-                    transition: all 600ms ease;
-                }
-
-                background: url(../images/ticc/icon/icon_doc2.svg) 14px 50% no-repeat, transparent;
-                background-size: 20px 20px;
-                &:hover {
-                    background: url(../images/ticc/icon/icon_doc2.svg) 14px 50% no-repeat, $secondaryColor;
-                    background-size: 20px 20px;
-                }
-
-                &:nth-child(2){
-                    background: url(../images/ticc/icon/icon_cloudUp2.svg) 14px 50% no-repeat, transparent;
-                    background-size: 24px 20px;
-                    &:hover {
-                        background: url(../images/ticc/icon/icon_cloudUp2.svg) 14px 50% no-repeat, $secondaryColor;
-                        background-size: 24px 20px;
-                    }
-                }
-                &:nth-child(3){
-                    background: url(../images/ticc/icon/icon_pen2.svg) 14px 50% no-repeat, transparent;
-                    background-size: 20px 20px;
-                    &:hover {
-                        background: url(../images/ticc/icon/icon_pen2.svg) 14px 50% no-repeat, $secondaryColor;
-                        background-size: 20px 20px;
-                    }
-                }
-                &:nth-child(4){
-                    background: url(../images/ticc/icon/icon_phone2.svg) 14px 50% no-repeat, transparent;
-                    background-size: 20px 20px;
-                    &:hover {
-                        background: url(../images/ticc/icon/icon_phone2.svg) 14px 50% no-repeat, $secondaryColor;
-                        background-size: 20px 20px;
-                    }
-                }
-
-                &:hover, &:focus{
-                    a{ left: 0; }
-                }
-            }
-        }
-    }
-}
 
 
 

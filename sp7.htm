@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>TICC</title>
+    <title>預約消息</title>
     <!--HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries [if lt IE 9]>
     <script src="js/html5shiv.js"></script>
     <script src="js/respond.min.js"></script>
@@ -23,6 +23,14 @@
     <link href="images/favicon.png" rel="icon" type="image/x-icon">
 </head>
 <body>
+    <!--跳窗-->
+    <!-- <div id="modal1" class="modal">
+        <h2>標題</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero, perferendis cumque nobis recusandae aperiam? Quis sunt, sit error consequuntur, amet, odit corrupti exercitationem eveniet debitis facere dolor mollitia natus suscipit.</p>
+        <div class="btn_grp">
+            <button class="btn btn-secondary">好的</button>
+        </div>
+    </div> -->
     <!-- wrapper Start -->
     <div class="wrapper">
         <!-- header Start -->
@@ -161,106 +169,141 @@
                         <li>節點</li>
                     </ul>
                 </div>
-                <h2 class="title">聯繫承辦<br><span>English title</span></h2>
+                <h2 class="title">價目表<br><span>English title</span></h2>
             </div>
             <!-- 主要內容 -->
             <div class="container">
                 <!-- 左側 -->
                 <!-- 如果不要sticky效果，就移除stickySidebar classname -->
-                <div class="left_block">
-                    <div class="leftblock_list">
+                <div class="left_block"> <!-- 廠商上稿 -->
+                    <div class="leftblock_list freezone">
                         <ul>
-                            <li><a href="javascript:;">預約訊息</a></li>
-                            <li><a href="javascript:;">上傳活動資料</a></li>
-                            <li><a href="javascript:;">填寫滿意度調查與下載收據</a></li>
-                            <li><a href="javascript:;">聯絡承辦</a></li>
+                            <li><a href="javascript:;">最新優惠</a></li>
+                            <li><a href="javascript:;">場地價目表</a></li>
+                            <li><a href="javascript:;">設備價目表</a></li>
+                            <li><a href="javascript:;">廣告/其他價目表</a></li>
+                            <li><a href="javascript:;">布置物/廣告擺設、懸掛、張貼</a></li>
+                            <li><a href="javascript:;">室內視聽廣告</a></li>
+                            <li><a href="javascript:;">外牆廣告</a></li>
                         </ul>
                     </div>
                 </div>
                 <!-- 主要內容區 -->
                 <div class="center_block">
-                    <!-- function_panel -->
-                    <!-- <div class="function_panel">
-                        <div class="function">
-                            <ul>
-                                <li class="back"><a href="javascript:history.back()">回上一頁</a></li>
-                                <li class="print"><a href="#">友善列印</a></li>
-                                <li class="forward"><a href="#">轉寄友人</a></li>
-                            </ul>
-                        </div>
-                    </div> -->
                     <!-- content Start -->
                     <section>
-                        <!-- 狀態 -->
-                        <section class="flex-2-col">
-                            <div class="col reserve_num">預約編號<b>202205021639</b></div>
-                            <div class="col state_label">
-                                <!-- <span class="">未付款</span>
-                                <span class="paid">已付款</span>
-                                <span class="delay">訂單逾期</span> -->
-                                <span class="error">訂單錯誤</span>
-                                <!-- <span class="finish">活動結束</span> -->
-                                <br>
-                                <time>訂單日期：2022/05/15</time>
-                            </div>
-                        </section>
-                        <!-- 內容 -->
+                        <!-- 活動訊息 -->
                         <section class="card">
                             <div class="inner">
-                                <div>
-                                    <h3>聯絡訊息</h3>
-                                    <p>若您對於此筆訂單有相關問題或其他資料需求，請填寫聯絡訊息，我們將盡快為您服務。</p>
-                                    <div class="info">
-                                        <div class="flex-form">
-                                            <textarea name="" id="" cols="30" rows="10" placeholder="請輸入您的問題"></textarea>
-                                            <button type="button" class="btn btn-primary">上傳附件</button><span>（PDF、JPG、PNG檔，檔案大小限制25Mb）</span>
-                                            <div class="form_grp">
-                                                <input name="text" type="text" value="用印合約.pdf" placeholder="尚未上傳合約">
-                                                <button type="button" class="btn btn-delete"><i class="i_close2"></i>移除</button>
-                                            </div>
-                                            <div class="form_grp">
-                                                <input name="text" type="text" value="用印合約.pdf" placeholder="尚未上傳合約">
-                                                <button type="button" class="btn btn-delete"><i class="i_close2"></i>移除</button>
-                                            </div>
-                                            <!-- <div class="notice_error">請上傳用印合約</div> -->
-                                        </div>
-                                    </div>
+                                <h3>最新優惠</h3>
+                                <!-- 文字連結 -->
+                                <div class="list">
+                                    <ul>
+                                        <li>
+                                            <a href="#">
+                                                <span class="num">1</span>颱風逼近軍民齊心加強防颱戒備颱風逼近軍民齊心加強防颱戒備颱風逼近軍民齊心加強防颱戒備颱風逼近軍民齊心加強防颱戒備颱風逼近軍民齊心加強防颱戒備颱風逼近軍民齊心加強防颱戒備
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <span class="num">2</span> 東坑微電網示範將到期縣府盼由台電承接
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <span class="num">3</span> 公務員高普考10日登場縣府謹慎試務
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <span class="num">4</span> 縣長﹕導引正向能量提升教育競爭力
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <span class="num">5</span> 颱風逼近軍民齊心加強防颱戒備
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <span class="num">6</span>立法院三讀通過「國軍退除役官兵輔導條例」第3條之1、第33條、第34條修正案
+                                            </a>
+                                        </li>
+                                    </ul>
                                 </div>
-                                <div class="btn_grp">
-                                    <!-- <input name="" type="reset" value="清除" class="btn btn-reset" /> -->
-                                    <input name="" type="submit" value="送出" class="btn btn-submit" />
+                                <!-- 下載 -->
+                                <div class="list download">
+                                    <ul>
+                                        <li>
+                                            <a href="#">
+                                                <span class="num">1</span>颱風逼近軍民齊心加強防颱戒備颱風逼近軍民齊心加強防颱戒備颱風逼近軍民齊心加強防颱戒備颱風逼近軍民齊心加強防颱戒備颱風逼近軍民齊心加強防颱戒備颱風逼近軍民齊心加強防颱戒備
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <span class="num">2</span> 東坑微電網示範將到期縣府盼由台電承接
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <span class="num">3</span> 公務員高普考10日登場縣府謹慎試務
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <span class="num">4</span> 縣長﹕導引正向能量提升教育競爭力
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <span class="num">5</span> 颱風逼近軍民齊心加強防颱戒備
+                                            </a>
+                                        </li>
+                                        <li>
+                                            <a href="#">
+                                                <span class="num">6</span>立法院三讀通過「國軍退除役官兵輔導條例」第3條之1、第33條、第34條修正案
+                                            </a>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <!-- 手風琴 -->
+                                <div class="accordion">
+                                    <ul>
+                                        <li>
+                                            <a href="#" title="">第一項說明</a>
+                                            <div class="accordion-content">直麼後大得股的要會使成事公人策公！我古車未書！上工題向案校立詩為色能狀計氣卻力沒時臺地是了養、後天連意市風怕著數往發民文手好，費的而西成曾給理必事後生包，就雄一過電流人住完是成；識愛作流：數關與不個性，還行案！住像印以排傷顧向樓事不音受差，重飯就孩他政的給滿綠不受東心斷來前現模微。</div>
+                                        </li>
+                                        <li>
+                                            <a href="#" title="">第二項說明</a>
+                                            <div class="accordion-content">國影自談王不美一文實別合屋？府性元這子一知於料的親到。一用技年不得就資公，也星樣團怎英班水灣個種決以因世書發定很功行何，下飯通反代命假到一不離護麼錯絕懷旅元人。弟新過，道給仍覺裡水國、醫灣了可實界一上德字什心成但創大品隨品。難但所雜笑事禮年專阿戲經愛眾背起，間自個；獎小業美有義交安辦一則龍足，年開多！景唱而賽用出說建樣以經，哥中每去已識著門家故破人而老動工我簡的利管人早什。葉禮名交，都說為一失到就招投高畫。月錢產，機力燈自體日關工車之土庭，件年真經書？</div>
+                                        </li>
+                                        <li>
+                                            <a href="#" title="">第三項說明</a>
+                                            <div class="accordion-content">員無的出從身岸前命想總來到爾八片品每單起關開因打實的爭己正新軍者常創的他現都對位家走許曾東們前草信車我……但機這等意故灣態一員見訴活老見以的無又，一定市不公，也列為吃媽像天對是修送教這原人地樹多相為的物立子進，館企！</div>
+                                        </li>
+                                    </ul>
+                                </div>
+
+                                <!-- Pagination -->
+                                <div class="pagination">
+                                    <ul class="page">
+                                        <li class="prev"><a href="javascript:;" title="回上一頁">回上一頁 </a></li>
+                                        <li class="active"><a href="javascript:;">01</a></li>
+                                        <li><a href="javascript:;">02</a></li>
+                                        <li><a href="javascript:;">03</a></li>
+                                        <li><a href="javascript:;">04</a></li>
+                                        <li><a href="javascript:;">05</a></li>
+                                        <li><a href="javascript:;">06</a></li>
+                                        <li><a href="javascript:;">07</a></li>
+                                        <li><a href="javascript:;">08</a></li>
+                                        <li><a href="javascript:;">09</a></li>
+                                        <li><a href="javascript:;">10</a></li>
+                                        <li class="next"><a href="javascript:;" title="下一頁">下一頁 </a></li>
+                                    </ul>
                                 </div>
                             </div>
                         </section>
-                        <!-- 客服 -->
-                        <div class="chat_content_inner">
-                            <!-- 左：客服 -->
-                            <div class="message_received">
-                                <!-- 客服icon -->
-                                <div class="service_icon"><img src="images/ticc/logo-default.png" alt=""></div>
-                                <!-- 客服訊息內容 -->
-                                <div class="service_wrap">
-                                    <div class="service_message">您好～我是TICC智能客服，很高興為您服務 😊 需要什麼協助呢？</div>
-                                </div>
-                                <!-- 訊息發送時間 -->
-                                <div class="received_time">2022/06/13&nbsp;&nbsp;09:10:36</div>
-                            </div>
-                            <!-- 右：user -->
-                            <div class="message_user">
-                                <!-- user icon -->
-                                <div class="user_icon"><img src="images/ticc/icon/icon_user.svg" alt=""></div>
-                                <!-- 訊息內容 -->
-                                <div class="user_wrap">
-                                    <div class="user_message"><span>繳費證明-1.pdf</span></div>
-                                    <div class="user_message"><span>繳費證明-2.pdf</span></div>
-                                    <!-- 訊息發送時間 -->
-                                    <div class="received_time">2022/06/13&nbsp;&nbsp;09:12:12</div>
-                                    <div class="user_message"><span>繳費證明-3.pdf</span></div>
-                                    <!-- 訊息發送時間 -->
-                                    <div class="received_time">2022/06/13&nbsp;&nbsp;09:13:02</div>
-                                </div>
-                            </div>
-                        </div>
                     </section>
                     <!-- content End -->
                 </div>

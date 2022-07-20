@@ -491,8 +491,7 @@
 }
 
 
-/*  slick-lightbox  */
-
+// slick-lightbox
 .slick-lightbox {
     position: fixed;
     top: 0;
@@ -743,3 +742,104 @@
         display: none !important;
     }
 }
+
+// 日期展示
+.date-slider{
+    // padding: 1em 0;
+    clear: both;
+    .date {
+        @include aspect-ratio(3, 1);
+        margin: 0px 15px;
+        background: #efefef;
+        border: solid 2px #fff;
+        box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+        display: flex;
+        flex-flow: row nowrap;
+        justify-content: center;
+        align-items: center;
+
+        position: relative;
+        &:before{
+            position: absolute;
+            width: 0;
+            height: 0;
+            border-style: solid;
+            transform-origin: top right;
+            transform: rotate(65deg);
+            border-width: 20px 60px 0 0;
+            border-color: #390d74;
+            // border-image-source: linear-gradient(0deg, #6a1b8a 0%, #24086b 100%);
+            left: 30px;
+            top: 0;
+
+            opacity: .65;
+        }
+
+        a {
+            color: #999;
+            display: block;
+            width: 100%;
+            height: 100%;
+            padding: 1em 0;
+            text-align: center;
+            font-size: 1.5em;
+            line-height: 1.4;
+            font-weight: bold;
+            b{ font-size: 140%; }
+        }
+
+        &.act{
+            background: linear-gradient(0deg, #24086b 0%, #6a1b8a 100%);
+            &:before{ border-color: #fff; opacity: 1; }
+            a{ color: #fff; }
+
+            &:hover,
+            &:focus { 
+                a{color: #fff !important;}
+            }
+        }
+
+        &:hover,
+        &:focus {
+            &:before{ opacity: 1;}
+            a { color: #222; }
+        }
+    }
+
+    // dots
+    // .slick-dots {
+    //     bottom: -60px;
+    //     li {
+    //         width: 10px;
+    //         height: 10px;
+    //         margin: 0 10px;
+    //     }
+    // }
+
+    //Arrows
+    .slick-prev, .slick-next {
+        top: calc( 50% - 25px);
+        width: 50px !important;
+        height: 50px !important;
+        border-radius: 50%;
+    }
+
+    .slick-prev {
+        left: 12px;
+        background: url(../images/ticc/icon/icon_arrow_prev.png) center center no-repeat, linear-gradient(0deg, #b0b0b1 0%, #b0b0b1 100%);
+        transition: background .6s ease;
+        &:hover, &:focus{
+            background: url(../images/ticc/icon/icon_arrow_prev.png) center center no-repeat, linear-gradient(0deg, #24086b 0%, #6a1b8a 100%);
+        }
+    }
+    .slick-next {
+        right: 12px;
+        background: url(../images/ticc/icon/icon_arrow_next.png) center center no-repeat, linear-gradient(0deg, #b0b0b1 0%, #b0b0b1 100%);
+        transition: background .6s ease;
+        &:hover, &:focus{
+            background: url(../images/ticc/icon/icon_arrow_next.png) center center no-repeat, linear-gradient(0deg, #24086b 0%, #6a1b8a 100%);
+        }
+    }
+    .slick-disabled{ opacity: 0 !important; }
+}
+

@@ -22,8 +22,19 @@
     <!-- favicon -->
     <link href="images/favicon.png" rel="icon" type="image/x-icon">
 </head>
-
 <body>
+    <!--跳窗-->
+    <!-- <div id="modal1" class="modal">
+        <h2>忘記密碼</h2>
+        <p>請輸入預約編號，我們將重新發送通知信。<br>若找不到信件時，請到「垃圾信件」分類查找，或請<a href="#">聯絡我們</a>。</p>
+        <div class="flex-form">
+            <input type="text" id="" placeholder="請輸入編號" class="error">
+            <div class="notice_error">查無此預約編號</div>
+        </div>
+        <div class="btn_grp">
+            <button class="btn btn-submit">送出</button>
+        </div>
+    </div> -->
     <!-- wrapper Start -->
     <div class="wrapper">
         <!-- header Start -->
@@ -125,106 +136,127 @@
         </header>
         <!-- header End -->
         <!-- main Start -->
-        <div id="center" class="main">
-            <!-- side bar -->
-            <section class="sideBar wow fadeInRight" data-wow-delay=".3s">
-                <a href="javascript:;">檔期<br>查詢</a>
-                <a href="javascript:;">線上<br>洽詢</a>
-                <a href="javascript:;">VR<br>實境</a>
-                <a href="javascript:;">活動<br>行事曆</a>
-                <a href="javascript:;" class="sb-scrollToTop">Top</a>
-            </section>
-            <!-- 影片 -->
-            <section class="full hero">
-                <div class="container">
-                    <!-- slogen -->
-                    <h3 class="slogen wow bounceInLeft">Taipei<br>
-                        International<br>
-                        Convention Center
-                    </h3>
-                    <!-- 登入＋查詢 -->
-                    <div class="btn_box">
-                        <a href="#" class="btn">預約編號登入<span>Login in</span></a>
-                        <a href="#" class="btn">大會堂座位圖查詢<span>Search</span></a>
+        <div id="center" class="main innerpage">
+            <div class="container-hero">
+                <!-- 內頁新增一個classname-->
+                <!-- side bar -->
+                <section class="sideBar wow fadeInRight" data-wow-delay=".3s">
+                    <a href="javascript:;">檔期<br>查詢</a>
+                    <a href="javascript:;">線上<br>洽詢</a>
+                    <a href="javascript:;">VR<br>實境</a>
+                    <a href="javascript:;">活動<br>行事曆</a>
+                    <a href="javascript:;" class="sb-scrollToTop">Top</a>
+                </section>
+                <!-- 影片 -->
+                <section class="full hero">
+                    <div class="container">
+                        <!-- slogen -->
+                        <h3 class="slogen wow bounceInLeft">Taipei<br>
+                            International<br>
+                            Convention Center
+                        </h3>
+                        <!-- 登入＋查詢 -->
+                        <div class="btn_box">
+                            <a href="#" class="btn">預約編號登入<span>Login in</span></a>
+                            <a href="#" class="btn">大會堂座位圖查詢<span>Search</span></a>
+                        </div>
+                        <img src="images/ticc/img-hero.jpg" alt="">
                     </div>
-                    <!-- muted=""  -->
-                    <video class="viedo_img" autoplay="" muted="" loop="">
-                        <source src="images/ticc/earth.mp4" type="video/mp4">
-                    </video>
+                </section>
+            </div>
+            <div class="mainTitleBox">
+                <!-- breadcrumb路徑 -->
+                <div class="breadcrumb">
+                    <ul>
+                        <li><a href="#">首頁</a></li>
+                        <li><a href="#">節點</a></li>
+                        <li>節點</li>
+                    </ul>
                 </div>
-            </section>
-            <!-- 計畫你的活動 -->
-            <section class="planSearch">
-                <div class="container">
-                    <h2 class="title wow bounceInLeft">計畫你的活動<br><span>Plan your event</span></h2>
-                    <p class="note">TICC提供專業會議服務，地處全臺最國際化的信義商圈，擁有多元化空間及一流的硬體設備，每年辦理超過800場以上的會議活動，包含大型國際會議、演唱會、各式研討會、產品發表會等，為臺灣會議暨大型活動首屈一指的專業場地。</p>
-                    <section class="box">
-                        <form action="">
-                            <div class="flex-form">
-                                <div class="form_grp" role="group" aria-labelledby="fake-legend">
-                                    <label for="" class="form_title" aria-required="true">用途選擇</label>
-                                    <div class="form_content" id="fake-legend">
-                                        <div class="check_grp form_inline">
-                                            <label><input type="checkbox" name="" value="" checked="">會議、典禮、教育訓練</label>
-                                            <label><input type="checkbox" name="" value="">宴會</label>
-                                        </div>
+                <!-- function 預定地 -->
+                <div class="function">
+                    <ul>
+                        <li class="icon_back"><a href="#">回上一頁</a></li>
+                        <!-- <li class="icon_print"><a href="#">友善列印</a></li>
+                        <li class="icon_forward"><a href="#">轉寄友人</a></li> -->
+                    </ul>
+                </div>
+                <!-- 活動標題＋時間 -->
+                <h2 class="act_title">Bio Korea 2022 International Convention
+                </h2>
+                <div class="act_during">
+                    <div class="col">
+                        <div><b class="date">05.27</b><br><span>16:00&nbsp;-&nbsp;20:00</span></div>
+                        <div>(五)<br><b>Fri.</b></div>
+                    </div>
+                    <div class="col">
+                        <div><b class="date">05.29</b><br><span>16:00&nbsp;-&nbsp;20:00</span></div>
+                        <div>(日)<br><b>Sun.</b></div>
+                    </div>
+                </div>
+                <!-- 活動分享＋加入google月曆 -->
+                <div class="link">
+                    <a href="javascript:;" class="" title="社群分享"><img src="images/ticc/icon/icon_share.png" alt=""></a>
+                    <a href="javascript:;" class="" title="google calendar"><img src="images/ticc/icon/icon_googleCalendar.png" alt=""></a>
+                </div>
+            </div>
+            <!-- 主要內容 -->
+            <div class="container">
+                <!-- 主要內容區 -->
+                <div class="center_block">
+                    <!-- content Start -->
+                    <section class="">
+                        <section class="card">
+                            <div class="inner">
+                                <!-- 左右圖文 -->
+                                <div class="act_info">
+                                    <div class="pic">
+                                        <!-- 此範例為4:3比例 -->
+                                        <picture>
+                                            <source media="(min-width: 768px)" srcset="images/demo/01.jpg">
+                                            <source media="(max-width: 767px)" srcset="images/demo/01.jpg">
+                                            <img data-src="images/demo/01.jpg" class="lazy">
+                                            <noscript><img src="images/demo/01.jpg"></noscript>
+                                        </picture>
+                                    </div>
+                                    <div class="list">
+                                        <table>
+                                            <tr>
+                                                <th>場地</th>
+                                                <td>
+                                                    <a href="#">05.27 (五) 201AB</a>
+                                                    <a href="#">05.28 (六) 101AB</a>
+                                                    <a href="#">05.29 (日) 101CD</a>
+                                                </td>
+                                            </tr>
+                                            <tr>
+                                                <th>主辦單位</th>
+                                                <td>BIO KOREA</td>
+                                            </tr>
+                                            <tr>
+                                                <th>網站</th>
+                                                <td><a href="#">https://www.google.com.tw/</a></td>
+                                            </tr>
+                                            <tr>
+                                                <th>Email</th>
+                                                <td>123456@gmail.com</td>
+                                            </tr>
+                                        </table>
                                     </div>
                                 </div>
-                                <div class="form_grp" role="group" aria-labelledby="fake-legend">
-                                    <label for="" class="form_title" aria-required="true">場地類型選擇</label>
-                                    <div class="form_content" id="fake-legend">
-                                        <div class="check_grp form_inline">
-                                            <label><input type="checkbox" name="" value="" checked="">教室型 （桌、椅）<img src="images/ticc/icon_site1.jpg" alt=""></label>
-                                            <label><input type="checkbox" name="" value="">劇院型（椅子）<img src="images/ticc/icon_site2.jpg" alt=""></label>
-                                            <label><input type="checkbox" name="" value="">馬蹄形&nbsp;&nbsp;<img src="images/ticc/icon_site3.jpg" alt=""></label>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="form_grp form_inline">
-                                    <div class="form_title">預算範圍</div>
-                                    <div class="form_content">
-                                        <input name="" type="text" value="200000" placeholder=""><b>~</b>
-                                        <input name="" type="text" value="500000" placeholder=""><b>元（台幣）</b>
-                                    </div>
-                                </div>
-                                <div class="form_grp">
-                                    <label for="" class="form_title" aria-required="true">人數規模選擇</label>
-                                    <div class="form_content form_inline">
-                                        <select name="" id="">
-                                            <option value="">30-70名規模</option>
-                                            <option value="">...</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <!-- 按鈕 -->
-                                <button class="btn btn-submit">查詢</button>
+                                <!-- 內容 -->
+                                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                                tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                                quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                                consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                                proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
                             </div>
-                        </form>
+                        </section>
                     </section>
+                    <!-- content End -->
                 </div>
-            </section>
-            <!-- 手機版 links -->
-            <section class="hotLinks">
-                <div class="container">
-                    <a href="#">檔期查詢</a>
-                    <a href="#">線上洽詢</a>
-                    <a href="#">VR實境</a>
-                    <a href="#">活動行事曆</a>
-                    <a href="#">場地查詢</a>
-                    <a href="#">攝影棚出租</a>
-                </div>
-            </section>
-            <!-- VR -->
-            <section class="VR full">
-                <div class="container">
-                    <h2 class="title wow bounceInLeft">領<em>/</em>先<em>/</em>業<em>/</em>界<br><b>全景虛擬實境服務</b><span>VR實境<b>身歷其境新體驗</b></span></h2>
-                    <a href="#" class="more">立即<br>體驗</a>
-                    <!-- VR 嵌入 -->
-                    <!-- <div class="VR-rwd">
-                        <iframe src="https://www.google.com/maps/embed?pb=!4v1656670947653!6m8!1m7!1sCAoSLEFGMVFpcFBEdDZWVnpjS0pMd1lsaEpZRU9oNnZxSzljbkViT3dBNHBfTkYz!2m2!1d25.03360058478195!2d121.5607563799119!3f91.87!4f-26.200000000000003!5f0.5970117501821992" width="800" height="680" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                    </div> -->
-                </div>
-            </section>
+            </div>
             <!-- 熱門活動 slider：滿版 full -->
             <section class="full">
                 <div class="container">
@@ -299,73 +331,6 @@
                     </div>
                 </div>
             </section>
-            <!-- 聯絡我們 -->
-            <section class="contentUs wow fadeIn">
-                <div class="container">
-                    <div class="col map-rwd">
-                        <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3615.0185468176514!2d121.55841961529123!3d25.033444644467018!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3442abb61ab3d33f%3A0xab0d0f7ac395bff4!2z5Y-w5YyX5ZyL6Zqb5pyD6K2w5Lit5b-DKFRJQ0Mp!5e0!3m2!1szh-TW!2stw!4v1656665290748!5m2!1szh-TW!2stw" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-                    </div>
-                    <div class="col">
-                        <h2 class="title">聯絡我們<br><span>contact us</span></h2>
-                        <p>無論您有任何疑問，或是想了解更多訊息，歡迎填寫以下表格，或直接撥打客服專線 (02)2725-5200(轉3000,]3151)，我們將竭誠為您服務。以上的會議活動，包含大型國際會議、演唱會、各式研討會、產品發表會等，為臺灣會議暨大型活動首屈一指的專業場地。</p>
-                        <form action="">
-                            <div class="flex-form form-column">
-                                <div class="form_grp">
-                                    <label for="" class="form_title" aria-required="true">問題類型：</label>
-                                    <div class="form_content">
-                                        <select name="" id="">
-                                            <option value="">問題類型</option>
-                                            <option value="">...</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="form_grp">
-                                    <label for="address" class="form_title">您的問題<abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr></label>
-                                    <div class="form_content">
-                                        <textarea name="" id="address" cols="30" rows="10"></textarea>
-                                    </div>
-                                </div>
-                                <div class="form_grp">
-                                    <div class="flex-col-equal-2">
-                                        <div class="form_grp">
-                                            <label for="inputSample" class="form_title">服務單位<abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr></label>
-                                            <div class="form_content">
-                                                <input name="username" id="inputSample" type="text" placeholder="">
-                                            </div>
-                                        </div>
-                                        <div class="form_grp">
-                                            <label for="inputSample2" class="form_title">聯絡電話手機</label>
-                                            <div class="form_content">
-                                                <input name="username" id="inputSample2" type="tel" placeholder="">
-                                            </div>
-                                        </div>
-                                        <div class="form_grp">
-                                            <label for="inputSample" class="form_title">姓名<abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr></label>
-                                            <div class="form_content">
-                                                <input name="username" id="inputSample" type="text" placeholder="">
-                                            </div>
-                                        </div>
-                                        <div class="form_grp">
-                                            <label for="inputSample2" class="form_title">Email<abbr class="necessary" title="為必填(選)欄位,不能為空白。">*</abbr></label>
-                                            <div class="form_content">
-                                                <input name="username" id="inputSample2" type="email" placeholder="">
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- 我不是機器人 -->
-                            <div class="google_captcha"><img src="images/ticc/google-reCAPTCHA.jpg" alt=""></div>
-
-                            <!-- 按鈕 -->
-                            <div class="btn_grp">
-                                <button class="btn btn-submit">送出</button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            </section>
         </div>
         <!-- footer Start-->
         <footer>
@@ -437,11 +402,10 @@
     <script src='vendor/wow/wow.js'></script>
     <script>
         new WOW().init();
+        $("img.lazyload").lazyload();
     </script>
     <!-- hyUI -->
     <script src="js/hyui.js"></script>
     <!-- 客製js -->
     <script src="js/customize.js"></script>
 </body>
-
-</html>

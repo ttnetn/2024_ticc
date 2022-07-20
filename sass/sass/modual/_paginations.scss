@@ -13,42 +13,47 @@
         margin: 0px .5em;
     }
     .page {
-        margin: 10px auto;
+        margin: 40px auto 60px;
         padding: 0;
         display: flex;
-        justify-content:center;
-        flex-wrap:wrap;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
         li {
-            min-width: 40px;
+            // min-width: 40px;
+            width: 42px;
             height: 40px;
-            margin: 2px;
+            margin: 0 8px;
             list-style: none;
             flex:0 0 40px;
 
             box-sizing: border-box;
             a {
-                border-radius: 5px;
-                padding: 6px 10px;
-                font-weight: 700;
+                padding: 10px 20px;
                 display: block;
                 white-space: nowrap;
-                font-size: 1em;
                 color: $color-word;
-                // @include gradient (#F7F7F7, #EAEAEA, vertical);
-                background: #eee;
-                border: #ccc solid 1px;
-                &:hover,
-                &:focus {
-                    background: $primaryColor;
-                    color: #fff !important;
-                    border: $primaryColor solid 1px;
+
+                font-size: 1.125em !important;
+                font-style: italic;
+
+                position: relative;
+                &:before{
+                    content: '-';
+                    position: absolute;
+                    left: 0;
+                    width: 20px;
+                    height: 30px;
+                    font-style: italic;
+                    color: #8e8e8e;
                 }
+
+                &:hover,
+                &:focus {}
             }
             &.active {
                 a {
-                    color: #fff !important;
-                    background: $form-focus;
-                    border: darken($form-focus, 5) solid 1px;
+                    border-bottom: 4px solid #674f11;
                 }
             }
             %arrow {
@@ -79,6 +84,7 @@
                     }
                 }
             }
+
             &.first {
                 a:before {
                     @extend %arrow;
@@ -91,19 +97,39 @@
                     transform: rotate(-135deg);
                 }
             }
+
+            &.prev ,&.next {
+                width: 72px;
+                height: 72px;
+                a{
+                    &:before { display: none;}
+                    width: 72px !important;
+                    height: 72px !important;
+                    border-radius: 50%;
+                }
+            }
             &.prev {
-                a:before {
-                    @extend %arrow;
-                    margin-left: -2px;
-                    transform: rotate(-135deg);
+                a{
+                    background: url(../images/ticc/icon/icon_arrow_prev.png) 50% 50% no-repeat,linear-gradient(90deg, #b0b0b1 0%, #b0b0b1 100%);
+                    background-size: 30px 20px, cover;
+                    transition: all .3s ease;
+                    &:hover, &:focus{
+                        background: url(../images/ticc/icon/icon_arrow_prev.png) 50% 50% no-repeat,linear-gradient(90deg, #6a1b8a 0%, #24086b 100%);
+                        background-size: 30px 20px, cover;
+                    }
                 }
             }
             &.next {
-                a:before {
-                    @extend %arrow;
-                    margin-left: -6px;
-                    transform: rotate(45deg);
+                a{
+                    background: url(../images/ticc/icon/icon_arrow_next.png) 50% 50% no-repeat,linear-gradient(90deg, #b0b0b1 0%, #b0b0b1 100%);
+                    background-size: 30px 20px, cover;
+                    transition: all .3s ease;
+                    &:hover, &:focus{
+                        background: url(../images/ticc/icon/icon_arrow_next.png) 50% 50% no-repeat,linear-gradient(90deg, #6a1b8a 0%, #24086b 100%);
+                        background-size: 30px 20px, cover;
+                    }
                 }
+                
             }
             &.last {
                 a:before {

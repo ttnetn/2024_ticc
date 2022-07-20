@@ -11,6 +11,14 @@ $(function() {
         });
     }
 
+    if ($('.left_block').length) {
+        $('.mainTitleBox').find('.title').css('margin-bottom','2em');
+    }
+    // else{
+    //     $('.mainTitleBox').find('.title').css('margin-bottom','-1em');
+    // }
+
+
     // 首頁 卡片輪播
     $('.cardSlider').slick({
         centerMode: true,
@@ -23,7 +31,7 @@ $(function() {
         responsive: [{
             breakpoint: 1200,
             settings: {
-                arrows: false,
+                arrows: true,
                 centerMode: true,
                 centerPadding: '40px',
                 slidesToShow: 3
@@ -31,10 +39,50 @@ $(function() {
         },{
             breakpoint: 992,
             settings: {
-                arrows: false,
+                arrows: true,
                 centerMode: true,
                 centerPadding: '40px',
                 slidesToShow: 1
+            }
+        }]
+    });
+
+    $('.date-slider').slick({
+        dots: false,
+        infinite: false,
+        speed: 500,
+        slidesToShow: 3,
+        slidesToScroll: 3,
+        autoplay: false,
+        autoplaySpeed: 1500,
+        // pauseOnHover: true,
+        // pauseOnFocus: true,
+        // focusOnSelect: true,
+        // accessibility: true,
+        // lazyLoad: 'ondemand',
+        // ease: 'ease',
+        responsive: [{
+            breakpoint: 768,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 2,
+                infinite: true,
+                dots: true
+            }
+        }, {
+            breakpoint: 545,
+            settings: {
+                arrows: true,
+                slidesToShow: 2,
+                slidesToScroll: 2
+            }
+        }, {
+            breakpoint: 480,
+            settings: {
+                arrows: true,
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                arrows: false
             }
         }]
     });

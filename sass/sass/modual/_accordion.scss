@@ -1,20 +1,22 @@
 .accordion {
     ul {
         list-style: none;
+        @include li-reset;  
         li {
             margin-bottom: 0.5em;
             a {
                 display: block;
-                background-color: #21baff;
+                background-color: #4b137c;
                 color: #fff;
                 text-decoration: none;
-                padding: 5px;
+                padding: .65em 1.5em;
+                border-radius: 3px;
             }
         }
     }
     .accordion-content {
-        line-height: 1.45em;
-        padding: 5px 0;
+        padding: 1.5em 1.25em;
+        line-height: 1.8;
     }
 }
 // 

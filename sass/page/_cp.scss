@@ -4,37 +4,38 @@ h1.title, h2.title {
   line-height: 1.25em;
   margin: .4em 0;
 }
-// .tt{ color: #222; }
-.cp {
-  .pic {
-    float: left;
-    margin: 0px 1em 1em 0;
-    width: auto;
-    width: 45%;
-    max-width: 400px;
-    background: #F1F1F1;
-    overflow: hidden;
-    padding: .5em .5em .2em;
-    img {
-      float: none;
-      width: 100%;
-      margin: 0;
-      display:block;
-    }
-    span {
-      text-align: center;
-      display: block;
-      font-size: .938em;
-    }
-    @include screen('mobile') {
-      float: none;
-      max-width: 100%;
-      width: auto;
-      margin: 0px auto;
-      display: block;
-      margin-bottom: .5em;
-    }
+
+.pic {
+  float: left;
+  margin: 0px 1em 1em 0;
+  width: auto;
+  width: 45%;
+  max-width: 400px;
+  background: #F1F1F1;
+  overflow: hidden;
+  padding: .5em .5em .2em;
+  img {
+    float: none;
+    width: 100%;
+    margin: 0;
+    display:block;
   }
+  span {
+    text-align: center;
+    display: block;
+    font-size: .938em;
+  }
+  @include screen('mobile') {
+    float: none;
+    max-width: 100%;
+    width: auto;
+    margin: 0px auto;
+    display: block;
+    margin-bottom: .5em;
+  }
+}
+
+.cp {
   table {
     background: #FFF;
   }
