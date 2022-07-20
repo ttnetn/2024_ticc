@@ -1219,6 +1219,7 @@ body {
         flex: none;
         flex-basis: 100%;
         max-width: 100%;
+        margin-bottom: 3em;
     }
     .left_block {
         flex: none;
@@ -1236,7 +1237,6 @@ body {
             flex: auto;
             flex-basis: calc(100% - 300px);
             max-width: calc(100% - 300px);
-            margin-bottom: 3em;
         }
 
         // @media screen and (max-width: 1600px) {
