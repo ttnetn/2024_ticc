@@ -1040,9 +1040,6 @@ body {
         &.calendar{}
     }
 }
-
-.center_block{}
-
 // 日曆calendar_Tb
 .calendar_Tb {
     margin: 0 0 20px;
@@ -1204,6 +1201,68 @@ body {
     +p{
         line-height: 2;
         margin: 3em 0 2em !important;
+    }
+}
+// 單月切換
+.month_switch {
+    font-size: 1.625em;
+    text-align: center;
+    margin: 40px 0;
+    font-weight: 500;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    @include screen('mobile') {
+        font-size: 1.562em;
+    }
+    @media(max-width: 400px) {
+        font-size: 1.25em;
+    }
+    .year_month {
+        .date_range {
+            display: flex;
+            align-items: center;
+            padding-right: 10px;
+            @include screen('mobile') {
+                flex-basis: 100%;
+                justify-content: center;
+            }
+        }
+        span {
+            padding: 0 10px;
+            // font-family: 'Merriweather', serif;
+            font-weight: 400;
+            font-size: 1.5em;
+            line-height: 52px;
+            @media(max-width: 380px) {
+                padding: 0 5px;
+            }
+        }
+    }
+    .prev_btn, .next_btn {
+        // display: inline-block;
+        // vertical-align: middle;
+        a {
+            display: block;
+            width: 52px;
+            height: 52px;
+            background-color: #666;
+            line-height: 52px;
+            border-radius: 50%;
+
+            img{
+                width: 20px;
+                height: 20px;
+            }
+
+            &:hover {
+                background-color: #000;
+            }
+            @media(max-width: 380px) {
+                width: 35px;
+                height: 35px;
+            }
+        }
     }
 }
 
