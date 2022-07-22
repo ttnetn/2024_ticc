@@ -87,6 +87,42 @@ $(function() {
         }]
     });
 
+    // singleSlider
+    $('.singleSlider').slick({
+        mobileFirst: true,
+        dots: true,
+        arrows: true,
+        infinite: true,
+        speed: 1200,
+        autoplay: false,
+        fade: true,
+        lazyLoaded: true,
+        lazyLoad: 'ondemand',
+        ease: 'ease',
+        pauseOnHover: false,
+        pauseOnFocus: false
+    });
+
+    // 內頁 篇幅三張
+    $('.galleryslider').slick({
+        centerMode: true,
+        centerPadding: '180px',
+        arrows: true,
+        dots: true,
+        infinite: true,
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        responsive: [{
+            breakpoint: 1200,
+            settings: {
+                arrows: true,
+                centerMode: true,
+                centerPadding: '40px',
+                slidesToShow: 1
+            }
+        }]
+    });
+
     // modal設定
     $(function () {
         $("#modal1").hide();                                                      //先隱藏視窗
@@ -148,24 +184,24 @@ $(function() {
 
 
     // 首頁輪播
-    $('.mpSlider').slick({
-        mobileFirst: true,
-        dots: true,
-        arrows: true,
-        infinite: true,
-        speed: 500,
-        autoplay: true,
-        fade: true,
-        lazyLoaded: true,
-        lazyLoad: 'ondemand',
-        ease: 'ease',
-        pauseOnHover: false,
-        pauseOnFocus: false,
-        customPaging: function(slider, i) {
-            var title = $(slider.$slides[i]).find('img').attr('alt').trim();
-            return $('<button type="button" aria-label="' + title + '"/>').text(title);
-        }
-    });
+    // $('.mpSlider').slick({
+    //     mobileFirst: true,
+    //     dots: true,
+    //     arrows: true,
+    //     infinite: true,
+    //     speed: 500,
+    //     autoplay: true,
+    //     fade: true,
+    //     lazyLoaded: true,
+    //     lazyLoad: 'ondemand',
+    //     ease: 'ease',
+    //     pauseOnHover: false,
+    //     pauseOnFocus: false,
+    //     customPaging: function(slider, i) {
+    //         var title = $(slider.$slides[i]).find('img').attr('alt').trim();
+    //         return $('<button type="button" aria-label="' + title + '"/>').text(title);
+    //     }
+    // });
     // 廣告輪播
     $('.adSlider').slick({
         mobileFirst: true,

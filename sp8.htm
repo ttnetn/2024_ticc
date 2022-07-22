@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>TICC</title>
+    <title>預約消息</title>
     <!--HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries [if lt IE 9]>
     <script src="js/html5shiv.js"></script>
     <script src="js/respond.min.js"></script>
@@ -25,14 +25,10 @@
 <body>
     <!--跳窗-->
     <!-- <div id="modal1" class="modal">
-        <h2>忘記密碼</h2>
-        <p>請輸入預約編號，我們將重新發送通知信。<br>若找不到信件時，請到「垃圾信件」分類查找，或請<a href="#">聯絡我們</a>。</p>
-        <div class="flex-form">
-            <input type="text" id="" placeholder="請輸入編號" class="error">
-            <div class="notice_error">查無此預約編號</div>
-        </div>
+        <h2>標題</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero, perferendis cumque nobis recusandae aperiam? Quis sunt, sit error consequuntur, amet, odit corrupti exercitationem eveniet debitis facere dolor mollitia natus suscipit.</p>
         <div class="btn_grp">
-            <button class="btn btn-submit">送出</button>
+            <button class="btn btn-secondary">好的</button>
         </div>
     </div> -->
     <!-- wrapper Start -->
@@ -181,77 +177,116 @@
                         <li class="icon_forward"><a href="#">轉寄友人</a></li> -->
                     </ul>
                 </div>
-                <!-- 活動標題＋時間 -->
-                <h2 class="act_title">Bio Korea 2022 International Convention
-                </h2>
-                <div class="act_during">
-                    <div class="col">
-                        <div><b class="date">05.27</b><br><span>16:00&nbsp;-&nbsp;20:00</span></div>
-                        <div>(五)<br><b>Fri.</b></div>
-                    </div>
-                    <div class="col">
-                        <div><b class="date">05.29</b><br><span>16:00&nbsp;-&nbsp;20:00</span></div>
-                        <div>(日)<br><b>Sun.</b></div>
-                    </div>
-                </div>
-                <!-- 活動分享＋加入google月曆 -->
-                <div class="link">
-                    <a href="javascript:;" class="" title="社群分享"><img src="images/ticc/icon/icon_share.png" alt=""></a>
-                    <a href="javascript:;" class="" title="google calendar"><img src="images/ticc/icon/icon_googleCalendar.png" alt=""></a>
-                </div>
+                <h2 class="title">價目表<br><span>English title</span></h2>
             </div>
             <!-- 主要內容 -->
             <div class="container">
+                <!-- 左側 -->
+                <!-- 如果不要sticky效果，就移除stickySidebar classname -->
+                <div class="left_block"> <!-- 廠商上稿 -->
+                    <div class="leftblock_list freezone">
+                        <ul>
+                            <li><a href="javascript:;">布置物/廣告擺設、懸掛、張貼</a></li>
+                            <li><a href="javascript:;">室內視聽廣告</a></li>
+                            <li><a href="javascript:;">外牆廣告</a></li>
+                        </ul>
+                    </div>
+                </div>
                 <!-- 主要內容區 -->
                 <div class="center_block">
                     <!-- content Start -->
-                    <section class="">
+                    <section>
+                        <!-- 活動訊息 -->
                         <section class="card">
                             <div class="inner">
-                                <!-- 左右圖文 -->
-                                <div class="act_info">
-                                    <div class="pic">
-                                        <!-- 此範例為4:3比例 -->
-                                        <picture>
-                                            <source media="(min-width: 768px)" srcset="images/demo/01.jpg">
-                                            <source media="(max-width: 767px)" srcset="images/demo/01.jpg">
-                                            <img data-src="images/demo/01.jpg" class="lazy">
-                                            <noscript><img src="images/demo/01.jpg"></noscript>
-                                        </picture>
+                                <h3>布置物/廣告擺設、懸掛、張貼</h3>
+                                <!-- single sider -->
+                                <div class="singleSlider">
+                                    <div class="Video">
+                                        <div class='embed-container'>
+                                            <iframe src="https://www.youtube.com/embed/bOL6ULLbTv4?start=299" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" frameborder='0' allowfullscreen></iframe>
+                                        </div>
                                     </div>
-                                    <div class="list">
-                                        <table>
-                                            <tr>
-                                                <th>場地</th>
-                                                <td>
-                                                    <a href="#">05.27 (五) 201AB</a>
-                                                    <a href="#">05.28 (六) 101AB</a>
-                                                    <a href="#">05.29 (日) 101CD</a>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <th>主辦單位</th>
-                                                <td>BIO KOREA</td>
-                                            </tr>
-                                            <tr>
-                                                <th>網站</th>
-                                                <td><a href="#">https://www.google.com.tw/</a></td>
-                                            </tr>
-                                            <tr>
-                                                <th>Email</th>
-                                                <td>123456@gmail.com</td>
-                                            </tr>
-                                        </table>
+                                    <div class="img-container">
+                                        <img src="images/demo/02.jpg" alt="" class="cover">
+                                    </div>
+                                    <div class="img-container">
+                                        <img src="images/demo/03.jpg" alt="" class="cover">
                                     </div>
                                 </div>
-                                <!-- 內容 -->
+                                <!-- table -->
+                                <div class="list">
+                                    <table>
+                                        <tr>
+                                            <th>出租項目</th>
+                                            <td>大門南北側精神堡壘</td>
+                                        </tr>
+                                        <tr>
+                                            <th>地點規格</th>
+                                            <td>東大門口外南北側空地，長寬高以 4M 為限</td>
+                                        </tr>
+                                        <tr>
+                                            <th>租金</th>
+                                            <td>每一會期租金NT$10,000/每側</td>
+                                        </tr>
+                                        <tr>
+                                            <th>優先順序</th>
+                                            <td>租用優先順序<br>
+                                                1.大會堂租戶： 優先租用南側掛旗及精神堡壘。<br>
+                                                2.國際會議： 優先租用北側 掛旗及精神堡壘。
+                                            </td>
+                                        </tr>
+                                    </table>
+                                </div>
+                                <!-- text -->
                                 <div class="text_info">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                                    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                                    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quaerat cumque voluptatem aliquid in qui ullam dolor! Exercitationem, assumenda quis. Incidunt exercitationem expedita asperiores dolorem, eum numquam sed vitae quisquam minus?</p>
+                                    <ol>
+                                        <li>lorem</li>
+                                        <li>lorem</li>
+                                        <li>lorem</li>
+                                    </ol>
+                                    <ul>
+                                        <li>lorem</li>
+                                        <li>lorem</li>
+                                        <li>lorem</li>
+                                    </ul>
+                                </div>
+                                <!-- file download 檔案下載 -->
+                                <div class="file_download">
+                                    <h3>附件下載</h3>
+                                    <ul>
+                                        <li><span class="file_name">檔案名稱</span>
+                                            <span class="file_doc"><a href="xxxx.doc">doc</a>823.8 KB，下載 1,489 次</span>
+                                            <span class="file_docx"><a href="xxx.docx">docx</a>823.8 KB，下載 1,489 次</span>
+                                            <span class="file_odt"><a href="xxxx.odt">odt</a>823.8 KB，下載 1,489 次</span>
+                                        </li>
+                                        <li><span class="file_name">檔案名稱檔案名稱</span>
+                                            <span class="file_xls"><a href="xxxx.xls">xls</a>823.8 KB，下載 1,489 次</span>
+                                            <span class="file_xlsx"><a href="xxxx.xlsx">xlsx</a>823.8 KB，下載 1,489 次</span>
+                                            <span class="file_csv"><a href="xxxx.csv">csv</a>823.8 KB，下載 1,489 次</span>
+                                            <span class="file_ods"><a href="xxxx.ods">ods</a>823.8 KB，下載 1,489 次</span>
+                                        </li>
+                                        <li><span class="file_name">檔案名稱</span>
+                                            <span class="file_ppt"><a href="xxxx.ppt">ppt</a>823.8 KB，下載 1,489 次</span>
+                                            <span class="file_pptx"><a href="xxxx.pptx">pptx</a>823.8 KB，下載 1,489 次</span>
+                                            <span class="file_odp"><a href="xxxx.odp">odp</a>823.8 KB，下載 1,489 次</span>
+                                        </li>
+                                        <li><span class="file_name">檔案名稱</span>
+                                            <span class="file_pdf"><a href="xxxx.pdf">pdf</a>823.8 KB，下載 1,489 次</span>
+                                            <span class="file_zip"><a href="xxxx.zip">zip</a>823.8 KB，下載 1,489 次</span>
+                                            <span class="file_txt"><a href="xxxx.txt">txt</a>823.8 KB，下載 1,489 次</span>
+                                            <span class="file_mov"><a href="xxxx.mov">mov</a>823.8 KB，下載 1,489 次</span>
+                                            <span class="file_mp3"><a href="xxxx.mp3">mp3</a>823.8 KB，下載 1,489 次</span>
+                                            <span class="file_jpg"><a href="xxxx.jpg">jpg</a>823.8 KB，下載 1,489 次</span>
+                                            <span class="file_wmv"><a href="xxxx.wmv">wmv</a>823.8 KB，下載 1,489 次</span>
+                                            <span class="file_mp4"><a href="xxxx.mp4">mp4</a>823.8 KB，下載 1,489 次</span>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <!-- btn -->
+                                <div class="btn_grp">
+                                    <button class="btn btn-primary">聯絡我們</button>
                                 </div>
                             </div>
                         </section>
@@ -259,80 +294,6 @@
                     <!-- content End -->
                 </div>
             </div>
-            <!-- 熱門活動 slider：滿版 full -->
-            <section class="full">
-                <div class="container">
-                    <h2 class="title wow bounceInLeft">熱門活動<br><span>hot</span></h2>
-                    <!-- slider -->
-                    <div class="cardSlider">
-                        <div class="info_card">
-                            <a href="javascript:;">
-                                <div class="img-container">
-                                    <img data-lazy="images/demo/01.jpg" class="cover" alt="圖說1">
-                                </div>
-                                <h3 class="title">2020 TIFFANY YOUNG OPEN HEARTS EVE</h3>
-                                <p>曾為少女時代團體一員的TIFFANY YOUNG 2017年回美國發展、2018年陸續推出單曲都獲得熱烈迴響。</p>
-                                <div class="info">
-                                    <img src="images/ticc/logo-default2.png" alt="">
-                                    <time><b>TICC</b><br>2021 / 10 / 23</time>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="info_card">
-                            <a href="javascript:;">
-                                <div class="img-container">
-                                    <img data-lazy="images/demo/02.jpg" class="cover" alt="圖說2">
-                                </div>
-                                <h3 class="title">2020 TIFFANY YOUNG OPEN HEARTS EVE</h3>
-                                <p>曾為少女時代團體一員的TIFFANY YOUNG 2017年回美國發展、2018年陸續推出單曲都獲得熱烈迴響。</p>
-                                <div class="info">
-                                    <img src="images/ticc/logo-default2.png" alt="">
-                                    <time><b>TICC</b><br>2021 / 10 / 23</time>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="info_card">
-                            <a href="javascript:;">
-                                <div class="img-container">
-                                    <img data-lazy="images/demo/03.jpg" class="cover" alt="圖說3">
-                                </div>
-                                <h3 class="title">2020 TIFFANY YOUNG OPEN HEARTS EVE</h3>
-                                <p>曾為少女時代團體一員的TIFFANY YOUNG 2017年回美國發展、2018年陸續推出單曲都獲得熱烈迴響。</p>
-                                <div class="info">
-                                    <img src="images/ticc/logo-default2.png" alt="">
-                                    <time><b>TICC</b><br>2021 / 10 / 23</time>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="info_card">
-                            <a href="javascript:;">
-                                <div class="img-container">
-                                    <img data-lazy="images/demo/04.jpg" class="cover" alt="圖說4">
-                                </div>
-                                <h3 class="title">2020 TIFFANY YOUNG OPEN HEARTS EVE</h3>
-                                <p>曾為少女時代團體一員的TIFFANY YOUNG 2017年回美國發展、2018年陸續推出單曲都獲得熱烈迴響。</p>
-                                <div class="info">
-                                    <img src="images/ticc/logo-default2.png" alt="">
-                                    <time><b>TICC</b><br>2021 / 10 / 23</time>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="info_card">
-                            <a href="javascript:;">
-                                <div class="img-container">
-                                    <img data-lazy="images/demo/05.jpg" class="cover" alt="圖說5">
-                                </div>
-                                <h3 class="title">2020 TIFFANY YOUNG OPEN HEARTS EVE</h3>
-                                <p>曾為少女時代團體一員的TIFFANY YOUNG 2017年回美國發展、2018年陸續推出單曲都獲得熱烈迴響。</p>
-                                <div class="info">
-                                    <img src="images/ticc/logo-default2.png" alt="">
-                                    <time><b>TICC</b><br>2021 / 10 / 23</time>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </section>
         </div>
         <!-- footer Start-->
         <footer>
@@ -404,7 +365,6 @@
     <script src='vendor/wow/wow.js'></script>
     <script>
         new WOW().init();
-        $("img.lazyload").lazyload();
     </script>
     <!-- hyUI -->
     <script src="js/hyui.js"></script>

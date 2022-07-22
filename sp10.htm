@@ -1,0 +1,469 @@
+<!doctype html>
+<html lang="zh-Hant" class="no-js">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>預約消息</title>
+    <!--HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries [if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <!-- slick css-->
+    <link rel="stylesheet" type="text/css" href="vendor/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="vendor/slick/slick-theme.css" />
+    <!-- 燈箱facybox -->
+    <link rel="stylesheet" type="text/css" href="vendor/fancybox/jquery.fancybox.min.css">
+    <!-- animate -->
+    <link rel="stylesheet" href="vendor/wow/animate.css">
+    <!-- hyUI css -->
+    <link rel="stylesheet" href="css/hyui.css">
+    <!-- 瀑布流 -->
+    <link rel="stylesheet" type="text/css" href="vendor/gridloading/css/component.css" />
+    <!-- favicon -->
+    <link href="images/favicon.png" rel="icon" type="image/x-icon">
+</head>
+<body>
+    <!--跳窗-->
+    <!-- <div id="modal1" class="modal">
+        <h2>標題</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero, perferendis cumque nobis recusandae aperiam? Quis sunt, sit error consequuntur, amet, odit corrupti exercitationem eveniet debitis facere dolor mollitia natus suscipit.</p>
+        <div class="btn_grp">
+            <button class="btn btn-secondary">好的</button>
+        </div>
+    </div> -->
+    <!-- wrapper Start -->
+    <div class="wrapper">
+        <!-- header Start -->
+        <header class="header">
+            <div class="container">
+                <!-- navigation Start -->
+                <nav class="navigation" role="navigation" aria-label="Site">
+                    <!-- Search Start -->
+                    <div class="search" role="search">
+                        <button class="switch">開關</button>
+                        <div class="form_grp">
+                            <input name="username" id="mustSameAsId" type="text" placeholder="請輸入文字" title="請輸入文字" aria-label="搜尋網站內容">
+                            <input name="" type="submit" value="查詢" class="btn btn-search" />
+                        </div>
+                    </div>
+                    <!-- 新增div navlist -->
+                    <div class="navlist">
+                        <ul>
+                            <li><a href="#">回首頁</a></li>
+                            <li><a href="#">網站導覽</a></li>
+                        </ul>
+                    </div>
+                    <!-- language -->
+                    <div class="language">
+                        <a href="#" class="switch">EN</a>
+                        <ul>
+                            <li><a href="#">繁中</a></li>
+                            <li><a href="#">EN</a></li>
+                        </ul>
+                    </div>
+                </nav>
+                <!-- navigation End -->
+                <h1>
+                    <a href="index.htm"><img src="images/ticc/logo-default.png" alt="網站標題" /></a>
+                </h1>
+                <!-- menu Start -->
+                <nav class="menu" role="navigation" aria-label="About page">
+                    <ul>
+                        <li><a href="#">關於我們</a>
+                            <ul>
+                                <li><a href="#">第二層選單</a></li>
+                                <li><a href="#">第二層選單</a></li>
+                                <li><a href="#">第二層選單</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">最新消息</a>
+                            <ul>
+                                <li><a href="#">第二層選單</a></li>
+                                <li><a href="#">第二層選單</a></li>
+                                <li><a href="#">第二層選單</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">場地導覽</a>
+                            <ul>
+                                <li><a href="#">第二層選單</a></li>
+                                <li><a href="#">第二層選單</a></li>
+                                <li><a href="#">第二層選單</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">檔期查詢</a>
+                            <ul>
+                                <li><a href="#">第二層選單</a></li>
+                                <li><a href="#">第二層選單</a></li>
+                                <li><a href="#">第二層選單</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">預約洽訂</a>
+                            <ul>
+                                <li><a href="#">第二層選單</a></li>
+                                <li><a href="#">第二層選單</a></li>
+                                <li><a href="#">第二層選單</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">參宴服務</a>
+                            <ul>
+                                <li><a href="#">第二層選單</a></li>
+                                <li><a href="#">第二層選單</a></li>
+                                <li><a href="#">第二層選單</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">出租服務</a>
+                            <ul>
+                                <li><a href="#">第二層選單</a></li>
+                                <li><a href="#">第二層選單</a></li>
+                                <li><a href="#">第二層選單</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">資源下載</a>
+                            <ul>
+                                <li><a href="#">第二層選單</a></li>
+                                <li><a href="#">第二層選單</a></li>
+                                <li><a href="#">第二層選單</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+                <!-- menu End -->
+            </div>
+        </header>
+        <!-- header End -->
+        <!-- main Start -->
+        <div id="center" class="main innerpage">
+            <div class="container-hero">
+                <!-- 內頁新增一個classname-->
+                <!-- side bar -->
+                <section class="sideBar wow fadeInRight" data-wow-delay=".3s">
+                    <a href="javascript:;">檔期<br>查詢</a>
+                    <a href="javascript:;">線上<br>洽詢</a>
+                    <a href="javascript:;">VR<br>實境</a>
+                    <a href="javascript:;">活動<br>行事曆</a>
+                    <a href="javascript:;" class="sb-scrollToTop">Top</a>
+                </section>
+                <!-- 影片 -->
+                <section class="full hero">
+                    <div class="container">
+                        <!-- slogen -->
+                        <h3 class="slogen wow bounceInLeft">Taipei<br>
+                            International<br>
+                            Convention Center
+                        </h3>
+                        <!-- 登入＋查詢 -->
+                        <div class="btn_box">
+                            <a href="#" class="btn">預約編號登入<span>Login in</span></a>
+                            <a href="#" class="btn">大會堂座位圖查詢<span>Search</span></a>
+                        </div>
+                        <img src="images/ticc/img-hero.jpg" alt="">
+                    </div>
+                </section>
+            </div>
+            <div class="mainTitleBox">
+                <!-- breadcrumb路徑 -->
+                <div class="breadcrumb">
+                    <ul>
+                        <li><a href="#">首頁</a></li>
+                        <li><a href="#">節點</a></li>
+                        <li>節點</li>
+                    </ul>
+                </div>
+                <!-- function 預定地 -->
+                <div class="function">
+                    <ul>
+                        <li class="icon_back"><a href="#">回上一頁</a></li>
+                        <!-- <li class="icon_print"><a href="#">友善列印</a></li>
+                        <li class="icon_forward"><a href="#">轉寄友人</a></li> -->
+                    </ul>
+                </div>
+                <h2 class="title">精采活動集錦<br><span>Photo Gallery</span></h2>
+            </div>
+            <!-- 主要內容 -->
+            <div class="container">
+                <!-- 左側 -->
+                <!-- 主要內容區 -->
+                <div class="center_block">
+                    <!-- content Start -->
+                    <!-- 瀑布流 -->
+                    <!-- <section class="waterfalls_wrap">
+                        <div class="waterfalls">
+                            <h3 class="title">2022 BEER　FESTIVAL</h3>
+                            <div class="contentblock">
+                                <ul class="grid effect-2" id="grid">
+                                    <li>
+                                        <a href="javascript:;">
+                                            <div class="image"><img src="images/demo/01.jpg"></div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">
+                                            <div class="image"><img src="images/demo/02.jpg"></div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">
+                                            <div class="image"><img src="images/demo/03.jpg"></div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">
+                                            <div class="image"><img src="images/demo/04.jpg"></div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">
+                                            <div class="image"><img src="images/demo/05.jpg"></div>
+                                        </a>
+                                    </li>
+                                    <li>
+                                        <a href="javascript:;">
+                                            <div class="image"><img src="images/demo/06.jpg"></div>
+                                        </a>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section> -->
+                    <section class="waterfalls_wrap">
+                        <div class="waterfalls">
+                            <h3 class="title">2022 BEER　FESTIVAL</h3>
+                            <div class="contentblock">
+                                <ul class="grid effect-2" id="grid">
+                                    <li>
+                                        <div class="activity_block">
+                                            <a href="images/demo/01.jpg" data-fancybox="images" data-caption="第1張圖說">
+                                                <div class="img-container2">
+                                                    <img src="images/demo/01.jpg" class="cover">
+                                                    <noscript><img src="images/demo/01.jpg" alt=""></noscript>
+                                                    <span class="caption">第1張圖說</span>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="activity_block">
+                                            <a href="images/demo/02.jpg" data-fancybox="images" data-caption="第2張圖說">
+                                                <div class="img-container2">
+                                                    <img src="images/demo/02.jpg" class="cover">
+                                                    <noscript><img src="images/demo/02.jpg" alt=""></noscript>
+                                                    <span class="caption">第2張圖說</span>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="activity_block">
+                                            <a href="images/demo/03.jpg" data-fancybox="images" data-caption="第3張圖說">
+                                                <div class="img-container2">
+                                                    <img src="images/demo/03.jpg" class="cover">
+                                                    <noscript><img src="images/demo/03.jpg" alt=""></noscript>
+                                                    <span class="caption">第3張圖說</span>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="activity_block">
+                                            <a href="images/demo/04.jpg" data-fancybox="images" data-caption="第4張圖說">
+                                                <div class="img-container2">
+                                                    <img src="images/demo/04.jpg" class="cover">
+                                                    <noscript><img src="images/demo/04.jpg" alt=""></noscript>
+                                                    <span class="caption">第4張圖說</span>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="activity_block">
+                                            <a href="images/demo/05.jpg" data-fancybox="images" data-caption="第5張圖說">
+                                                <div class="img-container2">
+                                                    <img src="images/demo/05.jpg" class="cover">
+                                                    <noscript><img src="images/demo/05.jpg" alt=""></noscript>
+                                                    <span class="caption">第5張圖說</span>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="activity_block">
+                                            <a href="images/demo/06.jpg" data-fancybox="images" data-caption="第6張圖說">
+                                                <div class="img-container2">
+                                                    <img src="images/demo/06.jpg" class="cover">
+                                                    <noscript><img src="images/demo/06.jpg" alt=""></noscript>
+                                                    <span class="caption">第6張圖說</span>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="activity_block">
+                                            <a href="images/demo/07.jpg" data-fancybox="images" data-caption="第7張圖說">
+                                                <div class="img-container2">
+                                                    <img src="images/demo/07.jpg" class="cover">
+                                                    <noscript><img src="images/demo/07.jpg" alt=""></noscript>
+                                                    <span class="caption">第7張圖說</span>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="activity_block">
+                                            <a href="images/demo/08.jpg" data-fancybox="images" data-caption="第8張圖說">
+                                                <div class="img-container2">
+                                                    <img src="images/demo/08.jpg" class="cover">
+                                                    <noscript><img src="images/demo/08.jpg" alt=""></noscript>
+                                                    <span class="caption">第8張圖說</span>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="activity_block">
+                                            <a href="images/demo/09.jpg" data-fancybox="images" data-caption="第9張圖說">
+                                                <div class="img-container2">
+                                                    <img src="images/demo/09.jpg" class="cover">
+                                                    <noscript><img src="images/demo/09.jpg" alt=""></noscript>
+                                                    <span class="caption">第9張圖說</span>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="activity_block">
+                                            <a href="images/demo/10.jpg" data-fancybox="images" data-caption="第10張圖說">
+                                                <div class="img-container2">
+                                                    <img src="images/demo/10.jpg" class="cover">
+                                                    <noscript><img src="images/demo/10.jpg" alt=""></noscript>
+                                                    <span class="caption">第10張圖說</span>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="activity_block">
+                                            <a href="images/demo/11.jpg" data-fancybox="images" data-caption="第11張圖說">
+                                                <div class="img-container2">
+                                                    <img src="images/demo/11.jpg" class="cover">
+                                                    <noscript><img src="images/demo/11.jpg" alt=""></noscript>
+                                                    <span class="caption">第11張圖說</span>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="activity_block">
+                                            <a href="images/demo/12.jpg" data-fancybox="images" data-caption="第12張圖說">
+                                                <div class="img-container2">
+                                                    <img src="images/demo/12.jpg" class="cover">
+                                                    <noscript><img src="images/demo/12.jpg" alt=""></noscript>
+                                                    <span class="caption">第12張圖說</span>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div class="activity_block">
+                                            <a href="images/demo/13.jpg" data-fancybox="images" data-caption="第13張圖說">
+                                                <div class="img-container2">
+                                                    <img src="images/demo/13.jpg" class="cover">
+                                                    <noscript><img src="images/demo/13.jpg" alt=""></noscript>
+                                                    <span class="caption">第13張圖說</span>
+                                                </div>
+                                            </a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- content End -->
+                </div>
+            </div>
+        </div>
+        <!-- footer Start-->
+        <footer>
+            <div class="container">
+                <section>
+                    <div class="col">
+                        <!-- logo -->
+                        <a href="#"><img src="images/ticc/bg-white.png"></a>
+                    </div>
+                    <div class="col">
+                        營運機構：中華民國對外貿易發展協會 (TAITRA)<br>
+                        地址：11049 台北市信義路五段1號<br>
+                        Email: ticc@taitra.org.tw<br>
+                        傳真：(02)2723-2589<br>
+                        總機：(02)2725-5200
+                    </div>
+                    <div class="col">
+                        會議場地訂位分機: 3517,3518   /  服務台分機：3000,3151  /<br>
+                        停車場分機：3040  /  餐飲服務分機：3350,3351<br>
+                        婚宴專線：(02)2720-8008
+                    </div>
+                </section>
+                <section>
+                    <div class="col">
+                        <!-- 標章2枚 -->
+                        <img src="images/ticc/footer_logo1.png" alt="">
+                        <img src="images/ticc/footer_logo2.png" alt="">
+                    </div>
+                    <div class="col">
+                        <!-- 隱私權三連結＋版權 -->
+                        <ul class="footer_link">
+                            <li><a href="javascript:;">隱私權政策</a></li>
+                            <li><a href="javascript:;">免責聲明</a></li>
+                            <li><a href="javascript:;">友站連結</a></li>
+                        </ul>
+                        <p class="Copyright">Taipei International Convention Center 版權所有</p>
+                    </div>
+                </section>
+            </div>
+        </footer>
+        <!-- footer End -->
+    </div>
+    <!-- 鯨魚 -->
+    <div class="abgne_float_game">
+        <a href="javascript:;"><img src="images/ticc/t-boHelper-ch.png" alt=""></a>
+    </div>
+    <a href="javascript:;" class="scrollToTop">回頁首</a>
+    <!-- JQ -->
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <!-- 外掛 plugin js -->
+    <script src="vendor/jquery.easing.min.js"></script>
+    <!-- ease -->
+    <script src="vendor/slick/slick.min.js "></script>
+    <!-- slick -->
+    <script src="vendor/slick/slick-lightbox.js "></script>
+    <!-- slick lightbox -->
+    <script src="vendor/lazyload/lazyload.js"></script>
+    <!-- lazyload -->
+    <script src="vendor/picturefill/picturefill.min.js" async></script>
+    <!-- picturefill -->
+    <script src="vendor/scrolltable/jquery.scroltable.min.js"></script>
+    <!-- scrolltable -->
+    <!-- sticky-sidebar -->
+    <script src='vendor/sticky-sidebar/sticky-sidebar.js'></script>
+    <script src='vendor/sticky-sidebar/ResizeSensor.js'></script>
+    <!-- fancy -->
+    <script src='vendor/fancybox/jquery.fancybox.min.js'></script>
+    <!-- 瀑布流-->
+    <script src="vendor/gridloading/js/modernizr.custom.js"></script>
+    <script src="vendor/gridloading/js/masonry.pkgd.min.js"></script>
+    <script src="vendor/gridloading/js/imagesloaded.js"></script>
+    <script src="vendor/gridloading/js/classie.js"></script>
+    <script src="vendor/gridloading/js/AnimOnScroll.js"></script>
+    <script>
+    new AnimOnScroll(document.getElementById('grid'), {
+        minDuration: 0.4,
+        maxDuration: 0.7,
+        viewportFactor: 0.2
+    });
+    </script>
+    <!-- hyUI -->
+    <script src="js/hyui.js"></script>
+    <!-- 客製js -->
+    <script src="js/customize.js"></script>
+</body>

@@ -5,7 +5,7 @@ table {
     @include screen('tablet') {
         width: 100%;
     }
-    th,
+    // th,
     // td:not(.gsib_b,.gsc-search-button) {
     //     padding: .5em;
     //     text-align: left;
@@ -13,25 +13,33 @@ table {
     // td:not(.gsib_a,.gsc-search-button){
     //     border: #ddd 1px solid;
     //     word-break: break-all;
-    //     a {
-    //         word-break: break-all;
-    //     }
+    //     a { word-break: break-all; }
     // }
+
+    th, td{
+        border-bottom: 1px solid #ddd;
+        padding: 1.45em .5em;
+    }
+    tr{
+        &:last-child{
+            th, td{ border-bottom: 1px solid transparent; }
+        }
+    }
+
     td {
-        padding: .5em;
         text-align: left;
     }
     td{
-        border: #ddd 1px solid;
         word-break: break-all;
         a {
             word-break: break-all;
+            display: block;
+            letter-spacing: 1px;
+            padding: .25em .5em;
         }
     }
     th {
-        background-color: #F3F3F3;
         color: #333;
-        border: #DDD 1px solid;
         text-align: center;
         white-space: nowrap;
     }

@@ -106,26 +106,29 @@
                     width: 72px !important;
                     height: 72px !important;
                     border-radius: 50%;
+                    transition: .2s ease;
                 }
             }
             &.prev {
                 a{
-                    background: url(../images/ticc/icon/icon_arrow_prev.png) 50% 50% no-repeat,linear-gradient(90deg, #b0b0b1 0%, #b0b0b1 100%);
+                    background: url(../images/ticc/icon/icon_arrow_prev.png) 50% 50% no-repeat, rgba(0,0,0,.75);
                     background-size: 30px 20px, cover;
-                    transition: all .3s ease;
+                    // transition: .3s ease;
+
                     &:hover, &:focus{
-                        background: url(../images/ticc/icon/icon_arrow_prev.png) 50% 50% no-repeat,linear-gradient(90deg, #6a1b8a 0%, #24086b 100%);
+                        background: url(../images/ticc/icon/icon_arrow_prev.png) 50% 50% no-repeat, #6a1b8a;
                         background-size: 30px 20px, cover;
                     }
                 }
             }
             &.next {
                 a{
-                    background: url(../images/ticc/icon/icon_arrow_next.png) 50% 50% no-repeat,linear-gradient(90deg, #b0b0b1 0%, #b0b0b1 100%);
+                    background: url(../images/ticc/icon/icon_arrow_next.png) 50% 50% no-repeat, rgba(0,0,0,.75);
                     background-size: 30px 20px, cover;
-                    transition: all .3s ease;
+                    // transition: .3s ease;
+
                     &:hover, &:focus{
-                        background: url(../images/ticc/icon/icon_arrow_next.png) 50% 50% no-repeat,linear-gradient(90deg, #6a1b8a 0%, #24086b 100%);
+                        background: url(../images/ticc/icon/icon_arrow_next.png) 50% 50% no-repeat, #6a1b8a;
                         background-size: 30px 20px, cover;
                     }
                 }

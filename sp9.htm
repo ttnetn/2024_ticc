@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>TICC</title>
+    <title>預約消息</title>
     <!--HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries [if lt IE 9]>
     <script src="js/html5shiv.js"></script>
     <script src="js/respond.min.js"></script>
@@ -25,14 +25,10 @@
 <body>
     <!--跳窗-->
     <!-- <div id="modal1" class="modal">
-        <h2>忘記密碼</h2>
-        <p>請輸入預約編號，我們將重新發送通知信。<br>若找不到信件時，請到「垃圾信件」分類查找，或請<a href="#">聯絡我們</a>。</p>
-        <div class="flex-form">
-            <input type="text" id="" placeholder="請輸入編號" class="error">
-            <div class="notice_error">查無此預約編號</div>
-        </div>
+        <h2>標題</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero, perferendis cumque nobis recusandae aperiam? Quis sunt, sit error consequuntur, amet, odit corrupti exercitationem eveniet debitis facere dolor mollitia natus suscipit.</p>
         <div class="btn_grp">
-            <button class="btn btn-submit">送出</button>
+            <button class="btn btn-secondary">好的</button>
         </div>
     </div> -->
     <!-- wrapper Start -->
@@ -174,84 +170,62 @@
                     </ul>
                 </div>
                 <!-- function 預定地 -->
-                <div class="function">
+                <!-- <div class="function">
                     <ul>
                         <li class="icon_back"><a href="#">回上一頁</a></li>
-                        <!-- <li class="icon_print"><a href="#">友善列印</a></li>
-                        <li class="icon_forward"><a href="#">轉寄友人</a></li> -->
+                        <li class="icon_print"><a href="#">友善列印</a></li>
+                        <li class="icon_forward"><a href="#">轉寄友人</a></li>
                     </ul>
-                </div>
-                <!-- 活動標題＋時間 -->
-                <h2 class="act_title">Bio Korea 2022 International Convention
-                </h2>
-                <div class="act_during">
-                    <div class="col">
-                        <div><b class="date">05.27</b><br><span>16:00&nbsp;-&nbsp;20:00</span></div>
-                        <div>(五)<br><b>Fri.</b></div>
-                    </div>
-                    <div class="col">
-                        <div><b class="date">05.29</b><br><span>16:00&nbsp;-&nbsp;20:00</span></div>
-                        <div>(日)<br><b>Sun.</b></div>
-                    </div>
-                </div>
-                <!-- 活動分享＋加入google月曆 -->
-                <div class="link">
-                    <a href="javascript:;" class="" title="社群分享"><img src="images/ticc/icon/icon_share.png" alt=""></a>
-                    <a href="javascript:;" class="" title="google calendar"><img src="images/ticc/icon/icon_googleCalendar.png" alt=""></a>
-                </div>
+                </div> -->
+                <h2 class="title">價目表<br><span>English title</span></h2>
             </div>
             <!-- 主要內容 -->
             <div class="container">
+                <!-- 左側 -->
                 <!-- 主要內容區 -->
                 <div class="center_block">
                     <!-- content Start -->
-                    <section class="">
+                    <section>
+                        <!-- 搜尋 -->
+                        <div class="inner_function">
+                            <!-- 搜尋 -->
+                            <form action="">
+                                <div class="form_grp search">
+                                    <input name="username" id="mustSameAsId" type="text" placeholder="請輸入關鍵字" title="" aria-label="搜尋網站內容">
+                                    <input name="" type="submit" value="查詢" class="btn btn-search" />
+                                </div>
+                            </form>
+                        </div>
+                        <!-- 活動訊息 -->
                         <section class="card">
                             <div class="inner">
-                                <!-- 左右圖文 -->
-                                <div class="act_info">
-                                    <div class="pic">
-                                        <!-- 此範例為4:3比例 -->
-                                        <picture>
-                                            <source media="(min-width: 768px)" srcset="images/demo/01.jpg">
-                                            <source media="(max-width: 767px)" srcset="images/demo/01.jpg">
-                                            <img data-src="images/demo/01.jpg" class="lazy">
-                                            <noscript><img src="images/demo/01.jpg"></noscript>
-                                        </picture>
+                                <!-- <h3>title</h3> -->
+                                <!-- galleryslider -->
+                                <div class="galleryslider">
+                                    <div class="Card">
+                                        <a href="javscript:;">
+                                            <p class="title">TEEN TOP PARTY TO N9NE IN TAIPEI</p>
+                                            <div class="img-container">
+                                                <img src="images/demo/01.jpg" alt="" class="cover">
+                                            </div>
+                                        </a>
                                     </div>
-                                    <div class="list">
-                                        <table>
-                                            <tr>
-                                                <th>場地</th>
-                                                <td>
-                                                    <a href="#">05.27 (五) 201AB</a>
-                                                    <a href="#">05.28 (六) 101AB</a>
-                                                    <a href="#">05.29 (日) 101CD</a>
-                                                </td>
-                                            </tr>
-                                            <tr>
-                                                <th>主辦單位</th>
-                                                <td>BIO KOREA</td>
-                                            </tr>
-                                            <tr>
-                                                <th>網站</th>
-                                                <td><a href="#">https://www.google.com.tw/</a></td>
-                                            </tr>
-                                            <tr>
-                                                <th>Email</th>
-                                                <td>123456@gmail.com</td>
-                                            </tr>
-                                        </table>
+                                    <div class="Card">
+                                        <a href="javscript:;">
+                                            <p class="title">海樂影業股份有限公司</p>
+                                            <div class="img-container">
+                                                <img src="images/demo/02.jpg" alt="" class="cover">
+                                            </div>
+                                        </a>
                                     </div>
-                                </div>
-                                <!-- 內容 -->
-                                <div class="text_info">
-                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                                    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                                    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                                    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                                    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                                    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                                    <div class="Card">
+                                        <a href="javscript:;">
+                                            <p class="title">標題</p>
+                                            <div class="img-container">
+                                                <img src="images/demo/03.jpg" alt="" class="cover">
+                                            </div>
+                                        </a>
+                                    </div>
                                 </div>
                             </div>
                         </section>
@@ -259,80 +233,6 @@
                     <!-- content End -->
                 </div>
             </div>
-            <!-- 熱門活動 slider：滿版 full -->
-            <section class="full">
-                <div class="container">
-                    <h2 class="title wow bounceInLeft">熱門活動<br><span>hot</span></h2>
-                    <!-- slider -->
-                    <div class="cardSlider">
-                        <div class="info_card">
-                            <a href="javascript:;">
-                                <div class="img-container">
-                                    <img data-lazy="images/demo/01.jpg" class="cover" alt="圖說1">
-                                </div>
-                                <h3 class="title">2020 TIFFANY YOUNG OPEN HEARTS EVE</h3>
-                                <p>曾為少女時代團體一員的TIFFANY YOUNG 2017年回美國發展、2018年陸續推出單曲都獲得熱烈迴響。</p>
-                                <div class="info">
-                                    <img src="images/ticc/logo-default2.png" alt="">
-                                    <time><b>TICC</b><br>2021 / 10 / 23</time>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="info_card">
-                            <a href="javascript:;">
-                                <div class="img-container">
-                                    <img data-lazy="images/demo/02.jpg" class="cover" alt="圖說2">
-                                </div>
-                                <h3 class="title">2020 TIFFANY YOUNG OPEN HEARTS EVE</h3>
-                                <p>曾為少女時代團體一員的TIFFANY YOUNG 2017年回美國發展、2018年陸續推出單曲都獲得熱烈迴響。</p>
-                                <div class="info">
-                                    <img src="images/ticc/logo-default2.png" alt="">
-                                    <time><b>TICC</b><br>2021 / 10 / 23</time>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="info_card">
-                            <a href="javascript:;">
-                                <div class="img-container">
-                                    <img data-lazy="images/demo/03.jpg" class="cover" alt="圖說3">
-                                </div>
-                                <h3 class="title">2020 TIFFANY YOUNG OPEN HEARTS EVE</h3>
-                                <p>曾為少女時代團體一員的TIFFANY YOUNG 2017年回美國發展、2018年陸續推出單曲都獲得熱烈迴響。</p>
-                                <div class="info">
-                                    <img src="images/ticc/logo-default2.png" alt="">
-                                    <time><b>TICC</b><br>2021 / 10 / 23</time>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="info_card">
-                            <a href="javascript:;">
-                                <div class="img-container">
-                                    <img data-lazy="images/demo/04.jpg" class="cover" alt="圖說4">
-                                </div>
-                                <h3 class="title">2020 TIFFANY YOUNG OPEN HEARTS EVE</h3>
-                                <p>曾為少女時代團體一員的TIFFANY YOUNG 2017年回美國發展、2018年陸續推出單曲都獲得熱烈迴響。</p>
-                                <div class="info">
-                                    <img src="images/ticc/logo-default2.png" alt="">
-                                    <time><b>TICC</b><br>2021 / 10 / 23</time>
-                                </div>
-                            </a>
-                        </div>
-                        <div class="info_card">
-                            <a href="javascript:;">
-                                <div class="img-container">
-                                    <img data-lazy="images/demo/05.jpg" class="cover" alt="圖說5">
-                                </div>
-                                <h3 class="title">2020 TIFFANY YOUNG OPEN HEARTS EVE</h3>
-                                <p>曾為少女時代團體一員的TIFFANY YOUNG 2017年回美國發展、2018年陸續推出單曲都獲得熱烈迴響。</p>
-                                <div class="info">
-                                    <img src="images/ticc/logo-default2.png" alt="">
-                                    <time><b>TICC</b><br>2021 / 10 / 23</time>
-                                </div>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </section>
         </div>
         <!-- footer Start-->
         <footer>
@@ -404,7 +304,6 @@
     <script src='vendor/wow/wow.js'></script>
     <script>
         new WOW().init();
-        $("img.lazyload").lazyload();
     </script>
     <!-- hyUI -->
     <script src="js/hyui.js"></script>

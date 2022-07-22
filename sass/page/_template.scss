@@ -138,7 +138,7 @@ body {
         img { width: 75px; }
     }
 }
-// 懶得找 sass 原檔改
+// 懶得找 sass 原檔改  ----------------------------
 .cp{
     blockquote,
     .publish_info{ background: #fff; }
@@ -292,6 +292,7 @@ body {
 
     h3{
         font-size: 1.75em;
+        line-height: 1.4;
         color: #0c2577;
 
         position: relative;
@@ -302,7 +303,7 @@ body {
             height: 42px;
             background: #0c2577;
             left: -1.4em;
-            top: -9px;
+            // top: -9px;
         }
     }
     h4{
@@ -1168,40 +1169,17 @@ body {
         .scroltable-nav{ display: none !important; }
 
         table{
-            th, td{
-                border: 0;
-                border-bottom: 1px solid #ddd;
-                padding: 1.45em .5em;
-            }
-
-            tr{
-                &:last-child{
-                    th, td{
-                        border-bottom: 1px solid transparent;
-                    }
-                }
-            }
-
             th{
                 background: transparent;
                 text-align: right;
             }
-            td{
-                a{
-                    display: block;
-                    letter-spacing: 1px;
-                    padding: .25em .5em;
-
-                    &:hover, &:focus{}
-                }
-            }
         }
     }
 
-    +p{
-        line-height: 2;
-        margin: 3em 0 2em !important;
-    }
+    // +p{
+    //     line-height: 2;
+    //     margin: 3em 0 2em !important;
+    // }
 }
 // 單月切換
 .month_switch {
@@ -1266,6 +1244,84 @@ body {
     }
 }
 
+// 
+.text_info{
+    padding: 3em 0 2em !important;
+    p{ line-height: 2; }
+}
+
+// Youtub RWD
+.Video {}
+.embed-container {
+    position: relative;
+    padding-bottom: 56.25%;
+    height: 0;
+    overflow: hidden;
+    max-width: 100%;
+}
+.embed-container iframe,
+.embed-container object,
+.embed-container embed {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+// 內頁 標題下操作
+.inner_function{
+    padding: 3em 0;
+
+    .search{
+        max-width: 560px;
+        margin: auto;
+        position: relative;
+
+        input[type="text"]{
+            padding: 1em 70px 1em 1.5em;
+            font-size: 1.125em;
+        }
+        .btn-search{
+            background: url(../images/icon/icon_search.svg) 50% 50% no-repeat,transparent;
+            background-size: 20px 20px;
+            border: 1px solid transparent;
+            font-size: 0;
+            width: 60px;
+            height: 60px;
+
+            position: absolute;
+            right: 5px;
+            top: 5px;
+
+            &:hover, &:focus{
+                background: url(../images/icon/icon_search2.svg) 50% 50% no-repeat, rgba(0,0,0,.75);
+                background-size: 20px 20px;
+            }
+        }
+    }
+}
+
+// 瀑布流
+.waterfalls_wrap {
+    position: relative;
+    padding-bottom: 40px;
+
+    .waterfalls {
+        h3.title {
+            text-align: center;
+            font-size: 2.25em;
+            letter-spacing: 2px;
+            line-height: 2;
+            margin: 0;
+            font-family: serif;
+        }
+        .contentblock {
+            position: relative;
+            z-index: 2;
+        }
+    }
+}
 
 ////////////////////////////////////////////////////////////
 // 為了與首頁區隔，請在內頁加上innerpage ClassName
