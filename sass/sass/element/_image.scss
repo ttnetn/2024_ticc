@@ -30,7 +30,8 @@ img {
 // 設定img 在IE9+ SAFARI FIREFOX CHROME 可以object-fit
 /*for IE */
 .img-container,
-.img-container2, {
+.img-container2,
+.img-container3 {
     width: 100%;
     position: relative;
     @include aspect-ratio(4, 3);
@@ -101,8 +102,15 @@ img {
     }
 }
 .img-container2{
+    // 瀑布流
     @include aspect-ratio(3, 4);
 }
+.img-container3{
+    // 友站連結
+    @include aspect-ratio(3, 1);
+
+}
+
 // %ie_setting {
 //     position: relative;
 //     background-position: center center;

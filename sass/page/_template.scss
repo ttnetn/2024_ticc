@@ -267,6 +267,12 @@ body {
                 flex-basis: calc(100% - 180px);
             }
         }
+
+        form{
+            .btn_grp{
+                .btn{ min-width: auto; }
+            }
+        }
     }
 
     .section_title{
