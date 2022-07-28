@@ -129,7 +129,8 @@ body {
     position: fixed;
     bottom: 10px;
     right: 6px;
-    z-index: 100000000;
+    // z-index: 100000000;
+    z-index: 9999;
     a{ display: block; }
     img { width: 90px; }
 
@@ -1306,13 +1307,17 @@ body {
             }
         }
     }
+
+    @include screen('tablet') {
+        padding-top: 7em;
+        .search{ display: block !important; }
+    }
 }
 
 // 瀑布流
 .waterfalls_wrap {
     position: relative;
     padding-bottom: 40px;
-
     .waterfalls {
         h3.title {
             text-align: center;
@@ -1325,6 +1330,42 @@ body {
         .contentblock {
             position: relative;
             z-index: 2;
+        }
+    }
+
+    @include screen('tablet') {
+        margin-top: 7em;
+        .waterfalls {
+            h3.title {
+                font-size: 1.75em;
+            }
+        }
+    }
+}
+
+// 查無資訊
+.nodata{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+    img{
+        flex: 0 0 40%;
+        max-width: 40%;
+    }
+    p{
+        flex: 1 1 60%; 
+        max-width: fit-content;
+        font-size: 1.6em;
+        font-weight: bold;
+    }
+
+    @include screen('mobile') {
+        flex-flow: row wrap;
+        img, p{
+            max-width: 80%;
+            flex: 1 1 100%; 
+            text-align: center;
         }
     }
 }

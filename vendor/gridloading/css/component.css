@@ -13,8 +13,14 @@
     vertical-align: top;
 }
 @media(min-width: 901px) {
-    .grid li:nth-child(1), .grid li:nth-child(3n), .grid li:nth-child(3n+1) {
-        padding: 50px 0 0;
+    .grid li:nth-child(1),
+    .grid li:nth-child(3n),
+    .grid li:nth-child(3n+1) { padding: 50px 0 0; }
+}
+
+@media screen and (max-width: 900px) {
+    .grid li {
+        padding: 0 0 20px;
     }
 }
 
@@ -38,15 +44,11 @@
 }
 @-webkit-keyframes fadeIn {
     0% {}
-    100% {
-        opacity: 1;
-    }
+    100% { opacity: 1; }
 }
 @keyframes fadeIn {
     0% {}
-    100% {
-        opacity: 1;
-    }
+    100% { opacity: 1; }
 }
 /* Effect 2: Move Up */
 .grid.effect-2 li.animate {

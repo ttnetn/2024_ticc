@@ -120,6 +120,14 @@ $(function() {
                 centerPadding: '40px',
                 slidesToShow: 1
             }
+        },{
+            breakpoint: 575,
+            settings: {
+                arrows: true,
+                centerMode: true,
+                centerPadding: '20px',
+                slidesToShow: 1
+            }
         }]
     });
 

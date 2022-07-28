@@ -575,10 +575,38 @@
     }
 
     @include screen('tablet') {
+        padding-bottom: 1em !important;
         .Card{
             &:before,
             a p.title { opacity: 1; }
             a p.title { width: 100%; }
+
+            // 三角窗外是黑夜
+            &:before{ display: none; }
+
+            a{
+                p.title{
+                    font-size: 1.25em;
+                    background: rgba(0,0,0, .45);
+                    padding: 2em 3em;
+                    height: auto;
+                }
+            }
+        }
+    }
+
+    @include screen('xs_mobile') {
+        .slick-prev{ left: -72px; }
+        .slick-next{ right: -72px; }
+        .Card{
+            margin: 2em .5em;
+            a{
+                p.title{
+                    padding: 1em 1.5em;
+                    font-size: 1em;
+                    font-weight: bold;
+                }
+            }
         }
     }
 }
