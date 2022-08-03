@@ -35,6 +35,15 @@ body {
             padding-right: 0 !important;
         }
     }
+
+    @media screen and (max-width: 1199px) {
+        padding-right: 0 !important;
+        padding-left: 0 !important;
+
+        .functions{
+            @include gutter(60px);
+        }
+    }
 }
 
 .hot{
@@ -1051,7 +1060,6 @@ body {
             padding-right: 0;
         }
     }
-
     .download_pdf{
         color: #fff;
         padding: .75em 1.5em;
@@ -1060,6 +1068,11 @@ body {
         background-size: 36px 36px;
         border-radius: 4px;
         display: inline-block;
+    }
+
+    @include screen('mobile') {
+        flex-flow: row wrap;
+        .col{}
     }
 }
 // 狀態

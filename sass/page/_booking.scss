@@ -1,0 +1,561 @@
+// 檔期查詢
+
+$boxSize: 60px;		// 按鈕寬高
+$m_left: 120px;		// 左側欄寬
+$lead_h: 180px;		// 左上欄高
+$border_color_D: #686868;	// 表格深灰
+$border_color_M: #dbdbdb;	// 表格中灰
+$border_color_L: #f2f2f2;	// 表格淺灰
+$border_line: #aeaeae;		// 表格線
+
+// 第二版
+.BookingCalendar{
+	position: relative;
+	width: 100%;
+	background: #fff;
+	border-top: 2px solid $border_color_D;
+	border-bottom: 2px solid $border_color_D;
+
+	.innerMask{
+
+		// 左側
+		.left{
+			position: relative;
+			.lead, .room_list{
+				position: absolute;
+			}
+
+			// 左上 fixed
+			.lead{
+				width: $m_left;
+				height: $lead_h;
+				background: rgba(0,0,0,.25);
+				color: #fff;
+				text-align: center;
+				border-right: 1px solid $border_line;
+
+				// position: fixed;
+				// z-index: 1;
+
+				.month, .date, .rooms>div{
+					border-bottom: 1px solid $border_line;
+				}
+				.month, .date, .period{
+					color: #666;
+					background: $border_color_L;
+
+					display: flex;
+				    justify-content: center;
+				    align-items: center;
+				}
+
+				.month{
+					height: 48px;
+				}
+				.date{
+					height: 61px;
+				}
+				.period{
+					height: 72.61px;
+					border-bottom: 3px solid $border_line;
+				}
+			}
+
+			// 左下 會議室 absolute
+			.room_list{
+				// background: rgba(0,0,0,.75);
+				width: $m_left;
+      			top: 180.61px;
+
+      			position: absolute;
+				>div{
+					display: flex;
+				    justify-content: center;
+				    align-items: center;
+					height: 60px;
+					border-bottom: 1px solid $border_line;
+					background: $border_color_D;
+					color: #fff;
+
+					// &:last-child{
+					// 	border-bottom: none;
+					// }
+				}
+			}
+		}
+
+		// 內容
+		.content{
+			width: calc( 100% - 120px);
+			margin-left: $m_left;
+			position: relative;
+			overflow: hidden;
+
+			.scroll{
+				overflow-x: scroll;
+
+				position: relative;
+				// 右上 fixed，需程式計算水平滾動
+				.Thead{
+					// background: pink;
+					position: absolute;
+					display: flex;
+					flex-flow: row nowrap;
+
+					// 月份
+					.month{
+						// 5月、6月、7月...etc
+						h4{
+							color: #fff;
+							background: $border_color_D;
+							margin: 0;
+							padding: 12px 0;
+							text-align: center;
+
+							position: relative;
+							&:after{
+								content: '';
+								position: absolute;
+								width: 1px;
+								height: 100%;
+								background: #fff;
+								top: 0;
+								right: 0;
+							}
+						}
+						&:last-child{
+							h4:after{ display: none; }
+						}
+
+						// 1日、2日、3日...etc
+						.days{
+							// set flex
+							display: flex;
+							flex-flow: row nowrap;
+							background: $border_color_L;
+
+							// 表格線
+							.col{
+								// border-left: 1px solid $border_line;
+								box-shadow: inset -1px 0 0 0 $border_line;
+
+								&.holliday{
+									background: $border_color_M;
+								}
+							}
+							.morning, .noon{ border-right: 1px solid $border_line;}
+
+							// 日期
+							.date{
+								text-align: center;
+								font-size: 1.125em;
+								font-weight: bold;
+								padding: 1em 0;
+								// box-shadow: inset -1px 0 0 0 $border_line;
+								border-bottom: 1px solid $border_line;
+							}
+							// 時段
+							.timeSection{
+								// set flex
+								display: flex;
+								flex-flow: row nowrap;
+
+								// 早、午、晚
+								.morning, .noon, .evening{
+									flex: 1 1 33.33333%;
+									min-width: 60px;
+
+									time{
+										display: block;
+										padding: 12px 0;
+									    font-weight: bold;
+									    text-align: center;
+									    line-height: 1.2;
+									    font-size: .813em;
+									    font-weight: bold;
+									    border-bottom: 3px solid $border_line;
+										span{
+											display: block;
+											text-align: center;
+											font-size: .5em;
+										}
+									}
+								}
+
+								.morning{}
+								.noon{}
+								.evening{}
+							}
+						}
+					}
+				}
+
+				// 右下
+				.Tbody{
+					background: deeppink;
+					margin-top: 180.61px;
+					// 會議室
+					// 單間會議室，90天檔期
+					.room{
+						display: flex;
+						flex-flow: row nowrap;
+
+						.morning, .noon, .evening{
+							flex: 0 0 $boxSize;
+							min-width: $boxSize;
+							height: 60px;
+							border-right: 1px solid $border_line;
+							border-bottom: 1px solid $border_line;
+							background: #fff;
+							text-align: center;
+
+							cursor: pointer;
+
+							&.able, &.unable, &.locked{}
+							&.unable, &.locked{
+								cursor: not-allowed;
+							}
+
+							&.able{ background: #c7c4e9; }
+					        &.unable{ background: #8782c4; }
+					        &.locked{ background: #d2d0d0; }
+
+					        &.act{ background: #e66a6e }
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+// 會議室資訊
+.room_info{
+	position: fixed;
+	width: 100%;
+	height: auto;
+	// background: rgba(0,0,0,.75);
+	background: linear-gradient(180deg, rgba(106,27,138,.95) 0%, rgba(36,8,107,.95) 100%);
+	color: #fff;
+	bottom: 0;
+	z-index: 100000000;
+	padding: 1.5em 3em;
+
+	// 預設隱藏
+	display: none;
+
+
+	.flex{
+		display: flex;
+		flex-flow: row nowrap;
+		align-items: center;
+		width: calc(100% - 96px);
+
+		h3.title{
+			flex: 1 1 60%;
+
+			font-size: 2em;
+			line-height: 1.2;
+			margin: 24px 0;
+			text-align: left;
+
+			time{
+				display: inline-block;
+				margin: 0 16px;
+			}
+			span{}
+		}
+		.rent_info{
+			flex: 1 1 40%;
+			text-align: right;
+			p{
+				display: inline-block;
+				margin: 6px 0;
+				font-size: 1.125em;
+			}
+
+			.room_type{
+				color: #fff;
+				b{
+					background: #e66a6e;
+					padding: 6px 24px;
+					border-radius: 4px;
+				}
+			}
+			.price{
+				color: #ffc7c9;
+				margin-left: 14px;
+			}
+		}
+
+		@include screen('mobile') {
+			flex-flow: row wrap;
+			h3.title, .rent_info{
+				flex: 1 1 100%;
+			}
+			h3.title{
+				margin-bottom: 12px;
+				font-size: 1.85em;
+			}
+			.rent_info{
+				text-align: left;
+				margin-bottom: 24px;
+			}
+		}
+	}
+	.text{
+		// background: rgba(0,0,0,.5);
+		max-height: 120px;
+		overflow-y: scroll;
+	}
+
+	.btn_grp{
+		display: flex;
+		flex-flow: row nowrap;
+		justify-content: space-between;
+	}
+	.btn{
+		flex: 1 1 49%;
+		background: #222;
+		padding: 1em;
+	    color: #fff;
+	    border: solid 1px #333;
+	    &:hover,
+	    &:focus{
+	        background: #000;
+	        border: solid 1px #333;
+	    }
+	}
+
+	// 關閉按鈕
+	.close{
+		position: absolute;
+		width: 96px;
+		height: 96px;
+		right: 0;
+		top: 0;
+		background: rgba(0,0,0,.45);
+		font-size: 0;
+
+		transition: .3s;
+
+		// position: relative;
+		&:before, &:after{
+			content: '';
+			position: absolute;
+			background: #fff;
+			width: 60px;
+			height: 1px;
+			left: 50%;
+			top: 50%;
+			margin-left: -28px;
+		}
+		&:before{
+			transform: rotate(45deg);
+		}
+		&:after{
+			transform: rotate(-45deg);
+		}
+
+		&:hover, &:focus{
+			background: rgba(0,0,0,.75);
+		}
+	}
+}
+
+
+// 第一版
+// // .BookingCalendar mask
+// .BookingCalendar{
+
+// 	$boxSize: 60px;		// 按鈕寬高
+// 	$m_left: 120px;		// 左側欄寬
+// 	$border_color_D: #686868;	// 表格深灰
+// 	$border_color_M: #dbdbdb;	// 表格中灰
+// 	$border_color_L: #f2f2f2;	// 表格淺灰
+// 	$border_line: #aeaeae;		// 表格線
+
+// 	position: relative;
+// 	width: 100%;
+// 	background: #fff;
+// 	border-top: 2px solid $border_color_D;
+// 	border-bottom: 2px solid $border_color_D;
+
+// 	// thead，need to fixed
+// 	.thead_room{
+// 		position: absolute;
+// 		width: $m_left;
+// 		left: 0;
+// 		top: 0;
+// 		text-align: center;
+// 		font-weight: bold;
+// 		background: $border_color_D;
+// 		color: #fff;
+
+// 		.month, .date, .rooms>div{
+// 			border-bottom: 1px solid $border_line;
+// 		}
+// 		.month, .date, .period{
+// 			color: #666;
+// 			background: $border_color_L;
+
+// 			display: flex;
+// 		    justify-content: center;
+// 		    align-items: center;
+// 		}
+
+// 		.month{
+// 			height: 48px;
+// 			// line-height: 48px;
+// 		}
+// 		.date{
+// 			height: 60px;
+// 			// line-height: 60px;
+// 		}
+// 		.period{
+// 			height: 72.61px;
+// 			// line-height: 72.61px;
+// 			border-bottom: 3px solid $border_line;
+// 		}
+
+// 		.rooms{
+// 			>div{
+// 				display: flex;
+// 			    height: 60px;
+// 			    justify-content: center;
+// 			    align-items: center;
+// 				height: 60px;
+// 				border-bottom: 1px solid $border_line;
+
+// 				// &:last-child{
+// 				// 	border-bottom: none;
+// 				// }
+// 			}
+// 		}
+// 	}
+
+// 	// tbody，遮罩，overflow: hidden
+// 	.tbody_wrap{
+// 		margin-left: $m_left;
+// 		// background: deeppink;
+
+// 		overflow: hidden;
+
+// 		.scroller{
+// 			width: 100%;
+// 			overflow-x: scroll;
+
+// 			display: flex;
+// 			flex-flow: row nowrap;
+// 		}
+
+// 		// 月份
+// 		.month{
+// 			// 5月、6月、7月...etc
+// 			h4{
+// 				color: #fff;
+// 				background: $border_color_D;
+// 				margin: 0;
+// 				padding: 12px 0;
+// 				text-align: center;
+
+// 				position: relative;
+// 				&:after{
+// 					content: '';
+// 					position: absolute;
+// 					width: 1px;
+// 					height: 100%;
+// 					background: #fff;
+// 					top: 0;
+// 					right: 0;
+// 				}
+// 			}
+
+// 			&:last-child{
+// 				h4:after{ display: none; }
+// 			}
+
+// 			// 1日、2日、3日...etc
+// 			.days{
+// 				// set flex
+// 				display: flex;
+// 				flex-flow: row nowrap;
+
+
+// 				// 表格線
+// 				.col{ border-left: 1px solid $border_line; }
+// 				.morning, .noon{ border-right: 1px solid $border_line;}
+
+// 				// 日期
+// 				.date{
+// 					text-align: center;
+// 					background: $border_color_M;
+// 					font-size: 1.125em;
+// 					font-weight: bold;
+// 					padding: 1em 0;
+// 				}
+// 				// 時段
+// 				.timeSection{
+// 					// set flex
+// 					display: flex;
+// 					flex-flow: row nowrap;
+
+// 					// 早、午、晚
+// 					.morning, .noon, .evening{
+// 						flex: 1 1 33.33333%;
+
+// 						time{
+// 							display: block;
+// 							padding: 12px 0;
+// 						    font-weight: bold;
+// 						    text-align: center;
+// 						    line-height: 1.2;
+// 						    font-size: .813em;
+// 						    font-weight: bold;
+// 						    border-bottom: 3px solid $border_line;
+// 							span{
+// 								display: block;
+// 								text-align: center;
+// 								font-size: .5em;
+// 							}
+// 						}
+// 					}
+
+// 					.morning{}
+// 					.noon{}
+// 					.evening{}
+// 				}
+// 				// 會議室
+// 				.rooms{
+// 					// display: block;
+// 					// background: #ddd;
+// 					// border: 1px solid #000;
+
+// 					div{
+// 						display: block;
+// 						width: $boxSize;
+// 						height: $boxSize;
+// 						border-bottom: 1px solid $border_line;
+// 						background: #fff;
+
+// 						cursor: pointer;
+
+// 						&.able, &.unable, &.locked{}
+
+// 						&.unable, &.locked{
+// 							cursor: not-allowed;
+// 						}
+
+// 						&.able{ background: #c7c4e9; }
+// 				        &.unable{ background: #8782c4; }
+// 				        &.locked{ background: #d2d0d0; }
+
+// 				        &.act{
+
+// 				        }
+// 					}
+// 				}
+// 			}
+// 		}
+// 	}
+// }

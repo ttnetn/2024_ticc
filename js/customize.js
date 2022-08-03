@@ -131,6 +131,18 @@ $(function() {
         }]
     });
 
+    // 靠北難用 calendar
+    $('.Tbody .room').find('div').click(function(event) {
+        $('.Tbody .room > div').removeClass('act');
+        $(this).addClass('act');
+
+        $('.room_info').fadeIn();
+    });
+    $('.room_info .close').click(function(event) {
+        $('.Tbody .room > div').removeClass('act');
+        $('.room_info').fadeOut();
+    });
+
     // modal設定
     $(function () {
         $("#modal1").hide();                                                      //先隱藏視窗
