@@ -1029,12 +1029,15 @@ body {
         a.calendar,
         a.list,
         a.floor,
+        a.timer,
+        a.sites,
         .filter{
             display: inline-block;
             padding: 0 1.5em;
             padding-left: 46px;
             line-height: 2;
             color: #222;
+            border-radius: 4px;
         }
 
         a.timeline{
@@ -1049,11 +1052,31 @@ body {
             background: url(../images/ticc/icon_grid.png) 6px 50% no-repeat;
             background-size: 36px 36px;
         }
+        // 樓層遠近
         a.floor{
-            padding-left: 56px;
-            background: url(../images/ticc/icon_floor.png) 6px 50% no-repeat;
+            background: url(../images/ticc/icon_floor.png) 8px 50% no-repeat, #fff;
+            background-size: 42px 42px;
+            &.H{ background: url(../images/ticc/icon_floor_H.png) 8px 50% no-repeat, #fff; }
+        }
+        // 時間遠近
+        a.timer{
+            background: url(../images/ticc/icon_timer.png) 8px 50% no-repeat, #fff;
             background-size: 42px 42px;
         }
+        // 場地選擇
+        a.sites{
+            background: url(../images/ticc/icon_site.png) 8px 50% no-repeat, #fff;
+            background-size: 42px 42px;
+        }
+        a.floor, a.timer, a.sites{
+            padding: 12px 12px 12px 56px;
+            filter: invert(0);
+            transition: .3s;
+            &:hover, &:focus{
+                filter: invert(1);
+            }
+        }
+
         .filter{
             background: url(../images/ticc/icon_date.png) 6px 50% no-repeat;
             background-size: 36px 36px;
@@ -1068,6 +1091,12 @@ body {
         background-size: 36px 36px;
         border-radius: 4px;
         display: inline-block;
+        &:hover,
+        &:focus {
+          background: url(../images/ticc/icon_pdf.png) 6px 50% no-repeat,darken($aHover, 0);
+          background-size: 36px 36px;
+          border-color: darken($aHover, 0);
+        }
     }
 
     @include screen('mobile') {

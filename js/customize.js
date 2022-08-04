@@ -18,6 +18,39 @@ $(function() {
     //     $('.mainTitleBox').find('.title').css('margin-bottom','-1em');
     // }
 
+    // 樓層高低切換
+    $('.functions .floor').click(function(event) {
+        if($(this).hasClass('H')){
+            $(this).removeClass('H');
+            $(this).text('按樓層由低到高排列');
+        }else{
+            $(this).addClass('H');
+            $(this).text('按樓層由高到低排列');
+        }
+    });
+    // 時間遠近切換
+    $('.functions .timer').click(function(event) {
+        if($(this).hasClass('F')){
+            $(this).removeClass('F');
+            $(this).text('時間由近到遠排列');
+        }else{
+            $(this).addClass('F');
+            $(this).text('時間由遠到近排列');
+        }
+    });
+
+    // 依地點檢視、會議室寬度
+    function roomItemWidthSet() {
+        var _roomItem = $('.room_list').find('.custom_room'),
+            roomLength = _roomItem.length,
+            mathValue= parseInt('100%'),
+            roomItemWidth;
+
+        roomItemWidth = ( mathValue / roomLength );
+        _roomItem.width(roomItemWidth);
+    }
+    roomItemWidthSet();
+
 
     // 首頁 卡片輪播
     $('.cardSlider').slick({
@@ -141,6 +174,15 @@ $(function() {
     $('.room_info .close').click(function(event) {
         $('.Tbody .room > div').removeClass('act');
         $('.room_info').fadeOut();
+    });
+
+    // 場地選擇 opem / close
+    $('.sites').click(function(event){
+        $('.site_list').fadeIn();
+    })
+
+    $('.site_list').find('.close').click(function(event) {
+        $('.site_list').fadeOut();
     });
 
     // modal設定
