@@ -501,13 +501,6 @@ $border_line: #aeaeae;		// 表格線
 			}
 		}
 
-		// @include screen('tablet') {
-		// 	.rent_info{
-		// 		flex-wrap: wrap;
-		// 		justify-content: flex-start;
-		// 	}
-		// }
-
 		@include screen('tablet') {
 			flex-flow: row wrap;
 			h3.title, .rent_info{
@@ -524,7 +517,6 @@ $border_line: #aeaeae;		// 表格線
 				justify-content: flex-start;
 			}
 		}
-
 		@include screen('mobile') {
 			.rent_info{
 				.rent_info{
@@ -535,12 +527,29 @@ $border_line: #aeaeae;		// 表格線
 			}
 		}
 	}
+	// 標題＋按鈕
+	.function{
+		display: flex;
+		flex-flow: row nowrap;
+		align-items: center;
+		width: calc(100% - 68px);
+
+		h3.title,
+		.lightbox{ flex: 0 0 auto; }
+
+		h3.title{ margin: 0;}
+		.lightbox{
+			margin: 0 20px;
+			font-size: 1.125em;
+			padding: .65em 1.125em;
+		}
+
+	}
 	.text{
 		// background: rgba(0,0,0,.5);
 		max-height: 120px;
 		overflow-y: scroll;
 	}
-
 	.btn_grp{
 		display: flex;
 		flex-flow: row nowrap;
@@ -557,6 +566,28 @@ $border_line: #aeaeae;		// 表格線
 	        background: #000;
 	        border: solid 1px #333;
 	    }
+	}
+	.img-container{
+		@include aspect-ratio(4,3);
+		background: transparent;
+		height: 240px;
+		width: calc(100% - 68px);
+	}
+
+	@include screen('mobile') {
+		.function{
+			flex-flow: row wrap;
+			h3.title, .lightbox{
+				flex: 1 1 100%;
+			}
+			h3.title{ font-size: 1.65em;}
+			.lightbox{ margin: 0;}
+		}
+	}
+	@include screen('xs_mobile') {
+		.img-container{
+			height: auto;
+		}
 	}
 
 	// // 關閉按鈕
@@ -594,6 +625,161 @@ $border_line: #aeaeae;		// 表格線
 	// 	}
 	// }
 }
+
+// 路線跳窗
+.full_lightbox{
+	position: fixed;
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,.75);
+	z-index: 100000001;
+	color: #fff;
+
+	// 預設隱藏
+	display: none;
+
+	.inner{
+		width: 680px;
+		height: 90%;
+		margin: 60px auto 0;
+		overflow: hidden;
+		position: relative;
+
+		.close {
+			background: $primaryColor;
+			&:hover, &:focus{
+				background: $secondaryColor;
+			}
+		}
+
+		p{ font-size: 1.25em; }
+		.map{
+			height: 86%;
+			overflow: scroll;
+			border-radius: 6px;
+			position: relative;
+			.exit{
+				position: absolute;
+				background: $secondaryColor;
+				border-radius: 30px;
+				z-index: 1;
+				font-size: .813em;
+				font-weight: bold;
+				line-height: 1.2;
+				color: #fff;
+				text-align: center;
+
+				// 預設關閉
+				opacity: 0;
+				&.show{ opacity: 1; }
+
+				// Y
+				&._2MF_L, &._2MF_R{ top: 180px; }
+				&._3F_L, &._3F_R{ top: 320px; }
+				&._4F_L, &._4F_R{ top: 440px; }
+				&._5F_L, &._5F_R, &._L_56F, &._R_56F{ top: 560px; }
+				&._6F_L, &._6F_R{
+					bottom: 8px;
+					animation: to_D 1s ease infinite;
+				}
+				// X
+				&._2MF_L, &._3F_L, &._4F_L, , &._5F_L{
+					left: 110px;
+					animation: to_L 1s ease infinite;
+				}
+				&._2MF_R, &._3F_R, &._4F_R, , &._5F_R{
+					right: 110px;
+					animation: to_R 1s ease infinite;
+				}
+				&._6F_L{ left: 150px; }
+				&._6F_R{ right: 150px; }
+
+				&._L_56F{
+					left: 20px;
+					animation: to_L56F 1s ease infinite;
+				}
+				&._R_56F{
+					right: 20px;
+					animation: to_R56F 1s ease infinite;
+				}
+
+				&._2MF_L, &._3F_L, &._4F_L, &._5F_L, &._6F_L, &._L_56F,
+				&._2MF_R, &._3F_R, &._4F_R, &._5F_R, &._6F_R, &._R_56F{
+					&:before{
+						content: '';
+						position: absolute;
+						width: 32px;
+						height: 32px;
+						top: 2px;
+					}
+				}
+
+				// arrow 左
+				&._2MF_L, &._3F_L, &._4F_L, &._5F_L, &._6F_L, &._L_56F{
+					padding: .75em 1.25em .75em 3em;
+					&:before{
+						background: url(../images/ticc/icon/icon_arrow_L.svg) 50% 50% no-repeat;
+						background-size: 32px 32px;
+						left: 4px;
+					}
+				}
+				// arrow 右
+				&._2MF_R, &._3F_R, &._4F_R, &._5F_R, &._6F_R, &._R_56F{
+					padding: .75em 3em .75em 1.25em;
+					&:before{
+						background: url(../images/ticc/icon/icon_arrow_R.svg) 50% 50% no-repeat;
+						background-size: 32px 32px;
+						right: 4px;
+					}
+				}
+				// arrow 上下
+				&._6F_L, &._6F_R{
+				 	&:before{
+						background: url(../images/ticc/icon/icon_arrow_D.svg) 50% 50% no-repeat;
+						background-size: 32px 32px;
+					}
+				}
+			}
+			.img-container{
+				@include aspect-ratio(5,6);
+				background: #fff
+			}
+		}
+
+		@media screen and (max-width: 720px) {
+			width: calc(100% - 30px);
+		}
+	}
+}
+
+@keyframes to_L {
+    0% { left: 110px; }
+    50% { left: 105px; }
+    100% { left: 110px; }
+}
+@keyframes to_L56F {
+    0% { left: 20px; }
+    50% { left: 15px; }
+    100% { left: 20px; }
+}
+
+@keyframes to_R {
+    0% { right: 110px; }
+    50% { right: 105px; }
+    100% { right: 110px; }
+}
+@keyframes to_R56F {
+    0% { right: 20px; }
+    50% { right: 15px; }
+    100% { right: 20px; }
+}
+@keyframes to_D {
+    0% { bottom: 8px;; }
+    50% { bottom: 3px; }
+    100% { bottom: 8px; }
+}
+
+
 
 // 關閉按鈕
 .close{

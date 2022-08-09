@@ -1,13 +1,55 @@
 
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+ul, ol{
+	list-style: none;
+}
+
 a[href^="http://maps.google.com/maps"]{display:none !important}
 a[href^="https://maps.google.com/maps"]{display:none !important}
 
-.gmnoprint .gm-style-cc {
-	display: none;
+.gmnoprint .gm-style-cc { display: none; }
+.gm-style-cc{ display: none !important; }
+
+header{
+	position: absolute;
+    width: 260px;
+    padding: 10px 20px;
+    box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    background: rgba(255,255,255,.8);
+    border-radius: 0 0 3px 3px;
+    top: 0;
+    left: 60px;
+    z-index: 80;
+}
+header h1{
+	position: relative;
+	display: block;
+	width: 200px;
+	height: 150px;
+	margin: auto;
+	background: url(../images/ticc/logo-default.png) no-repeat center;
+	text-indent: -9999px;
 }
 
-.gm-style-cc{
-	display: none !important;
+nav li a{
+	display: block;
+	padding: .5em .75em;
+	text-decoration: none;
+	color:  #222;
+	transition: .3s;
+	border-radius: 3px;
+}
+
+nav li a:hover,
+nav li a:focus{
+	background: #463b9e;
+	color:  #fff;
 }
 
 #Panorama{

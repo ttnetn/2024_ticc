@@ -51,6 +51,22 @@ $(function() {
     }
     roomItemWidthSet();
 
+    // 大會堂座位查詢
+    $('.seatDisplay').find('.view').click(function(event) {
+        $('.seatDisplay').find('.view').removeClass('act');
+        $(this).addClass('act');
+        $('.room_info').fadeIn();
+    });
+
+    // 
+    $('.lightbox').click(function(){
+        $('.full_lightbox').fadeIn();
+    });
+
+    $('.full_lightbox').find('.close').click(function(event) {
+        $('.full_lightbox').fadeOut();
+    });
+
 
     // 首頁 卡片輪播
     $('.cardSlider').slick({
@@ -173,6 +189,7 @@ $(function() {
     });
     $('.room_info .close').click(function(event) {
         $('.Tbody .room > div').removeClass('act');
+        $('.seatDisplay').find('.view').removeClass('act');
         $('.room_info').fadeOut();
     });
 

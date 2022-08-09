@@ -1523,9 +1523,9 @@ input[type="number"] {
 // input＋selectk 的下拉arrow
 input[type="text"]{
     &.complex{
-        padding-right: 1em;
+        padding-right: 24px;
         border: 1px solid #ccc;
-        background: #fff url(../images/icon/icon_select_arrow.png) no-repeat right center;
+        background: #fff url(../images/icon/icon_select_arrow.png) no-repeat right 4px center;
         background-size: 16px;
         min-width: 50%;
     }
@@ -1573,7 +1573,7 @@ select {
     line-height: 1.4em;
     padding: .5em 24px .5em .5em;
     border: 1px solid $color-gray;
-    background: #fff url(../images/icon/icon_select_arrow.png) no-repeat right center;
+    background: #fff url(../images/icon/icon_select_arrow.png) no-repeat right 4px center;
     background-size: 16px;
 
     option {

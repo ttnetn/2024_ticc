@@ -274,6 +274,10 @@ body {
                 padding: .75em 3em; 
             }
 
+            @include screen('mobile') {
+
+            }
+
             // &:before{
             //     content: '';
             //     position: absolute;
@@ -494,6 +498,51 @@ body {
             }
         }
     }
+    // 座位查詢
+    .flex-one-row{
+        display: flex;
+        flex-flow: row nowrap;
+        .col{
+            @include gutter(30px);
+            flex: 1 1 auto;
+
+            display: flex;
+            flex-flow: row nowrap;
+            justify-content: center;
+            align-items: center;
+
+            position: relative;
+
+            &:nth-child(1),
+            &:nth-child(2){
+                &:after{
+                    content: '';
+                    position: absolute;
+                    width: 1px;
+                    height: 32px;
+                    background: #222;
+                    right: 0;
+                }
+            }
+
+            >span{
+                display: block;
+                width: 60px;
+                font-weight: bold;
+            }
+            input{ margin-right: 12px; }
+
+            .btn_grp{
+                display: flex;
+                flex-flow: row nowrap;
+                .btn{
+                    margin: 0 2px;
+                    padding: .75em 1.65em !important;
+                    min-width: auto !important;
+                }
+            }
+        }
+    }
     .dateBox{
         .datepick {
             margin-left: .3em;
@@ -510,6 +559,34 @@ body {
                 margin-left: 0em;
 
                 &:before { display: none; }
+            }
+        }
+    }
+
+    @include screen('notebook'){}
+    @include screen('tablet'){
+        // 座位查詢
+        .flex-one-row{
+            flex-flow: row wrap;
+            .col{
+                flex: 1 1 auto;
+                flex-basis: calc(100% / 3);
+                &:last-child{
+                    flex: 1 1 100%;
+                }
+            }
+        }
+    }
+    @include screen('mobile') {
+        // 座位查詢
+        .flex-one-row{
+            .col{
+                >span{ width: 40px; }
+                flex-basis: calc(100% / 2);
+                &:first-child{
+                    flex: 1 1 100%;
+                    &:after{ opacity: 0;}
+                }
             }
         }
     }
@@ -1354,7 +1431,6 @@ ul.state{
         }
     }
 }
-
 // 
 .text_info{
     padding: 3em 0 2em !important;
@@ -1482,6 +1558,241 @@ h3.title {
     letter-spacing: 2px;
     line-height: 2;
 }
+
+// seat map
+.seatDisplay{
+    width: 100%;
+    border: 1px solid #ddd;
+    overflow: hidden;
+    // min-height: 600px;
+    // max-height: 900px;
+    max-height: 1720px;
+    background: #fff;
+
+    position: relative;
+    .zoom_in, .zoom_out{
+        position: absolute;
+        width: 72px;
+        height: 72px;
+        background: rgba(0,0,0,.45);
+        right: 0;
+        cursor: pointer;
+        transition: .3s;
+
+        font-size: 0;
+
+        &:before, &:after{
+            content: '';
+            position: absolute;
+            background: #fff;
+            left: 50%;
+            top: 50%;
+        }
+        &:before{
+            width: 30px;
+            height: 2px;
+            margin-left: -15px;
+        }
+        &:after{
+            width: 2px;
+            height: 30px;
+            margin-top: -15px;
+        }
+
+        &:hover, &:focus{
+            background: $secondaryColor;
+        }
+    }
+    .zoom_in{ top: 74px; }
+    .zoom_out{
+        top: 0;
+        &:after{
+            display: none;
+        }
+    }
+
+    @include screen('mobile') {
+        .zoom_in, .zoom_out{
+            width: 42px;
+            height: 42px;
+
+            &:before{
+                width: 18px;
+                height: 2px;
+                margin-left: -9px;
+            }
+            &:after{
+                width: 2px;
+                height: 18px;
+                margin-top: -9px;
+            }
+        }
+        .zoom_in{ top: 44px; }
+    }
+
+    // 視角按鈕
+    $btn-size: 60px;
+    .view{
+        position: absolute;
+        width: $btn-size;
+        height: $btn-size;
+        background: url(../images/ticc/icon/icon_camera.svg) 50% 50% no-repeat, rgba(0,0,0,.65);
+        background-size: 28px 28px;
+        border-radius: 50%;
+        text-align: center;
+        color: #fff;
+        line-height: $btn-size;
+        font-size: 0;
+        transition: .2s;
+
+        // 視圖 1340*1624
+        // 處理Y
+        &._2MF-1, &._2MF-2, &._2MF-3, &._2MF-4, &._2MF-5{ top: calc(32% - 30px); }
+        &._3F-1, &._3F-2, &._3F-3, &._3F-4, &._3F-5{ top: calc(46% - 30px); }
+        &._4F-1, &._4F-2, &._4F-3, &._4F-4, &._4F-5{ top: calc(62% - 30px); }
+        &._5F-1, &._5F-2, &._5F-3, &._5F-4, &._5F-5{ bottom: calc(25% - 30px); }
+        &._6F-1, &._6F-2, &._6F-3, &._6F-4, &._6F-5{ bottom: calc(12.5% - 30px); }
+        &._L-1, &._R-1{ top: calc(57% - 30px); }
+        &._L-2, &._R-2{ bottom: calc(33% - 30px); }
+        &._L-3, &._R-3{ bottom: calc(22% - 30px); }
+
+
+        // 處理X
+        &._2MF-1, &._3F-1, &._4F-1, &._5F-1, &._6F-1{ left: calc(26.5% - 30px); }
+        &._2MF-2, &._3F-2, &._4F-2, &._5F-2, &._6F-2{ left: calc(38% - 30px); }
+        &._2MF-3, &._3F-3, &._4F-3, &._5F-3, &._6F-3{ left: calc(50% - 30px); }
+        &._2MF-4, &._3F-4, &._4F-4, &._5F-4, &._6F-4{ right: calc(38% - 30px); }
+        &._2MF-5, &._3F-5, &._4F-5, &._5F-5, &._6F-5{ right: calc(26.5% - 30px); }
+        &._L-1, &._L-2, &._L-3{ left: calc(15.5% - 30px); }
+        &._R-1, &._R-2, &._R-3{ right: calc(15.5% - 30px); }
+
+        &:hover, &:focus, &.act{
+            background: url(../images/ticc/icon/icon_camera.svg) 50% 50% no-repeat, $primaryColor;
+            background-size: 34px 34px;
+            width: 72px;
+            height: 72px;
+            line-height: 72px;
+
+            cursor: pointer;
+
+            // -6
+            // 處理Y
+            &._2MF-1, &._2MF-2, &._2MF-3, &._2MF-4, &._2MF-5{ top: calc(32% - 36px); }
+            &._3F-1, &._3F-2, &._3F-3, &._3F-4, &._3F-5{ top: calc(46% - 36px); }
+            &._4F-1, &._4F-2, &._4F-3, &._4F-4, &._4F-5{ top: calc(62% - 36px); }
+            &._5F-1, &._5F-2, &._5F-3, &._5F-4, &._5F-5{ bottom: calc(25% - 36px); }
+            &._6F-1, &._6F-2, &._6F-3, &._6F-4, &._6F-5{ bottom: calc(12.5% - 36px); }
+            &._L-1, &._R-1{ top: calc(57% - 36px); }
+            &._L-2, &._R-2{ bottom: calc(33% - 36px); }
+            &._L-3, &._R-3{ bottom: calc(22% - 36px); }
+            // // 處理X
+            &._2MF-1, &._3F-1, &._4F-1, &._5F-1, &._6F-1{ left: calc(26.5% - 36px); }
+            &._2MF-2, &._3F-2, &._4F-2, &._5F-2, &._6F-2{ left: calc(38% - 36px); }
+            &._2MF-3, &._3F-3, &._4F-3, &._5F-3, &._6F-3{ left: calc(50% - 36px); }
+            &._2MF-4, &._3F-4, &._4F-4, &._5F-4, &._6F-4{ right: calc(38% - 36px); }
+            &._2MF-5, &._3F-5, &._4F-5, &._5F-5, &._6F-5{ right: calc(26.5% - 36px); }
+            &._L-1, &._L-2, &._L-3{ left: calc(15.5% - 36px); }
+            &._R-1, &._R-2, &._R-3{ right: calc(15.5% - 36px); }
+        }
+
+        // &.act{
+        //     background: url(../images/ticc/icon/icon_camera.svg) 50% 50% no-repeat, $primaryColor;
+        //     background-size: 34px 34px;
+        //     width: 72px;
+        //     height: 72px;
+        //     line-height: 72px;
+        // }
+
+        @include screen('mobile') {
+            width: 36px;
+            height: 36px;
+            line-height: 36px;
+            background-size: 18px 18px;
+            // 處理Y
+            &._2MF-1, &._2MF-2, &._2MF-3, &._2MF-4, &._2MF-5{ top: calc(32% - 18px); }
+            &._3F-1, &._3F-2, &._3F-3, &._3F-4, &._3F-5{ top: calc(46% - 18px); }
+            &._4F-1, &._4F-2, &._4F-3, &._4F-4, &._4F-5{ top: calc(62% - 18px); }
+            &._5F-1, &._5F-2, &._5F-3, &._5F-4, &._5F-5{ bottom: calc(25% - 18px); }
+            &._6F-1, &._6F-2, &._6F-3, &._6F-4, &._6F-5{ bottom: calc(12.5% - 18px); }
+            &._L-1, &._R-1{ top: calc(57% - 18px); }
+            &._L-2, &._R-2{ bottom: calc(33% - 18px); }
+            &._L-3, &._R-3{ bottom: calc(22% - 18px); }
+
+
+            // 處理X
+            &._2MF-1, &._3F-1, &._4F-1, &._5F-1, &._6F-1{ left: calc(26.5% - 18px); }
+            &._2MF-2, &._3F-2, &._4F-2, &._5F-2, &._6F-2{ left: calc(38% - 18px); }
+            &._2MF-3, &._3F-3, &._4F-3, &._5F-3, &._6F-3{ left: calc(50% - 18px); }
+            &._2MF-4, &._3F-4, &._4F-4, &._5F-4, &._6F-4{ right: calc(38% - 18px); }
+            &._2MF-5, &._3F-5, &._4F-5, &._5F-5, &._6F-5{ right: calc(26.5% - 18px); }
+            &._L-1, &._L-2, &._L-3{ left: calc(15.5% - 18px); }
+            &._R-1, &._R-2, &._R-3{ right: calc(15.5% - 18px); }
+
+            &:hover, &:focus, &.act{
+                width: 36px;
+                height: 36px;
+                line-height: 36px;
+                background-size: 18px 18px;
+
+                // 處理Y
+                &._2MF-1, &._2MF-2, &._2MF-3, &._2MF-4, &._2MF-5{ top: calc(32% - 18px); }
+                &._3F-1, &._3F-2, &._3F-3, &._3F-4, &._3F-5{ top: calc(46% - 18px); }
+                &._4F-1, &._4F-2, &._4F-3, &._4F-4, &._4F-5{ top: calc(62% - 18px); }
+                &._5F-1, &._5F-2, &._5F-3, &._5F-4, &._5F-5{ bottom: calc(25% - 18px); }
+                &._6F-1, &._6F-2, &._6F-3, &._6F-4, &._6F-5{ bottom: calc(12.5% - 18px); }
+                &._L-1, &._R-1{ top: calc(57% - 18px); }
+                &._L-2, &._R-2{ bottom: calc(33% - 18px); }
+                &._L-3, &._R-3{ bottom: calc(22% - 18px); }
+
+
+                // 處理X
+                &._2MF-1, &._3F-1, &._4F-1, &._5F-1, &._6F-1{ left: calc(26.5% - 18px); }
+                &._2MF-2, &._3F-2, &._4F-2, &._5F-2, &._6F-2{ left: calc(38% - 18px); }
+                &._2MF-3, &._3F-3, &._4F-3, &._5F-3, &._6F-3{ left: calc(50% - 18px); }
+                &._2MF-4, &._3F-4, &._4F-4, &._5F-4, &._6F-4{ right: calc(38% - 18px); }
+                &._2MF-5, &._3F-5, &._4F-5, &._5F-5, &._6F-5{ right: calc(26.5% - 18px); }
+                &._L-1, &._L-2, &._L-3{ left: calc(15.5% - 18px); }
+                &._R-1, &._R-2, &._R-3{ right: calc(15.5% - 18px); }
+
+                // // 處理Y
+                // &._2MF-1, &._2MF-2, &._2MF-3, &._2MF-4, &._2MF-5{ top: calc(35% - 18px); }
+                // &._3F-1, &._3F-2, &._3F-3, &._3F-4, &._3F-5{ top: calc(49% - 18px); }
+                // &._4F-1, &._4F-2, &._4F-3, &._4F-4, &._4F-5{ top: calc(64% - 18px); }
+                // &._5F-1, &._5F-2, &._5F-3, &._5F-4, &._5F-5{ bottom: calc(21% - 18px); }
+                // &._6F-1, &._6F-2, &._6F-3, &._6F-4, &._6F-5{ bottom: calc(10% - 18px); }
+                // &._L-1, &._R-1{ top: calc(60% - 18px); }
+                // &._L-2, &._R-2{ bottom: calc(30% - 18px); }
+                // &._L-3, &._R-3{ bottom: calc(19% - 18px); }
+
+
+                // // 處理X
+                // &._2MF-1, &._3F-1, &._4F-1, &._5F-1, &._6F-1{ left: calc(26.5% - 18px); }
+                // &._2MF-2, &._3F-2, &._4F-2, &._5F-2, &._6F-2{ left: calc(38% - 18px); }
+                // &._2MF-3, &._3F-3, &._4F-3, &._5F-3, &._6F-3{ left: calc(50% - 18px); }
+                // &._2MF-4, &._3F-4, &._4F-4, &._5F-4, &._6F-4{ right: calc(38% - 18px); }
+                // &._2MF-5, &._3F-5, &._4F-5, &._5F-5, &._6F-5{ right: calc(26.5% - 18px); }
+                // &._L-1, &._L-2, &._L-3{ left: calc(15.5% - 18px); }
+                // &._R-1, &._R-2, &._R-3{ right: calc(15.5% - 18px); }
+            }
+        }
+    }
+
+    #svg{
+        // background: rgba(0,0,0,.25);
+        // width: 100%;
+        // height: 100%;
+        overflow: hidden;
+
+        .seat_map{
+            // width: 100%;
+        }
+        .seat_this{
+            position: absolute;
+            z-index: 10;
+        }
+    }
+}
+
 
 ////////////////////////////////////////////////////////////
 // 為了與首頁區隔，請在內頁加上innerpage ClassName
