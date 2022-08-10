@@ -604,6 +604,8 @@ body {
         }
     }
     @include screen('tablet'){
+        width: 100%;
+        .col{ @include gutter(0); }
         // 座位查詢
         .flex-one-row{
             flex-flow: row wrap;
@@ -615,7 +617,6 @@ body {
                 }
             }
         }
-
         .flex-form .radio_grp.form_inline label{
             &:last-child{
                 flex-flow: row wrap;
@@ -1208,7 +1209,7 @@ body {
         a.sites,
         .filter{
             display: inline-block;
-            padding: 0 1.5em;
+            padding: .45em 1.5em;
             padding-left: 46px;
             line-height: 2;
             color: #222;
@@ -1274,9 +1275,11 @@ body {
         }
     }
 
-    @include screen('mobile') {
+    @include screen('tablet') {
         flex-flow: row wrap;
-        .col{}
+        .col{
+            flex: 1 1 100%;
+        }
     }
 }
 // 狀態
