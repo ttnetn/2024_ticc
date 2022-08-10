@@ -522,6 +522,11 @@ $border_line: #aeaeae;		// 表格線
 			}
 		}
 		@include screen('mobile') {
+			width: 100%;
+			h3.title{
+				time{ margin: 0 0 0 10px; }
+			}
+
 			.rent_info{
 				.rent_info{
 					.room_type, .price{

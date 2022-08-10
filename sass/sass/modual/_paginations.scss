@@ -33,6 +33,7 @@
                 display: block;
                 white-space: nowrap;
                 color: $color-word;
+                border-bottom: 4px solid transparent;
 
                 font-size: 1.125em !important;
                 font-style: italic;
@@ -48,13 +49,14 @@
                     color: #8e8e8e;
                 }
 
+                transition: .3s;
                 &:hover,
-                &:focus {}
-            }
-            &.active {
-                a {
+                &:focus {
                     border-bottom: 4px solid #674f11;
                 }
+            }
+            &.active {
+                a { border-bottom: 4px solid #674f11; }
             }
             %arrow {
                 content: "";
@@ -77,7 +79,7 @@
                     position: relative;
                     &:hover, &:focus {
                         &:before, &:after {
-                            border: 2px solid #FFF;
+                            // border: 2px solid #FFF;
                             border-left: none;
                             border-bottom: none;
                         }
@@ -98,6 +100,7 @@
                 }
             }
 
+            &.prev-10, &.next-10,
             &.prev ,&.next {
                 width: 72px;
                 height: 72px;
@@ -107,6 +110,11 @@
                     height: 72px !important;
                     border-radius: 50%;
                     transition: .2s ease;
+                    border-bottom: 0;
+
+                    &:hover, &:focus{
+                        border-bottom: 0;
+                    }
                 }
             }
             &.prev {
@@ -132,7 +140,6 @@
                         background-size: 30px 20px, cover;
                     }
                 }
-                
             }
             &.last {
                 a:before {
@@ -146,6 +153,21 @@
                     transform: rotate(45deg);
                 }
             }
+
+            // 上10頁、下10頁
+            &.prev-10, &.next-10{
+                a{
+                    background: rgba(255,255,255,.65);
+                    line-height: 50px;
+                    border: 1px solid rgba(0,0,0,.1);
+
+                    &:hover, &:focus{
+                        border: 1px solid rgba(0,0,0,.45);
+                    }
+                }
+            }
+            &.prev-10{}
+            &.next-10{}
         }
     }
     .total {
