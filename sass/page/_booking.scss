@@ -142,7 +142,7 @@ $border_line: #aeaeae;		// 表格線
 									background: $border_color_M;
 								}
 							}
-							.morning, .noon{ border-right: 1px solid $border_line;}
+							.morning, .noon, .evening, .night{ border-right: 1px solid $border_line;}
 
 							// 日期
 							.date{
@@ -160,7 +160,7 @@ $border_line: #aeaeae;		// 表格線
 								flex-flow: row nowrap;
 
 								// 早、午、晚
-								.morning, .noon, .evening{
+								.morning, .noon, .evening, .night, .early-morning{
 									flex: 1 1 33.33333%;
 									min-width: 60px;
 
@@ -184,6 +184,8 @@ $border_line: #aeaeae;		// 表格線
 								.morning{}
 								.noon{}
 								.evening{}
+								.night{}
+								.early-morning{}
 							}
 						}
 					}
@@ -199,7 +201,7 @@ $border_line: #aeaeae;		// 表格線
 						display: flex;
 						flex-flow: row nowrap;
 
-						.morning, .noon, .evening{
+						.morning, .noon, .evening, .night, .early-morning{
 							flex: 0 0 $boxSize;
 							min-width: $boxSize;
 							height: 60px;
@@ -320,7 +322,7 @@ $border_line: #aeaeae;		// 表格線
 							flex-direction: column;
 
 							// 早、午、晚
-							.morning, .noon, .evening{
+							.morning, .noon, .evening, .night, .early-morning{
 								flex: 1 1 33.33333%;
 								min-width: 60px;
 
@@ -347,6 +349,8 @@ $border_line: #aeaeae;		// 表格線
 							.evening{
 								// time{ border-bottom: transparent; }
 							}
+							.nigh{}
+							.early-morning{}
 						}
 					}
 				}
@@ -403,7 +407,7 @@ $border_line: #aeaeae;		// 表格線
 						display: flex;
 						flex-flow: column wrap;
 
-						.morning, .noon, .evening{
+						.morning, .noon, .evening, .night, .early-morning{
 							flex: 0 0 $boxSize;
 							min-width: $boxSize;
 							height: 60px;

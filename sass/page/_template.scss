@@ -267,7 +267,6 @@ body {
                 }
             }
         }
-
         .btn_grp{
             .btn{
                 min-width: 220px;
@@ -288,7 +287,6 @@ body {
             //     left: -2.5em;
             // }
         }
-
         .flex-form{
             .form_grp{
                 &:last-child{
@@ -305,10 +303,16 @@ body {
                 flex-basis: calc(100% - 180px);
             }
         }
-
         form{
             .btn_grp{
                 .btn{ min-width: auto; }
+            }
+        }
+
+        @include screen('mobile') {
+            .form_content{
+                max-width: 100% !important;
+                flex-basis: 100% !important;
             }
         }
     }
@@ -378,6 +382,14 @@ body {
             .form_grp{
                 border-bottom: 0;
                 flex-flow: row nowrap;
+            }
+        }
+
+        @include screen('mobile') {
+            .flex-form{
+                .form_grp{
+                    flex-flow: row wrap;
+                }
             }
         }
     }
@@ -498,6 +510,14 @@ body {
             }
         }
     }
+    .flex-form .radio_grp.form_inline label{
+        &:last-child{
+            span{
+                display: inline-block;
+                margin-right: 6px;
+            }
+        }
+    }
     // 座位查詢
     .flex-one-row{
         display: flex;
@@ -563,7 +583,26 @@ body {
         }
     }
 
-    @include screen('notebook'){}
+    @media screen and (max-width: 1499px) {
+        .flex-form .radio_grp.form_inline label{
+            display: inline-block;
+            margin-right: 0 !important;
+            &:last-child{
+                width: 100%;
+                display: flex;
+            }
+        }
+    }
+    @include screen('notebook') {
+        .flex-2-col{
+            .col{
+                @include flex-xs-equal(1, 0px);
+                @include flex-sm-equal(1, 0px);
+                @include flex-md-equal(1, 0px);
+                @include flex-lg-equal(2, 0px);
+            }
+        }
+    }
     @include screen('tablet'){
         // 座位查詢
         .flex-one-row{
@@ -573,6 +612,31 @@ body {
                 flex-basis: calc(100% / 3);
                 &:last-child{
                     flex: 1 1 100%;
+                }
+            }
+        }
+
+        .flex-form .radio_grp.form_inline label{
+            &:last-child{
+                flex-flow: row wrap;
+                span{
+                    display: block;
+                    margin-right: 0;
+                    width: calc(100% - 60px);
+                }
+
+                .datepick {
+                    width: 100%;
+                    display: block;
+                    padding-right: 0;
+                    margin: 0;
+
+                    &:before{ display: none; }
+
+                    >input[type="text"],
+                    >input[type="date"] {
+                        width: 100%;
+                    }
                 }
             }
         }
@@ -765,7 +829,6 @@ body {
         }
         .received_time{ text-align: right;}
     }
-
     // 反饋
     .feedback{
         display: flex;
@@ -901,7 +964,7 @@ body {
             border-width: 50px 120px 0 0;
             border-color: #fff;
             left: -20px;
-            top: 0px;
+            top: -5px;
         }
     }
     h4.month{
@@ -920,20 +983,6 @@ body {
             margin: 16px 0;
 
             position: relative;
-            // .link{
-            //     position: absolute;
-            //     right: 2em;
-            //     top: 2em;
-            //     z-index: 1;
-            //     a{
-            //         display: inline-block;
-            //         width: 42px;
-            //         height: 42px;
-            //         padding: 6px;
-            //         &.share{}
-            //         &.calendar{}
-            //     }
-            // }
             >a{
                 display: flex;
                 flex-flow: row nowrap;
@@ -1018,22 +1067,6 @@ body {
             }
 
             &.AD{
-                // p{
-                //     position: absolute;
-                //     right: 0;
-                //     bottom: 0;
-                //     text-align: center;
-                //     width: 260px;
-                //     padding: 1em 0;
-                //     margin: 0;
-                //     line-height: 1.6;
-                //     font-size: 1.2em;
-                //     letter-spacing: 1px;
-                //     // background: $secondaryColor;
-                //     background: linear-gradient(0deg, $secondaryColor 0%, $secondaryColor 100%);
-                //     color: #fff;
-                //     font-weight: 400;
-                // }
                 >a{
                     .img-container{
                         width: calc( 100% - 120px);
@@ -1046,7 +1079,6 @@ body {
                             transition: all .3s ease;
                         }
                     }
-
                     p{
                         position: absolute;
                         right: 0;
@@ -1065,14 +1097,6 @@ body {
 
                         transition: all .3s ease;
                     }
-
-                    // &:hover, &:focus{
-                    //     .img-container{
-                    //         img{
-                    //             transform: scale(1.1);
-                    //         }
-                    //     }
-                    // }
                 }
 
                 &:hover, &:focus{
@@ -1081,6 +1105,80 @@ body {
                             img{ transform: scale(1.1); }
                         }
                         p{ background: linear-gradient(0deg, $secondaryColor 0%, $secondaryColor 100%); }
+                    }
+                }
+            }
+        }
+    }
+
+    @include screen('tablet') {
+        // 日期展示
+        .date-display{
+            // 時間軸背景
+            &.timeline{
+                .slick-list{
+                    width: calc(100% - 3em);
+                }
+            }
+        }
+
+        // 品項
+        .content{
+            .item{
+                >a{
+                    flex-flow: row wrap;
+
+                    .timepoint, .text{
+                        flex: 0 0 auto;
+                        flex-basis: calc(100% - 50px);
+                    }
+                    .text{ padding: 0 2.5em;}
+                }
+                &.AD{
+                    >a{
+                        .img-container{
+                            width: calc( 100% - 50px);
+                        }
+                    }
+                }
+            }
+        }
+    }
+    @include screen('mobile') {
+        // 拖出來共用
+        h4.date{
+            width: 100%;
+            font-size: 120%;
+            padding: 2em 0 1em;
+        }
+
+        // 品項
+        .content{
+            .item{
+                >a{
+                    padding-top: 5.2em;
+                    .timepoint, .text{
+                        flex-basis: 100%;
+                    }
+                    .timepoint{
+                        p{
+                            span{
+                                &:nth-child(2){
+                                    font-size: 1.5em;
+                                }
+                                // &:nth-child(3){
+                                //     font-size: 1.75em;
+                                //     font-weight: bold;
+                                // }
+                            }
+                        }
+                    }
+                    .text{ padding: 0; }
+                }
+                &.AD{
+                    >a{
+                        @include gutter(0);
+                        .img-container{ width: 100%; border-radius: 0; }
                     }
                 }
             }
@@ -1228,6 +1326,13 @@ ul.state{
         &.share{}
         &.calendar{}
     }
+
+    @include screen('tablet') {
+        width: 42px;
+    }
+    @include screen('mobile') {
+        width: auto;
+    }
 }
 // 日曆calendar_Tb
 .calendar_Tb {
@@ -1306,7 +1411,6 @@ ul.state{
                 }
             }
         }
-
         @include screen('tablet') {
             tr{
                 &:nth-child(even){

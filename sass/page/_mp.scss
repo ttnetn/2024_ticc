@@ -359,10 +359,11 @@ h2.act_title{
                 color: #fff;
                 // padding: .75em 1.25em;
                 margin-bottom: .5em;
-                line-height: 2;
+                line-height: 2.2;
                 font-size: 1.125em;
                 span{
                     display: block;
+                    width: 100%;
 
                     position: relative;
                     &:before{
@@ -370,8 +371,8 @@ h2.act_title{
                         position: absolute;
                         left: 50%;
                         top: 0;
-                        margin-left: -15px;
-                        width: 30px;
+                        margin-left: -13px;
+                        width: 26px;
                         height: 2px;
                         background: #fff;
                     }
@@ -782,11 +783,17 @@ h2.act_title{
         .slick-dots{
             width: calc( 100% - 280px);
         }
+        .slick-prev{ right: 200px; }
+        .slick-next{ right: 120px; }
+    }
+    @include screen('mobile') {
         .slick-prev{
-            right: 200px;
+            left: 50%;
+            margin-left: -78px;
         }
         .slick-next{
-            right: 120px;
+            right: 50%;
+            margin-right: -78px;
         }
     }
 }

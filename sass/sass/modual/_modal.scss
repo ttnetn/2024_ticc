@@ -15,6 +15,11 @@
     box-shadow:1px 1px 15px RGBA(0, 0, 0, .5);
     animation: scaleUp .5s ease-out;
 
+    @include screen('mobile') {
+        width: 90%;
+        margin-left: -45%;
+    }
+
     h2 {
         padding-bottom: .5em;
         color: #0c2577;

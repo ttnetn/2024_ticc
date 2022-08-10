@@ -12,7 +12,7 @@ $(function() {
     }
 
     if ($('.left_block').length) {
-        $('.mainTitleBox').find('.title').css('margin-bottom','2em');
+        $('.mainTitleBox').find('.title').css('margin-bottom','3.1em');
     }
     // else{
     //     $('.mainTitleBox').find('.title').css('margin-bottom','-1em');
@@ -93,6 +93,15 @@ $(function() {
                 centerPadding: '40px',
                 slidesToShow: 1
             }
+        },{
+            breakpoint: 767,
+            settings: {
+                arrows: true,
+                dots: false,
+                centerMode: true,
+                centerPadding: '40px',
+                slidesToShow: 1
+            }
         }]
     });
 
@@ -114,24 +123,14 @@ $(function() {
             breakpoint: 768,
             settings: {
                 slidesToShow: 2,
-                slidesToScroll: 2,
-                infinite: true,
-                dots: true
+                slidesToScroll: 2
             }
         }, {
             breakpoint: 545,
             settings: {
                 arrows: true,
-                slidesToShow: 2,
-                slidesToScroll: 2
-            }
-        }, {
-            breakpoint: 480,
-            settings: {
-                arrows: true,
                 slidesToShow: 1,
-                slidesToScroll: 1,
-                arrows: false
+                slidesToScroll: 1
             }
         }]
     });
