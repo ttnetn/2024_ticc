@@ -244,8 +244,10 @@ h2.act_title{
         padding-left: 0 !important;
         padding-right: 0 !important;
 
-        h2.title{
-            margin-left: 40px !important;
+        @media screen and (max-width: 1440px) {
+            h2.title{
+                margin-left: 40px !important;
+            }
         }
     }
 }

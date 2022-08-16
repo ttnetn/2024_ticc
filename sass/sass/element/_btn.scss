@@ -157,6 +157,19 @@ $btn-radius:.2em;
     i:before{ margin-top: -3px; }
 }
 
+// 關閉樓層圖
+.floormap-switch{
+    padding: .75em 2.6em;
+    background: #222;
+    border-color: #222;
+    color: #FFF;
+    border-radius: 3px;
+    &:hover,
+    &:focus {
+        color: #FFF;
+        background: darken($aHover, 0);    }
+}
+
 // 返回
 // .btn-back{
 //     background: #555 !important;
