@@ -263,6 +263,7 @@ $(function() {
         pauseOnFocus: false
     });
 
+
     // 內頁 篇幅三張
     $('.galleryslider').slick({
         centerMode: true,
@@ -372,26 +373,44 @@ $(function() {
     //     }
     // });
 
+    // roomSlider
+    $('.roomSlider').slick({
+        mobileFirst: true,
+        dots: false,
+        infinite: true,
+        speed: 900,
+        slidesToShow: 2,
+        slidesToScroll: 1,
+        autoplay: false,
+        arrow: true,
+        lazyLoaded: true,
+        lazyLoad: 'ondemand',
+        ease: 'ease',
+        responsive: [{
+            breakpoint: 1200,
+            settings: {
+                slidesToShow: 4,
+                slidesToScroll: 3,
+                arrows: true
+            }
+        }, {
+            breakpoint: 768,
+            settings: {
+                slidesToShow: 3,
+                slidesToScroll: 2,
+                arrows: true
+            }
+        }, {
+            breakpoint: 575,
+            settings: {
+                slidesToShow: 2,
+                slidesToScroll: 1,
+                arrows: true
+            }
+        }]
+    });
 
-    // 首頁輪播
-    // $('.mpSlider').slick({
-    //     mobileFirst: true,
-    //     dots: true,
-    //     arrows: true,
-    //     infinite: true,
-    //     speed: 500,
-    //     autoplay: true,
-    //     fade: true,
-    //     lazyLoaded: true,
-    //     lazyLoad: 'ondemand',
-    //     ease: 'ease',
-    //     pauseOnHover: false,
-    //     pauseOnFocus: false,
-    //     customPaging: function(slider, i) {
-    //         var title = $(slider.$slides[i]).find('img').attr('alt').trim();
-    //         return $('<button type="button" aria-label="' + title + '"/>').text(title);
-    //     }
-    // });
+
     // 廣告輪播
     $('.adSlider').slick({
         mobileFirst: true,

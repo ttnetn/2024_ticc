@@ -411,6 +411,8 @@ $(function() {
             $(this).keyup(accordion);
         });
     });
+
+    $('.accordion.notice').find('.accordion-content').show();
     /*-----------------------------------*/
     /////////////fatfooter開關/////////////
     /*-----------------------------------*/
@@ -453,14 +455,21 @@ $(function() {
                 tabItemHeight = _tabItem.outerHeight(),
                 tabContentHeight = _tab.find('.active').next().innerHeight(),
                 tiGap = 0,
+                tabGutter= parseInt('4px'),
                 tabItemLength = _tabItem.length,
-                tabItemWidth;
+                tabItemWidth,
+                marginLeft;
+
             _tab.find('.active').next('.tabContent').show();
+            
             if (ww >= wwMedium) {
                 _tabContent.css('top', tabItemHeight);
                 _tab.height(tabContentHeight + tabItemHeight);
-                tabItemWidth = (tabwidth - (tabItemLength - 1) * tiGap) / tabItemLength;
-                _tabItem.width(tabItemWidth).css('margin-left', tiGap);
+
+                tabItemWidth = ( tabwidth / tabItemLength) - tabGutter;             // 單欄寬度 - gutter(左右各2px)
+                marginLeft = (tabGutter * tabItemLength) / (tabItemLength - 1);     // margin-left = gutter * tab個數 / (tab個數 -1)
+
+                _tabItem.width(tabItemWidth).css('margin-left', marginLeft);
                 _tabItem.first().css('margin-left', 0);
                 _tabItem.last().css({ position: 'absolute', top: 0, right: 0 }).width(tabItemWidth);
             } else {

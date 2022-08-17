@@ -1,7 +1,7 @@
 .tabSet {
     max-width: 100%;
     margin: 1em auto;
-    overflow: hidden;
+    // overflow: hidden;
     @extend %clearfix;
     @include screen('mobile') {
         width: auto;
@@ -54,7 +54,6 @@
         }
         float: left;
         margin: 0;
-        padding: 0;
         font-size:1em;
         line-height: 1;
         display: block;
@@ -80,14 +79,48 @@
     }
 }
 //多組 可設定差異
-.example-2 {
-    .tabItem:hover {
-        background: $secondaryColor;
+// .example-2 {
+//     .tabItem:hover {
+//         background: $secondaryColor;
+//     }
+//     .tabItem.active {
+//         background: $secondaryColor;
+//     }
+// }
+
+.space{
+    .tabItem{
+        background: #f5f5f5;
+        color: #666;
+        border: transparent;
+        padding: 20px 0;
+        border-radius: 2px;
+
+        &:hover, &:focus {
+            color: #fff;
+            background: $secondaryColor;
+        }
+
+        &.active{}
     }
-    .tabItem.active {
-        background: $secondaryColor;
+    .tabContent{
+        .singleSlider, .img-container, iframe{ height: 640px; }
+        .img-container{
+            background: #fff;
+            border: 1px solid #eaeaea;
+        }
+
+        @include screen('notebook') {
+            .singleSlider, .img-container, iframe{ height: 420px; }
+        }
+
+        // @include screen('mobile') {
+        //     .singleSlider, .img-container, iframe{ height: 360px; }
+        // }
     }
 }
+
+
 // 顯示content
 .active+.tabContent {
     display: block;

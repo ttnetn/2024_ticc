@@ -460,7 +460,7 @@
 }
 
 // 單篇
-.singleSlider {
+.singleSlider{
     width: 100%;
     padding: 0 0 5em !important;
     .img-container {
@@ -497,7 +497,58 @@
     // }
 
     .slick-dots{
-        bottom: 40px;
+        height: 90px;
+        align-items: center;
+        background: linear-gradient(0deg, rgba(0,0,0,0.75) 20%, rgba(0,0,0,0) 100%);
+        bottom: 0;
+
+        li{
+            position: relative;
+            display: block;
+            width: 42px;
+            height: 42px;
+            border-bottom: 0;
+            &:before{
+                content: '-0';
+                position: absolute;
+                top: 5px;
+                left: 0;
+                width: 20px;
+                height: 30px;
+                color: #fff;
+                font-style: italic;
+                font-size: 1.25em;
+            }
+            button{
+                font-size: 1.25em;
+                background: transparent;
+                width: 42px;
+                height: 42px;
+                color: #fff;
+                font-style: italic;
+                margin: 0;
+                padding-left: 24px;
+                border-radius: 0;
+                opacity: 1;
+
+                 &:hover, &:focus{
+                    background: transparent;
+                }
+
+                &:before{
+                    display: none;
+                }
+            }
+
+            &.slick-active{
+                button{
+                    box-shadow: inset 0 -4px 0 0 #fff;
+                    &:hover, &:focus{
+                        background: transparent;
+                    }
+                }
+            }
+        }
     }
 
     // .slick-prev {
@@ -609,6 +660,69 @@
             }
         }
     }
+}
+
+// 四篇 roomSlider
+.roomSlider{
+    margin-bottom: 20px;
+
+    @include screen('mobile') {
+        @include gutter();
+    }
+
+    .img-container {}
+    a {
+        display: block;
+        overflow: hidden;
+        color: #fff;
+        margin: 0 1em;
+        background: #ddd;
+
+        .img-container{
+            height: 240px;
+        }
+        img { margin: 0 auto; }
+
+        position: relative;
+        .room-Name{
+            position: absolute;
+            width: 100%;
+            top: 0;
+            z-index: 2;
+            letter-spacing: 2px;
+            font-size: 1.125em;
+            color: #fff !important;
+            margin: 0;
+            padding: 1em 1em;
+
+            &:after{
+                content: '';
+                position: absolute;
+                left: 0;
+                top: -60px;
+                z-index: -1;
+                width: 500px;
+                height: 160px;
+                background: linear-gradient(-90deg, #24086b 0%, #6a1b8a 100%);
+                transform: rotate(-22deg);
+                transform-origin: bottom left;
+            }
+        }
+    }
+    // &:focus {
+    //     &:before {
+    //         content: "";
+    //         position: absolute;
+    //         z-index: 9;
+    //         width: 100%;
+    //         height: 100%;
+    //         top: 0;
+    //         left: 0;
+    //         bottom: 0;
+    //         right: 0;
+    //         box-shadow: 0 0px 0px 3px $primaryColor inset;
+    //     }
+    // }
 }
 
 
