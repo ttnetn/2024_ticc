@@ -39,8 +39,13 @@
         padding: 0;
         background: url(../images/basic/icon_close.svg) no-repeat center center;
         background-size: 24px 24px;
+
+        &:before, &:after{ display: none;}
+
         &:hover, &:focus {
             cursor: pointer;
+            background: url(../images/basic/icon_close.svg) no-repeat center center, #ddd;
+            background-size: 24px 24px;
         }
     }
 

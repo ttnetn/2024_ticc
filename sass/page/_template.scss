@@ -529,6 +529,55 @@ body {
         }
     }
 
+    // 線上洽詢
+    &.contact{
+        .notice{
+            padding: 2em 5em;
+            font-size: 1em;
+            line-height: 2;
+            color: #222;
+        }
+
+        .flex-form{
+            display: flex;
+            flex-flow: row wrap;
+            .form_grp{
+                flex: 1 1 50%;
+                align-items: flex-start;
+                border-bottom: 0;
+                .form_title{
+                    text-align: right;
+                    padding-right: .75em;
+                    color: #222;
+                }
+                .form_content{
+                    .address{
+                        display: flex;
+                        flex-wrap: nowrap;
+                        width: 100%;
+                        select{ width: 120px; }
+                    }
+                }
+            }
+        }
+        @include screen('tablet') {
+            .notice{
+                padding: 2.5em 3.5em 2em;
+            }
+            .flex-form{
+                .form_grp{ flex: 1 1 100%; }
+            }
+        }
+        @include screen('mobile') {
+
+            .flex-form{
+                .form_grp{
+                    .form_title{ text-align: left;}
+                }
+            }
+        }
+    }
+
     // 空間圖片
     .space{
         .tabs>.tabItem{ font-size: 1.25em;}
