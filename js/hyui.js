@@ -509,7 +509,7 @@ $(function() {
         if ($(this).scrollTop() > 200) {
             $('.scrollToTop').fadeIn();
         } else {
-            $('.scrollToTop').fadeOut();
+            $('.scrollToTop').fadeOut();$('.header:before').css('display','none');
         }
     });
     /*-----------------------------------*/

@@ -1,7 +1,7 @@
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; }
 body {
-    background: url(../images/ticc/bg-default.jpg) left top repeat-y;
+    background: url(../images/ticc/bg-default.jpg) left top repeat;
     &.noscroll {
         position: static !important;
         width: 100%;
@@ -271,7 +271,7 @@ body {
 
     @include screen('mobile') {
         .function,
-        .link{ position: static; }
+        .link{ position: static; margin-bottom: 30px; }
     }
 }
 // 內頁內容區塊 卡片式
@@ -405,6 +405,7 @@ body {
     }
     p{
         margin: 18px 0 22px 0;
+        line-height: 1.2;
 
         b{ color: #9d0000; }
         a{
@@ -483,12 +484,19 @@ body {
             }
         }
 
+        p.time{
+            text-align: center;
+            font-size: 1.35em;
+            font-weight: bold;
+            color: $secondaryColor;
+        }
+
         .inner{
             padding: 2em 5.5em 1em;
             >div:after{ display: none; }
 
             @include screen('mobile') {
-                padding: 2em 3.5em 1em;
+                padding: 2em 2em 1em;
             }
         }
 
@@ -565,7 +573,15 @@ body {
                 padding: 2.5em 3.5em 2em;
             }
             .flex-form{
-                .form_grp{ flex: 1 1 100%; }
+                .form_grp{
+                    flex: 1 1 100%;
+                    .form_content{
+                        .address{
+                            flex-wrap: wrap;
+                            select{ width: 100%;}
+                        }
+                    }
+                }
             }
         }
         @include screen('mobile') {
@@ -613,13 +629,15 @@ body {
             overflow: hidden;
             background: #f3f3f3;
             padding: 0 2em;
+            margin-top: 2em;
+
         }
         .room-Name{
-            margin-bottom: 2.6em;
-            padding: 1.5em 0;
+            margin: 1em 0 2.6em;
+            padding: .5em 0;
             color: #fff !important;
             text-align: left !important;
-            font-size: 1.25em !important;
+            font-size: 1.45em !important;
 
             &:before{ display: none; }
             &:after{
@@ -647,8 +665,22 @@ body {
         }
         .btn_grp{}
 
+        .form_inline{
+            &.to-R{}
+        }
+        @include screen('tablet') {
+            .form_inline{
+                &.to-R{ justify-content: center !important; }
+            }
+        }
         @include screen('mobile') {
-            .room-Name{ margin-top: 0; }
+            .form_inline{
+                .btn{
+                    min-width: auto;
+                    width: 100%;
+                }
+            }
+            // .room-Name{ margin-top: 0; }
             .col:first-child{
                 margin-bottom: 2em;
             }
@@ -681,6 +713,11 @@ body {
     }
 
     @include screen('tablet') {
+        +.form_inline.to-R{
+            display: none;
+        }
+
+        // 設施與服務、圖文
         &.imgText{
             .inner{
                 .flex-2-col{
@@ -1074,9 +1111,23 @@ body {
 // 客服、左右欄
 .chat_content_inner{
     display: flex;
-    padding-top: 1em;
-    padding-bottom: 1em;
+    // padding-top: 1em;
+    // padding-bottom: 1em;
     flex-flow: column wrap;
+
+    background: #fff;
+    box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    border-radius: 4px;
+    padding: 1em 2.5em;
+    margin-top: 2em;
+
+    h3{
+        color: #222;
+        border-bottom: 1px solid #ddd;
+        margin: 0 0 1em;
+        font-size: 1.75em;
+        padding: 1em 0;
+    }
 
     .title,
     .title_pic{
@@ -1748,6 +1799,15 @@ ul.state{
         padding: 6px;
         &.share{}
         &.calendar{}
+
+        img{ 
+            transform: scale(1);
+            transition: .3s;
+        }
+
+        &:hover, &:focus{
+            img{ transform: scale(1.2); }
+        }
     }
 
     @include screen('tablet') {
@@ -2434,7 +2494,7 @@ $border-color: #bcc;
             overflow: hidden;
             // margin: 1em 0;
             margin-bottom: 1.65em;
-            @include flex-xs-equal(2, 8px);
+            @include flex-xs-equal(1, 0px);
             @include flex-sm-equal(3, 8px);
             @include flex-md-equal(2, 8px);
             @include flex-lg-equal(3, 8px);
@@ -2467,7 +2527,8 @@ $border-color: #bcc;
             //     }
             // }
             .info{
-                padding: 1.5em 0 1em 2em;
+                padding: 1.5em 0 1em;
+                text-align: center;
                 font-size: 1.125em;
                 line-height: 2;
                 b{ padding: 0 12px;}
@@ -2757,6 +2818,13 @@ $border-color: #bcc;
         flex-basis: 100%;
         max-width: 100%;
         margin-bottom: 3em;
+
+        position: relative;
+        // 活動行事曆：分享＋加入google月曆
+        >.link{
+            right: 120px;
+            top: -60px;
+        }
     }
     .left_block {
         flex: none;
@@ -2809,7 +2877,8 @@ $border-color: #bcc;
     }
     @media screen and (max-width: 1480px) {
         >.container {
-            @include gutter(80px);
+            // @include gutter(80px);
+            @include gutter(30px);
         }
     }
     @include screen('tablet') {

@@ -59,9 +59,11 @@
         }
     }
     .accordion-content {
-        padding: 1.5em 1.25em;
+        padding: 1.5em 0;
         line-height: 1.8;
         background: #fff;
+
+        ol, ul{ padding-left: 24px; }
     }
 
     &.notice{
@@ -87,5 +89,11 @@
         }
 
         .accordion-content { background: transparent; }
+
+        @include screen('mobile') {
+            .accordion-content{
+                padding: 1.5em 0;
+            }
+        }
     }
 }

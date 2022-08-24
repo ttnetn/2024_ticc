@@ -379,7 +379,7 @@ $(function() {
         dots: false,
         infinite: true,
         speed: 900,
-        slidesToShow: 2,
+        slidesToShow: 1,
         slidesToScroll: 1,
         autoplay: false,
         arrow: true,
@@ -393,14 +393,14 @@ $(function() {
                 slidesToScroll: 3,
                 arrows: true
             }
-        }, {
-            breakpoint: 768,
+        },{
+            breakpoint: 767,
             settings: {
                 slidesToShow: 3,
                 slidesToScroll: 2,
                 arrows: true
             }
-        }, {
+        },{
             breakpoint: 575,
             settings: {
                 slidesToShow: 2,
@@ -409,6 +409,8 @@ $(function() {
             }
         }]
     });
+
+
 
 
     // 廣告輪播
@@ -496,7 +498,7 @@ $(function() {
     });
     // 
     $('.cppic_slider').slick({
-        dots: true,
+        dots: false,
         infinite: false,
         speed: 500,
         slidesToShow: 4,

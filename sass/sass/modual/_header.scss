@@ -30,6 +30,7 @@
         right: 58%;
     }
 
+    // 大塊陰影
     &:after{
         content: '';
         position: absolute;
@@ -45,7 +46,7 @@
         width: 60px !important;
         height: 60px !important;
         position: absolute;
-        top: 50px;
+        top: 34px;
         display: block;
         font-size: 0em;
         padding: 15px;
@@ -131,6 +132,8 @@
             display: block;
             // max-width: 300px;
             max-height: 110px;
+            transform: scale(1);
+            transition: .3s;
         }
         // @include screen('tablet') {
         //     padding: 2px 60px;
@@ -267,6 +270,17 @@
         //         background-size: 16px 16px;
         //     }
         // }
+
+        // 背景
+        &:before {
+            opacity: 0
+        }
+        h1 {
+            img{
+                transform: scale(0.8);
+                filter: invert(1) brightness(5);
+            }
+        }
     }
 
     @media screen and (max-width: 1480px) {
@@ -283,7 +297,10 @@
         &:before {
             right: auto;
             left: -200px;
+            opacity: 0;
         }
+        // 大塊陰影
+        &:after{ height: 130px;}
 
         h1 {
             // padding: 2px 60px;
@@ -297,6 +314,7 @@
                 // max-height: 75px;
                 margin: 0px auto;
                 transform: scale(0.8);
+                filter: invert(1) brightness(5);
             }
         }
     }

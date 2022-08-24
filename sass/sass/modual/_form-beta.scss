@@ -1312,6 +1312,8 @@ select::-ms-expand {
                 margin-right: 1em;
                 display: inline-flex;
                 align-items: center;
+
+                min-width: 96px;
             }
         }
     }
