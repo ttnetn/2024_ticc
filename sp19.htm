@@ -1,0 +1,533 @@
+<!doctype html>
+<html lang="zh-Hant" class="no-js">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>預約消息</title>
+    <!--HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries [if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <!-- slick css-->
+    <link rel="stylesheet" type="text/css" href="vendor/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="vendor/slick/slick-theme.css" />
+    <!-- 燈箱facybox -->
+    <link rel="stylesheet" type="text/css" href="vendor/fancybox/jquery.fancybox.min.css">
+    <!-- animate -->
+    <link rel="stylesheet" href="vendor/wow/animate.css">
+    <!-- hyUI css -->
+    <link rel="stylesheet" href="css/hyui.css">
+    <!-- favicon -->
+    <link href="images/favicon.png" rel="icon" type="image/x-icon">
+</head>
+<body>
+    <!--跳窗-->
+    <div id="modal1" class="modal">
+        <h2>標題</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero, perferendis cumque nobis recusandae aperiam? Quis sunt, sit error consequuntur, amet, odit corrupti exercitationem eveniet debitis facere dolor mollitia natus suscipit.</p>
+        <div class="btn_grp">
+            <button class="btn btn-secondary">好的</button>
+        </div>
+    </div>
+    <!-- wrapper Start -->
+    <div class="wrapper">
+        <!-- header Start -->
+        <header class="header">
+            <div class="container">
+                <!-- navigation Start -->
+                <nav class="navigation" role="navigation" aria-label="Site">
+                    <!-- Search Start -->
+                    <div class="search" role="search">
+                        <button class="switch">開關</button>
+                        <div class="form_grp">
+                            <input name="username" id="mustSameAsId" type="text" placeholder="請輸入文字" title="請輸入文字" aria-label="搜尋網站內容">
+                            <input name="" type="submit" value="查詢" class="btn btn-search" />
+                        </div>
+                    </div>
+                    <!-- 新增div navlist -->
+                    <div class="navlist">
+                        <ul>
+                            <li><a href="#">回首頁</a></li>
+                            <li><a href="#">網站導覽</a></li>
+                        </ul>
+                    </div>
+                    <!-- language -->
+                    <div class="language">
+                        <a href="#" class="switch">EN</a>
+                        <ul>
+                            <li><a href="#">繁中</a></li>
+                            <li><a href="#">EN</a></li>
+                        </ul>
+                    </div>
+                </nav>
+                <!-- navigation End -->
+                <h1>
+                    <a href="index.htm"><img src="images/ticc/logo-default.png" alt="網站標題" /></a>
+                </h1>
+                <!-- menu Start -->
+                <nav class="menu" role="navigation" aria-label="About page">
+                    <ul>
+                        <li><a href="#">關於我們</a>
+                            <ul>
+                                <li><a href="#">第二層選單</a></li>
+                                <li><a href="#">第二層選單</a></li>
+                                <li><a href="#">第二層選單</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">最新消息</a>
+                            <ul>
+                                <li><a href="#">第二層選單</a></li>
+                                <li><a href="#">第二層選單</a></li>
+                                <li><a href="#">第二層選單</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">場地導覽</a>
+                            <ul>
+                                <li><a href="#">第二層選單</a></li>
+                                <li><a href="#">第二層選單</a></li>
+                                <li><a href="#">第二層選單</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">檔期查詢</a>
+                            <ul>
+                                <li><a href="#">第二層選單</a></li>
+                                <li><a href="#">第二層選單</a></li>
+                                <li><a href="#">第二層選單</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">預約洽訂</a>
+                            <ul>
+                                <li><a href="#">第二層選單</a></li>
+                                <li><a href="#">第二層選單</a></li>
+                                <li><a href="#">第二層選單</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">參宴服務</a>
+                            <ul>
+                                <li><a href="#">第二層選單</a></li>
+                                <li><a href="#">第二層選單</a></li>
+                                <li><a href="#">第二層選單</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">出租服務</a>
+                            <ul>
+                                <li><a href="#">第二層選單</a></li>
+                                <li><a href="#">第二層選單</a></li>
+                                <li><a href="#">第二層選單</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">資源下載</a>
+                            <ul>
+                                <li><a href="#">第二層選單</a></li>
+                                <li><a href="#">第二層選單</a></li>
+                                <li><a href="#">第二層選單</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+                <!-- menu End -->
+            </div>
+        </header>
+        <!-- header End -->
+        <!-- main Start -->
+        <div id="center" class="main innerpage">
+            <div class="container-hero">
+                <!-- 內頁新增一個classname-->
+                <!-- side bar -->
+                <section class="sideBar wow fadeInRight" data-wow-delay=".3s">
+                    <a href="javascript:;">檔期<br>查詢</a>
+                    <a href="javascript:;">線上<br>洽詢</a>
+                    <a href="javascript:;">VR<br>實境</a>
+                    <a href="javascript:;">活動<br>行事曆</a>
+                    <a href="javascript:;" class="sb-scrollToTop">Top</a>
+                </section>
+                <!-- 影片 -->
+                <section class="full hero">
+                    <div class="container">
+                        <!-- slogen -->
+                        <h3 class="slogen wow bounceInLeft">Taipei<br>
+                            International<br>
+                            Convention Center
+                        </h3>
+                        <!-- 登入＋查詢 -->
+                        <div class="btn_box">
+                            <a href="#" class="btn">預約編號登入<span>Login in</span></a>
+                            <a href="#" class="btn">大會堂座位圖查詢<span>Search</span></a>
+                        </div>
+                        <img src="images/ticc/img-hero.jpg" alt="">
+                    </div>
+                </section>
+            </div>
+            <div class="mainTitleBox">
+                <!-- breadcrumb路徑 -->
+                <div class="breadcrumb">
+                    <ul>
+                        <li><a href="#">首頁</a></li>
+                        <li><a href="#">節點</a></li>
+                        <li>節點</li>
+                    </ul>
+                </div>
+                <!-- function 預定地 -->
+                <div class="function">
+                    <ul>
+                        <li class="icon_back"><a href="#">回上一頁</a></li>
+                        <!-- <li class="icon_print"><a href="#">友善列印</a></li>
+                        <li class="icon_forward"><a href="#">轉寄友人</a></li> -->
+                    </ul>
+                </div>
+                <h2 class="title">租金試算<br><span>Rent calculator</span></h2>
+            </div>
+            <!-- 主要內容 -->
+            <div class="container">
+                <!-- 主要內容區 -->
+                <div class="center_block">
+                    <!-- content Start -->
+                    <section>
+                        <!-- 線上洽詢 -->
+                        <section class="card">
+                            <div class="inner">
+                                <div class="notice">試算結果<b class="R">僅供參考</b>，實際租用金額請洽本中心承辦人員，或立即<a href="#">線上洽詢</a></div>
+
+                                <div class="rent_calc">
+                                    <div class="calculator">
+                                        <h3>請輸入試算內容</h3>
+                                        <div class="flex-form form-column">
+                                            <!-- radio -->
+                                            <div class="form_grp" role="group" aria-labelledby="fake-legend">
+                                                <label for="" class="form_title" aria-required="true">Q1：請選擇活動類型展覽或會議</label>
+                                                <div class="form_content" id="fake-legend">
+                                                    <div class="radio_grp form_inline">
+                                                        <label><input type="radio" name="sampleRadio1" value="" checked="">會議</label>
+                                                        <label><input type="radio" name="sampleRadio1" value="">展覽</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- checkbox -->
+                                            <div class="form_grp" role="group" aria-labelledby="fake-legend">
+                                                <label for="" class="form_title" aria-required="true">Q2：請選擇租用時段、用途與租借場地(可複選)</label>
+                                                <div class="form_content">
+                                                    <div class="checkbox">
+                                                        <label><input name="checkSample" type="checkbox" value=""><span>正式使用</span></label>
+                                                    </div>
+                                                    <div class="set">
+                                                        <div class="form_content">
+                                                            <div class="datepick">
+                                                                <input name="" type="date" value="" class="calendar" placeholder="開始日期">
+                                                            </div>
+                                                            <div class="datepick">
+                                                                <input name="" type="date" value="" class="calendar" placeholder="結束日期">
+                                                            </div>
+                                                        </div>
+                                                        <div class="functions_rightblock">
+                                                            <div class="select_list_block">
+                                                                <select class="item_3">
+                                                                    <option value="1">會議、典禮、教育訓練營</option>
+                                                                    <option value="2">宴會</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form_content">
+                                                    <div class="checkbox">
+                                                        <label><input name="checkSample" type="checkbox" value=""><span>彩排使用</span></label>
+                                                    </div>
+                                                    <div class="set">
+                                                        <div class="form_content">
+                                                            <div class="datepick">
+                                                                <input name="" type="date" value="" class="calendar" placeholder="開始日期">
+                                                            </div>
+                                                            <div class="datepick">
+                                                                <input name="" type="date" value="" class="calendar" placeholder="結束日期">
+                                                            </div>
+                                                        </div>
+                                                        <div class="functions_rightblock">
+                                                            <div class="select_list_block">
+                                                                <select class="item_3">
+                                                                    <option value="1">會議、典禮、教育訓練營</option>
+                                                                    <option value="2">宴會</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form_content">
+                                                    <div class="checkbox">
+                                                        <label><input name="checkSample" type="checkbox" value=""><span>佈置/拆場</span></label>
+                                                    </div>
+                                                    <div class="set">
+                                                        <div class="form_content">
+                                                            <div class="datepick">
+                                                                <input name="" type="date" value="" class="calendar" placeholder="開始日期">
+                                                            </div>
+                                                            <div class="datepick">
+                                                                <input name="" type="date" value="" class="calendar" placeholder="結束日期">
+                                                            </div>
+                                                        </div>
+                                                        <div class="functions_rightblock">
+                                                            <div class="select_list_block">
+                                                                <select class="item_3">
+                                                                    <option value="1">會議、典禮、教育訓練營</option>
+                                                                    <option value="2">宴會</option>
+                                                                </select>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!-- radio -->
+                                            <div class="form_grp" role="group" aria-labelledby="fake-legend">
+                                                <label for="" class="form_title" aria-required="true">Q3：請選擇是否於正式使用或彩排租用設備</label>
+                                                <div class="form_content" id="fake-legend">
+                                                    <div class="radio_grp form_inline">
+                                                        <label><input type="radio" name="sampleRadio2" value="" checked="">是</label>
+                                                        <label><input type="radio" name="sampleRadio2" value="">否</label>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="form_grp" role="group" aria-labelledby="fake-legend">
+                                                <label for="" class="form_title" aria-required="true">Q4：承上，請選擇欲租用設備(可複選)</label>
+                                                <div class="form_content">
+                                                    <div class="checkbox">
+                                                        <label><input name="checkSample" type="checkbox" value=""><span>正式使用</span></label>
+                                                    </div>
+                                                    <div class="set">
+                                                        <div class="form_content additional">
+                                                            <div class="checkbox">
+                                                                <label><input name="checkSample" type="checkbox" value=""><span>有線麥克風</span></label>
+                                                            </div>
+                                                            <select name="" id="">
+                                                                <option value="">租用數量</option>
+                                                                <option value="">1</option>
+                                                                <option value="">2</option>
+                                                                <option value="">3</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="form_content additional">
+                                                            <div class="checkbox">
+                                                                <label><input name="checkSample" type="checkbox" value=""><span>無線麥克風（領夾/手握/頭戴）</span></label>
+                                                            </div>
+                                                            <select name="" id="">
+                                                                <option value="">租用數量</option>
+                                                                <option value="">1</option>
+                                                                <option value="">2</option>
+                                                                <option value="">3</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="form_content additional">
+                                                            <div class="checkbox">
+                                                                <label><input name="checkSample" type="checkbox" value=""><span>基本單槍</span></label>
+                                                            </div>
+                                                            <select name="" id="">
+                                                                <option value="">租用數量</option>
+                                                                <option value="">1</option>
+                                                                <option value="">2</option>
+                                                                <option value="">3</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="form_content additional">
+                                                            <div class="checkbox">
+                                                                <label><input name="checkSample" type="checkbox" value=""><span>高亮度大單槍(大會堂用)</span></label>
+                                                            </div>
+                                                            <select name="" id="">
+                                                                <option value="">租用數量</option>
+                                                                <option value="">1</option>
+                                                                <option value="">2</option>
+                                                                <option value="">3</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="form_content additional">
+                                                            <div class="checkbox">
+                                                                <label><input name="checkSample" type="checkbox" value=""><span>HD20單槍(大會堂用)</span></label>
+                                                            </div>
+                                                            <select name="" id="">
+                                                                <option value="">租用數量</option>
+                                                                <option value="">1</option>
+                                                                <option value="">2</option>
+                                                                <option value="">3</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="form_content additional">
+                                                            <div class="checkbox">
+                                                                <label><input name="checkSample" type="checkbox" value=""><span>音源線</span></label>
+                                                            </div>
+                                                            <select name="" id="">
+                                                                <option value="">租用數量</option>
+                                                                <option value="">1</option>
+                                                                <option value="">2</option>
+                                                                <option value="">3</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="form_content">
+                                                    <div class="checkbox">
+                                                        <label><input name="checkSample" type="checkbox" value=""><span>彩排使用</span></label>
+                                                    </div>
+                                                    <div class="set">
+                                                        <div class="form_content additional">
+                                                            <div class="checkbox">
+                                                                <label><input name="checkSample" type="checkbox" value=""><span>有線麥克風</span></label>
+                                                            </div>
+                                                            <select name="" id="">
+                                                                <option value="">租用數量</option>
+                                                                <option value="">1</option>
+                                                                <option value="">2</option>
+                                                                <option value="">3</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="form_content additional">
+                                                            <div class="checkbox">
+                                                                <label><input name="checkSample" type="checkbox" value=""><span>無線麥克風（領夾/手握/頭戴）</span></label>
+                                                            </div>
+                                                            <select name="" id="">
+                                                                <option value="">租用數量</option>
+                                                                <option value="">1</option>
+                                                                <option value="">2</option>
+                                                                <option value="">3</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="form_content additional">
+                                                            <div class="checkbox">
+                                                                <label><input name="checkSample" type="checkbox" value=""><span>基本單槍</span></label>
+                                                            </div>
+                                                            <select name="" id="">
+                                                                <option value="">租用數量</option>
+                                                                <option value="">1</option>
+                                                                <option value="">2</option>
+                                                                <option value="">3</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="form_content additional">
+                                                            <div class="checkbox">
+                                                                <label><input name="checkSample" type="checkbox" value=""><span>高亮度大單槍(大會堂用)</span></label>
+                                                            </div>
+                                                            <select name="" id="">
+                                                                <option value="">租用數量</option>
+                                                                <option value="">1</option>
+                                                                <option value="">2</option>
+                                                                <option value="">3</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="form_content additional">
+                                                            <div class="checkbox">
+                                                                <label><input name="checkSample" type="checkbox" value=""><span>HD20單槍(大會堂用)</span></label>
+                                                            </div>
+                                                            <select name="" id="">
+                                                                <option value="">租用數量</option>
+                                                                <option value="">1</option>
+                                                                <option value="">2</option>
+                                                                <option value="">3</option>
+                                                            </select>
+                                                        </div>
+                                                        <div class="form_content additional">
+                                                            <div class="checkbox">
+                                                                <label><input name="checkSample" type="checkbox" value=""><span>音源線</span></label>
+                                                            </div>
+                                                            <select name="" id="">
+                                                                <option value="">租用數量</option>
+                                                                <option value="">1</option>
+                                                                <option value="">2</option>
+                                                                <option value="">3</option>
+                                                            </select>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <!-- btn -->
+                                        <div class="btn_grp">
+                                            <button class="btn btn-reset">清除</button>
+                                            <button class="btn btn-primary">試算</button>
+                                        </div>
+                                    </div>
+                                    <div class="result">
+                                        <h3>試算明細</h3>
+                                        <p>123</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </section>
+                    </section>
+                    <!-- content End -->
+                </div>
+            </div>
+        </div>
+        <!-- footer Start-->
+        <footer>
+            <div class="container">
+                <section>
+                    <div class="col">
+                        <!-- logo -->
+                        <a href="#"><img src="images/ticc/bg-white.png"></a>
+                    </div>
+                    <div class="col">
+                        營運機構：中華民國對外貿易發展協會 (TAITRA)<br>
+                        地址：11049 台北市信義路五段1號<br>
+                        Email: ticc@taitra.org.tw<br>
+                        傳真：(02)2723-2589<br>
+                        總機：(02)2725-5200
+                    </div>
+                    <div class="col">
+                        會議場地訂位分機: 3517,3518   /  服務台分機：3000,3151  /<br>
+                        停車場分機：3040  /  餐飲服務分機：3350,3351<br>
+                        婚宴專線：(02)2720-8008
+                    </div>
+                </section>
+                <section>
+                    <div class="col">
+                        <!-- 標章2枚 -->
+                        <img src="images/ticc/footer_logo1.png" alt="">
+                        <img src="images/ticc/footer_logo2.png" alt="">
+                    </div>
+                    <div class="col">
+                        <!-- 隱私權三連結＋版權 -->
+                        <ul class="footer_link">
+                            <li><a href="javascript:;">隱私權政策</a></li>
+                            <li><a href="javascript:;">免責聲明</a></li>
+                            <li><a href="javascript:;">友站連結</a></li>
+                        </ul>
+                        <p class="Copyright">Taipei International Convention Center 版權所有</p>
+                    </div>
+                </section>
+            </div>
+        </footer>
+        <!-- footer End -->
+    </div>
+    <!-- 鯨魚 -->
+    <div class="abgne_float_game">
+        <a href="javascript:;"><img src="images/ticc/t-boHelper-ch.png" alt=""></a>
+    </div>
+    <a href="javascript:;" class="scrollToTop">回頁首</a>
+    <!-- JQ -->
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <!-- 外掛 plugin js -->
+    <script src="vendor/jquery.easing.min.js"></script>
+    <!-- ease -->
+    <script src="vendor/slick/slick.min.js "></script>
+    <!-- slick -->
+    <script src="vendor/slick/slick-lightbox.js "></script>
+    <!-- slick lightbox -->
+    <script src="vendor/lazyload/lazyload.js"></script>
+    <!-- lazyload -->
+    <script src="vendor/picturefill/picturefill.min.js" async></script>
+    <!-- picturefill -->
+    <script src="vendor/scrolltable/jquery.scroltable.min.js"></script>
+    <!-- scrolltable -->
+    <!-- sticky-sidebar -->
+    <script src='vendor/sticky-sidebar/sticky-sidebar.js'></script>
+    <script src='vendor/sticky-sidebar/ResizeSensor.js'></script>
+    <!-- fancy -->
+    <script src='vendor/fancybox/jquery.fancybox.min.js'></script>
+    <!-- WOW -->
+    <script src='vendor/wow/wow.js'></script>
+    <script>
+        new WOW().init();
+    </script>
+    <!-- hyUI -->
+    <script src="js/hyui.js"></script>
+    <!-- 客製js -->
+    <script src="js/customize.js"></script>
+</body>

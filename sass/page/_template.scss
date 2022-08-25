@@ -254,7 +254,7 @@ body {
         }
     }
      @media screen and (max-width: 1480px) {
-        @include gutter(80px);
+        @include gutter(40px);
         .function,
         .link{
             // 避開右側 sideBar
@@ -265,7 +265,7 @@ body {
         .function,
         .link{
             // 避開右側 sideBar
-            right: 40px;
+            right: 20px;
         }
     }
 
@@ -277,6 +277,13 @@ body {
 // 內頁內容區塊 卡片式
 .innerpage .center_block .card{
     // margin: 1em 0 2em;
+
+    .notice{
+        padding: 2em 5em !important;
+        font-size: 1.125em;
+        line-height: 2;
+        color: #222;
+    }
 
     .inner{
         background: #fff;
@@ -463,6 +470,83 @@ body {
         }
     }
 
+    // 場地介紹
+    &.venue_info{
+        margin-bottom: 2em;
+        &:first-child{ margin-top: 3.5em; }
+        .inner{
+            h3{ letter-spacing: 3px; }
+            .img-container{
+                // @include aspect-ratio(4,3);
+                max-height: 420px;
+                background: transparent;
+            }
+            .links{
+                @extend %flex_set;
+                margin-top: 2em;
+                a{
+                    @include flex-xs-equal(2, 8px);
+                    @include flex-sm-equal(2, 8px);
+                    @include flex-md-equal(4, 8px);
+                    @include flex-lg-equal(4, 8px);
+
+                    
+                    margin: .5em 0;
+                    font-weight: bold;
+                    font-size: 1.125em;
+                    border-radius: 4px;
+
+                    color: #333;
+                    background: #f0f0f0;
+                    padding: 1.25em 3em;
+                    transition: .3s;
+
+                    &:hover,
+                    &:focus {
+                        color: #fff;
+                        padding-left: 2em;
+                        background: linear-gradient(90deg, rgba(36,8,107,1) 0%, rgba(106,27,138,1) 100%);
+                    }
+                }
+            }
+        }
+    }
+
+    // 租金試算
+    .rent_calc{
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: stretch;
+
+        .form_title{
+            font-size: 1.125em;
+            margin: 1em .3em;
+        }
+        .form_content{
+            .set{
+                padding-left: 2em;
+                width: 100%;
+                margin: 1em 0;
+            }
+        }
+
+        h3{}
+        .calculator{
+            flex: 1 1 auto;
+            padding-right: 2.5em;
+            .flex-form{}
+        }
+        .result{
+            flex: 0 0 50%;
+            background: #f1f1f1;
+            padding: 0 2em;
+            h3{
+                &:before{ display: none; }
+            }
+        }
+
+    }
+
     // 場地詳目頁
     &.room-info{
         h3{
@@ -539,12 +623,12 @@ body {
 
     // 線上洽詢
     &.contact{
-        .notice{
-            padding: 2em 5em;
-            font-size: 1em;
-            line-height: 2;
-            color: #222;
-        }
+        // .notice{
+        //     padding: 2em 5em;
+        //     font-size: 1.125em;
+        //     line-height: 2;
+        //     color: #222;
+        // }
 
         .flex-form{
             display: flex;
@@ -602,6 +686,7 @@ body {
 
         @include screen('mobile') {
             .tabs>.tabItem{ margin: 0.5em 0; }
+            .tabContent{ padding: 0; }
         }
     }
     // 空間簡介
@@ -2385,8 +2470,9 @@ h3.title {
 .select_list_block {
     background-color: #fff;
     border: 1px solid #ccc;
-    border-radius: 5px;
-    padding: 0 10px;
+    border-radius: .2em;
+    padding: .5em;
+    margin: .3em;
     position: relative;
     width: 100%;
     min-width: 160px;
@@ -2398,8 +2484,8 @@ h3.title {
     }
 }
 .MultiCheckBox {
-    padding: 5px;
-    border-radius: 4px;
+    // padding: 5px;
+    // border-radius: 4px;
     cursor: pointer;
     text-align: left;
 
@@ -2822,8 +2908,24 @@ $border-color: #bcc;
         position: relative;
         // 活動行事曆：分享＋加入google月曆
         >.link{
-            right: 120px;
+            right: 20px;
             top: -60px;
+
+            a{
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 60px;
+                height: 60px;
+                // background: rgba(255,255,255,0);
+                transform: scale(.9);
+
+                &:hover, &:focus{
+                    transform: scale(1);
+                    // background: rgba(255,255,255,.15);
+                    // filter: invert(1) brightness(5);
+                }
+            }
         }
     }
     .left_block {
@@ -2873,14 +2975,34 @@ $border-color: #bcc;
 
     @media screen and (max-width: 1600px) {
         // 避開右側 sideBar
-        .center_block { padding-right: 100px; }
+        .center_block {
+            padding-right: 100px;
+            >.link{ right: 120px; }
+        }
     }
-    @media screen and (max-width: 1480px) {
+    @media screen and (max-width: 1440px) {
         >.container {
             // @include gutter(80px);
             @include gutter(30px);
         }
     }
+    // @media screen and (max-width: 1440px) {}
+    @media screen and (max-width: 1200px) {
+        .center_block {
+            // 活動行事曆：分享＋加入google月曆
+            >.link{
+                right: 0;
+                // top: -100px;
+                // a{
+                //     width: 60px;
+                //     height: 60px;
+                //     background: rgba(255,255,255, .65);
+                //     filter: invert(1) brightness(5);
+                // }
+            }
+        }
+    }
+
     @include screen('tablet') {
         .center_block {
             padding-right: 0;  // 右側 sideBar 隱藏，回歸原本位置

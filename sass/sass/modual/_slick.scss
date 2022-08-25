@@ -462,7 +462,9 @@
 // 單篇
 .singleSlider{
     width: 100%;
-    padding: 0 0 5em !important;
+    // padding: 0 0 5em !important;
+    padding: 0 !important;
+    margin-bottom: 3em;
     .img-container {
         // PC版比例
         @include aspect-ratio(16,9);
@@ -471,6 +473,8 @@
         //     @include aspect-ratio(4,3);
         // }
     }
+
+    &:after{ display: none;}
 
     // .slick-prev, .slick-next{
     //     width: 72px !important;
@@ -507,11 +511,12 @@
             display: block;
             width: 42px;
             height: 42px;
+            line-height: 42px;
             border-bottom: 0;
             &:before{
                 content: '-0';
                 position: absolute;
-                top: 5px;
+                // top: 5px;
                 left: 0;
                 width: 20px;
                 height: 30px;

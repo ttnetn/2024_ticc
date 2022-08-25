@@ -33,6 +33,8 @@
                 border-bottom: 1px solid #c0c0c0;
                 text-decoration: none;
                 padding: .65em 2.5em .65em 0;
+                font-size: 1.125em;
+                font-weight: bold;
 
                 position: relative;
                 &:after {
@@ -59,7 +61,7 @@
         }
     }
     .accordion-content {
-        padding: 1.5em 0;
+        padding: 1.5em 2em;
         line-height: 1.8;
         background: #fff;
 
