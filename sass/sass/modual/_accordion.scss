@@ -80,12 +80,10 @@
                 padding: 1em 2.5em 1em 0;
                 color: #222;
 
-                &:after { top: 30px; }
+                &:after { top: calc(50% - 8px); right: 20px;}
                 &.active {
                     border-bottom: 1px solid #c0c0c0;
-                    &:after {
-                        top: 34px;
-                    }
+                    &:after { top: calc(50% - 4px);}
                 }
             }
         }

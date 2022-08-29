@@ -138,3 +138,90 @@ em{
     }
     p>em { color: red; }
 }
+
+
+.tooltip2{
+    position: relative;
+    display: inline-block;
+
+    span{
+        display: inline-block;
+        color: #fff !important;
+        background: #06c;
+        text-align: center;
+        width: 32px;
+        height: 32px;
+        line-height: 32px;
+        border-radius: 50%;
+        vertical-align: baseline;
+        cursor: pointer;
+
+        transition: .3s;
+
+        &:before{
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 0;
+            // left: calc(50% - 20px);
+            // top: -12px;
+            bottom: -12px;
+            left: 4px;
+            border-style: solid;
+            border-width: 0 12px 12px 12px;
+            border-color: transparent transparent rgba(0,0,0,.85) transparent;
+
+            // 預設隱藏
+            display: none;
+        }
+
+        &.act{
+            &:before{
+                display: block;
+            }
+        }
+
+        &:hover{
+            background: darken($secondaryColor, 5);
+        }
+    }
+    .content{
+        position: absolute;
+        z-index: 100;
+        background: rgba(0,0,0,.85);
+        width: 420px;
+        font-size: 72%;
+        left: -580%;
+        top: 44px;
+        padding: 1em;
+        color: #fff;
+        font-weight: normal;
+        text-align: left;
+        border-radius: 4px;
+
+        // 預設隱藏
+        display: none;
+        &.show{ display: block; }
+
+        ol, ul{
+            padding-left: 1.25em;
+
+            b{
+                color: #222;
+                background: #ffeb3b;
+                padding: 0 6px;
+            }
+        }
+    }
+
+    @include screen('mobile') {
+        width: 100%;
+        margin-top: 10px;
+    }
+    @include screen('xs_mobile') {
+        .content{
+            width: 320px;
+            left: -24px;
+        }
+    }
+}

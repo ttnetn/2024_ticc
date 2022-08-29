@@ -96,6 +96,26 @@ $(function() {
         $('.floorDemo').find('._101A').stop(true, true).fadeOut();
     });
 
+    // 試算 count
+    $('.count').click(function(event) {
+        $('.rent_calc').find('.result').addClass('show');
+        $('.rent_calc').find('.result').fadeIn();
+    });
+
+    // tooltip2
+    $('.tooltip2').find('span').click(function(event) {
+        if($(this).hasClass('act')){
+            $('.tooltip2').find('span').removeClass('act');
+            $(this).next('.content').removeClass('show');
+        }else{
+            $('.tooltip2').find('span').removeClass('act');
+            $('.tooltip2').find('.content').removeClass('show');
+            $(this).addClass('act');
+            $(this).next('.content').addClass('show');
+        }
+    });
+
+
     // select 帶入勾選項
     $(function() {
         $("#item_1").CreateMultiCheckBox({ width: '100%', defaultText: '會議廳形式', height: '250px' });

@@ -188,7 +188,7 @@
                         <!-- 線上洽詢 -->
                         <section class="card">
                             <div class="inner">
-                                <div class="notice">試算結果<b class="R">僅供參考</b>，實際租用金額請洽本中心承辦人員，或立即<a href="#">線上洽詢</a></div>
+                                <div class="notice" >試算結果<b class="R">僅供參考</b>，實際租用金額請洽本中心承辦人員，或立即<a href="#">線上洽詢</a></div>
 
                                 <div class="rent_calc">
                                     <div class="calculator">
@@ -196,7 +196,14 @@
                                         <div class="flex-form form-column">
                                             <!-- radio -->
                                             <div class="form_grp" role="group" aria-labelledby="fake-legend">
-                                                <label for="" class="form_title" aria-required="true">Q1：請選擇活動類型展覽或會議</label>
+                                                <label for="" class="form_title" aria-required="true">Q1：請選擇活動類型展覽或會議
+                                                    <div class="tooltip2">
+                                                        <span>i</span>
+                                                        <div class="content">
+                                                            <p>展覽不分平日或假日均一價</p>
+                                                        </div>
+                                                    </div>
+                                                </label>
                                                 <div class="form_content" id="fake-legend">
                                                     <div class="radio_grp form_inline">
                                                         <label><input type="radio" name="sampleRadio1" value="" checked="">會議</label>
@@ -206,7 +213,19 @@
                                             </div>
                                             <!-- checkbox -->
                                             <div class="form_grp" role="group" aria-labelledby="fake-legend">
-                                                <label for="" class="form_title" aria-required="true">Q2：請選擇租用時段、用途與租借場地(可複選)</label>
+                                                <label for="" class="form_title" aria-required="true">Q2：請選擇租用時段、用途與租借場地(可複選)
+                                                    <div class="tooltip2">
+                                                        <span>i</span>
+                                                        <div class="content">
+                                                            <ul>
+                                                                <li>正式使用起訖時間如果跨日，則每一天起迄時間相同。</li>
+                                                                <li>4小時為1時段。</li>
+                                                                <li>計算時段：08:30~12:30、13:30~17:30、18:30~22:30、 00:00~03:30、03:30~07:30</li>
+                                                                <li>正式使用、彩排僅供營業時段(08:30-22:30)租借。</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </label>
                                                 <div class="form_content">
                                                     <div class="checkbox">
                                                         <label><input name="checkSample" type="checkbox" value=""><span>正式使用</span></label>
@@ -279,7 +298,20 @@
                                             </div>
                                             <!-- radio -->
                                             <div class="form_grp" role="group" aria-labelledby="fake-legend">
-                                                <label for="" class="form_title" aria-required="true">Q3：請選擇是否於正式使用或彩排租用設備</label>
+                                                <label for="" class="form_title" aria-required="true">Q3：請選擇是否於正式使用或彩排租用設備
+                                                    <div class="tooltip2">
+                                                        <span>i</span>
+                                                        <div class="content">
+                                                            <ul>
+                                                                <li>本中心提供每間會議室桌椅數量以價目表所列標準容量為限，額外需求或現場追加桌椅另計。</li>
+                                                                <li>會議活動免費提供標準配備：有線麥克風兩支、主講台一個、三至六人報到桌一個、海報架兩個，其它設備依價目表收費。</li>
+                                                                <li><b>租用會議室舉辦展覽者，上述設備不予提供。</b></li>
+                                                                <li>非經本中心同意，所有視聽設備及餐飲均不得自備。</li>
+                                                                <li>為使活動順利進行，請於會議<b>三天前</b>申請租用，並繳納租金；會議當天臨時追加或變更設備，須視本中心供需狀況提供，並按一時段租金加收30%，且須給予足夠之準備及架設時間。</li>
+                                                            </ul>
+                                                        </div>
+                                                    </div>
+                                                </label>
                                                 <div class="form_content" id="fake-legend">
                                                     <div class="radio_grp form_inline">
                                                         <label><input type="radio" name="sampleRadio2" value="" checked="">是</label>
@@ -440,12 +472,163 @@
                                         <!-- btn -->
                                         <div class="btn_grp">
                                             <button class="btn btn-reset">清除</button>
-                                            <button class="btn btn-primary">試算</button>
+                                            <button class="btn btn-primary count">試算</button>
                                         </div>
                                     </div>
                                     <div class="result">
                                         <h3>試算明細</h3>
-                                        <p>123</p>
+                                        <!-- <div class="btn_grp function">
+                                            <button class="btn btn-secondary">重新試算</button>
+                                            <button class="btn btn-secondary">下載Excel</button>
+                                        </div> -->
+
+                                        <section class="item">
+                                            <table>
+                                                <thead>
+                                                    <tr>
+                                                        <th>活動類型</th>
+                                                        <th>用途</th>
+                                                        <th>總時段</th>
+                                                        <th>項目</th>
+                                                        <th>場地/設備數量</th>
+                                                        <th>費用</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>展覽</td>
+                                                        <td>正式使用</td>
+                                                        <td>6</td>
+                                                        <td>101A</td>
+                                                        <td>6</td>
+                                                        <td>$1,350,000</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>展覽</td>
+                                                        <td>彩排</td>
+                                                        <td>6</td>
+                                                        <td>101A</td>
+                                                        <td>6</td>
+                                                        <td>$1,350,000</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>展覽</td>
+                                                        <td>佈置/拆場</td>
+                                                        <td>6</td>
+                                                        <td>101A</td>
+                                                        <td>6</td>
+                                                        <td>$1,350,000</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td colspan="5" class="total">小計(TWD)</td>
+                                                        <td class="price">$4,050,000</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <div class="btn_grp">
+                                                <button class="btn btn-normal">刪除本筆明細</button>
+                                            </div>
+                                        </section>
+
+
+                                        <section class="item">
+                                            <table>
+                                                <thead>
+                                                    <tr>
+                                                        <th>活動類型</th>
+                                                        <th>用途</th>
+                                                        <th>總時段</th>
+                                                        <th>項目</th>
+                                                        <th>場地/設備數量</th>
+                                                        <th>費用</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>展覽</td>
+                                                        <td>正式使用</td>
+                                                        <td>6</td>
+                                                        <td>101A</td>
+                                                        <td>6</td>
+                                                        <td>$1,350,000</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>展覽</td>
+                                                        <td>彩排</td>
+                                                        <td>6</td>
+                                                        <td>101A</td>
+                                                        <td>6</td>
+                                                        <td>$1,350,000</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>展覽</td>
+                                                        <td>佈置/拆場</td>
+                                                        <td>6</td>
+                                                        <td>101A</td>
+                                                        <td>6</td>
+                                                        <td>$1,350,000</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td colspan="5" class="total">小計(TWD)</td>
+                                                        <td class="price">$4,050,000</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <div class="btn_grp">
+                                                <button class="btn btn-normal">刪除本筆明細</button>
+                                            </div>
+                                        </section>
+                                        <section class="item">
+                                            <table>
+                                                <thead>
+                                                    <tr>
+                                                        <th>活動類型</th>
+                                                        <th>用途</th>
+                                                        <th>總時段</th>
+                                                        <th>項目</th>
+                                                        <th>場地/設備數量</th>
+                                                        <th>費用</th>
+                                                    </tr>
+                                                </thead>
+                                                <tbody>
+                                                    <tr>
+                                                        <td>展覽</td>
+                                                        <td>正式使用</td>
+                                                        <td>6</td>
+                                                        <td>101A</td>
+                                                        <td>6</td>
+                                                        <td>$1,350,000</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>展覽</td>
+                                                        <td>彩排</td>
+                                                        <td>6</td>
+                                                        <td>101A</td>
+                                                        <td>6</td>
+                                                        <td>$1,350,000</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td>展覽</td>
+                                                        <td>佈置/拆場</td>
+                                                        <td>6</td>
+                                                        <td>101A</td>
+                                                        <td>6</td>
+                                                        <td>$1,350,000</td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td colspan="5" class="total">小計(TWD)</td>
+                                                        <td class="price">$4,050,000</td>
+                                                    </tr>
+                                                </tbody>
+                                            </table>
+                                            <div class="btn_grp">
+                                                <button class="btn btn-normal">刪除本筆明細</button>
+                                            </div>
+                                        </section>
+                                        <div class="btn_grp function">
+                                            <button class="btn btn-secondary">清除，重新試算</button>
+                                            <button class="btn btn-secondary">下載Excel</button>
+                                        </div>
                                     </div>
                                 </div>
                             </div>

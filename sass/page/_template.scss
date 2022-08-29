@@ -490,7 +490,6 @@ body {
                     @include flex-md-equal(4, 8px);
                     @include flex-lg-equal(4, 8px);
 
-                    
                     margin: .5em 0;
                     font-weight: bold;
                     font-size: 1.125em;
@@ -507,6 +506,10 @@ body {
                         padding-left: 2em;
                         background: linear-gradient(90deg, rgba(36,8,107,1) 0%, rgba(106,27,138,1) 100%);
                     }
+
+                    @include screen('mobile') {
+                        padding: .5em 1em;
+                    }
                 }
             }
         }
@@ -517,9 +520,12 @@ body {
         display: flex;
         flex-flow: row nowrap;
         align-items: stretch;
+        padding: 0 !important;
+        // margin-bottom: -1em;
+        margin: 0 -2.5em -1em;
 
         .form_title{
-            font-size: 1.125em;
+            font-size: 1.25em;
             margin: 1em .3em;
         }
         .form_content{
@@ -527,24 +533,132 @@ body {
                 padding-left: 2em;
                 width: 100%;
                 margin: 1em 0;
+                label span{
+                    font-size: 80%;
+                    color: #222;
+                    font-weight: 500;
+                }
+                .additional{}
             }
         }
 
         h3{}
         .calculator{
             flex: 1 1 auto;
-            padding-right: 2.5em;
+            // padding-right: 2.5em;
+            padding: 2em 2.5em;
             .flex-form{}
+
+            label{
+                font-weight: bold;
+                font-size: 1.25em;
+            }
+            label span{
+                color: darken($secondaryColor, 5);
+                font-size: 90%;
+            }
         }
         .result{
             flex: 0 0 50%;
+            max-width: 50%;
             background: #f1f1f1;
-            padding: 0 2em;
+            padding: 2em 2em;
+
+            display: none;
             h3{
-                &:before{ display: none; }
+                &:before{ left: -1.1em; }
+            }
+
+            .btn_grp.function{
+                // position: absolute;
+                // right: 2em;
+                // top: 3.5em;
+                padding: 0;
+                .btn{
+                    padding: .45em 2em;
+                    min-width: auto;
+                }
+            }
+
+            .item{
+                .btn{
+                    min-width: auto;
+                    padding: .45em 2em;
+                }
+                // border-bottom: 1px dotted #a9a9a9;
+                margin: 2em 0;
+
+                &:last-child{
+                    border-bottom: transparent;
+                    margin: 0;
+                }
+
+                counter-increment: AA;
+                &:before{
+                    content: "NO."counter(AA);
+                    font-size: 1.75em;
+                    padding: .5em 0;
+                    display: block;
+                    font-weight: bold;
+                    color: #c9c9c9;
+                }
+            }
+
+            table{
+                background: #fff;
+                th, td{
+                    border: 1px solid #666;
+                    padding: 4px 2px;
+                    text-align: center;
+                }
+                th{
+                    // background: darken($primaryColor, 0);
+                    background: #d1d1d1;
+                    color: #1e1e1e;
+                }
+            }
+
+            .total{
+                background: #39559b;
+                color: #fff;
+            }
+            .price{
+                color: #bf0000;
+                background: #ffeb3b;
+                font-weight: bold;
             }
         }
 
+        @include screen('tablet') {
+            flex-wrap: wrap;
+
+            .calculator, .result{
+                flex: 1 1 100%;
+                max-width: 100%;
+            }
+            .calculator{ padding: 2em 1.25em; }
+            .result{
+                background: #fff;
+                border-top: solid 1px #ddd;
+            }
+        }
+        @include screen('mobile') {
+            .form_content{
+                .set{
+                    .additional{ flex-wrap: wrap; }
+                }
+            }
+        }
+        @include screen('xs_mobile') {
+            .form_content{
+                .set{
+                    .datepick>input[type="text"],
+                    .datepick>input[type="date"] {
+                        width: 100% !important;
+                    }
+                }
+            }
+        }
     }
 
     // 場地詳目頁
@@ -824,6 +938,14 @@ body {
         }
     }
     @include screen('mobile') {
+        .notice{
+            padding: 2em 1.75em !important;
+            // margin: 0 -32px;
+            margin: 2em 0 0;
+            background: #f4f4f4;
+
+            &:after{ display: none; }
+        }
         .inner{
             .form_content{
                 max-width: 100% !important;
