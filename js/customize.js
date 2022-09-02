@@ -28,6 +28,16 @@ $(function() {
             $(this).text('按樓層由高到低排列');
         }
     });
+    // 英文版
+    $('.functions .floor_EN').click(function(event) {
+        if($(this).hasClass('H')){
+            $(this).removeClass('H');
+            $(this).text('Arranged by floor from low to high');
+        }else{
+            $(this).addClass('H');
+            $(this).text('Arranged by floor from high to low');
+        }
+    });
     // 時間遠近切換
     $('.functions .timer').click(function(event) {
         if($(this).hasClass('F')){

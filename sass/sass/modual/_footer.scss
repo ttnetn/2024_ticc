@@ -34,15 +34,31 @@ footer{
                             border-radius: 4px;
                             text-align: center;
                             color: $linkColor;
+                            border: 2px solid transparent;
                             transition: all .3s ease-out;
 
                             &:hover, &:focus {
                                 color: #fff;
                                 background: darken($primaryColor, 10);
+                                border: 2px solid darken($primaryColor, 10);
                             }
                         }
                     }
 
+                    @include screen('tablet') {
+                        li {
+                            a{
+                                color: #fff;
+                                background: darken($primaryColor, 10);
+
+                                &:hover, &:focus {
+                                    font-weight: bold;
+                                    color: darken($primaryColor, 10);
+                                    background: transparent;
+                                }
+                            }
+                        }
+                    }
                     @include screen('mobile') {
                         flex-direction: column;
                         li { flex:1 1 100%; }
@@ -61,8 +77,10 @@ footer{
                     justify-content: flex-end;
                     .col{
                         flex: 0 0 70%;
+                        padding-left: 1.5em;
                         &:first-child{
-                            flex: 0 0 30%
+                            flex: 0 0 30%;
+                            padding-left: 0;
                         }
                     }
                 }
@@ -77,6 +95,23 @@ footer{
                     .footer_link {
                         flex-direction: row;
                         justify-content: center;
+                    }
+                }
+            }
+        }
+
+        @include screen('mobile') {
+            section{
+                // 黑底
+                &:first-child{
+                    justify-content: flex-start;
+                    .col{
+                        flex: 1 1 100%;
+                        padding-left: 0;
+                        margin-bottom: 1em;
+                        &:first-child{
+                            flex: 0 0 130px;
+                        }
                     }
                 }
             }

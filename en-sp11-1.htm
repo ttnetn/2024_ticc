@@ -1,0 +1,1160 @@
+<!doctype html>
+<html lang="zh-Hant" class="no-js">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>預約消息</title>
+    <!--HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries [if lt IE 9]>
+    <script src="js/html5shiv.js"></script>
+    <script src="js/respond.min.js"></script>
+    <![endif]-->
+    <!-- slick css-->
+    <link rel="stylesheet" type="text/css" href="vendor/slick/slick.css" />
+    <link rel="stylesheet" type="text/css" href="vendor/slick/slick-theme.css" />
+    <!-- 燈箱facybox -->
+    <link rel="stylesheet" type="text/css" href="vendor/fancybox/jquery.fancybox.min.css">
+    <!-- animate -->
+    <link rel="stylesheet" href="vendor/wow/animate.css">
+    <!-- hyUI css -->
+    <link rel="stylesheet" href="css/hyui_EN.css">
+    <!-- 瀑布流 -->
+    <link rel="stylesheet" type="text/css" href="vendor/gridloading/css/component.css" />
+    <!-- favicon -->
+    <link href="images/favicon.png" rel="icon" type="image/x-icon">
+</head>
+<body>
+    <!--跳窗-->
+    <!-- <div id="modal1" class="modal">
+        <h2>標題</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Libero, perferendis cumque nobis recusandae aperiam? Quis sunt, sit error consequuntur, amet, odit corrupti exercitationem eveniet debitis facere dolor mollitia natus suscipit.</p>
+        <div class="btn_grp">
+            <button class="btn btn-secondary">好的</button>
+        </div>
+    </div> -->
+    <!-- room info -->
+    <div class="room_info">
+        <a href="javascript:;" class="close">關閉</a>
+        <div class="flex">
+            <h3 class="title">101A<time>08:30-12:30</time><span>(無預約)</span></h3>
+            <div class="rent_info">
+                <p class="room_type"><b>貴賓室／會議室</b></p>
+                <p class="price">
+                    週一至週五 16,000元<br>
+                    週六至週日 18,000元
+                </p>
+            </div>
+        </div>
+        <div class="text">
+            場地介紹 / 位於1樓大廳南側，專供貴賓休息用。<br>
+            場地資訊 / 攤位數(3公尺*2公尺)：0<br>
+            面積：43/13(平方公尺/坪)<br>
+            尺寸：43/13(長*寬*高)公尺<br>
+            標準容量(人)：30 人
+        </div>
+        <div class="btn_grp">
+            <button class="btn">MORE</button>
+            <button class="btn">線上洽詢</button>
+        </div>
+    </div>
+    <!-- wrapper Start -->
+    <div class="wrapper">
+        <!-- header Start -->
+        <header class="header">
+            <div class="container">
+                <!-- navigation Start -->
+                <nav class="navigation" role="navigation" aria-label="Site">
+                    <!-- Search Start -->
+                    <div class="search" role="search">
+                        <button class="switch">開關</button>
+                        <div class="form_grp">
+                            <input name="username" id="mustSameAsId" type="text" placeholder="請輸入文字" title="請輸入文字" aria-label="搜尋網站內容">
+                            <input name="" type="submit" value="查詢" class="btn btn-search" />
+                        </div>
+                    </div>
+                    <!-- 新增div navlist -->
+                    <div class="navlist">
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">sitemap</a></li>
+                        </ul>
+                    </div>
+                    <!-- language -->
+                    <div class="language">
+                        <a href="#" class="switch">EN</a>
+                        <ul>
+                            <li><a href="#">TW</a></li>
+                            <li><a href="#">EN</a></li>
+                        </ul>
+                    </div>
+                </nav>
+                <!-- navigation End -->
+                <h1>
+                    <a href="index.htm"><img src="images/ticc/logo-default.png" alt="網站標題" /></a>
+                </h1>
+                <!-- menu Start -->
+                <nav class="menu" role="navigation" aria-label="About page">
+                    <ul>
+                        <li><a href="#">About Us</a>
+                            <ul>
+                                <li><a href="#">第二層選單</a></li>
+                                <li><a href="#">第二層選單</a></li>
+                                <li><a href="#">第二層選單</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">News</a>
+                            <ul>
+                                <li><a href="#">第二層選單</a></li>
+                                <li><a href="#">第二層選單</a></li>
+                                <li><a href="#">第二層選單</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Room tour</a>
+                            <ul>
+                                <li><a href="#">第二層選單</a></li>
+                                <li><a href="#">第二層選單</a></li>
+                                <li><a href="#">第二層選單</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Schedule query</a>
+                            <ul>
+                                <li><a href="#">第二層選單</a></li>
+                                <li><a href="#">第二層選單</a></li>
+                                <li><a href="#">第二層選單</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Reservation space</a>
+                            <ul>
+                                <li><a href="#">第二層選單</a></li>
+                                <li><a href="#">第二層選單</a></li>
+                                <li><a href="#">第二層選單</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Catering service</a>
+                            <ul>
+                                <li><a href="#">第二層選單</a></li>
+                                <li><a href="#">第二層選單</a></li>
+                                <li><a href="#">第二層選單</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Rental service</a>
+                            <ul>
+                                <li><a href="#">第二層選單</a></li>
+                                <li><a href="#">第二層選單</a></li>
+                                <li><a href="#">第二層選單</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="#">Download</a>
+                            <ul>
+                                <li><a href="#">第二層選單</a></li>
+                                <li><a href="#">第二層選單</a></li>
+                                <li><a href="#">第二層選單</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </nav>
+                <!-- menu End -->
+            </div>
+        </header>
+        <!-- header End -->
+        <!-- main Start -->
+        <div id="center" class="main innerpage">
+            <div class="container-hero">
+                <!-- 內頁新增一個classname-->
+                <!-- side bar -->
+                <section class="sideBar wow fadeInRight" data-wow-delay=".3s">
+                    <a href="javascript:;">Schedule<br>query</a>
+                    <a href="javascript:;">Booking<br>form</a>
+                    <a href="javascript:;">Virtual<br>reality</a>
+                    <a href="javascript:;">Events<br>calendar</a>
+                    <a href="javascript:;" class="sb-scrollToTop">Top</a>
+                </section>
+                <!-- 影片 -->
+                <section class="full hero">
+                    <div class="container">
+                        <!-- slogen -->
+                        <h3 class="slogen wow bounceInLeft">Taipei<br>
+                            International<br>
+                            Convention Center
+                        </h3>
+                        <!-- 登入＋查詢 -->
+                        <div class="btn_box">
+                            <a href="#" class="btn">Login with appointment number<span>Login in</span></a>
+                            <a href="#" class="btn">Search Seats<span>Search</span></a>
+                        </div>
+                        <img src="images/ticc/img-hero.jpg" alt="">
+                    </div>
+                </section>
+            </div>
+            <div class="mainTitleBox">
+                <!-- breadcrumb路徑 -->
+                <div class="breadcrumb">
+                    <ul>
+                        <li><a href="#">首頁</a></li>
+                        <li><a href="#">節點</a></li>
+                        <li>節點</li>
+                    </ul>
+                </div>
+                <!-- function 預定地 -->
+                <div class="function">
+                    <ul>
+                        <li class="icon_back"><a href="#">回上一頁</a></li>
+                        <!-- <li class="icon_print"><a href="#">友善列印</a></li>
+                        <li class="icon_forward"><a href="#">轉寄友人</a></li> -->
+                    </ul>
+                </div>
+                <h2 class="title">Schedule query<br><span>檔期查詢</span></h2>
+            </div>
+            <!-- 主要內容 -->
+            <div class="container bg-white">
+                <!-- 左側 -->
+                <!-- 主要內容區 -->
+                <div class="center_block">
+                    <!-- content Start -->
+                    <!-- 標題 -->
+                    <h3 class="title">Last 90 days</h3>
+
+                    <!-- function -->
+                    <div class="functions">
+                        <div class="col">
+                            <a href="javascript:;" class="floor_EN">Arranged by floor from low to high</a>
+                            <!-- 輸入日期 -->
+                            <div class="filter">
+                                <input type="date" alt="請輸入查詢時間">
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="filter">
+                                <select id="selectSample" name="">
+                                    <option value="">Show on Timeline</option>
+                                    <option value="">Show by location</option>
+                                </select>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+                    <div class="functions">
+                        <div class="col">
+                            <ul class="state">
+                                <li class="able">Waiting time available</li>
+                                <li class="unable">No waiting period</li>
+                                <li class="locked">Not open period</li>
+                            </ul>
+                        </div>
+                        <div class="col">
+                            <a href="javascript:;" class="download_pdf">Download PDF</a>
+                        </div>
+                    </div>
+
+                    <!-- BookingCalendar：水平 scroll -->
+                    <!-- 第二版 -->
+                    <!-- BookingCalendar：hidden -->
+                    <section class="BookingCalendar">
+                        <div class="innerMask">
+                            <div class="left">
+                                <!-- 左上 fixed -->
+                                <div class="lead">
+                                    <div class="month">月份</div>
+                                    <div class="date">日期</div>
+                                    <div class="period">時段</div>
+                                </div>
+                                <!-- 左下 會議室 absolute -->
+                                <div  class="room_list">
+                                    <!-- 1F -->
+                                    <div class="1F">101A</div>
+                                    <div class="1F">101B</div>
+                                    <div class="1F">101C</div>
+                                    <div class="1F">101D</div>
+                                    <div class="1F">102會議室</div>
+                                    <div class="1F">103Studio</div>
+                                    <div class="1F">105會議室</div>
+                                    <div class="1F">106(小教室)</div>
+                                    <div class="1F">1F北貴賓室</div>
+                                    <div class="1F">1F南貴賓室</div>
+                                    <!-- 2F -->
+                                    <!-- <div class="2F">201A</div>
+                                    <div class="2F">201B</div>
+                                    <div class="2F">201C</div>
+                                    <div class="2F">201D</div>
+                                    <div class="2F">201E</div>
+                                    <div class="2F">201F</div>
+                                    <div class="2F">202A</div>
+                                    <div class="2F">202B</div>
+                                    <div class="2F">203A</div>
+                                    <div class="2F">203B</div>
+                                    <div class="2F">翠庭</div> -->
+                                    <!-- 3F -->
+                                    <!-- <div class="3F">大會堂</div>
+                                    <div class="3F">宴會堂</div>
+                                    <div class="3F">南軒</div>
+                                    <div class="3F">北軒</div> -->
+                                    <!-- 4F -->
+                                    <!-- <div class="4F">401會議室</div>
+                                    <div class="4F">雅軒</div>
+                                    <div class="4F">悅軒</div>
+                                    <div class="4F">貴賓廳</div> -->
+                                </div>
+                            </div>
+                            <div class="content">
+                                <div class="scroll">
+                                    <!-- 右上 fixed，需程式計算水平滾動  -->
+                                    <div class="Thead">
+                                        <!-- month -->
+                                        <div class="month">
+                                            <h4>5月</h4>
+                                            <div class="days">
+                                                <!-- 單日 & 時段 -->
+                                                <div class="col">
+                                                    <div class="date">28<span>(五)</span></div>
+                                                    <div class="timeSection">
+                                                        <!-- 時段 -->
+                                                        <div class="morning"><time>08:30<span>|</span>12:30</time></div>
+                                                        <div class="noon"><time>13:30<span>|</span>17:30</time></div>
+                                                        <div class="evening"><time>18:30<span>|</span>22:30</time></div>
+                                                        <div class="night"><time>00:00<span>|</span>03:30</time></div>
+                                                        <div class="early-morning"><time>03:30<span>|</span>07:30</time></div>
+                                                    </div>
+                                                </div>
+                                                <!-- 單日 & 時段 -->
+                                                <div class="col holliday">
+                                                    <div class="date">29<span>(六)</span></div>
+                                                    <div class="timeSection">
+                                                        <!-- 時段 -->
+                                                        <div class="morning"><time>08:30<span>|</span>12:30</time></div>
+                                                        <div class="noon"><time>13:30<span>|</span>17:30</time></div>
+                                                        <div class="evening"><time>18:30<span>|</span>22:30</time></div>
+                                                        <div class="night"><time>00:00<span>|</span>03:30</time></div>
+                                                        <div class="early-morning"><time>03:30<span>|</span>07:30</time></div>
+                                                    </div>
+                                                </div>
+                                                <!-- 單日 & 時段 -->
+                                                <div class="col holliday">
+                                                    <div class="date">30<span>(日)</span></div>
+                                                    <div class="timeSection">
+                                                        <!-- 時段 -->
+                                                        <div class="morning"><time>08:30<span>|</span>12:30</time></div>
+                                                        <div class="noon"><time>13:30<span>|</span>17:30</time></div>
+                                                        <div class="evening"><time>18:30<span>|</span>22:30</time></div>
+                                                        <div class="night"><time>00:00<span>|</span>03:30</time></div>
+                                                        <div class="early-morning"><time>03:30<span>|</span>07:30</time></div>
+                                                    </div>
+                                                </div>
+                                                <!-- 單日 & 時段 -->
+                                                <div class="col">
+                                                    <div class="date">31<span>(一)</span></div>
+                                                    <div class="timeSection">
+                                                        <!-- 時段 -->
+                                                        <div class="morning"><time>08:30<span>|</span>12:30</time></div>
+                                                        <div class="noon"><time>13:30<span>|</span>17:30</time></div>
+                                                        <div class="evening"><time>18:30<span>|</span>22:30</time></div>
+                                                        <div class="night"><time>00:00<span>|</span>03:30</time></div>
+                                                        <div class="early-morning"><time>03:30<span>|</span>07:30</time></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="month">
+                                            <h4>6月</h4>
+                                            <div class="days">
+                                                <!-- 單日 & 時段 -->
+                                                <div class="col">
+                                                    <div class="date">1<span>(二)</span></div>
+                                                    <div class="timeSection">
+                                                        <!-- 時段 -->
+                                                        <div class="morning"><time>08:30<span>|</span>12:30</time></div>
+                                                        <div class="noon"><time>13:30<span>|</span>17:30</time></div>
+                                                        <div class="evening"><time>18:30<span>|</span>22:30</time></div>
+                                                        <div class="night"><time>00:00<span>|</span>03:30</time></div>
+                                                        <div class="early-morning"><time>03:30<span>|</span>07:30</time></div>
+                                                    </div>
+                                                </div>
+                                                <!-- 單日 & 時段 -->
+                                                <div class="col">
+                                                    <div class="date">2<span>(三)</span></div>
+                                                    <div class="timeSection">
+                                                        <!-- 時段 -->
+                                                        <div class="morning"><time>08:30<span>|</span>12:30</time></div>
+                                                        <div class="noon"><time>13:30<span>|</span>17:30</time></div>
+                                                        <div class="evening"><time>18:30<span>|</span>22:30</time></div>
+                                                        <div class="night"><time>00:00<span>|</span>03:30</time></div>
+                                                        <div class="early-morning"><time>03:30<span>|</span>07:30</time></div>
+                                                    </div>
+                                                </div>
+                                                <!-- 單日 & 時段 -->
+                                                <div class="col">
+                                                    <div class="date">3<span>(四)</span></div>
+                                                    <div class="timeSection">
+                                                        <!-- 時段 -->
+                                                        <div class="morning"><time>08:30<span>|</span>12:30</time></div>
+                                                        <div class="noon"><time>13:30<span>|</span>17:30</time></div>
+                                                        <div class="evening"><time>18:30<span>|</span>22:30</time></div>
+                                                        <div class="night"><time>00:00<span>|</span>03:30</time></div>
+                                                        <div class="early-morning"><time>03:30<span>|</span>07:30</time></div>
+                                                    </div>
+                                                </div>
+                                                <!-- 單日 & 時段 -->
+                                                <div class="col">
+                                                    <div class="date">4<span>(五)</span></div>
+                                                    <div class="timeSection">
+                                                        <!-- 時段 -->
+                                                        <div class="morning"><time>08:30<span>|</span>12:30</time></div>
+                                                        <div class="noon"><time>13:30<span>|</span>17:30</time></div>
+                                                        <div class="evening"><time>18:30<span>|</span>22:30</time></div>
+                                                        <div class="night"><time>00:00<span>|</span>03:30</time></div>
+                                                        <div class="early-morning"><time>03:30<span>|</span>07:30</time></div>
+                                                    </div>
+                                                </div>
+                                                <!-- 單日 & 時段 -->
+                                                <div class="col holliday">
+                                                    <div class="date">5<span>(六)</span></div>
+                                                    <div class="timeSection">
+                                                        <!-- 時段 -->
+                                                        <div class="morning"><time>08:30<span>|</span>12:30</time></div>
+                                                        <div class="noon"><time>13:30<span>|</span>17:30</time></div>
+                                                        <div class="evening"><time>18:30<span>|</span>22:30</time></div>
+                                                        <div class="night"><time>00:00<span>|</span>03:30</time></div>
+                                                        <div class="early-morning"><time>03:30<span>|</span>07:30</time></div>
+                                                    </div>
+                                                </div>
+                                                <!-- 單日 & 時段 -->
+                                                <div class="col holliday">
+                                                    <div class="date">6<span>(日)</span></div>
+                                                    <div class="timeSection">
+                                                        <!-- 時段 -->
+                                                        <div class="morning"><time>08:30<span>|</span>12:30</time></div>
+                                                        <div class="noon"><time>13:30<span>|</span>17:30</time></div>
+                                                        <div class="evening"><time>18:30<span>|</span>22:30</time></div>
+                                                        <div class="night"><time>00:00<span>|</span>03:30</time></div>
+                                                        <div class="early-morning"><time>03:30<span>|</span>07:30</time></div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <!-- 右下 內容區塊 -->
+                                    <!-- able 檔期可後補、unable 檔期不可後補、locked 不開放檔期 -->
+                                    <div class="Tbody">
+                                        <!-- 101A -->
+                                        <section class="room">
+                                            <!-- 單日 -->
+                                            <div data-date="5/28" class="morning"></div>
+                                            <div data-date="5/28" class="noon"></div>
+                                            <div data-date="5/28" class="evening"></div>
+                                            <div data-date="5/28" class="night"></div>
+                                            <div data-date="5/28" class="early-morning"></div>
+                                            <!-- 單日 -->
+                                            <div data-date="5/29" class="morning"></div>
+                                            <div data-date="5/29" class="noon"></div>
+                                            <div data-date="5/29" class="evening"></div>
+                                            <div data-date="5/29" class="night"></div>
+                                            <div data-date="5/29" class="early-morning"></div>
+                                            <!-- 單日 -->
+                                            <div data-date="5/30" class="morning"></div>
+                                            <div data-date="5/30" class="noon"></div>
+                                            <div data-date="5/30" class="evening"></div>
+                                            <div data-date="5/30" class="night"></div>
+                                            <div data-date="5/30" class="early-morning"></div>
+                                            <!-- 單日 -->
+                                            <div data-date="5/31" class="morning"></div>
+                                            <div data-date="5/31" class="noon"></div>
+                                            <div data-date="5/31" class="evening"></div>
+                                            <div data-date="5/31" class="night"></div>
+                                            <div data-date="5/31" class="early-morning"></div>
+                                            <!-- 單日 -->
+                                            <div data-date="6/1" class="morning"></div>
+                                            <div data-date="6/1" class="noon"></div>
+                                            <div data-date="6/1" class="evening"></div>
+                                            <div data-date="6/1" class="night"></div>
+                                            <div data-date="6/1" class="early-morning"></div>
+                                            <!-- 單日 -->
+                                            <div data-date="6/2" class="morning"></div>
+                                            <div data-date="6/2" class="noon"></div>
+                                            <div data-date="6/2" class="evening"></div>
+                                            <div data-date="6/2" class="night"></div>
+                                            <div data-date="6/2" class="early-morning"></div>
+                                            <!-- 單日 -->
+                                            <div data-date="6/3" class="morning"></div>
+                                            <div data-date="6/3" class="noon"></div>
+                                            <div data-date="6/3" class="evening"></div>
+                                            <div data-date="6/3" class="night"></div>
+                                            <div data-date="6/3" class="early-morning"></div>
+                                            <!-- 單日 -->
+                                            <div data-date="6/4" class="morning"></div>
+                                            <div data-date="6/4" class="noon"></div>
+                                            <div data-date="6/4" class="evening"></div>
+                                            <div data-date="6/4" class="night"></div>
+                                            <div data-date="6/4" class="early-morning"></div>
+                                            <!-- 單日 -->
+                                            <div data-date="6/5" class="morning"></div>
+                                            <div data-date="6/5" class="noon"></div>
+                                            <div data-date="6/5" class="evening"></div>
+                                            <div data-date="6/5" class="night"></div>
+                                            <div data-date="6/5" class="early-morning"></div>
+                                            <!-- 單日 -->
+                                            <div data-date="6/6" class="morning"></div>
+                                            <div data-date="6/6" class="noon"></div>
+                                            <div data-date="6/6" class="evening"></div>
+                                            <div data-date="6/6" class="night"></div>
+                                            <div data-date="6/6" class="early-morning"></div>
+                                        </section>
+                                        <!-- 101B -->
+                                        <section class="room">
+                                            <!-- 單日 -->
+                                            <div data-date="5/28" class="morning"></div>
+                                            <div data-date="5/28" class="noon"></div>
+                                            <div data-date="5/28" class="evening"></div>
+                                            <div data-date="5/28" class="night"></div>
+                                            <div data-date="5/28" class="early-morning"></div>
+                                            <!-- 單日 -->
+                                            <div data-date="5/29" class="morning"></div>
+                                            <div data-date="5/29" class="noon able"></div>
+                                            <div data-date="5/29" class="evening able"></div>
+                                            <div data-date="5/29" class="night able"></div>
+                                            <div data-date="5/29" class="early-morning"></div>
+                                            <!-- 單日 -->
+                                            <div data-date="5/30" class="morning unable"></div>
+                                            <div data-date="5/30" class="noon unable"></div>
+                                            <div data-date="5/30" class="evening unable"></div>
+                                            <div data-date="5/30" class="night"></div>
+                                            <div data-date="5/30" class="early-morning"></div>
+                                            <!-- 單日 -->
+                                            <div data-date="5/31" class="morning"></div>
+                                            <div data-date="5/31" class="noon"></div>
+                                            <div data-date="5/31" class="evening"></div>
+                                            <div data-date="5/31" class="night"></div>
+                                            <div data-date="5/31" class="early-morning"></div>
+                                            <!-- 單日 -->
+                                            <div data-date="6/1" class="morning"></div>
+                                            <div data-date="6/1" class="noon"></div>
+                                            <div data-date="6/1" class="evening"></div>
+                                            <div data-date="6/1" class="night"></div>
+                                            <div data-date="6/1" class="early-morning"></div>
+                                            <!-- 單日 -->
+                                            <div data-date="6/2" class="morning"></div>
+                                            <div data-date="6/2" class="noon"></div>
+                                            <div data-date="6/2" class="evening"></div>
+                                            <div data-date="6/2" class="night"></div>
+                                            <div data-date="6/2" class="early-morning"></div>
+                                            <!-- 單日 -->
+                                            <div data-date="6/3" class="morning"></div>
+                                            <div data-date="6/3" class="noon"></div>
+                                            <div data-date="6/3" class="evening"></div>
+                                            <div data-date="6/3" class="night"></div>
+                                            <div data-date="6/3" class="early-morning"></div>
+                                            <!-- 單日 -->
+                                            <div data-date="6/4" class="morning"></div>
+                                            <div data-date="6/4" class="noon"></div>
+                                            <div data-date="6/4" class="evening"></div>
+                                            <div data-date="6/4" class="night"></div>
+                                            <div data-date="6/4" class="early-morning"></div>
+                                            <!-- 單日 -->
+                                            <div data-date="6/5" class="morning"></div>
+                                            <div data-date="6/5" class="noon"></div>
+                                            <div data-date="6/5" class="evening"></div>
+                                            <div data-date="6/5" class="night"></div>
+                                            <div data-date="6/5" class="early-morning"></div>
+                                            <!-- 單日 -->
+                                            <div data-date="6/6" class="morning"></div>
+                                            <div data-date="6/6" class="noon"></div>
+                                            <div data-date="6/6" class="evening"></div>
+                                            <div data-date="6/6" class="night"></div>
+                                            <div data-date="6/6" class="early-morning"></div>
+                                        </section>
+                                        <!-- 101C -->
+                                        <section class="room">
+                                            <!-- 單日 -->
+                                            <div data-date="5/28" class="morning"></div>
+                                            <div data-date="5/28" class="noon"></div>
+                                            <div data-date="5/28" class="evening"></div>
+                                            <div data-date="5/28" class="night"></div>
+                                            <div data-date="5/28" class="early-morning"></div>
+                                            <!-- 單日 -->
+                                            <div data-date="5/29" class="morning"></div>
+                                            <div data-date="5/29" class="noon able"></div>
+                                            <div data-date="5/29" class="evening able"></div>
+                                            <div data-date="5/29" class="night able"></div>
+                                            <div data-date="5/29" class="early-morning"></div>
+                                            <!-- 單日 -->
+                                            <div data-date="5/30" class="morning unable"></div>
+                                            <div data-date="5/30" class="noon unable"></div>
+                                            <div data-date="5/30" class="evening unable"></div>
+                                            <div data-date="5/30" class="night"></div>
+                                            <div data-date="5/30" class="early-morning"></div>
+                                            <!-- 單日 -->
+                                            <div data-date="5/31" class="morning"></div>
+                                            <div data-date="5/31" class="noon"></div>
+                                            <div data-date="5/31" class="evening"></div>
+                                            <div data-date="5/31" class="night"></div>
+                                            <div data-date="5/31" class="early-morning"></div>
+                                            <!-- 單日 -->
+                                            <div data-date="6/1" class="morning"></div>
+                                            <div data-date="6/1" class="noon"></div>
+                                            <div data-date="6/1" class="evening"></div>
+                                            <div data-date="6/1" class="night"></div>
+                                            <div data-date="6/1" class="early-morning"></div>
+                                            <!-- 單日 -->
+                                            <div data-date="6/2" class="morning"></div>
+                                            <div data-date="6/2" class="noon"></div>
+                                            <div data-date="6/2" class="evening"></div>
+                                            <div data-date="6/2" class="night"></div>
+                                            <div data-date="6/2" class="early-morning"></div>
+                                            <!-- 單日 -->
+                                            <div data-date="6/3" class="morning"></div>
+                                            <div data-date="6/3" class="noon"></div>
+                                            <div data-date="6/3" class="evening"></div>
+                                            <div data-date="6/3" class="night"></div>
+                                            <div data-date="6/3" class="early-morning"></div>
+                                            <!-- 單日 -->
+                                            <div data-date="6/4" class="morning"></div>
+                                            <div data-date="6/4" class="noon"></div>
+                                            <div data-date="6/4" class="evening"></div>
+                                            <div data-date="6/4" class="night"></div>
+                                            <div data-date="6/4" class="early-morning"></div>
+                                            <!-- 單日 -->
+                                            <div data-date="6/5" class="morning"></div>
+                                            <div data-date="6/5" class="noon"></div>
+                                            <div data-date="6/5" class="evening"></div>
+                                            <div data-date="6/5" class="night"></div>
+                                            <div data-date="6/5" class="early-morning"></div>
+                                            <!-- 單日 -->
+                                            <div data-date="6/6" class="morning"></div>
+                                            <div data-date="6/6" class="noon"></div>
+                                            <div data-date="6/6" class="evening"></div>
+                                            <div data-date="6/6" class="night"></div>
+                                            <div data-date="6/6" class="early-morning"></div>
+                                        </section>
+                                        <!-- 101D -->
+                                        <section class="room">
+                                            <!-- 單日 -->
+                                            <div data-date="5/28" class="morning"></div>
+                                            <div data-date="5/28" class="noon"></div>
+                                            <div data-date="5/28" class="evening"></div>
+                                            <div data-date="5/28" class="night"></div>
+                                            <div data-date="5/28" class="early-morning"></div>
+                                            <!-- 單日 -->
+                                            <div data-date="5/29" class="morning"></div>
+                                            <div data-date="5/29" class="noon locked"></div>
+                                            <div data-date="5/29" class="evening locked"></div>
+                                            <div data-date="5/29" class="night locked"></div>
+                                            <div data-date="5/29" class="early-morning"></div>
+                                            <!-- 單日 -->
+                                            <div data-date="5/30" class="morning"></div>
+                                            <div data-date="5/30" class="noon"></div>
+                                            <div data-date="5/30" class="evening"></div>
+                                            <div data-date="5/30" class="night"></div>
+                                            <div data-date="5/30" class="early-morning"></div>
+                                            <!-- 單日 -->
+                                            <div data-date="5/31" class="morning"></div>
+                                            <div data-date="5/31" class="noon"></div>
+                                            <div data-date="5/31" class="evening"></div>
+                                            <div data-date="5/31" class="night"></div>
+                                            <div data-date="5/31" class="early-morning"></div>
+                                            <!-- 單日 -->
+                                            <div data-date="6/1" class="morning"></div>
+                                            <div data-date="6/1" class="noon"></div>
+                                            <div data-date="6/1" class="evening"></div>
+                                            <div data-date="6/1" class="night"></div>
+                                            <div data-date="6/1" class="early-morning"></div>
+                                            <!-- 單日 -->
+                                            <div data-date="6/2" class="morning"></div>
+                                            <div data-date="6/2" class="noon"></div>
+                                            <div data-date="6/2" class="evening"></div>
+                                            <div data-date="6/2" class="night"></div>
+                                            <div data-date="6/2" class="early-morning"></div>
+                                            <!-- 單日 -->
+                                            <div data-date="6/3" class="morning"></div>
+                                            <div data-date="6/3" class="noon"></div>
+                                            <div data-date="6/3" class="evening"></div>
+                                            <div data-date="6/3" class="night"></div>
+                                            <div data-date="6/3" class="early-morning"></div>
+                                            <!-- 單日 -->
+                                            <div data-date="6/4" class="morning"></div>
+                                            <div data-date="6/4" class="noon"></div>
+                                            <div data-date="6/4" class="evening"></div>
+                                            <div data-date="6/4" class="night"></div>
+                                            <div data-date="6/4" class="early-morning"></div>
+                                            <!-- 單日 -->
+                                            <div data-date="6/5" class="morning"></div>
+                                            <div data-date="6/5" class="noon"></div>
+                                            <div data-date="6/5" class="evening"></div>
+                                            <div data-date="6/5" class="night"></div>
+                                            <div data-date="6/5" class="early-morning"></div>
+                                            <!-- 單日 -->
+                                            <div data-date="6/6" class="morning"></div>
+                                            <div data-date="6/6" class="noon"></div>
+                                            <div data-date="6/6" class="evening"></div>
+                                            <div data-date="6/6" class="night"></div>
+                                            <div data-date="6/6" class="early-morning"></div>
+                                        </section>
+                                        <!-- 102會議室-->
+                                        <section class="room">
+                                            <!-- 單日 -->
+                                            <div data-date="5/28" class="morning"></div>
+                                            <div data-date="5/28" class="noon"></div>
+                                            <div data-date="5/28" class="evening"></div>
+                                            <div data-date="5/28" class="night"></div>
+                                            <div data-date="5/28" class="early-morning"></div>
+                                            <!-- 單日 -->
+                                            <div data-date="5/29" class="morning"></div>
+                                            <div data-date="5/29" class="noon locked"></div>
+                                            <div data-date="5/29" class="evening locked"></div>
+                                            <div data-date="5/29" class="night locked"></div>
+                                            <div data-date="5/29" class="early-morning"></div>
+                                            <!-- 單日 -->
+                                            <div data-date="5/30" class="morning"></div>
+                                            <div data-date="5/30" class="noon"></div>
+                                            <div data-date="5/30" class="evening"></div>
+                                            <div data-date="5/30" class="night"></div>
+                                            <div data-date="5/30" class="early-morning"></div>
+                                            <!-- 單日 -->
+                                            <div data-date="5/31" class="morning"></div>
+                                            <div data-date="5/31" class="noon"></div>
+                                            <div data-date="5/31" class="evening"></div>
+                                            <div data-date="5/31" class="night"></div>
+                                            <div data-date="5/31" class="early-morning"></div>
+                                            <!-- 單日 -->
+                                            <div data-date="6/1" class="morning"></div>
+                                            <div data-date="6/1" class="noon"></div>
+                                            <div data-date="6/1" class="evening"></div>
+                                            <div data-date="6/1" class="night"></div>
+                                            <div data-date="6/1" class="early-morning"></div>
+                                            <!-- 單日 -->
+                                            <div data-date="6/2" class="morning"></div>
+                                            <div data-date="6/2" class="noon"></div>
+                                            <div data-date="6/2" class="evening"></div>
+                                            <div data-date="6/2" class="night"></div>
+                                            <div data-date="6/2" class="early-morning"></div>
+                                            <!-- 單日 -->
+                                            <div data-date="6/3" class="morning"></div>
+                                            <div data-date="6/3" class="noon"></div>
+                                            <div data-date="6/3" class="evening"></div>
+                                            <div data-date="6/3" class="night"></div>
+                                            <div data-date="6/3" class="early-morning"></div>
+                                            <!-- 單日 -->
+                                            <div data-date="6/4" class="morning"></div>
+                                            <div data-date="6/4" class="noon"></div>
+                                            <div data-date="6/4" class="evening"></div>
+                                            <div data-date="6/4" class="night"></div>
+                                            <div data-date="6/4" class="early-morning"></div>
+                                            <!-- 單日 -->
+                                            <div data-date="6/5" class="morning"></div>
+                                            <div data-date="6/5" class="noon"></div>
+                                            <div data-date="6/5" class="evening"></div>
+                                            <div data-date="6/5" class="night"></div>
+                                            <div data-date="6/5" class="early-morning"></div>
+                                            <!-- 單日 -->
+                                            <div data-date="6/6" class="morning"></div>
+                                            <div data-date="6/6" class="noon"></div>
+                                            <div data-date="6/6" class="evening"></div>
+                                            <div data-date="6/6" class="night"></div>
+                                            <div data-date="6/6" class="early-morning"></div>
+                                        </section>
+                                        <!-- 103Studio-->
+                                        <section class="room">
+                                            <!-- 單日 -->
+                                            <div data-date="5/28" class="morning"></div>
+                                            <div data-date="5/28" class="noon"></div>
+                                            <div data-date="5/28" class="evening"></div>
+                                            <div data-date="5/28" class="night"></div>
+                                            <div data-date="5/28" class="early-morning"></div>
+                                            <!-- 單日 -->
+                                            <div data-date="5/29" class="morning"></div>
+                                            <div data-date="5/29" class="noon"></div>
+                                            <div data-date="5/29" class="evening"></div>
+                                            <div data-date="5/29" class="night"></div>
+                                            <div data-date="5/29" class="early-morning"></div>
+                                            <!-- 單日 -->
+                                            <div data-date="5/30" class="morning"></div>
+                                            <div data-date="5/30" class="noon"></div>
+                                            <div data-date="5/30" class="evening"></div>
+                                            <div data-date="5/30" class="night"></div>
+                                            <div data-date="5/30" class="early-morning"></div>
+                                            <!-- 單日 -->
+                                            <div data-date="5/31" class="morning"></div>
+                                            <div data-date="5/31" class="noon"></div>
+                                            <div data-date="5/31" class="evening"></div>
+                                            <div data-date="5/31" class="night"></div>
+                                            <div data-date="5/31" class="early-morning"></div>
+                                            <!-- 單日 -->
+                                            <div data-date="6/1" class="morning"></div>
+                                            <div data-date="6/1" class="noon"></div>
+                                            <div data-date="6/1" class="evening"></div>
+                                            <div data-date="6/1" class="night"></div>
+                                            <div data-date="6/1" class="early-morning"></div>
+                                            <!-- 單日 -->
+                                            <div data-date="6/2" class="morning"></div>
+                                            <div data-date="6/2" class="noon"></div>
+                                            <div data-date="6/2" class="evening"></div>
+                                            <div data-date="6/2" class="night"></div>
+                                            <div data-date="6/2" class="early-morning"></div>
+                                            <!-- 單日 -->
+                                            <div data-date="6/3" class="morning"></div>
+                                            <div data-date="6/3" class="noon"></div>
+                                            <div data-date="6/3" class="evening"></div>
+                                            <div data-date="6/3" class="night"></div>
+                                            <div data-date="6/3" class="early-morning"></div>
+                                            <!-- 單日 -->
+                                            <div data-date="6/4" class="morning"></div>
+                                            <div data-date="6/4" class="noon"></div>
+                                            <div data-date="6/4" class="evening"></div>
+                                            <div data-date="6/4" class="night"></div>
+                                            <div data-date="6/4" class="early-morning"></div>
+                                            <!-- 單日 -->
+                                            <div data-date="6/5" class="morning"></div>
+                                            <div data-date="6/5" class="noon"></div>
+                                            <div data-date="6/5" class="evening"></div>
+                                            <div data-date="6/5" class="night"></div>
+                                            <div data-date="6/5" class="early-morning"></div>
+                                            <!-- 單日 -->
+                                            <div data-date="6/6" class="morning"></div>
+                                            <div data-date="6/6" class="noon"></div>
+                                            <div data-date="6/6" class="evening"></div>
+                                            <div data-date="6/6" class="night"></div>
+                                            <div data-date="6/6" class="early-morning"></div>
+                                        </section>
+                                        <!-- 105會議室 -->
+                                        <section class="room">
+                                            <!-- 單日 -->
+                                            <div data-date="5/28" class="morning"></div>
+                                            <div data-date="5/28" class="noon"></div>
+                                            <div data-date="5/28" class="evening"></div>
+                                            <div data-date="5/28" class="night"></div>
+                                            <div data-date="5/28" class="early-morning"></div>
+                                            <!-- 單日 -->
+                                            <div data-date="5/29" class="morning"></div>
+                                            <div data-date="5/29" class="noon"></div>
+                                            <div data-date="5/29" class="evening"></div>
+                                            <div data-date="5/29" class="night"></div>
+                                            <div data-date="5/29" class="early-morning"></div>
+                                            <!-- 單日 -->
+                                            <div data-date="5/30" class="morning"></div>
+                                            <div data-date="5/30" class="noon"></div>
+                                            <div data-date="5/30" class="evening"></div>
+                                            <div data-date="5/30" class="night"></div>
+                                            <div data-date="5/30" class="early-morning"></div>
+                                            <!-- 單日 -->
+                                            <div data-date="5/31" class="morning"></div>
+                                            <div data-date="5/31" class="noon"></div>
+                                            <div data-date="5/31" class="evening"></div>
+                                            <div data-date="5/31" class="night"></div>
+                                            <div data-date="5/31" class="early-morning"></div>
+                                            <!-- 單日 -->
+                                            <div data-date="6/1" class="morning"></div>
+                                            <div data-date="6/1" class="noon"></div>
+                                            <div data-date="6/1" class="evening"></div>
+                                            <div data-date="6/1" class="night"></div>
+                                            <div data-date="6/1" class="early-morning"></div>
+                                            <!-- 單日 -->
+                                            <div data-date="6/2" class="morning"></div>
+                                            <div data-date="6/2" class="noon"></div>
+                                            <div data-date="6/2" class="evening"></div>
+                                            <div data-date="6/2" class="night"></div>
+                                            <div data-date="6/2" class="early-morning"></div>
+                                            <!-- 單日 -->
+                                            <div data-date="6/3" class="morning"></div>
+                                            <div data-date="6/3" class="noon"></div>
+                                            <div data-date="6/3" class="evening"></div>
+                                            <div data-date="6/3" class="night"></div>
+                                            <div data-date="6/3" class="early-morning"></div>
+                                            <!-- 單日 -->
+                                            <div data-date="6/4" class="morning"></div>
+                                            <div data-date="6/4" class="noon"></div>
+                                            <div data-date="6/4" class="evening"></div>
+                                            <div data-date="6/4" class="night"></div>
+                                            <div data-date="6/4" class="early-morning"></div>
+                                            <!-- 單日 -->
+                                            <div data-date="6/5" class="morning"></div>
+                                            <div data-date="6/5" class="noon"></div>
+                                            <div data-date="6/5" class="evening"></div>
+                                            <div data-date="6/5" class="night"></div>
+                                            <div data-date="6/5" class="early-morning"></div>
+                                            <!-- 單日 -->
+                                            <div data-date="6/6" class="morning"></div>
+                                            <div data-date="6/6" class="noon"></div>
+                                            <div data-date="6/6" class="evening"></div>
+                                            <div data-date="6/6" class="night"></div>
+                                            <div data-date="6/6" class="early-morning"></div>
+                                        </section>
+                                        <!-- 106(小教室) -->
+                                        <section class="room">
+                                            <!-- 單日 -->
+                                            <div data-date="5/28" class="morning"></div>
+                                            <div data-date="5/28" class="noon"></div>
+                                            <div data-date="5/28" class="evening"></div>
+                                            <div data-date="5/28" class="night"></div>
+                                            <div data-date="5/28" class="early-morning"></div>
+                                            <!-- 單日 -->
+                                            <div data-date="5/29" class="morning"></div>
+                                            <div data-date="5/29" class="noon"></div>
+                                            <div data-date="5/29" class="evening"></div>
+                                            <div data-date="5/29" class="night"></div>
+                                            <div data-date="5/29" class="early-morning"></div>
+                                            <!-- 單日 -->
+                                            <div data-date="5/30" class="morning"></div>
+                                            <div data-date="5/30" class="noon"></div>
+                                            <div data-date="5/30" class="evening"></div>
+                                            <div data-date="5/30" class="night"></div>
+                                            <div data-date="5/30" class="early-morning"></div>
+                                            <!-- 單日 -->
+                                            <div data-date="5/31" class="morning"></div>
+                                            <div data-date="5/31" class="noon"></div>
+                                            <div data-date="5/31" class="evening"></div>
+                                            <div data-date="5/31" class="night"></div>
+                                            <div data-date="5/31" class="early-morning"></div>
+                                            <!-- 單日 -->
+                                            <div data-date="6/1" class="morning"></div>
+                                            <div data-date="6/1" class="noon"></div>
+                                            <div data-date="6/1" class="evening"></div>
+                                            <div data-date="6/1" class="night"></div>
+                                            <div data-date="6/1" class="early-morning"></div>
+                                            <!-- 單日 -->
+                                            <div data-date="6/2" class="morning"></div>
+                                            <div data-date="6/2" class="noon"></div>
+                                            <div data-date="6/2" class="evening"></div>
+                                            <div data-date="6/2" class="night"></div>
+                                            <div data-date="6/2" class="early-morning"></div>
+                                            <!-- 單日 -->
+                                            <div data-date="6/3" class="morning"></div>
+                                            <div data-date="6/3" class="noon"></div>
+                                            <div data-date="6/3" class="evening"></div>
+                                            <div data-date="6/3" class="night"></div>
+                                            <div data-date="6/3" class="early-morning"></div>
+                                            <!-- 單日 -->
+                                            <div data-date="6/4" class="morning"></div>
+                                            <div data-date="6/4" class="noon"></div>
+                                            <div data-date="6/4" class="evening"></div>
+                                            <div data-date="6/4" class="night"></div>
+                                            <div data-date="6/4" class="early-morning"></div>
+                                            <!-- 單日 -->
+                                            <div data-date="6/5" class="morning"></div>
+                                            <div data-date="6/5" class="noon"></div>
+                                            <div data-date="6/5" class="evening"></div>
+                                            <div data-date="6/5" class="night"></div>
+                                            <div data-date="6/5" class="early-morning"></div>
+                                            <!-- 單日 -->
+                                            <div data-date="6/6" class="morning"></div>
+                                            <div data-date="6/6" class="noon"></div>
+                                            <div data-date="6/6" class="evening"></div>
+                                            <div data-date="6/6" class="night"></div>
+                                            <div data-date="6/6" class="early-morning"></div>
+                                        </section>
+                                        <!-- 1F北貴賓室 -->
+                                        <section class="room">
+                                            <!-- 單日 -->
+                                            <div data-date="5/28" class="morning"></div>
+                                            <div data-date="5/28" class="noon"></div>
+                                            <div data-date="5/28" class="evening"></div>
+                                            <div data-date="5/28" class="night"></div>
+                                            <div data-date="5/28" class="early-morning"></div>
+                                            <!-- 單日 -->
+                                            <div data-date="5/29" class="morning"></div>
+                                            <div data-date="5/29" class="noon"></div>
+                                            <div data-date="5/29" class="evening"></div>
+                                            <div data-date="5/29" class="night"></div>
+                                            <div data-date="5/29" class="early-morning"></div>
+                                            <!-- 單日 -->
+                                            <div data-date="5/30" class="morning"></div>
+                                            <div data-date="5/30" class="noon"></div>
+                                            <div data-date="5/30" class="evening"></div>
+                                            <div data-date="5/30" class="night"></div>
+                                            <div data-date="5/30" class="early-morning"></div>
+                                            <!-- 單日 -->
+                                            <div data-date="5/31" class="morning"></div>
+                                            <div data-date="5/31" class="noon"></div>
+                                            <div data-date="5/31" class="evening"></div>
+                                            <div data-date="5/31" class="night"></div>
+                                            <div data-date="5/31" class="early-morning"></div>
+                                            <!-- 單日 -->
+                                            <div data-date="6/1" class="morning"></div>
+                                            <div data-date="6/1" class="noon"></div>
+                                            <div data-date="6/1" class="evening"></div>
+                                            <div data-date="6/1" class="night"></div>
+                                            <div data-date="6/1" class="early-morning"></div>
+                                            <!-- 單日 -->
+                                            <div data-date="6/2" class="morning"></div>
+                                            <div data-date="6/2" class="noon"></div>
+                                            <div data-date="6/2" class="evening"></div>
+                                            <div data-date="6/2" class="night"></div>
+                                            <div data-date="6/2" class="early-morning"></div>
+                                            <!-- 單日 -->
+                                            <div data-date="6/3" class="morning"></div>
+                                            <div data-date="6/3" class="noon"></div>
+                                            <div data-date="6/3" class="evening"></div>
+                                            <div data-date="6/3" class="night"></div>
+                                            <div data-date="6/3" class="early-morning"></div>
+                                            <!-- 單日 -->
+                                            <div data-date="6/4" class="morning"></div>
+                                            <div data-date="6/4" class="noon"></div>
+                                            <div data-date="6/4" class="evening"></div>
+                                            <div data-date="6/4" class="night"></div>
+                                            <div data-date="6/4" class="early-morning"></div>
+                                            <!-- 單日 -->
+                                            <div data-date="6/5" class="morning"></div>
+                                            <div data-date="6/5" class="noon"></div>
+                                            <div data-date="6/5" class="evening"></div>
+                                            <div data-date="6/5" class="night"></div>
+                                            <div data-date="6/5" class="early-morning"></div>
+                                            <!-- 單日 -->
+                                            <div data-date="6/6" class="morning"></div>
+                                            <div data-date="6/6" class="noon"></div>
+                                            <div data-date="6/6" class="evening"></div>
+                                            <div data-date="6/6" class="night"></div>
+                                            <div data-date="6/6" class="early-morning"></div>
+                                        </section>
+                                        <!-- 1F南貴賓室 -->
+                                        <section class="room">
+                                            <!-- 單日 -->
+                                            <div data-date="5/28" class="morning"></div>
+                                            <div data-date="5/28" class="noon"></div>
+                                            <div data-date="5/28" class="evening"></div>
+                                            <div data-date="5/28" class="night"></div>
+                                            <div data-date="5/28" class="early-morning"></div>
+                                            <!-- 單日 -->
+                                            <div data-date="5/29" class="morning"></div>
+                                            <div data-date="5/29" class="noon"></div>
+                                            <div data-date="5/29" class="evening"></div>
+                                            <div data-date="5/29" class="night"></div>
+                                            <div data-date="5/29" class="early-morning"></div>
+                                            <!-- 單日 -->
+                                            <div data-date="5/30" class="morning"></div>
+                                            <div data-date="5/30" class="noon"></div>
+                                            <div data-date="5/30" class="evening"></div>
+                                            <div data-date="5/30" class="night"></div>
+                                            <div data-date="5/30" class="early-morning"></div>
+                                            <!-- 單日 -->
+                                            <div data-date="5/31" class="morning"></div>
+                                            <div data-date="5/31" class="noon"></div>
+                                            <div data-date="5/31" class="evening"></div>
+                                            <div data-date="5/31" class="night"></div>
+                                            <div data-date="5/31" class="early-morning"></div>
+                                            <!-- 單日 -->
+                                            <div data-date="6/1" class="morning"></div>
+                                            <div data-date="6/1" class="noon"></div>
+                                            <div data-date="6/1" class="evening"></div>
+                                            <div data-date="6/1" class="night"></div>
+                                            <div data-date="6/1" class="early-morning"></div>
+                                            <!-- 單日 -->
+                                            <div data-date="6/2" class="morning"></div>
+                                            <div data-date="6/2" class="noon"></div>
+                                            <div data-date="6/2" class="evening"></div>
+                                            <div data-date="6/2" class="night"></div>
+                                            <div data-date="6/2" class="early-morning"></div>
+                                            <!-- 單日 -->
+                                            <div data-date="6/3" class="morning"></div>
+                                            <div data-date="6/3" class="noon"></div>
+                                            <div data-date="6/3" class="evening"></div>
+                                            <div data-date="6/3" class="night"></div>
+                                            <div data-date="6/3" class="early-morning"></div>
+                                            <!-- 單日 -->
+                                            <div data-date="6/4" class="morning"></div>
+                                            <div data-date="6/4" class="noon"></div>
+                                            <div data-date="6/4" class="evening"></div>
+                                            <div data-date="6/4" class="night"></div>
+                                            <div data-date="6/4" class="early-morning"></div>
+                                            <!-- 單日 -->
+                                            <div data-date="6/5" class="morning"></div>
+                                            <div data-date="6/5" class="noon"></div>
+                                            <div data-date="6/5" class="evening"></div>
+                                            <div data-date="6/5" class="night"></div>
+                                            <div data-date="6/5" class="early-morning"></div>
+                                            <!-- 單日 -->
+                                            <div data-date="6/6" class="morning"></div>
+                                            <div data-date="6/6" class="noon"></div>
+                                            <div data-date="6/6" class="evening"></div>
+                                            <div data-date="6/6" class="night"></div>
+                                            <div data-date="6/6" class="early-morning"></div>
+                                        </section>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                    <!-- content End -->
+                </div>
+            </div>
+        </div>
+        <!-- footer Start-->
+        <footer>
+            <div class="container">
+                <section>
+                    <div class="col">
+                        <!-- logo -->
+                        <a href="#"><img src="images/ticc/bg-white.png"></a>
+                    </div>
+                    <div class="col">
+                        Taiwan External Trade Development Council (TAITRA)<br>
+                        Address: No. 1, Section 5, Xinyi Road, Taipei City, 11049<br>
+                        Email: ticc@taitra.org.tw<br>
+                        Fax: +886(2)2723-2589<br>
+                        Switchboard: +886(2)2725-5200
+                    </div>
+                    <div class="col">
+                        Conference Venue Reservation Extension: 3517,3518 / Service Desk Extension: 3000,3151 /<br>
+                        Parking Ext.: 3040 / Food Service Ext.: 3350, 3351<br>
+                        Wedding hotline: +886(2)2720-8008a
+                    </div>
+                </section>
+                <section>
+                    <div class="col">
+                        <!-- 標章2枚 -->
+                        <img src="images/ticc/footer_logo1.png" alt="">
+                        <img src="images/ticc/footer_logo2.png" alt="">
+                    </div>
+                    <div class="col">
+                        <!-- 隱私權三連結＋版權 -->
+                        <ul class="footer_link">
+                            <li><a href="javascript:;">Privacy Policy</a></li>
+                            <li><a href="javascript:;">Liability Disclaimer</a></li>
+                            <li><a href="javascript:;">Links</a></li>
+                        </ul>
+                        <p class="Copyright">Copyright ©2015 Taipei International Convention Center.All rights reserved</p>
+                    </div>
+                </section>
+            </div>
+        </footer>
+        <!-- footer End -->
+    </div>
+    <!-- 鯨魚 -->
+    <div class="abgne_float_game">
+        <a href="javascript:;"><img src="images/ticc/t-boHelper-ch.png" alt=""></a>
+    </div>
+    <a href="javascript:;" class="scrollToTop">回頁首</a>
+    <!-- JQ -->
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <!-- 外掛 plugin js -->
+    <script src="vendor/jquery.easing.min.js"></script>
+    <!-- ease -->
+    <script src="vendor/slick/slick.min.js "></script>
+    <!-- slick -->
+    <script src="vendor/slick/slick-lightbox.js "></script>
+    <!-- slick lightbox -->
+    <script src="vendor/lazyload/lazyload.js"></script>
+    <!-- lazyload -->
+    <script src="vendor/picturefill/picturefill.min.js" async></script>
+    <!-- picturefill -->
+    <script src="vendor/scrolltable/jquery.scroltable.min.js"></script>
+    <!-- scrolltable -->
+    <!-- sticky-sidebar -->
+    <script src='vendor/sticky-sidebar/sticky-sidebar.js'></script>
+    <script src='vendor/sticky-sidebar/ResizeSensor.js'></script>
+    <!-- fancy -->
+    <script src='vendor/fancybox/jquery.fancybox.min.js'></script>
+    <!-- 瀑布流-->
+    <script src="vendor/gridloading/js/modernizr.custom.js"></script>
+    <script src="vendor/gridloading/js/masonry.pkgd.min.js"></script>
+    <script src="vendor/gridloading/js/imagesloaded.js"></script>
+    <script src="vendor/gridloading/js/classie.js"></script>
+    <script src="vendor/gridloading/js/AnimOnScroll.js"></script>
+    <script>
+    new AnimOnScroll(document.getElementById('grid'), {
+        minDuration: 0.4,
+        maxDuration: 0.7,
+        viewportFactor: 0.2
+    });
+    </script>
+    <!-- hyUI -->
+    <script src="js/hyui.js"></script>
+    <!-- 客製js -->
+    <script src="js/customize.js"></script>
+</body>

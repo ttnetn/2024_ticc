@@ -1,0 +1,110 @@
+// 英文版修正
+
+// body{
+//     text-transform: uppercase;
+// }
+
+// 大寫
+.menu ul li a {
+    text-transform: uppercase;
+}
+
+.sideBar{
+    a{
+        padding: 16px 16px !important;
+        &.sb-scrollToTop{ padding-top: 4em !important; }
+
+        &:before{
+            left: 22px !important;
+        }
+    }
+}
+
+// 
+.menu{
+    max-width: 900px;
+    margin: auto;
+}
+// hero
+.hero{
+    .container{
+        // 登入＋查詢
+        .btn_box{
+            top: 200px !important;
+        }
+    }
+}
+
+.planSearch h2.title+p {
+    width: 70% !important;
+}
+
+// 右邊 sticky function
+.sideBar{
+    a{ font-size: 90%; }
+}
+
+// 內頁內容區塊 卡片式
+.innerpage .center_block .card{
+    p{ line-height: 1.8 !important;}
+}
+
+// VR 滿版：滿版
+.VR{
+    h2.title{
+        font-size: 2em !important;
+
+        b{ font-size: 50% !important; }
+        em{
+            font-size: 40%;
+            padding: 0 4px;
+        }
+        span{
+            width: 400px !important;
+            line-height: 1.4;
+            text-align: left !important;
+            font-size: 75%;
+        }
+
+        @include screen('mobile') {
+            span{
+                width: auto !important;
+            }
+        }
+    }
+
+}
+
+// 聯絡我們：2欄、3:2
+.contentUs{
+    .col{
+        .form_title{
+            font-size: 1.125em;
+            margin-top: .25em;
+        }
+        &:last-child{
+            p{
+                padding: 8em 0 2em !important;
+            }
+        }
+    }
+}
+footer{
+    .container {
+        section{
+            // 黑底
+            &:first-child{
+                .col{
+                    padding-right: 1em;
+                }
+            }
+        }
+    }
+}
+
+
+
+
+
+
+
