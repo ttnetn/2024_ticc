@@ -197,8 +197,13 @@ $(function() {
             var multiCheckBoxDetailBody = detail.find(".MultiCheckBoxDetailBody");
             this.find("option").each(function() {
                 var val = $(this).attr("value");
+                var selectflg = $(this).attr("selected");
                 if (val == undefined) val = "";
-                multiCheckBoxDetailBody.append("<div class='cont'><div><input type='checkbox' class='mulinput' value='" + val + "' /></div><div>" + $(this).text() + "</div></div>");
+                if(selectflg == undefined) {
+                    multiCheckBoxDetailBody.append("<div class='cont'><div><input type='checkbox' class='mulinput' value='" + val + "' /></div><div>" + $(this).text() + "</div></div>");
+                } else {
+                    multiCheckBoxDetailBody.append("<div class='cont'><div><input type='checkbox' class='mulinput' value='" + val + "' checked /></div><div>" + $(this).text() + "</div></div>");
+                }
             });
             multiCheckBoxDetailBody.css("max-height", parseInt($(".MultiCheckBoxDetail").css("max-height")) - 28 + "px");
         },
