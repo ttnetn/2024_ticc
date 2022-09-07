@@ -2644,7 +2644,7 @@ h3.title {
         overflow: hidden;
         padding: 4px 12px;
 
-        &:hover { background-color: #cfcfcf; }
+        &:hover { background-color: #e5e5e5; }
     }
 }
 .MultiCheckBoxDetailBody {
@@ -2661,8 +2661,12 @@ h3.title {
 .MultiCheckBoxDetailHeader {
     overflow: hidden;
     position: relative;
-    height: 34px;
-    background-color: #3d3d3d;
+    height: 32px;
+    background-color: #fff;
+    &:hover{
+        background-color: #e5e5e5;
+    }
+
     >input {
         position: absolute;
         left: 12px;
@@ -2673,7 +2677,7 @@ h3.title {
         position: absolute;
         top: 5px;
         left: 36px;
-        color: #fff;
+        color: #000;
     }
 }
 $border-color: #bcc;
