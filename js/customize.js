@@ -79,13 +79,6 @@ $(function() {
 
     // 樓層圖 動態sample
     $('.floorDemo').find('.area').hide();
-    // 101
-    $('.filter-list').find('._101').mouseover(function(event) {
-        $('.floorDemo').find('._101').stop(true, true).fadeIn();
-    });
-    $('.filter-list').find('._101').mouseout(function(event) {
-        $('.floorDemo').find('._101').stop(true, true).fadeOut();
-    });
 
     // 樓層圖開關
     $('.floormap-switch').click(function(event) {
@@ -104,6 +97,303 @@ $(function() {
     });
     $('.filter-list').find('._101A').mouseout(function(event) {
         $('.floorDemo').find('._101A').stop(true, true).fadeOut();
+    });
+    // 101B
+    $('.filter-list').find('._101B').mouseover(function(event) {
+        $('.floorDemo').find('._101B').stop(true, true).fadeIn();
+    });
+    $('.filter-list').find('._101B').mouseout(function(event) {
+        $('.floorDemo').find('._101B').stop(true, true).fadeOut();
+    });
+    // 101C
+    $('.filter-list').find('._101C').mouseover(function(event) {
+        $('.floorDemo').find('._101C').stop(true, true).fadeIn();
+    });
+    $('.filter-list').find('._101C').mouseout(function(event) {
+        $('.floorDemo').find('._101C').stop(true, true).fadeOut();
+    });
+    // 101D
+    $('.filter-list').find('._101D').mouseover(function(event) {
+        $('.floorDemo').find('._101D').stop(true, true).fadeIn();
+    });
+    $('.filter-list').find('._101D').mouseout(function(event) {
+        $('.floorDemo').find('._101D').stop(true, true).fadeOut();
+    });
+    // 101AB
+    $('.filter-list').find('._101AB').mouseover(function(event) {
+        $('.floorDemo').find('._101AB').stop(true, true).fadeIn();
+    });
+    $('.filter-list').find('._101AB').mouseout(function(event) {
+        $('.floorDemo').find('._101AB').stop(true, true).fadeOut();
+    });
+    // 101CD
+    $('.filter-list').find('._101CD').mouseover(function(event) {
+        $('.floorDemo').find('._101CD').stop(true, true).fadeIn();
+    });
+    $('.filter-list').find('._101CD').mouseout(function(event) {
+        $('.floorDemo').find('._101CD').stop(true, true).fadeOut();
+    });
+    // 101
+    $('.filter-list').find('._101').mouseover(function(event) {
+        $('.floorDemo').find('._101').stop(true, true).fadeIn();
+    });
+    $('.filter-list').find('._101').mouseout(function(event) {
+        $('.floorDemo').find('._101').stop(true, true).fadeOut();
+    });
+    // 102
+    $('.filter-list').find('._102').mouseover(function(event) {
+        $('.floorDemo').find('._102').stop(true, true).fadeIn();
+    });
+    $('.filter-list').find('._102').mouseout(function(event) {
+        $('.floorDemo').find('._102').stop(true, true).fadeOut();
+    });
+    // 103
+    $('.filter-list').find('._103').mouseover(function(event) {
+        $('.floorDemo').find('._103').stop(true, true).fadeIn();
+    });
+    $('.filter-list').find('._103').mouseout(function(event) {
+        $('.floorDemo').find('._103').stop(true, true).fadeOut();
+    });
+    // 105
+    $('.filter-list').find('._105').mouseover(function(event) {
+        $('.floorDemo').find('._105').stop(true, true).fadeIn();
+    });
+    $('.filter-list').find('._105').mouseout(function(event) {
+        $('.floorDemo').find('._105').stop(true, true).fadeOut();
+    });
+    // 106
+    $('.filter-list').find('._106').mouseover(function(event) {
+        $('.floorDemo').find('._106').stop(true, true).fadeIn();
+    });
+    $('.filter-list').find('._106').mouseout(function(event) {
+        $('.floorDemo').find('._106').stop(true, true).fadeOut();
+    });
+    // 1-vip-N
+    $('.filter-list').find('._1-vip-N').mouseover(function(event) {
+        $('.floorDemo').find('._1-vip-N').stop(true, true).fadeIn();
+    });
+    $('.filter-list').find('._1-vip-N').mouseout(function(event) {
+        $('.floorDemo').find('._1-vip-N').stop(true, true).fadeOut();
+    });
+    // 1-vip-S
+    $('.filter-list').find('._1-vip-S').mouseover(function(event) {
+        $('.floorDemo').find('._1-vip-S').stop(true, true).fadeIn();
+    });
+    $('.filter-list').find('._1-vip-S').mouseout(function(event) {
+        $('.floorDemo').find('._1-vip-S').stop(true, true).fadeOut();
+    });
+
+    // 201A
+    $('.filter-list').find('._201A').mouseover(function(event) {
+        $('.floorDemo').find('._201A').stop(true, true).fadeIn();
+    });
+    $('.filter-list').find('._201A').mouseout(function(event) {
+        $('.floorDemo').find('._201A').stop(true, true).fadeOut();
+    });
+    // 201B
+    $('.filter-list').find('._201B').mouseover(function(event) {
+        $('.floorDemo').find('._201B').stop(true, true).fadeIn();
+    });
+    $('.filter-list').find('._201B').mouseout(function(event) {
+        $('.floorDemo').find('._201B').stop(true, true).fadeOut();
+    });
+    // 201C
+    $('.filter-list').find('._201C').mouseover(function(event) {
+        $('.floorDemo').find('._201C').stop(true, true).fadeIn();
+    });
+    $('.filter-list').find('._201C').mouseout(function(event) {
+        $('.floorDemo').find('._201C').stop(true, true).fadeOut();
+    });
+    // 201D
+    $('.filter-list').find('._201D').mouseover(function(event) {
+        $('.floorDemo').find('._201D').stop(true, true).fadeIn();
+    });
+    $('.filter-list').find('._201D').mouseout(function(event) {
+        $('.floorDemo').find('._201D').stop(true, true).fadeOut();
+    });
+    // 201E
+    $('.filter-list').find('._201E').mouseover(function(event) {
+        $('.floorDemo').find('._201E').stop(true, true).fadeIn();
+    });
+    $('.filter-list').find('._201E').mouseout(function(event) {
+        $('.floorDemo').find('._201E').stop(true, true).fadeOut();
+    });
+    // 201F
+    $('.filter-list').find('._201F').mouseover(function(event) {
+        $('.floorDemo').find('._201F').stop(true, true).fadeIn();
+    });
+    $('.filter-list').find('._201F').mouseout(function(event) {
+        $('.floorDemo').find('._201F').stop(true, true).fadeOut();
+    });
+    // 201AB
+    $('.filter-list').find('._201AB').mouseover(function(event) {
+        $('.floorDemo').find('._201AB').stop(true, true).fadeIn();
+    });
+    $('.filter-list').find('._201AB').mouseout(function(event) {
+        $('.floorDemo').find('._201AB').stop(true, true).fadeOut();
+    });
+    // 201BC
+    $('.filter-list').find('._201BC').mouseover(function(event) {
+        $('.floorDemo').find('._201BC').stop(true, true).fadeIn();
+    });
+    $('.filter-list').find('._201BC').mouseout(function(event) {
+        $('.floorDemo').find('._201BC').stop(true, true).fadeOut();
+    });
+    // 201DE
+    $('.filter-list').find('._201DE').mouseover(function(event) {
+        $('.floorDemo').find('._201DE').stop(true, true).fadeIn();
+    });
+    $('.filter-list').find('._201DE').mouseout(function(event) {
+        $('.floorDemo').find('._201DE').stop(true, true).fadeOut();
+    });
+    // 201EF
+    $('.filter-list').find('._201EF').mouseover(function(event) {
+        $('.floorDemo').find('._201EF').stop(true, true).fadeIn();
+    });
+    $('.filter-list').find('._201EF').mouseout(function(event) {
+        $('.floorDemo').find('._201EF').stop(true, true).fadeOut();
+    });
+    // 201AF
+    $('.filter-list').find('._201AF').mouseover(function(event) {
+        $('.floorDemo').find('._201AF').stop(true, true).fadeIn();
+    });
+    $('.filter-list').find('._201AF').mouseout(function(event) {
+        $('.floorDemo').find('._201AF').stop(true, true).fadeOut();
+    });
+    // 201ABC
+    $('.filter-list').find('._201ABC').mouseover(function(event) {
+        $('.floorDemo').find('._201ABC').stop(true, true).fadeIn();
+    });
+    $('.filter-list').find('._201ABC').mouseout(function(event) {
+        $('.floorDemo').find('._201ABC').stop(true, true).fadeOut();
+    });
+    // 201DEF
+    $('.filter-list').find('._201DEF').mouseover(function(event) {
+        $('.floorDemo').find('._201DEF').stop(true, true).fadeIn();
+    });
+    $('.filter-list').find('._201DEF').mouseout(function(event) {
+        $('.floorDemo').find('._201DEF').stop(true, true).fadeOut();
+    });
+    // 201ABEF
+    $('.filter-list').find('._201ABEF').mouseover(function(event) {
+        $('.floorDemo').find('._201ABEF').stop(true, true).fadeIn();
+    });
+    $('.filter-list').find('._201ABEF').mouseout(function(event) {
+        $('.floorDemo').find('._201ABEF').stop(true, true).fadeOut();
+    });
+    // 201BCDE
+    $('.filter-list').find('._201BCDE').mouseover(function(event) {
+        $('.floorDemo').find('._201BCDE').stop(true, true).fadeIn();
+    });
+    $('.filter-list').find('._201BCDE').mouseout(function(event) {
+        $('.floorDemo').find('._201BCDE').stop(true, true).fadeOut();
+    });
+    // 201
+    $('.filter-list').find('._201').mouseover(function(event) {
+        $('.floorDemo').find('._201').stop(true, true).fadeIn();
+    });
+    $('.filter-list').find('._201').mouseout(function(event) {
+        $('.floorDemo').find('._201').stop(true, true).fadeOut();
+    });
+    // 202B
+    $('.filter-list').find('._202B').mouseover(function(event) {
+        $('.floorDemo').find('._202B').stop(true, true).fadeIn();
+    });
+    $('.filter-list').find('._202B').mouseout(function(event) {
+        $('.floorDemo').find('._202B').stop(true, true).fadeOut();
+    });
+    // 202A
+    $('.filter-list').find('._202A').mouseover(function(event) {
+        $('.floorDemo').find('._202A').stop(true, true).fadeIn();
+    });
+    $('.filter-list').find('._202A').mouseout(function(event) {
+        $('.floorDemo').find('._202A').stop(true, true).fadeOut();
+    });
+    // 202
+    $('.filter-list').find('._202').mouseover(function(event) {
+        $('.floorDemo').find('._202').stop(true, true).fadeIn();
+    });
+    $('.filter-list').find('._202').mouseout(function(event) {
+        $('.floorDemo').find('._202').stop(true, true).fadeOut();
+    });
+    // 203A
+    $('.filter-list').find('._203A').mouseover(function(event) {
+        $('.floorDemo').find('._203A').stop(true, true).fadeIn();
+    });
+    $('.filter-list').find('._203A').mouseout(function(event) {
+        $('.floorDemo').find('._203A').stop(true, true).fadeOut();
+    });
+    // 203B
+    $('.filter-list').find('._203B').mouseover(function(event) {
+        $('.floorDemo').find('._203B').stop(true, true).fadeIn();
+    });
+    $('.filter-list').find('._203B').mouseout(function(event) {
+        $('.floorDemo').find('._203B').stop(true, true).fadeOut();
+    });
+    // 203
+    $('.filter-list').find('._203').mouseover(function(event) {
+        $('.floorDemo').find('._203').stop(true, true).fadeIn();
+    });
+    $('.filter-list').find('._203').mouseout(function(event) {
+        $('.floorDemo').find('._203').stop(true, true).fadeOut();
+    });
+
+    // 3-hall
+    $('.filter-list').find('._3-hall').mouseover(function(event) {
+        $('.floorDemo').find('._3-hall').stop(true, true).fadeIn();
+    });
+    $('.filter-list').find('._3-hall').mouseout(function(event) {
+        $('.floorDemo').find('._3-hall').stop(true, true).fadeOut();
+    });
+    // 3-party
+    $('.filter-list').find('._3-party').mouseover(function(event) {
+        $('.floorDemo').find('._3-party').stop(true, true).fadeIn();
+    });
+    $('.filter-list').find('._3-party').mouseout(function(event) {
+        $('.floorDemo').find('._3-party').stop(true, true).fadeOut();
+    });
+    // 3-S
+    $('.filter-list').find('._3-S').mouseover(function(event) {
+        $('.floorDemo').find('._3-S').stop(true, true).fadeIn();
+    });
+    $('.filter-list').find('._3-S').mouseout(function(event) {
+        $('.floorDemo').find('._3-S').stop(true, true).fadeOut();
+    });
+    // 3-N
+    $('.filter-list').find('._3-N').mouseover(function(event) {
+        $('.floorDemo').find('._3-N').stop(true, true).fadeIn();
+    });
+    $('.filter-list').find('._3-N').mouseout(function(event) {
+        $('.floorDemo').find('._3-N').stop(true, true).fadeOut();
+    });
+
+    // 401
+    $('.filter-list').find('._401').mouseover(function(event) {
+        $('.floorDemo').find('._401').stop(true, true).fadeIn();
+    });
+    $('.filter-list').find('._401').mouseout(function(event) {
+        $('.floorDemo').find('._401').stop(true, true).fadeOut();
+    });
+    // 401-Ya
+    $('.filter-list').find('._401-Ya').mouseover(function(event) {
+        $('.floorDemo').find('._401-Ya').stop(true, true).fadeIn();
+    });
+    $('.filter-list').find('._401-Ya').mouseout(function(event) {
+        $('.floorDemo').find('._401-Ya').stop(true, true).fadeOut();
+    });
+    // 401-Yuea
+    $('.filter-list').find('._401-Yuea').mouseover(function(event) {
+        $('.floorDemo').find('._401-Yuea').stop(true, true).fadeIn();
+    });
+    $('.filter-list').find('._401-Yuea').mouseout(function(event) {
+        $('.floorDemo').find('._401-Yuea').stop(true, true).fadeOut();
+    });
+    // 401-vip
+    $('.filter-list').find('._401-vip').mouseover(function(event) {
+        $('.floorDemo').find('._401-vip').stop(true, true).fadeIn();
+    });
+    $('.filter-list').find('._401-vip').mouseout(function(event) {
+        $('.floorDemo').find('._401-vip').stop(true, true).fadeOut();
     });
 
     // 試算 count
