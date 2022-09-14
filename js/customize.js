@@ -62,11 +62,11 @@ $(function() {
     roomItemWidthSet();
 
     // 大會堂座位查詢
-    $('.seatDisplay').find('.view').click(function(event) {
-        $('.seatDisplay').find('.view').removeClass('act');
-        $(this).addClass('act');
-        $('.room_info').fadeIn();
-    });
+    // $('.seatDisplay').find('.view').click(function(event) {
+    //     $('.seatDisplay').find('.view').removeClass('act');
+    //     $(this).addClass('act');
+    //     $('.room_info').fadeIn();
+    // });
 
     // 
     $('.lightbox').click(function(){
