@@ -242,12 +242,13 @@ div.function{
             &:before {
                 content: "";
                 position: absolute;
-                width: 20px;
-                height: 20px;
+                width: 30px;
+                height: 30px;
                 top: 50%;
                 left: 50%;
-                margin-top: -10px;
-                margin-left: -10px;
+                margin-top: -15px;
+                margin-left: -15px;
+                // background: url(../images/ticc/icon/icon_share.png) no-repeat center center  !important;
                 background: url(../images/basic/icon_share.svg) no-repeat center center  !important;
                 background-size: 20px 20px;
             }
