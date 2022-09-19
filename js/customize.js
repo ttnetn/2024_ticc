@@ -674,7 +674,7 @@ $(function() {
         dots: true,
         arrows: true,
         infinite: true,
-        speed: 1200,
+        speed: 300,
         autoplay: false,
         fade: true,
         lazyLoaded: true,
