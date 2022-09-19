@@ -462,16 +462,16 @@ $(function() {
 
             _tab.find('.active').next('.tabContent').show();
             
-            if (ww >= wwMedium) {
+            if (ww >= 1199) {
                 _tabContent.css('top', tabItemHeight);
                 _tab.height(tabContentHeight + tabItemHeight);
 
                 tabItemWidth = ( tabwidth / tabItemLength) - tabGutter;             // 單欄寬度 - gutter(左右各2px)
                 marginLeft = (tabGutter * tabItemLength) / (tabItemLength - 1);     // margin-left = gutter * tab個數 / (tab個數 -1)
 
-                _tabItem.width(tabItemWidth).css('margin-left', marginLeft);
+                _tabItem.outerWidth(tabItemWidth).css('margin-left', marginLeft);
                 _tabItem.first().css('margin-left', 0);
-                _tabItem.last().css({ position: 'absolute', top: 0, right: 0 }).width(tabItemWidth);
+                _tabItem.last().css({ position: 'absolute', top: 0, right: 0 }).outerWidth(tabItemWidth);
             } else {
                 _tab.css('height', 'auto');
                 _tabItem.width(tabwidth);
@@ -486,7 +486,7 @@ $(function() {
                     scollDistance = tvp + tabItemHeight * tabIndex - tab_headerHeight;
                 _tabItem.removeClass('active');
                 _tabItemNow.addClass('active');
-                if (ww <= wwMedium) {
+                if (ww <= 1199) {
                     _tabItem.not('.active').next().slideUp();
                     _tabItemNow.next().slideDown();
                     $('html,body').stop(true, false).animate({ scrollTop: scollDistance });

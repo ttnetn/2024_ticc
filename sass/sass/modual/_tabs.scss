@@ -3,11 +3,55 @@
     margin: 1em auto;
     // overflow: hidden;
     @extend %clearfix;
-    @include screen('mobile') {
+    @include screen('tablet') {
         width: auto;
         height: auto !important;
     }
 }
+// 寶弟 present
+.tabSet2 {
+    margin: 30px auto;
+    width: 100%;
+    .tabItems {
+        display: flex;
+        flex-flow: row nowrap;
+        margin: 0 auto;
+        .item {
+            flex: 1 1 auto;
+            font-size: 1em;
+            height: 2.8em;
+            text-align: center;
+            border: none;
+            margin: 1px;
+            box-shadow: none;
+            background: #ddd;
+            cursor: pointer;
+            &:hover { background: #cdd; }
+            &.active {
+                cursor: default;
+                background: #379;
+                color: #fff;
+            }
+        }
+    }
+    .tabContent {
+        display: none;
+        position: relative;
+        padding: 15px;
+        // box-shadow: #bbb 0 0 0 1px inset;
+        a:focus { //取代原有focus
+            border: 2px solid red;
+            outline: none;
+        }
+    }
+    .tabContentGroup{
+        // background: #dedede;
+        height: 640px;
+    }
+}
+
+
+
 .tabs {
     position: relative;
     // 原來h2
@@ -68,7 +112,7 @@
         &:hover, &:focus {
             background: $primaryColor;
         }
-        @include screen('mobile') {
+        @include screen('tablet') {
             float: none;
             width: 100% !important;
             border-bottom: 1px solid #888;
@@ -95,6 +139,7 @@
         border: transparent;
         padding: 20px 0;
         border-radius: 2px;
+        border: solid 1px #ddd;
 
         &:hover, &:focus {
             color: #fff;
@@ -104,6 +149,7 @@
         &.active{}
     }
     .tabContent{
+        .singleSlider{ margin-bottom: 0;}
         .singleSlider, .img-container, iframe{ height: 640px; }
         .img-container{
             background: #fff;
@@ -111,7 +157,9 @@
         }
 
         @include screen('notebook') {
-            .singleSlider, .img-container, iframe{ height: 420px; }
+            .singleSlider,
+            .img-container,
+            iframe{ height: 420px; }
         }
 
         // @include screen('mobile') {
@@ -133,7 +181,7 @@
     clear: both;
     padding: 30px 20px;
     display: none;
-    @include screen('mobile') {
+    @include screen('tablet') {
         position: static;
     }
     ul {
@@ -144,7 +192,7 @@
         padding: 0;
         line-height: 1.6;
         border-bottom: 1px #CCC dashed;
-        @include screen('mobile') {
+        @include screen('tablet') {
             @include text-overflow();
         }
         a {
