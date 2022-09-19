@@ -486,13 +486,18 @@ $(function() {
                     scollDistance = tvp + tabItemHeight * tabIndex - tab_headerHeight;
                 _tabItem.removeClass('active');
                 _tabItemNow.addClass('active');
-                if (ww <= 1199) {
+
+                if (ww <= 1199 ) {
                     _tabItem.not('.active').next().slideUp();
                     _tabItemNow.next().slideDown();
+                    _tabItemNow.next().find('.slick-track, .img-container').css('width','100%');
+                    _tabItemNow.next().find('.img-container:first-child').css('opacity','1');
                     $('html,body').stop(true, false).animate({ scrollTop: scollDistance });
                 } else {
                     _tabItem.not('.active').next().hide();
                     _tabItemNow.next().show();
+                    _tabItemNow.next().find('.slick-track, .img-container').css('width','100%');
+                    _tabItemNow.next().find('.img-container:first-child').css('opacity','1');
                     tabContentHeight = _tabItemNow.next().innerHeight();
                     _tab.height(tabContentHeight + tabItemHeight);
                 }
