@@ -160,7 +160,8 @@
             border: 1px solid #eaeaea;
         }
 
-        @include screen('notebook') {
+        // @include screen('notebook') {
+        @include screen('tablet') {
             .singleSlider,
             .singleSlider .draggable,
             .img-container,

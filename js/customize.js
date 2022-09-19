@@ -514,7 +514,6 @@ $(function() {
     $(function() {
         $("#item_1").CreateMultiCheckBox({ width: '100%', defaultText: '會議廳形式', height: '250px' });
         $("#item_2").CreateMultiCheckBox({ width: '100%', defaultText: '座椅形式', height: '250px' });
-
         $(".item_3").CreateMultiCheckBox({ width: '100%', defaultText: '請選擇場地', height: '250px' });
     })
     $(document).ready(function() {
