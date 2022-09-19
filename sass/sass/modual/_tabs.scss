@@ -149,7 +149,11 @@
         &.active{}
     }
     .tabContent{
-        .singleSlider{ margin-bottom: 0;}
+        .singleSlider{
+            margin-bottom: 0;
+
+            .draggable{}
+        }
         .singleSlider, .img-container, iframe{ height: 640px; }
         .img-container{
             background: #fff;
@@ -158,8 +162,13 @@
 
         @include screen('notebook') {
             .singleSlider,
+            .singleSlider .draggable,
             .img-container,
             iframe{ height: 420px; }
+
+            // .singleSlider .draggable{
+            //     overflow: hidden;
+            // }
         }
 
         // @include screen('mobile') {
