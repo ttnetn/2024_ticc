@@ -6,6 +6,8 @@ footer{
             flex-flow: row nowrap;
             justify-content: space-between;
 
+            a{ display: block;}
+
             // 黑底
             &:first-child{
                 background: #030303;
