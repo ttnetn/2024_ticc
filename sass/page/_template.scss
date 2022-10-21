@@ -321,6 +321,19 @@ body {
                 }
             }
         }
+        >.act_during{
+            padding: 0 0 2em;
+            &:after{
+                content: '';
+                position: absolute;
+                width: 130px;
+                height: 4px;
+                background: #000;
+                left: 0;
+                bottom: 0;
+            }   
+        }
+
         .btn_grp{
             .btn{
                 min-width: 220px;
