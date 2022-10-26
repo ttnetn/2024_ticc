@@ -515,6 +515,9 @@ $(function() {
         $("#item_1").CreateMultiCheckBox({ width: '100%', defaultText: '會議廳形式', height: '250px' });
         $("#item_2").CreateMultiCheckBox({ width: '100%', defaultText: '座椅形式', height: '250px' });
         $(".item_3").CreateMultiCheckBox({ width: '100%', defaultText: '請選擇場地', height: '250px' });
+		$(".item_31").CreateMultiCheckBox({ width: '100%', defaultText: '請選擇場地', height: '250px' });
+        $(".item_32").CreateMultiCheckBox({ width: '100%', defaultText: '請選擇場地', height: '250px' });
+        $(".item_33").CreateMultiCheckBox({ width: '100%', defaultText: '請選擇場地', height: '250px' });
     })
     $(document).ready(function() {
         $(document).on("click", ".MultiCheckBox", function() {
@@ -580,12 +583,13 @@ $(function() {
             var multiCheckBoxDetailBody = detail.find(".MultiCheckBoxDetailBody");
             this.find("option").each(function() {
                 var val = $(this).attr("value");
+				var cid = $(this).attr("cid");
                 var selectflg = $(this).attr("selected");
                 if (val == undefined) val = "";
                 if(selectflg == undefined) {
-                    multiCheckBoxDetailBody.append("<div class='cont'><div><input type='checkbox' class='mulinput' value='" + val + "' /></div><div>" + $(this).text() + "</div></div>");
+                    multiCheckBoxDetailBody.append("<div class='cont'><div><input type='checkbox' class='mulinput' id='" + cid + "' value='" + val + "' /></div><div>" + $(this).text() + "</div></div>");
                 } else {
-                    multiCheckBoxDetailBody.append("<div class='cont'><div><input type='checkbox' class='mulinput' value='" + val + "' checked /></div><div>" + $(this).text() + "</div></div>");
+                    multiCheckBoxDetailBody.append("<div class='cont'><div><input type='checkbox' class='mulinput' id='" + cid + "' value='" + val + "' checked /></div><div>" + $(this).text() + "</div></div>");
                 }
             });
             multiCheckBoxDetailBody.css("max-height", parseInt($(".MultiCheckBoxDetail").css("max-height")) - 28 + "px");
