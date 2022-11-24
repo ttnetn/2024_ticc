@@ -797,12 +797,12 @@ h2.act_title{
     .slick-prev{
         left: auto;
         right: calc((100% - 1440px)/2 + 80px);
-        background: url(../images/ticc/icon/icon_arrow_prev.png) 50% 50% no-repeat,linear-gradient(90deg, #6a1b8a 0%, #24086b 100%);
+        background: url(../images/ticc/icon/icon_arrow_prev.png) 50% 50% no-repeat,linear-gradient(180deg, #6a1b8a 0%, #24086b 100%);
         background-size: 30px 20px, cover;
     }
     .slick-next{
         right: calc((100% - 1440px)/2);
-        background: url(../images/ticc/icon/icon_arrow_next.png) 50% 50% no-repeat,linear-gradient(90deg, #6a1b8a 0%, #24086b 100%);
+        background: url(../images/ticc/icon/icon_arrow_next.png) 50% 50% no-repeat,linear-gradient(180deg, #6a1b8a 0%, #24086b 100%);
         background-size: 30px 20px, cover;
     }
 
