@@ -869,8 +869,19 @@ h2.act_title{
         letter-spacing: 1px;
         text-align: left;
         line-height: 1.4;
+
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 2;
+        overflow: hidden;
     }
-    p{ margin: 1em 0 2em;}
+    p{
+        margin: 1em 0 2em;
+        display: -webkit-box;
+        -webkit-box-orient: vertical;
+        -webkit-line-clamp: 5;
+        overflow: hidden;
+    }
     .info{
         display: flex;
         flex-flow: row nowrap;
