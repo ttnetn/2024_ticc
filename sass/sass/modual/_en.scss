@@ -4,10 +4,6 @@
 //     text-transform: uppercase;
 // }
 
-// 大寫
-.menu ul li a {
-    text-transform: uppercase;
-}
 
 .sideBar{
     a{
@@ -22,8 +18,38 @@
 
 // 
 .menu{
-    max-width: 900px;
+    max-width: initial;
     margin: auto;
+    // 預設選單 ul
+    >ul {
+        justify-content: flex-end;
+        margin-right: 2em;
+        // 第一層選單樣式
+        >li {
+            align-self: center;
+            >a {
+                text-transform: uppercase;  // 大寫
+                width: 140px;
+                padding: .5em;
+                white-space: initial;
+                line-height: 1.4;
+                text-align: center;
+            }
+        }
+    }
+    ul{
+        li{
+            ul{
+                width: 160px;
+                left: -10px;
+                padding: .5em 0;
+                li a{
+                    line-height: 1.2;
+                    padding: .75em 1.5em;
+                }
+            }
+        }
+    }
 }
 // hero
 .hero{

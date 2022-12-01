@@ -385,6 +385,8 @@ h2.act_title{
                 line-height: 2.2;
                 font-size: 1.125em;
                 white-space: normal;
+
+                transition: .3s;
                 span{
                     display: block;
                     width: 100%;
@@ -414,6 +416,14 @@ h2.act_title{
                         border-color: $secondaryColor;
                     }
                 }
+
+                &:hover, &:focus{
+                    background: $primaryColor;
+                    &:last-child{
+                        background: $secondaryColor !important;
+                    }
+                }
+
             }
         }
 
