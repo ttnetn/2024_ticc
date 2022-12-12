@@ -8,7 +8,7 @@ $(function() {
         wh = _window.height(),
         _body = $('body'),
         wwNormal = 1400,
-        wwMedium = 992,
+        wwMedium = 1199,
         wwSmall = 768,
         wwxs = 576;
     /*-----------------------------------*/

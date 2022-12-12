@@ -22,14 +22,16 @@
     margin: auto;
     // 預設選單 ul
     >ul {
-        justify-content: flex-end;
-        margin-right: 2em;
+        // justify-content: flex-end;
+        // margin-right: 2em;
+        flex-wrap: nowrap;
+
         // 第一層選單樣式
         >li {
             align-self: center;
             >a {
                 text-transform: uppercase;  // 大寫
-                width: 140px;
+                max-width: 132px;
                 padding: .5em;
                 white-space: initial;
                 line-height: 1.4;
@@ -46,6 +48,24 @@
                 li a{
                     line-height: 1.2;
                     padding: .75em 1.5em;
+                }
+            }
+        }
+    }
+
+    @media screen and (max-width: 1640px){
+        >ul {
+            margin-right: 100px;
+        }
+    }
+    @media screen and (max-width: 1200px){
+        >ul {
+            flex-wrap: wrap;
+            margin-right: 0;
+            // 第一層選單樣式
+            >li {
+                >a {
+                    max-width: initial;
                 }
             }
         }

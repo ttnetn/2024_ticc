@@ -284,16 +284,15 @@
         }
     }
 
-    @media screen and (max-width: 1480px) {
-        // 背景
-        &:before {
-            // left: -150px;
-            right: 52%;
-        }
-        h1{ margin-left: 40px; }
-    }
 
-    @include screen('tablet') {
+    @media screen and (max-width: 1480px) {
+        // // 背景
+        // &:before {
+        //     // left: -150px;
+        //     right: 52%;
+        // }
+        // h1{ margin-left: 40px; }
+
         // 背景
         &:before {
             right: auto;
@@ -301,7 +300,7 @@
             opacity: 0;
         }
         // 大塊陰影
-        &:after{ height: 130px;}
+        &:after{ height: 150px;}
 
         h1 {
             // padding: 2px 60px;
@@ -319,6 +318,33 @@
             }
         }
     }
+
+    // @include screen('tablet') {
+    //     // 背景
+    //     &:before {
+    //         right: auto;
+    //         left: -200px;
+    //         opacity: 0;
+    //     }
+    //     // 大塊陰影
+    //     &:after{ height: 130px;}
+
+    //     h1 {
+    //         // padding: 2px 60px;
+    //         // width: 100%;
+    //         margin-left: 0;
+    //         text-align: center;
+    //         // height: 60px;
+    //         img {
+    //             width: auto;
+    //             height: auto;
+    //             // max-height: 75px;
+    //             margin: 0px auto;
+    //             transform: scale(0.8);
+    //             filter: invert(1) brightness(5);
+    //         }
+    //     }
+    // }
 }
 
 // test
