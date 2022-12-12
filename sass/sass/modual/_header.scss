@@ -317,6 +317,10 @@
                 filter: invert(1) brightness(5);
             }
         }
+
+        .container{
+            @include gutter(60px);
+        }
     }
 
     // @include screen('tablet') {
