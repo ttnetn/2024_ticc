@@ -546,7 +546,7 @@ body {
                 padding-left: 2em;
                 width: 100%;
                 margin: 1em 0;
-                padding: 1em;
+                padding: 1.2em 1em 1.2em 2.2em;
                 background: #f7f7f7;
                 label span{
                     font-size: 80%;
@@ -660,6 +660,7 @@ body {
         @include screen('mobile') {
             .form_content{
                 .set{
+                    padding-left: 1.2em;
                     .additional{
                         flex-wrap: wrap;
                         label{
