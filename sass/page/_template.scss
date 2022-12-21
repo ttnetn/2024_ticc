@@ -658,7 +658,27 @@ body {
         @include screen('mobile') {
             .form_content{
                 .set{
-                    .additional{ flex-wrap: wrap; }
+                    .additional{
+                        flex-wrap: wrap;
+                        label{
+                            display: flex;
+                            flex-wrap: nowrap;
+                            align-items: center;
+
+                            input{
+                                flex: 0 0 30px;
+                            }
+                            span{
+                                flex: 1 0 auto;
+                                flex-basis: calc(100% - 30px);
+                                // background: pink;
+                            }
+                        }
+
+                        .checkbox{
+                            width: 100%;
+                        }
+                    }
                 }
             }
         }
