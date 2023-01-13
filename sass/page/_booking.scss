@@ -305,7 +305,7 @@ $border_line: #aeaeae;		// 表格線
 							text-align: center;
 							font-size: 1.125em;
 							font-weight: bold;
-							padding: 3.5em .5em;
+							padding: 3.5em 0;
 							width: 50px;
 							box-shadow: inset -1px 0 0 0 $border_line;
 							border-bottom: 1px solid $border_line;
@@ -313,6 +313,8 @@ $border_line: #aeaeae;		// 表格線
 							span{
 								display: block;
 								width: 100%;
+								font-size: 75%;
+								font-weight: bold;
 							}
 						}
 						// 時段
@@ -330,12 +332,13 @@ $border_line: #aeaeae;		// 表格線
 									display: block;
 									padding: 8px 0;
 									height: 60px;
-								    font-weight: bold;
-								    text-align: center;
-								    line-height: 1.1;
-								    font-size: .813em;
-								    font-weight: bold;
-								    border-bottom: 1px solid $border_line;
+								  font-weight: bold;
+								  text-align: center;
+								  line-height: 1.1;
+								  font-size: .813em;
+								  font-weight: bold;
+								  border-bottom: 1px solid $border_line;
+
 									span{
 										display: block;
 										text-align: center;
@@ -365,11 +368,11 @@ $border_line: #aeaeae;		// 表格線
 				// 右上
 				.room_list{
 					width: 100%;
-	      			top: 0;
-	      			display: flex;
-	      			flex-flow: row nowrap;
+	      	top: 0;
+	      	display: flex;
+	      	flex-flow: row nowrap;
+	      	position: absolute;
 
-	      			position: absolute;
 					>div{
 						flex: 1 1 auto;
 						min-width: 60px;
@@ -383,8 +386,10 @@ $border_line: #aeaeae;		// 表格線
 						justify-content: center;
 						align-items: center;
 
-						word-break: break-all;
-						padding: 0 6px;
+						// word-break: break-all;
+						text-align: center;
+						line-height: 1.2;
+						padding: 2px 6px;
 
 						&:last-child{
 							border-right: transparent;
@@ -393,7 +398,7 @@ $border_line: #aeaeae;		// 表格線
 				}
 				// 右下
 				.Tbody{
-					background: deeppink;
+					// background: deeppink;
 					margin-top: 48px;
 
 					display: flex;
@@ -424,10 +429,32 @@ $border_line: #aeaeae;		// 表格線
 							}
 
 							&.able{ background: #c7c4e9; }
-					        &.unable{ background: #8782c4; }
-					        &.locked{ background: #d2d0d0; }
+					    &.unable{ background: #8782c4; }
+					    &.locked{ background: #d2d0d0; }
 
-					        &.act{ background: #e66a6e }
+					    &.act{ background: #e66a6e }
+						}
+					}
+				}
+			}
+		}
+	}
+
+	// 2023-0113 異變體
+	&.Mix{
+		// 內容
+		.content{
+			.scroll{
+				// 右上
+				.room_list{
+					>div{ min-width: 110px; }
+				}
+				// 右下
+				.Tbody{
+					.room{
+						flex: 0 1 110px;
+						.morning, .noon, .evening, .night, .early-morning{
+							min-width: 110px;
 						}
 					}
 				}
